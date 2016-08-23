@@ -1,443 +1,427 @@
 object Form1: TForm1
-  Left = 0
-  Top = 0
-  ParentCustomHint = False
+  Left = 457
+  Height = 695
+  Top = 185
+  Width = 932
   BorderStyle = bsSingle
-  ClientHeight = 647
-  ClientWidth = 926
+  ClientHeight = 672
+  ClientWidth = 932
   Color = clBtnFace
   Constraints.MaxHeight = 696
   Constraints.MaxWidth = 932
   Constraints.MinHeight = 695
   Constraints.MinWidth = 932
   DefaultMonitor = dmMainForm
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
-  Font.Style = []
   Menu = MainMenu1
-  OldCreateOrder = False
-  Position = poDesigned
-  Scaled = False
-  ShowHint = True
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
-  PixelsPerInch = 96
-  TextHeight = 13
+  ShowHint = True
+  LCLVersion = '1.7'
   object Bevel3: TBevel
     Left = 7
+    Height = 167
     Top = 474
     Width = 593
-    Height = 167
     Style = bsRaised
   end
   object Bevel5: TBevel
     Left = 606
+    Height = 609
     Top = 32
     Width = 315
-    Height = 609
     Style = bsRaised
   end
   object Bevel9: TBevel
     Left = 20
+    Height = 37
     Top = 592
     Width = 176
-    Height = 37
   end
   object Bevel6: TBevel
     Left = 206
+    Height = 37
     Top = 592
     Width = 176
-    Height = 37
   end
   object Bevel8: TBevel
     Left = 20
+    Height = 55
     Top = 484
     Width = 427
-    Height = 55
   end
   object PosX: TLabel
     Left = 24
+    Height = 38
     Top = 504
-    Width = 106
-    Height = 37
+    Width = 122
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -32
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object BtnZeroX: TSpeedButton
     Left = 24
-    Top = 545
-    Width = 80
     Height = 25
     Hint = 'Tool is at part X zero; set part X to 0'
+    Top = 545
+    Width = 80
     Caption = 'Zero X'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -15
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    ParentFont = False
     OnClick = BtnZeroXClick
+    ParentFont = False
   end
   object PosY: TLabel
     Left = 152
+    Height = 38
     Top = 504
-    Width = 106
-    Height = 37
+    Width = 122
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -32
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object BtnZeroY: TSpeedButton
     Left = 156
-    Top = 545
-    Width = 77
     Height = 25
     Hint = 'Tool is at part Y zero; set part Y to 0'
+    Top = 545
+    Width = 77
     Caption = 'Zero Y'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = 1097744
     Font.Height = -15
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    ParentFont = False
     OnClick = BtnZeroYClick
+    ParentFont = False
   end
   object PosZ: TLabel
     Left = 280
+    Height = 38
     Top = 504
-    Width = 106
-    Height = 37
+    Width = 122
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -32
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object BtnZeroZ: TSpeedButton
     Left = 280
-    Top = 545
-    Width = 81
     Height = 25
     Hint = 'Tool is at part Y zero; set part Z to Z gauge value from job defaults'
+    Top = 545
+    Width = 81
     Caption = 'Zero Z'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -15
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    ParentFont = False
     OnClick = BtnZeroZClick
+    ParentFont = False
   end
   object MposX: TLabel
     Left = 24
+    Height = 15
     Top = 486
-    Width = 45
-    Height = 16
+    Width = 50
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object MposY: TLabel
     Left = 152
+    Height = 15
     Top = 486
-    Width = 45
-    Height = 16
+    Width = 50
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object MposZ: TLabel
     Left = 280
+    Height = 15
     Top = 486
-    Width = 45
-    Height = 16
+    Width = 50
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object Label23: TLabel
     Left = 212
+    Height = 15
     Top = 593
-    Width = 126
-    Height = 13
+    Width = 173
     Caption = 'Part zero in machine coord'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 13
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    ParentColor = False
     ParentFont = False
   end
   object Label27: TLabel
-    Left = 402
+    Left = 399
+    Height = 25
     Top = 512
-    Width = 34
-    Height = 20
+    Width = 48
     Caption = 'Part'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 21
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object Label28: TLabel
-    Left = 397
-    Top = 486
-    Width = 41
-    Height = 13
+    Left = 393
+    Height = 15
+    Top = 484
+    Width = 54
     Caption = 'Machine'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 13
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    ParentColor = False
     ParentFont = False
   end
   object LabelWorkX: TLabel
     Left = 212
-    Top = 608
-    Width = 45
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
+    Top = 608
+    Width = 50
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object LabelWorkY: TLabel
     Left = 270
-    Top = 608
-    Width = 45
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
+    Top = 608
+    Width = 50
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object LabelWorkZ: TLabel
     Left = 330
-    Top = 608
-    Width = 45
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
+    Top = 608
+    Width = 50
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object LabelTableX: TLabel
     Left = 25
-    Top = 610
-    Width = 45
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
+    Top = 610
+    Width = 50
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object LabelTableY: TLabel
     Left = 83
-    Top = 610
-    Width = 45
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
+    Top = 610
+    Width = 50
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object LabelTableZ: TLabel
     Left = 143
-    Top = 610
-    Width = 45
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
+    Top = 610
+    Width = 50
     Caption = '000,00'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object Label31: TLabel
     Left = 25
+    Height = 15
     Top = 593
-    Width = 132
-    Height = 13
+    Width = 187
     Caption = 'Table size (limits XYZ travel)'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 13
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    ParentColor = False
     ParentFont = False
   end
   object LabelHintZ: TLabel
     Left = 516
-    Top = 505
-    Width = 62
     Height = 13
     Hint = 'Z Gauge height value from job defaults'
+    Top = 505
+    Width = 71
     Caption = '+00.00 mm'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object BtnCancel: TSpeedButton
     Left = 392
-    Top = 590
-    Width = 98
     Height = 39
     Hint = 'Cancel any running process and clear 3D view'
+    Top = 590
+    Width = 98
     Caption = 'CANCEL'
-    Font.Charset = ANSI_CHARSET
+    Font.CharSet = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -19
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    ParentFont = False
     OnClick = BtnCancelClick
     OnMouseEnter = BtnCancelMouseEnter
     OnMouseLeave = BtnCancelMouseLeave
+    ParentFont = False
   end
   object BtnZeroAll: TSpeedButton
     Left = 496
-    Top = 545
-    Width = 98
     Height = 25
     Hint = 'Set workpiece Z to Z gauge value'
+    Top = 545
+    Width = 98
     Caption = 'Zero All'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -15
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    ParentFont = False
     OnClick = BtnZeroAllClick
+    ParentFont = False
   end
   object Label13: TLabel
     Left = 612
-    Top = 41
-    Width = 155
     Height = 13
+    Top = 41
+    Width = 165
     Caption = 'G-Code Output / Messages'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = cl3DDkShadow
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentColor = False
     ParentFont = False
   end
   object LabelATCmsg: TLabel
     Left = 612
+    Height = 13
     Top = 423
     Width = 99
-    Height = 19
     Caption = 'ATC or Tool List'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = cl3DDkShadow
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    GlowSize = 3
+    ParentColor = False
     ParentFont = False
   end
   object Label24: TLabel
     Left = 794
-    Top = 423
-    Width = 113
     Height = 13
+    Top = 423
+    Width = 140
     Caption = '(current tool highlighted)'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    ParentColor = False
     ParentFont = False
   end
   object LabelFaults: TLabel
     Left = 815
-    Top = 41
-    Width = 54
     Height = 13
+    Top = 41
+    Width = 62
     Caption = 'LabelFaults'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    ParentColor = False
     ParentFont = False
   end
   object Label22: TLabel
     Left = 508
-    Top = 486
-    Width = 79
     Height = 13
+    Top = 486
+    Width = 93
     Caption = 'Z Gauge Height:'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    ParentColor = False
     ParentFont = False
   end
   object ToolBar1: TToolBar
     Left = 0
-    Top = 0
-    Width = 926
     Height = 30
+    Top = 0
+    Width = 932
     BorderWidth = 1
     ButtonHeight = 24
-    Color = clBtnFace
     Constraints.MaxWidth = 1192
+    Color = clBtnFace
     Images = ImageList1
     Indent = 5
     ParentColor = False
@@ -447,140 +431,133 @@ object Form1: TForm1
     Wrapable = False
     object ToolButton9: TToolButton
       Left = 5
-      Top = 0
+      Top = 2
       Action = FileNew1
     end
     object ToolButton1: TToolButton
       Left = 28
-      Top = 0
+      Top = 2
       Action = FileOpen1
     end
     object ToolButton2: TToolButton
       Left = 51
-      Top = 0
+      Top = 2
       Action = FileSave1
     end
   end
   object DeviceView: TEdit
     Left = 296
-    Top = 4
-    Width = 193
     Height = 21
     Hint = 'Selected FTDI Device'
-    TabStop = False
-    AutoSelect = False
+    Top = 4
+    Width = 193
     AutoSize = False
-    BevelInner = bvNone
-    BevelWidth = 2
+    AutoSelect = False
     Color = clGradientInactiveCaption
-    Font.Charset = ANSI_CHARSET
+    Font.CharSet = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -12
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
     ReadOnly = True
+    TabStop = False
     TabOrder = 0
     Text = 'SIMULATION'
   end
   object PageControl1: TPageControl
     Left = 7
+    Height = 433
     Top = 36
     Width = 593
-    Height = 433
+    TabStop = False
     ActivePage = TabSheetRun
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    HotTrack = True
     ParentFont = False
+    TabIndex = 4
     TabOrder = 2
-    TabStop = False
     OnChange = PageControl1Change
     object TabSheet1: TTabSheet
       Caption = 'Job/Files'
-      Font.Charset = DEFAULT_CHARSET
+      ClientHeight = 402
+      ClientWidth = 587
       Font.Color = clBlack
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
-      Highlighted = True
       ParentFont = False
       object Label1: TLabel
         Left = 8
-        Top = 8
-        Width = 323
         Height = 13
+        Top = 8
+        Width = 371
         Caption = 'HPGL/Vector/Drill Fles (G-Code/SVG will be mapped to Pen/Tool 9)'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label12: TLabel
         Left = 8
-        Top = 186
-        Width = 58
         Height = 13
+        Top = 186
+        Width = 66
         Caption = 'Job Settings'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label2: TLabel
         Left = 134
-        Top = 186
-        Width = 138
         Height = 13
+        Top = 186
+        Width = 163
         Caption = 'Press Enter to Accept Values'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label3: TLabel
         Left = 304
-        Top = 240
-        Width = 64
         Height = 13
+        Top = 240
+        Width = 76
         Caption = 'Job Comment'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object SgFiles: TStringGrid
         Tag = 1
         Left = 8
-        Top = 25
-        Width = 569
         Height = 155
         Hint = 'File settings - click on path to load. G-Code and SVG files will be mapped to Pen/Tool 9.'
+        Top = 25
+        Width = 569
         ColCount = 9
         DefaultRowHeight = 18
-        DrawingStyle = gdsClassic
         FixedCols = 0
-        RowCount = 8
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine]
         ParentFont = False
+        RowCount = 8
         ScrollBars = ssNone
         TabOrder = 0
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -12
+        TitleFont.Name = 'MS Sans Serif'
         OnClick = SgFilesClick
         OnDrawCell = SgFilesDrawCell
         OnKeyPress = SgFilesKeyPress
@@ -596,36 +573,26 @@ object Form1: TForm1
           44
           56
         )
-        RowHeights = (
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-        )
       end
       object SgJobDefaults: TStringGrid
         Left = 8
-        Top = 202
-        Width = 265
         Height = 193
         Hint = 'General job settings common for all files and tools'
+        Top = 202
+        Width = 265
         ColCount = 2
         DefaultRowHeight = 18
-        DrawingStyle = gdsClassic
-        RowCount = 2
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
         ParentFont = False
+        RowCount = 2
         ScrollBars = ssNone
         TabOrder = 1
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -12
+        TitleFont.Name = 'MS Sans Serif'
         OnClick = SgJobDefaultsClick
         OnDrawCell = SgJobDefaultsDrawCell
         OnExit = SgJobDefaultsExit
@@ -635,22 +602,16 @@ object Form1: TForm1
           209
           51
         )
-        RowHeights = (
-          18
-          18
-        )
       end
       object MemoComment: TMemo
         Left = 304
-        Top = 261
-        Width = 273
         Height = 134
         Hint = 'Custom comment, saved with this job'
-        Font.Charset = DEFAULT_CHARSET
+        Top = 261
+        Width = 273
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
         Lines.Strings = (
           'Your Job Description'
           ''
@@ -664,44 +625,41 @@ object Form1: TForm1
     end
     object TabSheetPens: TTabSheet
       Caption = 'Tools'
+      ClientHeight = 402
+      ClientWidth = 587
       object Label7: TLabel
         Left = 8
-        Top = 8
-        Width = 231
         Height = 13
+        Top = 8
+        Width = 269
         Caption = 'HPGL Pen Mill (P) and Excellon Drill (D) Tool Edit'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object SgPens: TStringGrid
         Tag = 2
         Left = 8
-        Top = 24
-        Width = 565
         Height = 369
         Hint = 'HPGL Pen and Excellon Drill settings. Drill number = pen number+10.'
+        Top = 24
+        Width = 565
         ColCount = 13
-        Ctl3D = True
         DefaultColWidth = 30
         DefaultRowHeight = 18
-        DoubleBuffered = True
-        DrawingStyle = gdsClassic
-        RowCount = 32
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
-        ParentCtl3D = False
-        ParentDoubleBuffered = False
         ParentFont = False
+        RowCount = 32
         ScrollBars = ssVertical
         TabOrder = 0
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -12
+        TitleFont.Name = 'MS Sans Serif'
         OnDrawCell = SgPensDrawCell
         OnKeyPress = SgPensKeyPress
         OnMouseDown = SgPensMouseDown
@@ -721,78 +679,45 @@ object Form1: TForm1
           32
           56
         )
-        RowHeights = (
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-          18
-        )
       end
     end
     object TabSheetGroups: TTabSheet
       Caption = 'Path View'
+      ClientHeight = 402
+      ClientWidth = 587
       ImageIndex = 1
       object Label5: TLabel
         Left = 9
-        Top = 8
-        Width = 48
         Height = 13
+        Top = 8
+        Width = 56
         Caption = 'Path View'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object SgBlocks: TStringGrid
         Tag = 3
         Left = 8
-        Top = 24
-        Width = 565
         Height = 369
         Hint = 'Lists all groups in job'
+        Top = 24
+        Width = 565
         ColCount = 8
         DefaultRowHeight = 18
-        DrawingStyle = gdsClassic
-        RowCount = 2
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goThumbTracking]
         ParentFont = False
+        RowCount = 2
         ScrollBars = ssVertical
         TabOrder = 0
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -12
+        TitleFont.Name = 'MS Sans Serif'
         OnClick = SgBlocksClick
         OnDrawCell = SgBlocksDrawCell
         OnMouseDown = SgBlocksMouseDown
@@ -806,182 +731,171 @@ object Form1: TForm1
           84
           52
         )
-        RowHeights = (
-          18
-          18
-        )
       end
     end
     object TabSheetDefaults: TTabSheet
       Caption = 'Defaults'
+      ClientHeight = 402
+      ClientWidth = 587
       ImageIndex = 2
       object Bevel11: TBevel
         Left = 319
+        Height = 69
         Top = 327
         Width = 255
-        Height = 69
         Shape = bsFrame
       end
       object Label11: TLabel
         Left = 8
-        Top = 8
-        Width = 202
         Height = 13
+        Top = 8
+        Width = 243
         Caption = 'GRBL Settings (use decimal dot for values)'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Bevel1: TBevel
         Left = 8
+        Height = 69
         Top = 327
         Width = 294
-        Height = 69
         Shape = bsFrame
       end
       object BtnLoadGrblSetup: TSpeedButton
         Left = 23
-        Top = 333
-        Width = 98
         Height = 25
         Hint = 'Load GRBL Setup from File'
+        Top = 333
+        Width = 98
         Caption = 'Load from File'
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = clBlue
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnLoadGrblSetupClick
+        ParentFont = False
       end
       object BtnSaveGrblSetup: TSpeedButton
         Left = 127
-        Top = 333
-        Width = 98
         Height = 25
         Hint = 'Save GRBL Setup to File'
+        Top = 333
+        Width = 98
         Caption = 'Save to File'
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = 4227327
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnSaveGrblSetupClick
+        ParentFont = False
       end
       object Label25: TLabel
         Left = 319
-        Top = 8
-        Width = 139
         Height = 13
+        Top = 8
+        Width = 163
         Caption = 'GRBLize Application Defaults'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label10: TLabel
         Left = 334
-        Top = 334
-        Width = 103
         Height = 13
+        Top = 334
+        Width = 126
         Caption = 'Set to current position'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object SgGrblSettings: TStringGrid
         Left = 8
-        Top = 24
-        Width = 293
         Height = 304
         Hint = 'GRBL params read from GRBL-JOG'
+        Top = 24
+        Width = 293
         ColCount = 2
         DefaultColWidth = 160
         DefaultRowHeight = 18
-        DrawingStyle = gdsClassic
         FixedCols = 0
-        RowCount = 2
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goEditing, goThumbTracking]
         ParentFont = False
+        RowCount = 2
         ScrollBars = ssVertical
         TabOrder = 0
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -12
+        TitleFont.Name = 'MS Sans Serif'
         OnDrawCell = SgGrblSettingsDrawCell
         ColWidths = (
           205
           64
         )
-        RowHeights = (
-          18
-          18
-        )
       end
       object BtnSendGrblSettings: TBitBtn
         Left = 127
-        Top = 364
-        Width = 98
         Height = 25
         Hint = 'Send edited values to GRBL device'
+        Top = 364
+        Width = 98
         Caption = 'Send to GRBL'
         Enabled = False
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
+        OnClick = BtnSendGrblSettingsClick
         ParentFont = False
         TabOrder = 1
-        OnClick = BtnSendGrblSettingsClick
       end
       object BtnRefreshGrblSettings: TBitBtn
         Left = 23
-        Top = 364
-        Width = 98
         Height = 25
         Hint = 'Read values from GRBL device'
+        Top = 364
+        Width = 98
         Caption = 'Get from GRBL'
         Enabled = False
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clTeal
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
+        OnClick = BtnRefreshGrblSettingsClick
         ParentFont = False
         TabOrder = 2
-        OnClick = BtnRefreshGrblSettingsClick
       end
       object SgAppDefaults: TStringGrid
         Left = 319
-        Top = 27
-        Width = 254
         Height = 301
         Hint = 'General job settings common for all files and tools, will be saved to GRBLize.ini on application quit'
+        Top = 27
+        Width = 254
         ColCount = 2
         DefaultRowHeight = 18
-        DrawingStyle = gdsClassic
         FixedCols = 0
-        RowCount = 2
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
         ParentFont = False
+        RowCount = 2
         TabOrder = 3
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -12
+        TitleFont.Name = 'MS Sans Serif'
         OnClick = SgAppDefaultsClick
         OnDrawCell = SgAppDefaultsDrawCell
         OnExit = SgAppDefaultsExit
@@ -991,535 +905,507 @@ object Form1: TForm1
           184
           47
         )
-        RowHeights = (
-          18
-          18
-        )
       end
       object BtnSetPark: TButton
         Left = 454
-        Top = 334
-        Width = 103
         Height = 25
         Hint = 'Set default park position to current machine position'
+        Top = 334
+        Width = 103
         Caption = 'Set new Park'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -9
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        OnClick = BtnSetParkClick
         ParentFont = False
         TabOrder = 4
-        OnClick = BtnSetParkClick
       end
       object BtnSetFix1: TButton
         Left = 334
-        Top = 364
-        Width = 103
         Height = 25
         Hint = 'Set default fixture position to current machine position'
+        Top = 364
+        Width = 103
         Caption = 'Set new Fixture 1'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -9
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        OnClick = BtnSetFix1Click
         ParentFont = False
         TabOrder = 5
-        OnClick = BtnSetFix1Click
       end
       object BtnSetFix2: TButton
         Left = 454
-        Top = 364
-        Width = 103
         Height = 25
         Hint = 'Set default fixture position to current machine position'
+        Top = 364
+        Width = 103
         Caption = 'Set new Fixture 2'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -9
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        OnClick = BtnSetFix2Click
         ParentFont = False
         TabOrder = 6
-        OnClick = BtnSetFix2Click
       end
     end
     object TabSheetRun: TTabSheet
       Caption = 'Machine Control'
+      ClientHeight = 402
+      ClientWidth = 587
       ImageIndex = 3
       object Bevel2: TBevel
         Left = 3
+        Height = 170
         Top = 231
         Width = 301
-        Height = 170
         Shape = bsFrame
       end
       object Bevel4: TBevel
         Left = 310
+        Height = 226
         Top = 17
         Width = 272
-        Height = 226
         Shape = bsFrame
       end
       object Bevel10: TBevel
         Left = 3
+        Height = 197
         Top = 17
         Width = 301
-        Height = 197
         Shape = bsFrame
       end
       object Bevel7: TBevel
         Left = 310
+        Height = 153
         Top = 248
         Width = 272
-        Height = 153
         Shape = bsFrame
       end
       object BtnRunJob: TSpeedButton
         Left = 325
-        Top = 264
-        Width = 106
         Height = 25
         Hint = '´Run or simulate complete job with all tools listed'
+        Top = 264
+        Width = 106
         Caption = 'Run Job'
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = 2925325
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnRunJobClick
+        ParentFont = False
       end
       object Label6: TLabel
         Left = 4
-        Top = 1
-        Width = 37
         Height = 13
+        Top = 1
+        Width = 41
         Caption = 'Jogging'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label26: TLabel
         Left = 511
-        Top = 216
-        Width = 61
         Height = 13
+        Top = 216
+        Width = 71
         Caption = 'Job Progress'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label4: TLabel
         Left = 325
-        Top = 344
-        Width = 125
         Height = 13
+        Top = 344
+        Width = 150
         Caption = 'GCode Simulation Settings'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGray
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label8: TLabel
         Left = 486
-        Top = 367
-        Width = 82
         Height = 13
+        Top = 367
+        Width = 94
         Caption = 'G-Code Tool Dia.'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object BtnRunGcode: TSpeedButton
         Left = 325
+        Height = 25
         Top = 301
         Width = 106
-        Height = 25
         Caption = 'Run GCode File'
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = clBlue
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = RunGcode
+        ParentFont = False
       end
       object Label19: TLabel
         Left = 499
-        Top = 301
-        Width = 67
         Height = 13
+        Top = 301
+        Width = 82
         Caption = 'Apply Z Offset'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label44: TLabel
         Left = 499
-        Top = 315
-        Width = 67
         Height = 13
+        Top = 315
+        Width = 79
         Caption = 'to G-Code File'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label48: TLabel
         Left = 327
-        Top = 27
-        Width = 100
         Height = 13
+        Top = 27
+        Width = 115
         Caption = 'First Tool used in Job'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label17: TLabel
         Left = 44
+        Height = 19
         Top = 82
-        Width = 43
-        Height = 16
+        Width = 55
         Caption = 'X Axis'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = 16
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
+        ParentColor = False
         ParentFont = False
       end
       object Label18: TLabel
         Left = 151
+        Height = 19
         Top = 26
-        Width = 44
-        Height = 16
+        Width = 55
         Caption = 'Y Axis'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = 16
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
+        ParentColor = False
         ParentFont = False
       end
       object BtnHomeCycle: TSpeedButton
         Left = 208
-        Top = 344
-        Width = 87
         Height = 25
         Hint = 'Perform a homing cycle'
+        Top = 344
+        Width = 87
         Caption = 'Home Cycle'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGreen
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnHomeCycleClick
+        ParentFont = False
       end
       object BtnMovePark: TSpeedButton
         Left = 11
-        Top = 239
-        Width = 66
         Height = 25
         Hint = 'Move tool bit to park position'
+        Top = 239
+        Width = 66
         Caption = 'Park'
         Enabled = False
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = 2925325
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnMoveParkClick
+        ParentFont = False
       end
       object BtnMoveFix1: TSpeedButton
         Left = 11
-        Top = 270
-        Width = 66
         Height = 25
         Hint = 'Move tool bit to fixture 1 position'
+        Top = 270
+        Width = 66
         Caption = 'Fixture 1'
         Enabled = False
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = clPurple
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnMoveFix1Click
+        ParentFont = False
       end
       object BtnMoveFix2: TSpeedButton
         Left = 11
-        Top = 301
-        Width = 66
         Height = 25
         Hint = 'Move tool bit to fixture 2 position'
+        Top = 301
+        Width = 66
         Caption = 'Fixture 2'
         Enabled = False
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = clMaroon
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnMoveFix2Click
+        ParentFont = False
       end
       object Label20: TLabel
         Left = 5
-        Top = 216
-        Width = 39
         Height = 13
+        Top = 216
+        Width = 45
         Caption = 'Move to'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object BtnMoveXYzero: TSpeedButton
         Left = 102
-        Top = 239
-        Width = 87
         Height = 25
         Hint = 'Move tool to workpiece XY zero and Z =Z Lift value from job defaults'
+        Top = 239
+        Width = 87
         Caption = 'Part Zero XY'
         Enabled = False
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = 4227327
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnMoveXYzeroClick
+        ParentFont = False
       end
       object BtnMoveToolChange: TSpeedButton
         Left = 11
-        Top = 332
-        Width = 80
         Height = 25
         Hint = 'Move tool bit to manual tool change position'
+        Top = 332
+        Width = 80
         Caption = 'Tool Change'
         Enabled = False
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = clOlive
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnMoveToolChangeClick
+        ParentFont = False
       end
       object LabelHintZ2: TLabel
         Left = 113
-        Top = 346
-        Width = 62
         Height = 13
         Hint = 'Z Lift value from job defaults'
+        Top = 346
+        Width = 71
         Caption = '+00,00 mm'
+        ParentColor = False
       end
       object Label15: TLabel
         Left = 158
+        Height = 28
         Top = 153
-        Width = 70
-        Height = 24
+        Width = 92
         Caption = 'Jogpad'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = 24
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
+        ParentColor = False
         ParentFont = False
       end
       object Label16: TLabel
-        Left = 220
+        Left = 216
+        Height = 19
         Top = 26
-        Width = 43
-        Height = 16
+        Width = 55
         Caption = 'Z Axis'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = 16
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
+        ParentColor = False
         ParentFont = False
       end
       object BtnHomeOverride: TSpeedButton
         Left = 208
-        Top = 375
-        Width = 87
         Height = 18
         Hint = 'Will set "homed" condition - be careful!'
+        Top = 375
+        Width = 87
         Caption = 'Override Home'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
-        ParentFont = False
         OnClick = BtnHomeOverrideClick
+        ParentFont = False
       end
       object BtnRunTool: TSpeedButton
         Left = 457
-        Top = 264
-        Width = 106
         Height = 25
         Hint = 'Run only the single tool selected in "Tools used" list'
+        Top = 264
+        Width = 106
         Caption = 'Run Single Tool'
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = 2925325
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnRunToolClick
+        ParentFont = False
       end
       object BtnMoveMillCenter: TSpeedButton
         Left = 102
-        Top = 270
-        Width = 87
         Height = 25
         Hint = 'Move tool to job mills/drills XY center with Z =Up to probe part Z'
+        Top = 270
+        Width = 87
         Caption = 'Job Center'
         Enabled = False
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = clTeal
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnMoveMillCenterClick
+        ParentFont = False
       end
       object BtnZcontact: TSpeedButton
         Left = 208
-        Top = 270
-        Width = 87
         Height = 25
         Hint = 'Move tool bit to movable Z probe contact and stop'
+        Top = 270
+        Width = 87
         Caption = 'Probe Z'
         Enabled = False
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = clFuchsia
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnZcontactClick
+        ParentFont = False
       end
       object Label9: TLabel
         Left = 208
-        Top = 298
-        Width = 86
         Height = 13
+        Top = 298
+        Width = 106
         Caption = 'with floating probe'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label14: TLabel
         Left = 310
-        Top = 1
-        Width = 107
         Height = 13
+        Top = 1
+        Width = 132
         Caption = 'Options (from Defaults)'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object Label21: TLabel
         Left = 106
-        Top = 331
-        Width = 81
         Height = 13
+        Top = 331
+        Width = 99
         Caption = 'Z Lift above part:'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        ParentColor = False
         ParentFont = False
       end
       object BtnMoveZzero: TSpeedButton
         Left = 102
-        Top = 301
-        Width = 87
         Height = 25
         Hint = 'Move tool to workpiece XY zero and Z =Z Lift value from job defaults'
+        Top = 301
+        Width = 87
         Caption = 'Part Zero Z'
         Enabled = False
-        Font.Charset = ANSI_CHARSET
+        Font.CharSet = ANSI_CHARSET
         Font.Color = 4227327
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        ParentFont = False
         OnClick = BtnMoveZzeroClick
+        ParentFont = False
       end
       object CheckEndPark: TCheckBox
         Left = 13
-        Top = 371
-        Width = 80
-        Height = 13
+        Height = 22
         Hint = 'On end move to Park Position'
+        Top = 371
+        Width = 90
         Caption = 'Park on end'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
         ParentFont = False
         TabOrder = 0
       end
       object ProgressBar1: TProgressBar
         Left = 325
+        Height = 17
         Top = 213
         Width = 180
-        Height = 17
         TabOrder = 1
       end
       object ComboBoxGtip: TComboBox
         Left = 406
+        Height = 27
+        Hint = 'Simulated tool tip'
         Top = 363
         Width = 75
-        Height = 21
-        Hint = 'Simulated tool tip'
-        Style = csDropDownList
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
+        ItemHeight = 0
         ItemIndex = 0
-        ParentFont = False
-        TabOrder = 2
-        Text = 'Flat Tip'
-        OnChange = ComboBoxGtipChange
         Items.Strings = (
           'Flat Tip'
           'Cone 30°'
@@ -1528,24 +1414,24 @@ object Form1: TForm1
           'Cone 90°'
           'Ball Tip'
         )
+        OnChange = ComboBoxGtipChange
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 2
+        Text = 'Flat Tip'
       end
       object ComboBoxGdia: TComboBox
         Left = 325
+        Height = 27
+        Hint = 'Simulated tool diameter'
         Top = 363
         Width = 75
-        Height = 21
-        Hint = 'Simulated tool diameter'
-        Style = csDropDownList
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
+        ItemHeight = 0
         ItemIndex = 1
-        ParentFont = False
-        TabOrder = 3
-        Text = '2-2,5 mm'
-        OnChange = ComboBoxGdiaChange
         Items.Strings = (
           '1-1,5 mm'
           '2-2,5 mm'
@@ -1554,14 +1440,18 @@ object Form1: TForm1
           '5 mm'
           '6 mm'
         )
+        OnChange = ComboBoxGdiaChange
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 3
+        Text = '2-2,5 mm'
       end
       object EditZoffs: TEdit
         Left = 437
+        Height = 23
+        Hint = 'Offset added to G-Gode Z output (does not affect jobs)'
         Top = 303
         Width = 56
-        Height = 21
-        Hint = 'Offset added to G-Gode Z output (does not affect jobs)'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
@@ -1572,239 +1462,234 @@ object Form1: TForm1
       end
       object CheckTLCprobe: TCheckBox
         Left = 325
-        Top = 145
-        Width = 227
-        Height = 13
+        Height = 22
         Hint = 'Use a separate fixed Z probe for tool length compensation. If not enabled, will use movable part probe as fixed probe.'
+        Top = 145
+        Width = 249
         Caption = 'Use TLC Probe Switch (required for ATC)'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        OnClick = CheckTLCprobeClick
         ParentFont = False
         TabOrder = 5
-        OnClick = CheckTLCprobeClick
       end
       object CheckPartProbeZ: TCheckBox
         Left = 325
-        Top = 122
-        Width = 182
-        Height = 13
+        Height = 22
         Hint = 'Use a movable Z probe to be placed on part'
+        Top = 122
+        Width = 204
         Caption = 'Use Floating Part Z Probe Switch'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        Font.Style = []
         ParentFont = False
         TabOrder = 6
       end
       object BitBtn9: TBitBtn
         Tag = 12
         Left = 119
+        Height = 25
         Top = 23
         Width = 26
-        Height = 25
         Caption = '+10'
-        TabOrder = 7
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 7
       end
       object BitBtn8: TBitBtn
         Tag = 11
         Left = 119
+        Height = 25
         Top = 51
         Width = 26
-        Height = 25
         Caption = '+1'
-        TabOrder = 8
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 8
       end
       object BitBtn7: TBitBtn
         Tag = 10
         Left = 119
+        Height = 25
         Top = 79
         Width = 26
-        Height = 25
         Caption = '+0.1'
-        TabOrder = 9
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 9
       end
       object BitBtn10: TBitBtn
         Tag = 13
         Left = 119
+        Height = 25
         Top = 129
         Width = 26
-        Height = 25
         Caption = '-0.1'
-        TabOrder = 10
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 10
       end
       object BitBtn11: TBitBtn
         Tag = 14
         Left = 119
+        Height = 25
         Top = 156
         Width = 26
-        Height = 25
         Caption = '-1'
-        TabOrder = 11
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 11
       end
       object BitBtn12: TBitBtn
         Tag = 15
         Left = 119
+        Height = 25
         Top = 183
         Width = 26
-        Height = 25
         Caption = '-10'
-        TabOrder = 12
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 12
       end
       object BitBtn1: TBitBtn
         Left = 145
+        Height = 25
         Top = 104
         Width = 26
-        Height = 25
         Caption = '+0.1'
-        TabOrder = 13
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 13
       end
       object BitBtn2: TBitBtn
         Tag = 1
         Left = 173
+        Height = 25
         Top = 104
         Width = 26
-        Height = 25
         Caption = '+1'
-        TabOrder = 14
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 14
       end
       object BitBtn3: TBitBtn
         Tag = 2
         Left = 202
+        Height = 25
         Top = 104
         Width = 26
-        Height = 25
         Caption = '+10'
-        TabOrder = 15
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 15
       end
       object BitBtn4: TBitBtn
         Tag = 3
         Left = 93
+        Height = 25
         Top = 104
         Width = 26
-        Height = 25
         Caption = '-0.1'
-        TabOrder = 16
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 16
       end
       object BitBtn5: TBitBtn
         Tag = 4
         Left = 65
+        Height = 25
         Top = 104
         Width = 26
-        Height = 25
         Caption = '-1'
-        TabOrder = 17
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 17
       end
       object BitBtn6: TBitBtn
         Tag = 5
         Left = 37
+        Height = 25
         Top = 104
         Width = 26
-        Height = 25
         Caption = '-10'
-        TabOrder = 18
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 18
       end
       object BitBtn15: TBitBtn
         Tag = 22
         Left = 269
+        Height = 25
         Top = 23
         Width = 26
-        Height = 25
         Caption = '+10'
-        TabOrder = 19
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 19
       end
       object BitBtn14: TBitBtn
         Tag = 21
         Left = 269
+        Height = 25
         Top = 51
         Width = 26
-        Height = 25
         Caption = '+1'
-        TabOrder = 20
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 20
       end
       object BitBtn13: TBitBtn
         Tag = 20
         Left = 269
+        Height = 25
         Top = 79
         Width = 26
-        Height = 25
         Caption = '+0.1'
-        TabOrder = 21
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 21
       end
       object BitBtn16: TBitBtn
         Tag = 23
         Left = 269
+        Height = 25
         Top = 129
         Width = 26
-        Height = 25
         Caption = '-0.1'
-        TabOrder = 22
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 22
       end
       object BitBtn17: TBitBtn
         Tag = 24
         Left = 269
+        Height = 25
         Top = 156
         Width = 26
-        Height = 25
         Caption = '-1'
-        TabOrder = 23
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 23
       end
       object BitBtn18: TBitBtn
         Tag = 25
         Left = 269
+        Height = 25
         Top = 183
         Width = 26
-        Height = 25
         Caption = '-10'
-        TabOrder = 24
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
+        TabOrder = 24
       end
       object EditFirstToolDia: TEdit
         Left = 325
+        Height = 23
+        Hint = 'This tool must be inserted before running job'
         Top = 46
         Width = 182
-        Height = 21
-        Hint = 'This tool must be inserted before running job'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGreen
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
@@ -1812,106 +1697,83 @@ object Form1: TForm1
         ParentFont = False
         ParentShowHint = False
         ReadOnly = True
-        ShowHint = False
         TabOrder = 25
         Text = '(dummy probe tool)'
       end
       object CheckToolChange: TCheckBox
         Left = 325
-        Top = 89
-        Width = 177
-        Height = 13
+        Height = 22
         Hint = 'Will use same tool for complete job if disabled'
+        Top = 89
+        Width = 168
         Caption = 'Enable Tool Change in Job'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
+        OnClick = CheckToolChangeClick
         ParentFont = False
         TabOrder = 26
-        OnClick = CheckToolChangeClick
       end
       object CheckUseATC2: TCheckBox
         Left = 325
+        Height = 22
         Top = 175
-        Width = 227
-        Height = 13
+        Width = 218
         Caption = 'Use Automatic Tool Changer (ATC)'
-        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
+        OnClick = CheckUseATC2Click
         ParentFont = False
         TabOrder = 27
-        OnClick = CheckUseATC2Click
       end
     end
   end
   object BtnRescan: TButton
     Left = 229
-    Top = 2
-    Width = 60
     Height = 24
     Hint = 'Open FTDI USB Device'
+    Top = 2
+    Width = 60
     Caption = 'Rescan'
-    Font.Charset = ANSI_CHARSET
+    Font.CharSet = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
+    OnClick = BtnRescanClick
     ParentFont = False
     TabOrder = 3
-    OnClick = BtnRescanClick
   end
   object BtnClose: TButton
     Left = 156
-    Top = 2
-    Width = 54
     Height = 24
     Hint = 'Close FTDI USB Device'
+    Top = 2
+    Width = 54
     Caption = 'Close'
-    Font.Charset = ANSI_CHARSET
+    Font.CharSet = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
+    OnClick = BtnCloseClick
     ParentFont = False
     TabOrder = 1
-    OnClick = BtnCloseClick
   end
   object ComboBox1: TComboBox
     Left = 25
+    Height = 25
     Top = 752
     Width = 89
-    Height = 21
-    Margins.Left = 0
-    Margins.Top = 0
-    Margins.Right = 0
-    Margins.Bottom = 0
-    AutoCloseUp = True
-    BevelEdges = []
-    BevelInner = bvNone
-    BevelOuter = bvNone
-    Style = csDropDownList
-    BiDiMode = bdRightToLeftNoAlign
-    Ctl3D = False
+    BidiMode = bdRightToLeftNoAlign
     DropDownCount = 20
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentBiDiMode = False
-    ParentCtl3D = False
-    ParentFont = False
-    ParentShowHint = False
-    ShowHint = True
-    TabOrder = 4
-    Visible = False
-    OnExit = ComboBox1Exit
-    OnSelect = ComboBox1Exit
+    ItemHeight = 0
     Items.Strings = (
       'OFF'
       'Pen 0'
@@ -1926,15 +1788,23 @@ object Form1: TForm1
       'Pen 9'
       'Drill 0'
     )
+    OnExit = ComboBox1Exit
+    OnSelect = ComboBox1Exit
+    ParentBidiMode = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    Style = csDropDownList
+    TabOrder = 4
+    Visible = False
   end
   object BtnEmergStop: TBitBtn
     Left = 496
-    Top = 590
-    Width = 98
     Height = 39
     Hint = 'Emergency Stop - Steps may be lost!'
+    Top = 590
+    Width = 98
     Caption = 'STOP'
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -14
     Font.Name = 'MS Sans Serif'
@@ -2039,70 +1909,40 @@ object Form1: TForm1
       FFFFFFFFECEEF9E6E6F4E4E5F4E9EAF7FDFDFEFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
     }
-    ParentFont = False
-    TabOrder = 5
     OnClick = BtnEmergencyStopClick
     OnMouseEnter = BtnCancelMouseEnter
     OnMouseLeave = BtnCancelMouseLeave
+    ParentFont = False
+    TabOrder = 5
   end
   object PanelBusy: TPanel
     Left = 871
-    Top = 5
-    Width = 50
     Height = 21
     Hint = 'Busy/Running'
+    Top = 5
+    Width = 50
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Busy'
     Color = clMaroon
-    Ctl3D = True
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentBackground = False
-    ParentCtl3D = False
+    ParentColor = False
     ParentFont = False
     TabOrder = 6
   end
   object ComboBoxTip: TComboBox
     Left = 118
+    Height = 25
+    Hint = 'Select Tool Tip'
     Top = 752
     Width = 89
-    Height = 21
-    Hint = 'Select Tool Tip'
-    Margins.Left = 0
-    Margins.Top = 0
-    Margins.Right = 0
-    Margins.Bottom = 0
-    AutoCloseUp = True
-    BevelEdges = []
-    BevelInner = bvNone
-    BevelOuter = bvNone
-    Style = csDropDownList
-    BiDiMode = bdRightToLeftNoAlign
-    Ctl3D = False
-    DoubleBuffered = False
+    BidiMode = bdRightToLeftNoAlign
     DropDownCount = 7
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clDefault
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentBiDiMode = False
-    ParentCtl3D = False
-    ParentDoubleBuffered = False
-    ParentFont = False
-    ParentShowHint = False
-    ShowHint = True
-    TabOrder = 7
-    Visible = False
-    OnChange = ComboBoxTipExit
-    OnExit = ComboBoxTipExit
-    OnKeyPress = ComboBoxTipKeyPress
-    OnMouseLeave = ComboBoxTipMouseLeave
-    OnSelect = ComboBoxTipExit
+    ItemHeight = 0
     Items.Strings = (
       'Flat Tip'
       'Cone 30°'
@@ -2112,200 +1952,180 @@ object Form1: TForm1
       'Ball Tip'
       'Drill'
     )
+    OnChange = ComboBoxTipExit
+    OnExit = ComboBoxTipExit
+    OnKeyPress = ComboBoxTipKeyPress
+    OnMouseLeave = ComboBoxTipMouseLeave
+    OnSelect = ComboBoxTipExit
+    ParentBidiMode = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    Style = csDropDownList
+    TabOrder = 7
+    Visible = False
   end
   object PanelRun: TPanel
     Left = 705
-    Top = 5
-    Width = 49
     Height = 21
     Hint = 'Machine is moving. Click panel to cancel HOLD state'
+    Top = 5
+    Width = 49
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Run'
     Color = 4194368
-    Ctl3D = True
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentBackground = False
-    ParentCtl3D = False
+    ParentColor = False
     ParentFont = False
     TabOrder = 8
     OnClick = PanelReadyClick
   end
   object PanelReady: TPanel
     Left = 649
-    Top = 5
-    Width = 50
     Height = 21
     Hint = 'Machine Idle. Click panel to cancel HOLD state'
+    Top = 5
+    Width = 50
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Ready'
     Color = 16384
-    Ctl3D = True
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentBackground = False
-    ParentCtl3D = False
+    ParentColor = False
     ParentFont = False
     TabOrder = 9
     OnClick = PanelReadyClick
   end
   object PanelAlarm: TPanel
     Left = 815
-    Top = 5
-    Width = 50
     Height = 21
     Hint = 'Steps missed or probing failed, run Home Cycle. Click to Unlock'
+    Top = 5
+    Width = 50
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Alarm'
     Color = 64
-    Ctl3D = True
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentBackground = False
-    ParentCtl3D = False
+    ParentColor = False
     ParentFont = False
     TabOrder = 10
     OnClick = PanelAlarmClick
   end
   object PanelHold: TPanel
     Left = 760
-    Top = 5
-    Width = 49
     Height = 21
     Hint = 'Feed hold/pause. Click panel to set HOLD state'
+    Top = 5
+    Width = 49
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Hold'
     Color = 4194304
-    Ctl3D = True
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentBackground = False
-    ParentCtl3D = False
+    ParentColor = False
     ParentFont = False
     TabOrder = 11
     OnClick = PanelHoldClick
   end
   object PanelZdone: TPanel
     Left = 367
-    Top = 548
-    Width = 20
     Height = 20
     Hint = 'Zero Z first before Run Job is blinking'
+    Top = 548
+    Width = 20
     BevelOuter = bvLowered
     BevelWidth = 2
     Color = 64
-    Ctl3D = True
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentBackground = False
-    ParentCtl3D = False
+    ParentColor = False
     ParentFont = False
     TabOrder = 12
   end
   object CheckBoxSim: TCheckBox
     Left = 485
-    Top = 37
-    Width = 115
-    Height = 17
+    Height = 22
     Hint = 'Job will be simulated only, no output to machine'
+    Top = 37
+    Width = 122
     Caption = 'Simulation only'
     Checked = True
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    OnClick = CheckBoxSimClick
     ParentFont = False
     State = cbChecked
     TabOrder = 14
-    OnClick = CheckBoxSimClick
   end
   object BtnConnect: TBitBtn
     Left = 82
+    Height = 24
     Top = 2
     Width = 68
-    Height = 24
     Caption = 'Connect'
     Default = True
     Enabled = False
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    OnClick = BtnConnectClick
     ParentFont = False
     TabOrder = 15
-    OnClick = BtnConnectClick
   end
   object PanelYdone: TPanel
     Left = 239
-    Top = 548
-    Width = 20
     Height = 20
     Hint = 'Zero Z first before Run Job is blinking'
+    Top = 548
+    Width = 20
     BevelOuter = bvLowered
     BevelWidth = 2
     Color = 64
-    Ctl3D = True
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentBackground = False
-    ParentCtl3D = False
+    ParentColor = False
     ParentFont = False
     TabOrder = 16
   end
   object PanelXdone: TPanel
     Left = 110
-    Top = 548
-    Width = 20
     Height = 20
     Hint = 'Zero Z first before Run Job is blinking'
+    Top = 548
+    Width = 20
     BevelOuter = bvLowered
     BevelWidth = 2
     Color = 64
-    Ctl3D = True
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentBackground = False
-    ParentCtl3D = False
+    ParentColor = False
     ParentFont = False
     TabOrder = 17
   end
   object Memo1: TMemo
     Left = 611
+    Height = 359
     Top = 58
     Width = 297
-    Height = 359
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
     Lines.Strings = (
       'GRBL G-Code messages'
     )
@@ -2315,47 +2135,42 @@ object Form1: TForm1
   end
   object PanelAlive: TPanel
     Left = 592
-    Top = 5
-    Width = 50
     Height = 21
     Hint = 'Machine Idle. Click if response stuck to exit receive loop.'
+    Top = 5
+    Width = 50
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Resp OK'
     Color = 16416
-    Ctl3D = True
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentBackground = False
-    ParentCtl3D = False
+    ParentColor = False
     ParentFont = False
     TabOrder = 19
     OnClick = PanelAliveClick
   end
   object sgATC: TStringGrid
     Left = 611
-    Top = 440
-    Width = 297
     Height = 193
     Hint = 'List of all Tools used in job. Right-click for disable/enable.'
+    Top = 440
+    Width = 297
     ColCount = 3
     DefaultRowHeight = 18
-    DrawingStyle = gdsClassic
     FixedCols = 0
-    RowCount = 21
-    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    GradientEndColor = cl3DLight
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine]
     ParentFont = False
+    RowCount = 21
     ScrollBars = ssNone
     TabOrder = 20
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'MS Sans Serif'
     OnDrawCell = sgATCDrawCell
     OnMouseDown = sgATCMouseDown
     ColWidths = (
@@ -2363,33 +2178,10 @@ object Form1: TForm1
       199
       62
     )
-    RowHeights = (
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-      18
-    )
   end
   object MainMenu1: TMainMenu
-    Left = 458
-    Top = 743
+    left = 458
+    top = 743
     object File1: TMenuItem
       Caption = '&File'
       Hint = 'File Commands'
@@ -2466,31 +2258,31 @@ object Form1: TForm1
     end
   end
   object ActionList1: TActionList
-    Left = 530
-    Top = 743
+    left = 530
+    top = 743
     object FileNew1: TAction
       Category = 'File'
       Caption = '&Neu'
       Hint = 'Neu|Neue Datei erstellen'
       ImageIndex = 6
-      ShortCut = 16462
       OnExecute = FileNew1Execute
+      ShortCut = 16462
     end
     object FileOpen1: TAction
       Category = 'File'
       Caption = 'Ö&ffnen'
       Hint = 'Öffnen|Datei öffnen'
       ImageIndex = 7
-      ShortCut = 16463
       OnExecute = JobOpenExecute
+      ShortCut = 16463
     end
     object FileSave1: TAction
       Category = 'File'
       Caption = '&Speichern'
       Hint = 'Speichern|Aktuelle Datei speichern'
       ImageIndex = 8
-      ShortCut = 16467
       OnExecute = JobSaveExecute
+      ShortCut = 16467
     end
     object FileSaveAs1: TAction
       Category = 'File'
@@ -2534,595 +2326,561 @@ object Form1: TForm1
     end
   end
   object ImageList1: TImageList
-    Left = 578
-    Top = 743
+    left = 578
+    top = 743
     Bitmap = {
-      494C01010F001100500010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
-      0000000000003600000028000000400000004000000001002000000000000040
+      4C690F0000001000000010000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      0000840000008400000000000000000000000000000000000000000000000000
+      000000000000000000FF000000000000000000000000000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000FF000000000000000000000000000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000FF000000000000000000000000000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000FF000000FF00000000000000FF000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000FF00000000000000FF00000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000FF000000FF000000FF00000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000840000FF000000FF840000FF00000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000840000FF00000000840000FF840000FF840000FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000840000FF840000FF840000FF00000000840000FF00000000000000008400
+      00FF000000000000000000000000000000000000000000000000000000008400
+      00FF0000000000000000840000FF00000000840000FF00000000000000008400
+      00FF000000000000000000000000000000000000000000000000000000008400
+      00FF0000000000000000840000FF00000000840000FF00000000000000008400
+      00FF000000000000000000000000000000000000000000000000000000008400
+      00FF0000000000000000840000FF0000000000000000840000FF840000FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000840000FF840000FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000FF000000FF000000FF0000
+      00FF000000FF000000FF00000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF000000FF000000FF000000000000000000000000000000000000
+      000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF000000FFFFFFFFFF000000FF0000000000000000000000000000
+      000000000000000000000000000000000000000000FFFFFFFFFF000000FF0000
+      00FFFFFFFFFF000000FF840000FF840000FF840000FF840000FF840000FF8400
+      00FF00000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8400
+      00FF840000FF000000000000000000000000000000FFFFFFFFFF000000FF0000
+      00FF000000FF000000FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8400
+      00FFFFFFFFFF840000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF840000FFFFFFFFFF000000FF000000FFFFFFFFFF8400
+      00FF840000FF840000FF840000FF00000000000000FFFFFFFFFF000000FF0000
+      00FF000000FF000000FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF840000FF00000000000000FFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF840000FFFFFFFFFF000000FF000000FF000000FF0000
+      00FF000000FFFFFFFFFF840000FF00000000000000FF000000FF000000FF0000
+      00FF000000FF000000FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF840000FF000000000000000000000000000000000000
+      00000000000000000000840000FFFFFFFFFF000000FF000000FF000000FF0000
+      00FF000000FFFFFFFFFF840000FF000000000000000000000000000000000000
+      00000000000000000000840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF840000FF000000000000000000000000000000000000
+      00000000000000000000840000FF840000FF840000FF840000FF840000FF8400
+      00FF840000FF840000FF840000FF000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
+      0000000000FF000000FF000000FF000000FF0000000000000000000000000000
+      000000000000000000000000000000000000000000FF000000FF000000FF0000
+      00FF000000FF00FFFFFF00FFFFFF000000FF000000FF000000FF000000FF0000
+      00FF000000000000000000000000000000FF008484FF848484FF008484FF0000
+      00FF00FFFFFF000000FF000000FF00FFFFFF000000FF848484FF008484FF8484
+      84FF000000FF0000000000000000000000FF848484FF848484FF000000FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF848484FF0084
+      84FF000000FF0000000000000000000000FF008484FF848484FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF848484FF8484
+      84FF000000FF0000000000000000000000FF848484FF008484FF848484FF0084
+      84FF848484FF008484FF848484FF008484FF848484FF008484FF848484FF0084
+      84FF000000FF0000000000000000000000FF008484FF848484FF008484FF8484
+      84FF008484FF840000FF840000FF840000FF840000FF840000FF840000FF8400
+      00FF000000FF0000000000000000000000FF848484FF008484FF848484FF0084
+      84FF848484FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8400
+      00FF840000FF0000000000000000000000FF008484FF848484FF008484FF8484
+      84FF008484FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8400
+      00FFFFFFFFFF840000FF00000000000000FF848484FF008484FF848484FF0084
+      84FF848484FF840000FFFFFFFFFF000000FF000000FF000000FFFFFFFFFF8400
+      00FF840000FF840000FF840000FF000000FF008484FF848484FF008484FF8484
+      84FF008484FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF840000FF000000FF848484FF008484FF848484FF0084
+      84FF848484FF840000FFFFFFFFFF000000FF000000FF000000FF000000FF0000
+      00FF000000FFFFFFFFFF840000FF00000000000000FF000000FF000000FF0000
+      00FF000000FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF840000FF000000000000000000000000000000000000
+      000000000000840000FF840000FF840000FF840000FF840000FF840000FF8400
+      00FF840000FF840000FF840000FF000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000DEA57BFF7B5A00FF7B5A00FF7B5A00FF7B5A00FFDEA5
+      7BFF0000000000000000000000000000000000000000946B08FF000000000000
+      0000DEA57BFF7B5A00FF7B5A00FFDEA57BFF0000000000000000DEA57BFF7B5A
+      00FFDEA57BFF00000000000000000000000000000000946B08FF946B08FFDEA5
+      7BFF7B5A00FFDEA57BFF0000000000000000000000000000000000000000DEA5
+      7BFF7B5A00FF00000000000000000000000000000000946B08FF7B5A00FF946B
+      08FFDEA57BFF0000000000000000000000000000000000000000000000000000
+      00007B5A00FF00000000000000000000000000000000946B08FF7B5A00FF7B5A
+      00FF946B08FF0000000000000000000000000000000000000000000000000000
+      00007B5A00FF00000000000000000000000000000000634A00FF634A00FF634A
+      00FF634A00FF634A00FF00000000000000000000000000000000000000000000
+      00007B5A00FF0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000DEA57BFF7B5A
+      00FF7B5A00FF7B5A00FF7B5A00FFDEA57BFF0000000000000000000000000000
+      00000000000000000000000000000000000000000000DEA57BFF7B5A00FFDEA5
+      7BFF0000000000000000DEA57BFF7B5A00FF7B5A00FFDEA57BFF000000000000
+      0000946B08FF000000000000000000000000000000007B5A00FFDEA57BFF0000
+      000000000000000000000000000000000000DEA57BFF7B5A00FFDEA57BFF946B
+      08FF946B08FF000000000000000000000000000000007B5A00FF000000000000
+      00000000000000000000000000000000000000000000DEA57BFF946B08FF7B5A
+      00FF946B08FF000000000000000000000000000000007B5A00FF000000000000
+      00000000000000000000000000000000000000000000946B08FF7B5A00FF7B5A
+      00FF946B08FF000000000000000000000000000000007B5A00FF000000000000
+      000000000000000000000000000000000000634A00FF634A00FF634A00FF634A
+      00FF634A00FF0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000FF000000FF0000
+      00FF000000000000000000000000000000000000000000000000000000000000
+      000000000000000000FF000000000000000000000000000000FF000000FF0000
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      00FF000000FF0000000000000000000000000000000000000000000000FF0000
+      00FF000000FF000000FF00000000000000000000000000000000000000FF0000
+      00FF000000000000000000000000000000000000000000000000000000000000
+      0000000000FF000000FF000000FF0000000000000000000000FF000000FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000FF000000FF000000FF000000FF000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000FF000000FF000000FF00000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000FF000000FF000000FF000000FF000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000FF000000FF000000FF0000000000000000000000FF000000FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00FF000000FF000000FF00000000000000000000000000000000000000FF0000
+      00FF000000000000000000000000000000000000000000000000000000FF0000
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      00FF0000000000000000000000000000000000000000000000FF000000FF0000
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      0000000000FF00000000000000000000000000000000000000FF000000FF0000
+      00FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF00000000000000000000
+      00000000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF000000000000
+      00000000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFF000000FF0000
+      00000000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF000000FF0000
+      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+      00FF0000000000000000000000000000000000000000000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000FF000000FF000000FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FF0000000000000000000000000000
+      00FF00000000000000FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000FF000000FF0000000000000000000000FF000000FF000000FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00FF000000FF000000FF00000000000000FF00FFFFFFFFFFFFFF00FFFFFF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000000000
+      0000000000000000000000000000000000FFFFFFFFFF00FFFFFFFFFFFFFF00FF
+      FFFFFFFFFFFF00FFFFFFFFFFFFFF00FFFFFFFFFFFFFF000000FF000000000000
+      0000000000000000000000000000000000FF00FFFFFFFFFFFFFF00FFFFFFFFFF
+      FFFF00FFFFFFFFFFFFFF00FFFFFFFFFFFFFF00FFFFFF000000FF000000000000
+      0000000000000000000000000000000000FFFFFFFFFF00FFFFFFFFFFFFFF00FF
+      FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF00FFFFFFFFFFFFFF00FFFFFF0000
+      00FF008484FF008484FF008484FF008484FF008484FF008484FF008484FF0084
+      84FF008484FF000000FF00000000000000FFFFFFFFFF00FFFFFF000000FF0084
+      84FF008484FF008484FF008484FF008484FF008484FF008484FF008484FF0084
+      84FF000000FF0000000000000000000000FF00FFFFFF000000FF008484FF0084
+      84FF008484FF008484FF008484FF008484FF008484FF008484FF008484FF0000
+      00FF000000000000000000000000000000FF000000FF008484FF008484FF0084
+      84FF008484FF008484FF008484FF008484FF008484FF008484FF000000FF0000
+      0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF0000000000000000000000FF008484FF000000FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
+      00FFC6C6C6FF000000FF0000000000000000000000FF008484FF000000FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
+      00FF000000FF000000FF0000000000000000000000FF008484FF000000FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
+      00FF008484FF000000FF0000000000000000000000FF008484FF000000FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
+      00FF008484FF000000FF0000000000000000000000FF008484FF000000FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
+      00FF008484FF000000FF0000000000000000000000FF008484FF000000FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
+      00FF008484FF000000FF0000000000000000000000FF008484FF008484FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0084
+      84FF008484FF000000FF0000000000000000000000FF008484FF008484FF0084
+      84FF008484FF008484FF008484FF008484FF008484FF008484FF008484FF0084
+      84FF008484FF000000FF0000000000000000000000FF008484FF008484FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF008484FF000000FF0000000000000000000000FF008484FF008484FF0000
+      00FF000000FF000000FF000000FF000000FF000000FFC6C6C6FFC6C6C6FF0000
+      00FF008484FF000000FF0000000000000000000000FF008484FF008484FF0000
+      00FF000000FF000000FF000000FF000000FF000000FFC6C6C6FFC6C6C6FF0000
+      00FF008484FF000000FF0000000000000000000000FF008484FF008484FF0000
+      00FF000000FF000000FF000000FF000000FF000000FFC6C6C6FFC6C6C6FF0000
+      00FF008484FF000000FF000000000000000000000000000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF0000000000000000000000000000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF00000000000000000000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFC6C6C6FF000000FF000000000000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF000000FF000000FF0000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF000000FF000000FF0000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF000000FF848484FFC6C6C6FFC6C6C6FF848484FF0000
+      00FF000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF000000FF848484FFFFFF00FFFFFF00FFC6C6C6FF848484FF8484
+      84FF000000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF000000FFC6C6C6FFFFFF00FFC6C6C6FFC6C6C6FF848484FFC6C6
+      C6FF000000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF848484FFC6C6
+      C6FF000000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFF000000FF848484FFC6C6C6FFC6C6C6FFFFFF00FF848484FF8484
+      84FF000000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF000000FF848484FFC6C6C6FFC6C6C6FF848484FF0000
+      00FF000000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF00000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000
+      0000000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      000000000000000000FF000000FF000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000FF000000FF000000FF000000FF000000FF0000
+      00FF00000000840000FF840000FF000000000000000000000000000000000000
+      000000000000000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
+      C6FF000000FF840000FF840000FF000000000000000000000000000000000000
+      0000000000FFC6C6C6FF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
+      C6FFC6C6C6FF840000FF840000FF000000FF000000FF000000FF000000FF0000
+      00FFC6C6C6FF000000FFC6C6C6FF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
+      C6FFC6C6C6FF840000FF840000FF000000FFFFFFFFFFFFFFFFFF000000FFC6C6
+      C6FF000000FFC6C6C6FF000000FFC6C6C6FF000000FFC6C6C6FFC6C6C6FFC6C6
+      C6FF000000FF840000FF840000FF000000FFFFFFFFFF000000FFC6C6C6FF0000
+      00FFFFFFFFFF000000FFC6C6C6FF000000FFC6C6C6FF000000FF000000FF0000
+      00FF00000000840000FF840000FF000000FFFFFFFFFF000000FF000000FFFFFF
+      FFFFFFFFFFFFFFFFFFFF000000FFC6C6C6FF000000FFFFFFFFFF000000FF0000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFF000000FF0000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000
+      0000000000000000000000000000000000FFFFFFFFFF000000FF000000FFFFFF
+      FFFF000000FF000000FF000000FF000000FF000000FFFFFFFFFF000000FF0000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000
+      0000000000000000000000000000000000FFFFFFFFFF000000FF000000FFFFFF
+      FFFF000000FF000000FF000000FF000000FF000000FFFFFFFFFF000000FF0000
+      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000
+      0000000000000000000000000000000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FF0000000000000000000000000000
+      000000000000000000000000000000000000840000FF840000FF840000FF8400
+      00FF840000FF0000000000000000000000FF000000FF00000000000000000000
+      0000000000000000000000000000840000FF840000FF840000FF840000FF8400
+      00FF840000FF840000FF00000000000000FF000000FF000000FF000000000000
+      00000000000000000000840000FF840000FF840000FF00000000000000000000
+      0000840000FF840000FF840000FF000000FF000000FF000000FF000000FF0000
+      00000000000000000000840000FF840000FF840000FF00000000000000000000
+      0000840000FF840000FF840000FF000000FF000000FF000000FF000000FF0000
+      00FF0000000000000000840000FF840000FF840000FF00000000000000000000
+      0000840000FF840000FF840000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF0000000000000000000000000000000000000000000000008400
+      00FF840000FF840000FF00000000000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF00000000000000000000000000000000840000FF8400
+      00FF840000FF0000000000000000000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF0000000000000000840000FF840000FF8400
+      00FF000000000000000000000000000000FF000000FF000000FF000000FF0000
+      00FF0000000000000000000000000000000000000000840000FF840000FF8400
+      00FF000000000000000000000000000000FF000000FF00000000000000FF0000
+      00FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000FF0000000000000000000000000000
+      00FF000000FF00000000000000000000000000000000840000FF840000FF8400
+      00FF000000000000000000000000000000000000000000000000000000000000
+      00FF000000FF00000000000000000000000000000000840000FF840000FF8400
+      00FF000000000000000000000000000000000000000000000000000000000000
+      0000000000FF000000FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000FF000000FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00FF000000FF000000FF000000FF000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000FF000000FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF000000FF00000000000000000000
+      000000000000000000000000000000000000000000FF848484FFFFFFFFFFFFFF
+      FFFFFFFFFFFFC6C6C6FFC6C6C6FFC6C6C6FF848484FF000000FF000000000000
+      000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFF
+      00FFFFFF00FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF000000000000
+      0000000000000000000000000000000000FFC6C6C6FFFFFFFFFFFFFF00FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF0000
+      0000000000000000000000000000000000FFC6C6C6FFFFFFFFFFFFFF00FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF0000
+      0000000000000000000000000000000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF0000
+      0000000000000000000000000000000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF0000
+      000000000000000000000000000000000000000000FFC6C6C6FFC6C6C6FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFFFFFFFFF000000FF000000000000
+      000000000000000000000000000000000000000000FF848484FFC6C6C6FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFFFFFFFFF848484FF000000FF000000000000
+      00000000000000000000000000000000000000000000000000FF000000FFC6C6
+      C6FFC6C6C6FFC6C6C6FFFFFFFFFF848484FF840000FF840000FF840000FF0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00FF000000FF000000FF000000FF840000FFC6C6C6FF840000FF840000FF8400
+      00FF000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000840000FFC6C6C6FF840000FF8400
+      00FF840000FF0000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000840000FFC6C6C6FF8400
+      00FF840000FF840000FF00000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000840000FFC6C6
+      C6FF840000FF840000FF00000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000008400
-      0000C6C6C6008400000084000000000000000000000000000000000000000000
-      0000000000000000000000000000000000008400000084000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000084000000C6C6
-      C600840000008400000084000000000000000000000000000000000000000000
-      0000000000000000000000000000840000008400000084000000000000000000
-      0000000000000000000000000000000000000000000000000000C6C6C600C6C6
-      C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C6000000
-      0000C6C6C6000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000084000000C6C6C6008400
-      0000840000008400000000000000000000000000000000000000000000000000
-      0000000000000000000084000000840000008400000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000C6C6C60000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000084000000C6C6C600840000008400
-      000084000000000000000000000000000000000000000000000084848400C6C6
-      C600FFFFFF008484840000000000840000000000000000000000000000000000
-      00000000840000000000000000000000000000000000C6C6C600C6C6C600C6C6
-      C600C6C6C600C6C6C600C6C6C60000FFFF0000FFFF0000FFFF00C6C6C600C6C6
-      C600000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000C6C6C600C6C6C600C6C6C600FFFFFF008484840084000000840000008400
-      0000000000000000000000000000000000000000000084848400C6C6C600C6C6
-      C600C6C6C600FFFFFF0084848400000000000000000000000000000000000000
-      84000000840000000000000000000000000000000000C6C6C600C6C6C600C6C6
-      C600C6C6C600C6C6C600C6C6C600848484008484840084848400C6C6C600C6C6
-      C60000000000C6C6C60000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000084848400C6C6
-      C600C6C6C600C6C6C600C6C6C600C6C6C600FFFFFF0084848400000000000000
-      00000000000000000000000000000000000000000000C6C6C600C6C6C600C6C6
-      C600C6C6C600C6C6C600FFFFFF00000000000000000000000000000084000000
-      8400000084000000840000008400000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000C6C6C600C6C6C600000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000C6C6C600C6C6
-      C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600FFFFFF00000000000000
-      00000000000000000000000000000000000000000000C6C6C600FFFFFF00FFFF
-      0000C6C6C600C6C6C600C6C6C600000000000000000000000000000000000000
-      84000000840000000000000000000000840000000000C6C6C600C6C6C600C6C6
-      C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C6000000
-      0000C6C6C60000000000C6C6C600000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000C6C6C600C6C6C600C6C6
-      C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C6000000
-      0000000000000000000000000000000000000000000084848400FFFFFF00FFFF
-      FF00C6C6C600C6C6C60084848400000000000000000000000000000000000000
-      0000000084000000000000000000000084000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000C6C6
-      C60000000000C6C6C60000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000C6C6C600C6C6C600C6C6
-      C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C6000000
-      000000000000000000000000000000000000000000000000000084848400C6C6
-      C600C6C6C6008484840000000000000000000000000000000000000000000000
-      000000000000000000000000000000008400000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
-      0000C6C6C60000000000C6C6C600000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000C6C6C600FFFFFF00FFFF
-      0000C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C6000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000008400000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000FFFFFF000000000000000000000000000000000000000000FFFFFF000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000C6C6C600FFFFFF00FFFF
-      0000C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C6000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000008400000000000000
-      0000000084000000000000000000000000000000000000000000000000000000
-      0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000FFFFFF00FFFF
-      FF00FFFF0000FFFF0000C6C6C600C6C6C600C6C6C600C6C6C600000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000008400000000000000
-      0000000084000000840000000000000000000000000000000000000000000000
-      000000000000FFFFFF000000000000000000000000000000000000000000FFFF
-      FF00000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000084848400FFFF
-      FF00FFFFFF00FFFFFF00C6C6C600C6C6C600C6C6C60084848400000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000084000000
-      8400000084000000840000008400000000000000000000000000000000000000
-      000000000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000C6C6C600C6C6C600C6C6C600C6C6C6000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000084000000840000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000084000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000008484000084
-      8400000000000000000000000000000000000000000000000000C6C6C600C6C6
-      C6000000000000848400000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
-      00000000000000000000000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000008484000084
-      8400000000000000000000000000000000000000000000000000C6C6C600C6C6
-      C6000000000000848400000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
-      00000000000000000000000000000000000000000000FFFFFF00000000000000
-      0000FFFFFF000000000000000000000000000000000000000000FFFFFF000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000840000008400
-      0000840000000000000000000000000000000000000000000000008484000084
-      8400000000000000000000000000000000000000000000000000C6C6C600C6C6
-      C6000000000000848400000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF000000000084848400C6C6C600C6C6C6008484
-      84000000000000000000000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000840000008400
-      0000840000000000000000000000000000000000000000000000008484000084
-      8400000000000000000000000000000000000000000000000000000000000000
-      00000000000000848400000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF000000000084848400C6C6C600C6C6C600FFFF00008484
-      84008484840000000000000000000000000000000000FFFFFF00000000000000
-      0000FFFFFF000000000000000000000000000000000000000000FFFFFF000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000008484000084
-      8400008484000084840000848400008484000084840000848400008484000084
-      84000084840000848400000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF0000000000C6C6C600C6C6C600C6C6C600C6C6C6008484
-      8400C6C6C60000000000000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000840000008400
-      0000840000000000000000000000000000000000000000000000008484000084
-      8400000000000000000000000000000000000000000000000000000000000000
-      00000084840000848400000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF0000000000C6C6C600FFFF0000C6C6C600C6C6C6008484
-      8400C6C6C60000000000000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000FFFFFF00FFFFFF000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000840000008400
-      0000840000000000000000000000000000000000000000000000008484000000
-      0000C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6
-      C6000000000000848400000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF000000000084848400FFFF0000FFFF0000C6C6C6008484
-      84008484840000000000000000000000000000000000FFFFFF00000000000000
-      0000FFFFFF00FFFFFF00FFFFFF0000000000C6C6C60000000000FFFFFF000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000008400
-      0000840000008400000000000000000000000000000000000000008484000000
-      0000C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6
-      C6000000000000848400000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF000000000084848400C6C6C600C6C6C6008484
-      84000000000000000000000000000000000000000000FFFFFF0000000000C6C6
-      C60000000000FFFFFF0000000000C6C6C60000000000C6C6C600000000000000
-      0000000000000000000084000000840000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000840000008400000084000000000000000000000000000000008484000000
-      0000C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6
-      C6000000000000848400000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
-      00000000000000000000000000000000000000000000FFFFFF00FFFFFF000000
-      0000C6C6C60000000000C6C6C60000000000C6C6C60000000000C6C6C600C6C6
-      C600C6C6C6000000000084000000840000000000000000000000000000000000
-      0000000000000000000000000000840000008400000084000000000000000000
-      0000000000008400000084000000840000000000000000000000008484000000
-      0000C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6
-      C6000000000000848400000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000C6C6C60000000000C6C6C60000000000C6C6C600C6C6C600C6C6
-      C600C6C6C600C6C6C60084000000840000000000000000000000000000000000
-      0000000000000000000000000000840000008400000084000000000000000000
-      0000000000008400000084000000840000000000000000000000008484000000
-      0000C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6
-      C6000000000000000000000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000C6C6C60000000000C6C6C600C6C6C600C6C6C600C6C6
-      C600C6C6C600C6C6C60084000000840000000000000000000000000000000000
-      0000000000000000000000000000840000008400000084000000000000000000
-      0000000000008400000084000000840000000000000000000000008484000000
-      0000C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6
-      C60000000000C6C6C600000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000C6C6C600000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000C6C6C600C6C6C600C6C6C600C6C6C600C6C6
-      C600C6C6C6000000000084000000840000000000000000000000000000000000
-      0000000000000000000000000000000000008400000084000000840000008400
-      0000840000008400000084000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000084000000840000000000000000000000000000000000
-      0000000000000000000000000000000000000000000084000000840000008400
-      0000840000008400000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00000000000000000000000000000000000000000000000000008484000084
-      8400008484000084840000848400008484000084840000848400008484000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00000000000000000000000000000000000000000000FFFF00000000000084
-      8400008484000084840000848400008484000084840000848400008484000084
-      8400000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF000000000000000000000000000000000000000000FFFFFF0000FFFF000000
-      0000008484000084840000848400008484000084840000848400008484000084
-      84000084840000000000000000000000000000000000000000007B5A00000000
-      00000000000000000000000000000000000000000000634A0000634A0000634A
-      0000634A0000634A000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00000000000000000000000000000000000000000000FFFF00FFFFFF0000FF
-      FF00000000000084840000848400008484000084840000848400008484000084
-      84000084840000848400000000000000000000000000000000007B5A00000000
-      0000000000000000000000000000000000000000000000000000946B08007B5A
-      00007B5A0000946B080000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF000000000000000000000000000000000000000000FFFFFF0000FFFF00FFFF
-      FF0000FFFF000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000000000007B5A00000000
-      0000000000000000000000000000000000000000000000000000DEA57B00946B
-      08007B5A0000946B080000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00000000000000000000000000000000000000000000FFFF00FFFFFF0000FF
-      FF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FFFF00000000000000
-      00000000000000000000000000000000000000000000000000007B5A0000DEA5
-      7B000000000000000000000000000000000000000000DEA57B007B5A0000DEA5
-      7B00946B0800946B080000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF000000000000000000000000000000000000000000FFFFFF0000FFFF00FFFF
-      FF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF00000000000000
-      0000000000000000000000000000000000000000000000000000DEA57B007B5A
-      0000DEA57B000000000000000000DEA57B007B5A00007B5A0000DEA57B000000
-      000000000000946B080000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00000000000000000000000000000000000000000000FFFF00FFFFFF0000FF
-      FF00000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000DEA5
-      7B007B5A00007B5A00007B5A00007B5A0000DEA57B0000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000FFFFFF000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000000000000000000000FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000008400000084000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000084000000840000008400000084000000840000008400
-      0000840000008400000084000000840000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000840000000000000000000000840000000000000000000000840000008400
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000840000008400000084000000840000008400
-      0000840000008400000084000000840000000000000000000000000000000000
-      0000000000000000000084000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00840000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000840000000000000000000000840000000000000084000000000000000000
-      0000840000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000084000000FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00840000000000000084848400008484008484
-      8400008484008484840084000000FFFFFF000000000000000000000000000000
-      00000000000000000000FFFFFF00840000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000840000000000000000000000840000000000000084000000000000000000
-      0000840000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000084000000FFFFFF0000000000000000000000
-      00000000000000000000FFFFFF00840000000000000000848400848484000084
-      8400848484000084840084000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00840000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000008400000084000000840000000000000084000000000000000000
-      0000840000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000084000000FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00840000000000000084848400008484008484
-      8400008484008484840084000000FFFFFF00000000000000000000000000FFFF
-      FF00840000008400000084000000840000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000840000000000000084000000840000008400
-      0000000000000000000000000000000000000000000000000000FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF0084000000FFFFFF0000000000000000000000
-      00000000000000000000FFFFFF00840000000000000000848400848484000084
-      8400848484000084840084000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF0084000000FFFFFF0084000000000000000000000000000000634A0000634A
-      0000634A0000634A0000634A0000000000000000000000000000000000000000
-      0000000000007B5A000000000000000000000000000000000000000000000000
-      0000000000000000000000000000840000000000000084000000000000000000
-      0000000000000000000000000000000000000000000000000000FFFFFF000000
-      000000000000000000000000000084000000FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF00840000000000000084848400008484008484
-      8400008484008484840084000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00840000008400000000000000000000000000000000000000946B08007B5A
-      00007B5A0000946B080000000000000000000000000000000000000000000000
-      0000000000007B5A000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF0084000000FFFFFF000000000000000000FFFF
-      FF00840000008400000084000000840000000000000000848400848484000084
-      8400848484000084840084000000840000008400000084000000840000008400
-      0000840000000000000000000000000000000000000000000000946B08007B5A
-      0000946B0800DEA57B0000000000000000000000000000000000000000000000
-      0000000000007B5A000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000FFFFFF000000
-      000000000000000000000000000084000000FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF0084000000FFFFFF0084000000000000000000000084848400008484008484
-      8400008484008484840000848400848484000084840084848400008484008484
-      8400008484000000000000000000000000000000000000000000946B0800946B
-      0800DEA57B007B5A0000DEA57B00000000000000000000000000000000000000
-      0000DEA57B007B5A000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF00FFFFFF0084000000FFFFFF00FFFFFF00FFFFFF00FFFF
-      FF00840000008400000000000000000000000000000000848400848484000000
-      0000000000000000000000000000000000000000000000000000000000008484
-      8400848484000000000000000000000000000000000000000000946B08000000
-      000000000000DEA57B007B5A00007B5A0000DEA57B000000000000000000DEA5
-      7B007B5A0000DEA57B0000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000FFFFFF000000
-      000000000000FFFFFF0000000000840000008400000084000000840000008400
-      0000840000000000000000000000000000000000000084848400848484000000
-      0000C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600C6C6C600000000008484
-      8400008484000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000DEA57B007B5A00007B5A00007B5A00007B5A
-      0000DEA57B000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF0000000000FFFFFF000000000000000000000000000000
-      0000000000000000000000000000000000000000000000848400848484000084
-      84000000000000FFFF00000000000000000000FFFF0000000000848484000084
-      8400848484000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000FFFFFF00FFFF
-      FF00FFFFFF00FFFFFF0000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000FFFF0000FFFF000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000424D3E000000000000003E000000
-      2800000040000000400000000100010000000000000200000000000000000000
-      000000000000000000000000FFFFFF00FFF3FFFFFFFF0000FFE1FF3FC0070000
-      FFC1FE3F80030000FF83C07F00010000F00780F700010000C00F00E700010000
-      801F00C100000000801F00E600000000000F00F680000000000F81FEC0000000
-      000FC3BFE0010000000FFFB7E0070000801FFFB3F0070000801FFFC1F0030000
-      C03FFFF3F8030000F0FFFFF7FFFF0000FFFFFFFFFFFFFFFFC001000C000FF9FF
-      80010008000FF9FF80010001000FF3C780010003000F73C780010003000F27FF
-      80010003000F07C780010003000F00C780010003000F01E380010007000403F1
-      8001000F000006388001000F00000E388001000FF8001E388001001FFC003F01
-      8001003FFE047F83FFFF007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFEFFDC007001FFFFFC7FFC007000FFFFFC3FBC0070007FFFFE3F7C0070003
-      DF83F1E7C0070001DFC3F8CFC0070000DFC3FC1FC007001FCF83FE3FC007001F
-      C61BFC1FC007001FE07FF8CFC0078FF1FFFFE1E7C00FFFF9FFFFC3F3C01FFF75
-      FFFFC7FDC03FFF8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9FFFFFFFC00FFFF
-      F6CFFE008000FFFFF6B7FE000000FFFFF6B7FE000000FFFFF8B780000000FFFF
-      FE8F80000001C1FBFE3F80000003C3FBFF7F80000003C3FBFE3F80010003C1F3
-      FEBF80030003D863FC9F80070003FE07FDDF807F0003FFFFFDDF80FF8007FFFF
-      FDDF81FFF87FFFFFFFFFFFFFFFFFFFFF00000000000000000000000000000000
-      000000000000
+      00FF840000FF0000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      84FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      84FF000084FF0000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000084FF000084FF0000
+      84FF000084FF000084FF00000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000084FF00000000000000000000
+      84FF000084FF0000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000084FF00000000000000000000
+      84FF0000000000000000000000000000000000000000000000FF000000FF0000
+      00FF000000FF000000000000000000000000000084FF00000000000000000000
+      000000000000000000000000000000000000000000FF848484FFC6C6C6FFC6C6
+      C6FF848484FF000000FF00000000000000000000000000000000000000000000
+      00000000000000000000000084FF000000FF848484FFFFFFFFFFFFFFFFFFC6C6
+      C6FFC6C6C6FF848484FF000000FF000000000000000000000000000000000000
+      84FF0000000000000000000084FF000000FFC6C6C6FFFFFFFFFFFFFF00FFC6C6
+      C6FFC6C6C6FFC6C6C6FF000000FF000000000000000000000000000084FF0000
+      84FF0000000000000000000084FF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
+      C6FFC6C6C6FFFFFFFFFF000000FF0000000000000000000084FF000084FF0000
+      84FF000084FF000084FF00000000000000FF848484FFC6C6C6FFC6C6C6FFC6C6
+      C6FFFFFFFFFF848484FF000000FF000000000000000000000000000084FF0000
+      84FF00000000000000000000000000000000000000FF848484FFC6C6C6FFFFFF
+      FFFF848484FF000000FF840000FF000000000000000000000000000000000000
+      84FF0000000000000000000000000000000000000000000000FF000000FF0000
+      00FF000000FF840000FF840000FF840000FF0000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000840000FF840000FF840000FF00000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000840000FF840000FF00000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF0000000000000000000000000000000000000000000000000000
+      00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFF000000FF0000000000000000000000000000000000000000000000000000
+      00FFFFFFFFFF000000FF000000FF000000FF000000FF000000FFFFFFFFFF0000
+      00FF000000000000000000000000000000000000000000000000000000FFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
+      00FF000000000000000000000000000000000000000000000000000000FFFFFF
+      FFFF000000FF000000FF000000FF000000FF000000FFFFFFFFFF000000FF0000
+      00FF000000FF000000FF000000000000000000000000000000FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFC6C6
+      C6FF000000FFC6C6C6FF000000FF00000000000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FFC6C6C6FF0000
+      00FFC6C6C6FF000000FF000000FF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FFC6C6
+      C6FF000000FFC6C6C6FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FFC6C6C6FFC6C6C6FF000000FF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
+      C6FFC6C6C6FFC6C6C6FF848484FF848484FF848484FFC6C6C6FFC6C6C6FF0000
+      00FFC6C6C6FF000000FF00000000000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
+      C6FFC6C6C6FFC6C6C6FF00FFFFFF00FFFFFF00FFFFFFC6C6C6FFC6C6C6FF0000
+      00FF000000FF000000FF00000000000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FFC6C6C6FF000000FF0000000000000000000000FFC6C6C6FFC6C6C6FFC6C6
+      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FFC6C6
+      C6FF000000FF00000000000000000000000000000000000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000
     }
   end
   object OpenFileDialog: TOpenDialog
     Filter = 'Vector/Drill Files|*.plt;*.hpgl; *.hpg;*.pen;*.drl;*.svg|G-Code Files|*.tap; *.dat; *.nc?; *.gc?; *.ngc|GRBL Setup|*.grb|Gerber Files|*.gbr|All Files|*.*'
     FilterIndex = 0
     Options = [ofFileMustExist, ofEnableSizing]
-    Left = 346
-    Top = 743
+    left = 346
+    top = 743
   end
   object TimerDraw: TTimer
     Interval = 100
     OnTimer = TimerDrawElapsed
-    Left = 698
-    Top = 743
-  end
-  object XPManifest1: TXPManifest
-    Left = 794
-    Top = 743
+    left = 698
+    top = 743
   end
   object OpenJobDialog: TOpenDialog
     Filter = 'Job Files|*.job|All Files|*.*'
     FilterIndex = 0
     Options = [ofHideReadOnly, ofFileMustExist, ofEnableSizing]
-    Left = 298
-    Top = 743
+    left = 298
+    top = 743
   end
   object SaveJobDialog: TSaveDialog
-    DefaultExt = 'job'
-    Filter = 'JOB File|*.job|GRBL Setup|*.grb|All Files|*.*'
     Title = 'Job File Save'
-    Left = 402
-    Top = 743
+    DefaultExt = '.job'
+    Filter = 'JOB File|*.job|GRBL Setup|*.grb|All Files|*.*'
+    left = 402
+    top = 743
   end
   object ColorDialog1: TColorDialog
-    Left = 250
-    Top = 743
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 250
+    top = 743
   end
   object TimerStatus: TTimer
     Interval = 25
     OnTimer = TimerStatusElapsed
-    Left = 642
-    Top = 743
+    left = 642
+    top = 743
   end
   object TimerBlink: TTimer
     Interval = 350
     OnTimer = TimerBlinkTimer
-    Left = 746
-    Top = 743
+    left = 746
+    top = 743
   end
   object PopupMenuATC: TPopupMenu
-    Left = 856
-    Top = 464
+    left = 856
+    top = 464
     object pu_ToolEnable: TMenuItem
       Caption = 'Tool enabled'
       OnClick = pu_ToolEnableClick

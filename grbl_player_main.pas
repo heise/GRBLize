@@ -61,9 +61,6 @@ type
     OpenFileDialog: TOpenDialog;
     TimerDraw: TTimer;
     BtnClose: TButton;
-    {$IFnDEF FPC}
-    XPManifest1: TXPManifest;
-    {$ENDIF}
     N7: TMenuItem;
     OpenJobDialog: TOpenDialog;
     SaveJobDialog: TSaveDialog;
@@ -339,9 +336,11 @@ type
     procedure pu_ToolEnableClick(Sender: TObject);
     procedure BtnMoveMillCenterClick(Sender: TObject);
     procedure BtnMoveZzeroClick(Sender: TObject);
-
   private
     { Private declarations }
+    {$IFnDEF FPC}
+    XPManifest1: TXPManifest;
+    {$ENDIF}
   public
     { Public declarations }
   end;
@@ -802,6 +801,9 @@ var
 
 begin
   StartupDone:= false;
+  {$IFnDEF FPC}
+  XPManifest1:=TXPManifest.Create(Self);
+  {$ENDIF}
   Show;
   PlaySound('SYSTEMWELCOME', 0, SND_ASYNC);
   StopWatch:= TStopWatch.Create() ;

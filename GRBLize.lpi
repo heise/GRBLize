@@ -97,7 +97,8 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <SearchPaths>
-      <IncludeFiles Value="ftdiclass;DirectX;..\LKomponenten\glscene\Source;..\LKomponenten\glscene\Source\base;..\LKomponenten\glscene\Source\fileformats;..\LKomponenten\glscene\Source\cgshaders;..\LKomponenten\glscene\Source\platform;$(ProjOutDir)"/>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="ftdiclass"/>
     </SearchPaths>
     <Parsing>
       <SyntaxOptions>
