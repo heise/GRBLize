@@ -114,7 +114,9 @@ begin
     Form1.EditFirstToolDia.Text:= pen_description(atcArray[FirstToolUsed].pen)
   else
     Form1.EditFirstToolDia.Text:=  '(no tools, job empty)';
+  {$IFnDEF FPC}
   GLSsetToolToATCidx(FirstToolUsed);
+  {$ENDIF}
   ForceToolPositions(grbl_wpos.x, grbl_wpos.y, grbl_wpos.z);
 end;
 
@@ -123,7 +125,9 @@ procedure ResetATC;
 begin
   ClearATCarray;
   UpdateATCsg;
+  {$IFnDEF FPC}
   GLSneedsATCupdateTimeout:= 1;
+  {$ENDIF}
 end;
 
 procedure TForm1.sgATCDrawCell(Sender: TObject; ACol, ARow: Integer;
@@ -231,9 +235,11 @@ begin
     atcArray[i].inslot:= atcArray[i].enable;
   if (my_dlg_result = mrYES) then begin
     ToolInSpindle:= atc_idx_new;
+    {$IFnDEF FPC}
     if Form1.Show3DPreview1.checked then
       GLSupdateATC;
     GLSsetToolToATCidx(atc_idx_new);
+    {$ENDIF}
     UpdateATCsg;
     Form1.sgATC.Col:= 1;
     Form1.sgATC.row:= atc_idx_new;
@@ -281,10 +287,12 @@ begin
     atcArray[atc_idx].inslot:= true;
     atcArray[atc_idx].enable:= old_enable;
   end;
+  {$IFnDEF FPC}
   if Form1.Show3DPreview1.Checked then begin
     GLSupdateATC;
     GLSsetToolDia(0, 0);
   end;
+  {$ENDIF}
   grbl_addStr('G4 P0'); // dwell
   grbl_moveZ(0, true);     // move Z up
   SendListToGrbl;
@@ -336,10 +344,12 @@ begin
   atcArray[atc_idx].inslot:= false;
   grbl_moveZ(0, true);  // move Z up
   SendListToGrbl;
+  {$IFnDEF FPC}
   if Form1.Show3DPreview1.Checked then begin
     GLSupdateATC;
     GLSsetToolToATCidx(atc_idx);
   end;
+  {$ENDIF}
   if do_tlc then
     DoTLCandConfirm(false, atc_idx);
   ToolInSpindle:= atc_idx;

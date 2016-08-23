@@ -74,7 +74,11 @@ begin
         aRect := Rect;
         aStr:= Cells[ACol, ARow];
         aRect.Top := aRect.Top + 1; // adjust top to center vertical
+        {$IFnDEF FPC}
         DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
+        {$ELSE}
+        //TODO:Draw Text
+        {$ENDIF}
       end;
     9:  // Shape
       begin
@@ -91,7 +95,11 @@ begin
         Font.Color:= ShapeColorArray[ord(my_shape)];
         aStr:= ShapeArray[ord(my_shape)];
         aRect.Top := aRect.Top + 1; // adjust top to center vertical
+        {$IFnDEF FPC}
         DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
+        {$ELSE}
+        //TODO:Draw Text
+        {$ENDIF}
       end;
     11:  // ATC, nicht aktiv
       begin
@@ -118,7 +126,11 @@ begin
         my_tooltip:= job.pens[aRow-1].tooltip;
         aStr:= ToolTipArray[my_tooltip];
         aRect.Top := aRect.Top + 1; // adjust top to center vertical
+        {$IFnDEF FPC}
         DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
+        {$ELSE}
+        //TODO:Draw Text
+        {$ENDIF}
       end;
     end; //case
   end;
@@ -130,8 +142,10 @@ begin
     SgPens.Repaint;
     PenGridListToJob;
     param_change;
+    {$IFnDEF FPC}
     GLSneedsRedrawTimeout:= 2;
     GLSneedsATCupdateTimeout:= 3;
+    {$ENDIF}
   end;
 end;
 
@@ -217,7 +231,9 @@ begin
     param_change; // setzt Timeouts über ListBlocks auf 1
     Repaint;
     if (my_Col = 1) or (my_Col = 9) then begin
+      {$IFnDEF FPC}
       Form4.FormRefresh(nil);  // sofortiges Update für Enable und Shape
+      {$ENDIF}
     end;
   end;
 end;
@@ -250,8 +266,10 @@ begin
     end;
   ComboBoxTip.hide;
   NeedsRedraw:= true;
+  {$IFnDEF FPC}
   GLSneedsRedrawTimeout:= 1;
   GLSneedsATCupdateTimeout:= 1;
+  {$ENDIF}
 end;
 
 procedure TForm1.ComboBoxTipMouseLeave(Sender: TObject);

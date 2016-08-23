@@ -2,9 +2,12 @@
 
 interface
 
-uses ShellApi, Winapi.Windows, MMsystem, System.SysUtils, System.Classes,
-  Vcl.Graphics, Vcl.Forms,
-  Vcl.Controls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Dialogs,
+uses
+  {$IFnDEF FPC}
+  Windows, Messages, MMsystem, ShellApi,
+  {$ENDIF}
+  SysUtils, Classes, Graphics, Forms, FileUtil,
+  Controls, StdCtrls, Buttons, ExtCtrls, Dialogs,
   import_files, grbl_com;
 
 type
@@ -52,6 +55,7 @@ implementation
 uses grbl_player_main;
 
 function CopyFileEx(const ASource, ADest: string; ARenameCheck: boolean = false): boolean;
+{$IFnDEF FPC}
 var
   sh: TSHFileOpStruct;
 begin
@@ -64,6 +68,10 @@ begin
   if ARenameCheck then
     sh.fFlags := sh.fFlags or fof_RenameOnCollision;
   Result:=ShFileOperation(sh)=0;
+{$ELSE}
+begin
+  Result := CopyFile(ASource,ADest,False);
+{$ENDIF}
 end;
 
 function RenameFileBlanks(my_file: String): String;
@@ -206,10 +214,14 @@ begin { Mirror }
       Dest.Top := 0;
       Dest.Right := -MemBmp.Width;
       Dest.Bottom := MemBmp.Height;
+
+      {$IFnDEF FPC}
       StretchBlt(MemBmp.Canvas.Handle, Dest.Left, Dest.Top, Dest.Right, Dest.Bottom,
                  MemBmp.Canvas.Handle, 0, 0, MemBmp.Width, MemBmp.Height,
                  SRCCOPY);
-
+      {$ELSE}
+      MemBmp.Canvas.StretchDraw(Dest,MemBmp);
+      {$ENDIF}
       my_picture.Graphic.Assign(MemBmp);
     finally
       FreeAndNil(MemBmp)

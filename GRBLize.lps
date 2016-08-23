@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="72">
+      <Unit0>
+        <Filename Value="GRBLize.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos Y="29"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="ABOUT.PAS"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="24"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="grbl_com.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="800"/>
+        <CursorPos X="2" Y="828"/>
+        <UsageCount Value="24"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="deviceselect.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="24"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="import_files.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="3" Y="12"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="clipper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="25"/>
+        <CursorPos X="9" Y="56"/>
+        <UsageCount Value="24"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="drawing_window.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1092"/>
+        <CursorPos X="12" Y="1109"/>
+        <UsageCount Value="24"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="cam_view.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form3"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="339"/>
+        <CursorPos X="25" Y="380"/>
+        <UsageCount Value="24"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="grbl_player_main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="2353"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="ftdiclass\blinklist.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="84"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="ftdiclass\bsearchtree.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="ftdiclass\FTDIchip.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="26" Y="20"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="ftdiclass\FTDIdll.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="13" Y="20"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="ftdiclass\FTDIthread.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="76"/>
+        <CursorPos Y="120"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="ftdiclass\FTDItypes.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="glscene_view.pas"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5"/>
+        <CursorPos X="3" Y="22"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="DirectX\DirectDraw.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="824"/>
+        <CursorPos X="14" Y="846"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="DirectX\DirectShow9.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="DirectX\DirectSound.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="DirectX\DXTypes.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="DirectX\Direct3D9.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="VFrames.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="57"/>
+        <CursorPos X="16" Y="79"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="drill_import.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="163"/>
+        <CursorPos X="15" Y="4"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="hpgl_import.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="10" Y="147"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="page_job.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="18" Y="375"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\LKomponenten\glscene\Source\base\glcolor.pas"/>
+        <UnitName Value="GLColor"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="..\LKomponenten\glscene\Source\base\glcoordinates.pas"/>
+        <UnitName Value="GLCoordinates"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="..\LKomponenten\glscene\Source\cgshaders\cg.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="..\LKomponenten\glscene\Source\cgshaders\cggl.pas"/>
+        <UnitName Value="cgGL"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="..\LKomponenten\glscene\Source\cgshaders\glcgshader.pas"/>
+        <UnitName Value="GLCgShader"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="..\LKomponenten\glscene\Source\fileformats\glfile3ds.pas"/>
+        <UnitName Value="GLFile3DS"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="..\LKomponenten\glscene\Source\glcadencer.pas"/>
+        <UnitName Value="GLCadencer"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="..\LKomponenten\glscene\Source\glextrusion.pas"/>
+        <UnitName Value="GLExtrusion"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="..\LKomponenten\glscene\Source\glfpsmovement.pas"/>
+        <UnitName Value="GLFPSMovement"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="..\LKomponenten\glscene\Source\glgeomobjects.pas"/>
+        <UnitName Value="GLGeomObjects"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="..\LKomponenten\glscene\Source\glgraph.pas"/>
+        <UnitName Value="GLGraph"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="..\LKomponenten\glscene\Source\glgui.pas"/>
+        <UnitName Value="GLGui"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="..\LKomponenten\glscene\Source\glmaterial.pas"/>
+        <UnitName Value="GLMaterial"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2373"/>
+        <CursorPos X="21" Y="2394"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="..\LKomponenten\glscene\Source\glmultipolygon.pas"/>
+        <UnitName Value="GLMultiPolygon"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="..\LKomponenten\glscene\Source\glnavigator.pas"/>
+        <UnitName Value="GLNavigator"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="..\LKomponenten\glscene\Source\globjects.pas"/>
+        <UnitName Value="GLObjects"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="..\LKomponenten\glscene\Source\glscene.pas"/>
+        <UnitName Value="GLScene"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8342"/>
+        <CursorPos X="20" Y="8363"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="..\LKomponenten\glscene\Source\glsmoothnavigator.pas"/>
+        <UnitName Value="GLSmoothNavigator"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="..\LKomponenten\glscene\Source\glspacetext.pas"/>
+        <UnitName Value="GLSpaceText"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="..\LKomponenten\glscene\Source\gltexture.pas"/>
+        <UnitName Value="GLTexture"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4331"/>
+        <CursorPos X="16" Y="4353"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="..\LKomponenten\glscene\Source\glutils.pas"/>
+        <UnitName Value="GLUtils"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="512"/>
+        <CursorPos X="17" Y="534"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="..\LKomponenten\glscene\Source\glvectorfileobjects.pas"/>
+        <UnitName Value="GLVectorFileObjects"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="..\LKomponenten\glscene\Source\glwindows.pas"/>
+        <UnitName Value="GLWindows"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="..\LKomponenten\glscene\Source\glzbuffer.pas"/>
+        <UnitName Value="GLzBuffer"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="..\LKomponenten\glscene\Source\platform\glcrossplatform.pas"/>
+        <UnitName Value="GLCrossPlatform"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="..\LKomponenten\glscene\Source\platform\glkeyboard.pas"/>
+        <UnitName Value="GLKeyboard"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="..\LKomponenten\glscene\Source\platform\glwin32viewer.pas"/>
+        <UnitName Value="GLWin32Viewer"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="17"/>
+        <CursorPos X="4" Y="39"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="UGDIPlus.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="VSample.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="130"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="grbl_player_main.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3141"/>
+        <CursorPos Y="3220"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="ConverterBackup\glscene_view.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17" Y="21"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="ConverterBackup\glwin32viewer.pas"/>
+        <UnitName Value="GLWin32Viewer"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="194"/>
+        <CursorPos X="6" Y="216"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="ConverterBackup\glscene.pas"/>
+        <UnitName Value="GLScene"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="140"/>
+        <CursorPos X="52" Y="162"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="GLScene\Source\cgshaders\cg.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="GLScene\Source\cgshaders\cggl.pas"/>
+        <UnitName Value="cgGL"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="117"/>
+        <CursorPos X="38" Y="130"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="GLScene\Source\glmaterial.pas"/>
+        <UnitName Value="GLMaterial"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="510"/>
+        <CursorPos X="35" Y="525"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="page_blocks.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="72" Y="145"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="page_pens.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="12" Y="191"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="page_run.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="78"/>
+        <CursorPos X="11" Y="95"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="c:\lazarus144\fpc\2.6.4\source\rtl\objpas\sysutils\sysinth.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="3" Y="33"/>
+        <UsageCount Value="10"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="gcode_interpreter.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="161"/>
+        <CursorPos X="12" Y="228"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="F:\usr\share\lazarus\1.4.4\lcl\stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="page_grblsetup.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos X="15" Y="20"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="ftdiclass\unitfrmasyncdemo.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="21" Y="15"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="ftdiclass\unitfrmenumdemo.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="31" Y="15"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="ftdiclass\unitfrmsyncdemo.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23" Y="16"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="F:\usr\share\lazarus\1.4.4\lcl\grids.pas"/>
+        <UnitName Value="Grids"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9126"/>
+        <CursorPos X="68" Y="9143"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit71>
+    </Units>
+    <JumpHistory Count="18" HistoryIndex="17">
+      <Position1>
+        <Filename Value="import_files.pas"/>
+      </Position1>
+      <Position2>
+        <Filename Value="import_files.pas"/>
+        <Caret Line="237" TopLine="220"/>
+      </Position2>
+      <Position3>
+        <Filename Value="GRBLize.lpr"/>
+        <Caret Line="31" Column="29"/>
+      </Position3>
+      <Position4>
+        <Filename Value="GRBLize.lpr"/>
+        <Caret Line="29"/>
+      </Position4>
+      <Position5>
+        <Filename Value="GRBLize.lpr"/>
+        <Caret Line="13" Column="22"/>
+      </Position5>
+      <Position6>
+        <Filename Value="GRBLize.lpr"/>
+        <Caret Line="13" Column="22"/>
+      </Position6>
+      <Position7>
+        <Filename Value="GRBLize.lpr"/>
+        <Caret Line="35"/>
+      </Position7>
+      <Position8>
+        <Filename Value="grbl_player_main.pas"/>
+        <Caret Line="18" Column="3"/>
+      </Position8>
+      <Position9>
+        <Filename Value="grbl_player_main.pas"/>
+        <Caret Line="436" Column="105" TopLine="421"/>
+      </Position9>
+      <Position10>
+        <Filename Value="grbl_player_main.pas"/>
+        <Caret Line="440" Column="41" TopLine="421"/>
+      </Position10>
+      <Position11>
+        <Filename Value="grbl_player_main.pas"/>
+        <Caret Line="428" Column="157" TopLine="421"/>
+      </Position11>
+      <Position12>
+        <Filename Value="import_files.pas"/>
+        <Caret Line="245" TopLine="228"/>
+      </Position12>
+      <Position13>
+        <Filename Value="import_files.pas"/>
+        <Caret Line="12" Column="3"/>
+      </Position13>
+      <Position14>
+        <Filename Value="grbl_player_main.pas"/>
+        <Caret Line="67" Column="5" TopLine="49"/>
+      </Position14>
+      <Position15>
+        <Filename Value="grbl_player_main.pas"/>
+        <Caret Line="66" Column="63" TopLine="49"/>
+      </Position15>
+      <Position16>
+        <Filename Value="grbl_player_main.pas"/>
+        <Caret Line="57" Column="3"/>
+      </Position16>
+      <Position17>
+        <Filename Value="grbl_player_main.pas"/>
+        <Caret Line="1640" Column="3" TopLine="1609"/>
+      </Position17>
+      <Position18>
+        <Filename Value="grbl_player_main.pas"/>
+        <Caret Line="2" TopLine="2"/>
+      </Position18>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

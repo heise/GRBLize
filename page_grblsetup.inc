@@ -15,6 +15,7 @@ begin
   end;
 end;
 
+{$IFnDEF FPC}
 procedure OpenFTDIport;
 var
   vid, pid: word;
@@ -37,7 +38,7 @@ begin
       sleep(500);  // Arduino Startup Time
     end;
 end;
-
+{$ENDIF}
 procedure PortOpenedCheck;
 begin
   if ftdi_isopen or com_isopen then
@@ -65,12 +66,14 @@ begin
   SetUpFTDI;
   if ftdi_device_count > 0 then begin
     deviceselectbox.ListView1.Items.clear;
+    {$IFnDEF FPC}
     for i := 0 to ftdi_device_count - 1 do begin
       LV := deviceselectbox.ListView1.Items.Add;
       LV.Caption := 'Device '+IntToStr(i);
       LV.SubItems.Add(ftdi_sernum_arr[i]);
       LV.SubItems.Add(ftdi_desc_arr[i]);
     end;
+    {$ENDIF}
     deviceselectbox.ListView1.Items[0].Selected := true;
   end;
   deviceselectbox.ComboBoxCOMport.Items.clear;
@@ -87,20 +90,21 @@ begin
       com_selected_port:= deviceselectbox.ComboBoxCOMport.ItemIndex - 1;
       com_name:= deviceselectbox.ComboBoxCOMport.Text;
       OpenCOMport;
-    end else if (ftdi_device_count > 0) then begin
+    end {$IFnDEF FPC} else if (ftdi_device_count > 0) then begin
       ftdi_selected_device:= deviceselectbox.ListView1.itemindex;
       ftdi_serial:= ftdi_sernum_arr[ftdi_selected_device];
       OpenFTDIport;
-    end;
+    end{$ENDIF};
   end;
   PortOpenedCheck;
 end;
 
 procedure TForm1.BtnConnectClick(Sender: TObject);
 begin
+  {$IFnDEF FPC}
   if ftdi_was_open then
     OpenFTDIport
-  else if com_was_open then
+  else {$ENDIF} if com_was_open then
     OpenCOMport;
   PortOpenedCheck;
 end;
@@ -111,8 +115,10 @@ begin
   com_was_open:= com_isopen;
   if com_isopen then
     COMClose;
+  {$IFnDEF FPC}
   if ftdi_isopen then
     ftdi.closeDevice;
+  {$ENDIF}
   ftdi_isopen:= false;
   com_isopen:= false;
   if grbl_is_connected or com_was_open then begin

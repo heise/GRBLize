@@ -1,15 +1,23 @@
 unit drawing_window;
-// 2D-Visualisierung der Fräswege und Bohrlöcher für GRBLize CNC-Steuerung
+
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
+// 2D-Visualisierung der FrÃ¤swege und BohrlÃ¶cher fÃ¼r GRBLize CNC-Steuerung
 
 
 interface
 
 uses
+  {$IFnDEF FPC}
+  Windows,VFrames, ShellApi, XPMan, System.UItypes,
+  {$ENDIF}
   Math, StdCtrls, ComCtrls, ToolWin, Buttons, ExtCtrls, ImgList,
   Controls, StdActns, Classes, ActnList, Menus, GraphUtil,
-  SysUtils, StrUtils, Windows, Graphics, Forms, Registry,  // Messages,
-  Dialogs, Spin, ShellApi, VFrames, ExtDlgs, grbl_com, XPMan, CheckLst, Clipper,
-  System.UItypes, System.Types, MMsystem, import_files;
+  SysUtils, StrUtils, Graphics, Forms, Registry,  // Messages,
+  Dialogs, Spin, ExtDlgs, grbl_com, CheckLst, Clipper,
+  Types, import_files;
 
 type
   TForm2 = class(TForm)
@@ -125,7 +133,11 @@ procedure SetAllPosZupMM(x, y: Double);
 
 implementation
 
-uses grbl_player_main, glscene_view;
+uses grbl_player_main
+  {$IFnDEF FPC}
+  ,glscene_view
+  {$ENDIF}
+  ;
 
 {$R *.dfm}
 
@@ -177,8 +189,8 @@ end;
 procedure search_entry_in_drawing(mx, my: Integer);
 // sucht im BlockArray nach passenden Screen-Koordinaten
 // (Maus-XY) innerhalb Drawingbox
-// Liefert BlockArray-Index mit am besten passenden Eintrag zurück
-// oder -1 falls nichts gefunden (Klick außerhalb)
+// Liefert BlockArray-Index mit am besten passenden Eintrag zurÃ¼ck
+// oder -1 falls nichts gefunden (Klick auÃŸerhalb)
 var i, f, p: Integer;
   x1, x2, y1, y2, dx, dy, dxy, old_dxy: Integer;
   my_bounds: Tbounds;
@@ -190,7 +202,7 @@ begin
 
   if length(final_array) < 1 then
     exit;
-  // zunächst Punkt suchen wg. Drills
+  // zunÃ¤chst Punkt suchen wg. Drills
   for f:= 0 to length(final_array) - 1 do begin // penPathArray
     my_bounds:= final_array[f].bounds; // Bounds im Path #
     my_offset:= job.pens[final_array[f].pen].offset;
@@ -266,7 +278,7 @@ begin
 end;
 
 // #############################################################################
-// Drawing-Routinen für Screen
+// Drawing-Routinen fÃ¼r Screen
 // #############################################################################
 
 
@@ -382,7 +394,7 @@ end;
 
 function get_bm_point(var my_path: Tpath; my_idx: Integer; my_offset: TIntPoint; var pt: TPoint): Boolean;
 // Holt einen Punkt und Punkt mit Offset aus BlockArray-Path
-// liefert FALSE, wenn Array-Grenze überschritten
+// liefert FALSE, wenn Array-Grenze Ã¼berschritten
 begin
   get_bm_point:= false;
   if my_idx >= length(my_path) then
@@ -444,7 +456,7 @@ begin
       fill_color2:= fill_color2 or clgray;
     draw_move(p1, p2, fill_color2, enable, false);
 
-    Canvas.brush.Color:= fill_color1;  // Kreisfüllung
+    Canvas.brush.Color:= fill_color1;  // KreisfÃ¼llung
     if radius < 3 then
       Canvas.ellipse(p2.x-2, p2.y-2, p2.x+2, p2.y+2)
     else
@@ -479,15 +491,15 @@ end;
 // #############################################################################
 
 procedure draw_final_entry(my_final_entry: Tfinal; is_highlited: Boolean; var last_point: TPoint);
-// Eintrag aus finalem Array zeichnen einschließlich mill-Pfaden
-// liefert zuletzt gezeichnete Screen-Koordinaten zurück für nächsten Entry
+// Eintrag aus finalem Array zeichnen einschlieÃŸlich mill-Pfaden
+// liefert zuletzt gezeichnete Screen-Koordinaten zurÃ¼ck fÃ¼r nÃ¤chsten Entry
 const
   c_disabled: Tcolor = $00202020;
 
 var i, p: Integer;
   p1, p2, po1: Tpoint;
   pmin, pmax: TPoint;
-  pf: TpointFloat;
+  pf: TFloatPoint;
   my_pathlen, my_pathcount, my_radius: Integer;
   my_pen_color, my_line_color, my_fill_color1, my_fill_color2, my_fill_color3: Tcolor;
   vlen_ok: boolean;
@@ -619,14 +631,14 @@ begin
         if my_pathlen = 0 then
           continue;
         get_bm_point(my_final_entry.outlines[p], 0, my_offset, po1);
-        Canvas.moveto(po1.x, po1.y);        // zurück zum ersten Punkt
+        Canvas.moveto(po1.x, po1.y);        // zurÃ¼ck zum ersten Punkt
         for i:= 1 to my_pathlen - 1 do begin
           if not get_bm_point(my_final_entry.outlines[p], i, my_offset, p1) then
             break;
           Canvas.lineto(p1.x, p1.y);
         end;
         if my_final_entry.closed then begin
-          Canvas.lineto(po1.x, po1.y);        // zurück zum ersten Punkt
+          Canvas.lineto(po1.x, po1.y);        // zurÃ¼ck zum ersten Punkt
         end;
       end;
 //    end;
@@ -648,7 +660,7 @@ begin
       p2.y:= p1.y;
       vlen_ok:= abs(p2.x - p1.x) > 100;
       Canvas.font.Orientation:= 0;
-      if vlen_ok then begin           // X-Vektorlänge in mm anzeigen
+      if vlen_ok then begin           // X-VektorlÃ¤nge in mm anzeigen
         draw_arrow(p1, p2, true, true);
         pf.x:= (my_final_entry.bounds.max.x - my_final_entry.bounds.min.x) / 40;
         p1.x:= (pmax.x + pmin.x) div 2;
@@ -660,7 +672,7 @@ begin
       p2.y:= pmax.y;
       vlen_ok:= abs(p2.y - p1.y) > 100;
       Canvas.font.Orientation:= 900;
-      if vlen_ok then begin           // X-Vektorlänge in mm anzeigen
+      if vlen_ok then begin           // X-VektorlÃ¤nge in mm anzeigen
         draw_arrow(p1, p2, true, true);
         pf.y:= (my_final_entry.bounds.max.y - my_final_entry.bounds.min.y) / 40;
         p1.y:= (pmax.y + pmin.y) div 2;
@@ -1113,8 +1125,10 @@ begin
     item_change(HiliteBlock);
     ListBlocks;
     NeedsRedraw:= true;
+    {$IFnDEF FPC}
     GLSneedsRedrawTimeout:= 2;
     GLSneedsATCupdateTimeout:= 3;
+    {$ENDIF}
   end;
 end;
 
@@ -1433,7 +1447,9 @@ begin
       bm_scroll.y:= bm_scroll.y + round(diff * p.y / Scale);
     end;
   end;
+  {$IFnDEF FPC}
   TrackBarZoom.Perform(CN_HSCROLL, SB_ENDSCROLL, 0);
+  {$ENDIF}
   NeedsRedraw:= true;
 end;
 

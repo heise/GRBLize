@@ -20,6 +20,7 @@ var
   show_drawing, show_3d: boolean;
 
 begin
+  {$IFnDEF FPC}
   GLSmillAtPos(xf0, yf0, zf0, gcsim_dia, true, true);
   my_delay:= 5;
   if fast_move then begin
@@ -142,6 +143,7 @@ begin
     end;
   end;
   GLSmillAtPos(xf1, yf1, zf1, gcsim_dia, false, true);
+  {$ENDIF}
 end;
 
 // #############################################################################
@@ -163,10 +165,12 @@ var
 
 begin
   if (pos('M3', my_str) > 0) or (pos('M4', my_str) > 0) then begin
+    {$IFnDEF FPC}
     GLSspindle_on_off(true);
     mdelay(500);
     if Form1.Show3DPreview1.Checked then // wird vorher aufgerufen
       GLSmakeToolArray(gcsim_dia);
+    {$ENDIF}
   end;
   if (my_str[1] = '/') or (my_str[1] = '(') then // andere Kommentare
     exit;
@@ -180,7 +184,9 @@ begin
     mdelay(500);
   is_offset:= (pos('G92', my_str) > 0);     // G92
   if pos('M5', my_str) > 0 then
+    {$IFnDEF FPC}
     GLSspindle_on_off(false)
+    {$ENDIF}
   else if pos('G1', my_str) > 0 then
     gcsim_seek:= false
   else if pos('G0', my_str) > 0 then

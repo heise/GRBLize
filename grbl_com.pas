@@ -1,4 +1,9 @@
 unit grbl_com;
+
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 // Sende- und Empfangsroutinen for GRBLize und GRBL-Jogger
 
 {$DEFINE UNICODE}
@@ -7,8 +12,14 @@ unit grbl_com;
 interface
 
 //uses SysUtils, FTDIdll, FTDIchip, FTDItypes;
-uses SysUtils, StrUtils, DateUtils, Windows, Classes, Forms, Controls, Menus, MMsystem,
-  Dialogs, StdCtrls, FTDIdll, FTDIchip, FTDItypes, import_files, Clipper, deviceselect;
+uses
+{$IFnDEF FPC}
+  MMsystem, Windows, FTDIdll, FTDIchip, FTDItypes,
+{$ELSE}
+  LCLIntf, LCLType, LMessages, LCLProc, Serial,
+{$ENDIF}
+  SysUtils, StrUtils, DateUtils, Classes, Forms, Controls, Menus,
+  Dialogs, StdCtrls, import_files, Clipper, deviceselect;
 
 type
   TFileBuffer = Array of byte;
@@ -21,8 +32,8 @@ type
   function InitFTDI(my_device:Integer; baud_str: String):String;
   function InitFTDIbySerial(my_serial: String; baud_str: String):String;
 
-   // f¸r Kommunikation nicht ¸ber FTDI, sondern ¸ber COM-port
-  function CheckCom(my_ComNumber: Integer): Integer;   // COM# verf¸gbar?
+   // f√ºr Kommunikation nicht √ºber FTDI, sondern √ºber COM-port
+  function CheckCom(my_ComNumber: Integer): Integer;   // COM# verf√ºgbar?
   function COMOpen(com_name: String): Boolean;
   procedure COMRxClear;
   procedure COMClose;
@@ -41,53 +52,53 @@ type
   procedure grbl_addStr(my_str: String);
 
   // GCode-String von GRBL holen, ggf. Timeout-Zeit warten:
-  // ggf. Application.ProcessMessages w‰hrend Warten ausf¸hren
+  // ggf. Application.ProcessMessages w√§hrend Warten ausf√ºhren
   function grbl_receiveStr(timeout: Integer): string;
 
-  // gibt Anzahl der Zeichen im Empfangspuffer zur¸ck:
+  // gibt Anzahl der Zeichen im Empfangspuffer zur√ºck:
   function grbl_receiveCount: Integer;
 
   // leert Empfangspuffer:
   procedure grbl_rx_clear;
 
-  // GCode-String G92 x,y mit abschlieﬂendem CR an GRBL senden, auf OK warten:
+  // GCode-String G92 x,y mit abschlie√üendem CR an GRBL senden, auf OK warten:
   procedure grbl_offsXY(x, y: Double);
-  // GCode-String G92 z mit abschlieﬂendem CR an GRBL senden, auf OK warten
+  // GCode-String G92 z mit abschlie√üendem CR an GRBL senden, auf OK warten
   procedure grbl_offsZ(z: Double);
 
 
-  // GCode-String G0 x,y mit abschlieﬂendem CR an GRBL senden, auf OK warten.
+  // GCode-String G0 x,y mit abschlie√üendem CR an GRBL senden, auf OK warten.
   // Maschinenkoordinaten wenn is_abs = TRUE
   procedure grbl_moveXY(x, y: Double; is_abs: Boolean);
 
-  // GCode-String G0 z mit abschlieﬂendem CR an GRBL senden, auf OK warten.
+  // GCode-String G0 z mit abschlie√üendem CR an GRBL senden, auf OK warten.
   // Maschinenkoordinaten wenn is_abs = TRUE
   procedure grbl_moveZ(z: Double; is_abs: Boolean);
   procedure grbl_moveslowZ(z: Double; is_abs: Boolean);
 
-  // GCode-String G1 x,y,f mit abschlieﬂendem CR an GRBL senden, auf OK warten:
-  // F (speed) wird nur gesendet, wenn es sich ge‰ndert hat!
+  // GCode-String G1 x,y,f mit abschlie√üendem CR an GRBL senden, auf OK warten:
+  // F (speed) wird nur gesendet, wenn es sich ge√§ndert hat!
   procedure grbl_millXYF(x, y: Double; f: Integer);
 
-  // GCode-String G1 x,y,f mit abschlieﬂendem CR an GRBL senden, auf OK warten:
-  // F (speed) wird nur gesendet, wenn es sich ge‰ndert hat!
+  // GCode-String G1 x,y,f mit abschlie√üendem CR an GRBL senden, auf OK warten:
+  // F (speed) wird nur gesendet, wenn es sich ge√§ndert hat!
   procedure grbl_millXY(x, y: Double);
 
-  // GCode-String G1 z mit abschlieﬂendem CR an GRBL senden, auf OK warten:
-  // F (speed) wird nur gesendet, wenn es sich ge‰ndert hat!
+  // GCode-String G1 z mit abschlie√üendem CR an GRBL senden, auf OK warten:
+  // F (speed) wird nur gesendet, wenn es sich ge√§ndert hat!
   procedure grbl_millZF(z: Double; f: Integer);
 
-  // GCode-String G1 z mit abschlieﬂendem CR an GRBL senden, auf OK warten:
+  // GCode-String G1 z mit abschlie√üendem CR an GRBL senden, auf OK warten:
   procedure grbl_millZ(z: Double);
 
-  // GCode-String G1 x,y,z,f mit abschlieﬂendem CR an GRBL senden, auf OK warten:
-  // F (speed) wird nur gesendet, wenn es sich ge‰ndert hat!
+  // GCode-String G1 x,y,z,f mit abschlie√üendem CR an GRBL senden, auf OK warten:
+  // F (speed) wird nur gesendet, wenn es sich ge√§ndert hat!
   procedure grbl_millXYZF(x, y, z: Double; f: Integer);
 
-  // GCode-String G1 x,y,z mit abschlieﬂendem CR an GRBL senden, auf OK warten:
+  // GCode-String G1 x,y,z mit abschlie√üendem CR an GRBL senden, auf OK warten:
   procedure grbl_millXYZ(x, y, z: Double);
 
-  // kompletten einzelnen Pfad fr‰sen, zur¸ck bis Anfang wenn Closed
+  // kompletten einzelnen Pfad fr√§sen, zur√ºck bis Anfang wenn Closed
   procedure grbl_millpath(millpath: TPath; millpen: Integer; offset: TIntPoint; is_closedpoly: Boolean);
 
   // kompletten Pfad bohren, ggf. wiederholen bis z_end erreicht
@@ -98,37 +109,43 @@ type
 
   procedure grbl_wait_for_timeout(timeout: Integer);
 
-type TStopWatch = class
+type
+
+{ TStopWatch }
+
+ TStopWatch = class
    private
-     fFrequency : TLargeInteger;
+     fFrequency : Int64;
      fIsRunning: boolean;
      fIsHighResolution: boolean;
-     fStartCount, fStopCount : TLargeInteger;
-     procedure SetTickStamp(var lInt : TLargeInteger);
-     function GetElapsedTicks: TLargeInteger;
-     function GetElapsedMilliseconds: TLargeInteger;
-     function GetCurrentMilliseconds : TLargeInteger;
+     fStartCount, fStopCount : Int64;
+     procedure SetTickStamp(var lInt : Int64);
+     function GetElapsedTicks: Int64;
+     function GetElapsedMilliseconds: Int64;
+     function GetCurrentMilliseconds : Int64;
    public
      constructor Create(const startOnCreate : boolean = false) ;
      procedure Start;
      procedure Stop;
      property IsHighResolution : boolean read fIsHighResolution;
-     property ElapsedTicks : TLargeInteger read GetElapsedTicks;
-     property ElapsedMilliseconds : TLargeInteger read GetElapsedMilliseconds;
-     property CurrentMilliseconds : TLargeInteger read GetCurrentMilliseconds;
+     property ElapsedTicks : Int64 read GetElapsedTicks;
+     property ElapsedMilliseconds : Int64 read GetElapsedMilliseconds;
+     property CurrentMilliseconds : Int64 read GetCurrentMilliseconds;
      property IsRunning : boolean read fIsRunning;
    end;
 
 
 var
 //FTDI-Device
+  {$IFnDEF FPC}
   ftdi: Tftdichip;
+  ftdi_device_list: pftdiDeviceList;
+  ftdi_sernum_arr, ftdi_desc_arr: Array[0..15] of String;
+  {$ENDIF}
   com_isopen, ftdi_isopen : Boolean;
   com_selected_port, ftdi_selected_device: Integer;  // FTDI-Frosch-Device-Nummer
   com_name, ftdi_serial: String;
   com_device_count, ftdi_device_count: dword;
-  ftdi_device_list: pftdiDeviceList;
-  ftdi_sernum_arr, ftdi_desc_arr: Array[0..15] of String;
   grbl_oldx, grbl_oldy, grbl_oldz: Double;
   grbl_oldf: Integer;
   grbl_sendlist, grbl_receveivelist: TSTringList;
@@ -143,7 +160,11 @@ var
 
 implementation
 
-uses grbl_player_main, glscene_view, Graphics;
+uses grbl_player_main,Graphics
+  {$IFnDEF FPC}
+  ,glscene_view
+  {$ENDIF}
+  ;
 
 // #############################################################################
 
@@ -153,36 +174,43 @@ begin
 
   fIsRunning := false;
 
+  {$IFnDEF FPC}
   fIsHighResolution := QueryPerformanceFrequency(fFrequency);
+  {$ELSE}
+  fIsHighResolution := True;
+  {$ENDIF}
   if not fIsHighResolution then
     fFrequency := MSecsPerSec;
-
   if startOnCreate then
     Start;
 end;
 
-function TStopWatch.GetElapsedTicks: TLargeInteger;
+function TStopWatch.GetElapsedTicks: Int64;
 begin
   result := fStopCount - fStartCount;
 end;
 
-procedure TStopWatch.SetTickStamp(var lInt : TLargeInteger) ;
+procedure TStopWatch.SetTickStamp(var lInt: Int64);
 begin
   if fIsHighResolution then
-     QueryPerformanceCounter(lInt)
+    {$IFnDEF FPC}
+    QueryPerformanceCounter(lInt)
+    {$ELSE}
+    lInt:=GetTickCount64
+    {$ENDIF}
    else
      lInt := MilliSecondOf(Now) ;
 end;
 
-function TStopWatch.GetElapsedMilliseconds: TLargeInteger;
+function TStopWatch.GetElapsedMilliseconds: Int64;
 // Millisekunden von StopWatch.Start bis StopWatch.Stop
 begin
   result := (MSecsPerSec * (fStopCount - fStartCount)) div fFrequency;
 end;
 
-function TStopWatch.GetCurrentMilliseconds: TLargeInteger;
+function TStopWatch.GetCurrentMilliseconds: Int64;
 // aktuelle Millisekunden seit StopWatch.Start
-var current_ticks: TLargeInteger;
+var current_ticks: Int64;
 begin
   SetTickStamp(current_ticks) ;
   result := (MSecsPerSec * (current_ticks - fStartCount)) div fFrequency;
@@ -259,6 +287,7 @@ var
 begin
   Result := 0;
   my_str:= ExtComName(my_ComNumber);
+  {$IFnDEF FPC}
   FHandle := CreateFile(PChar(my_str),
     GENERIC_WRITE,
     0, {exclusive access}
@@ -267,9 +296,16 @@ begin
     FILE_ATTRIBUTE_NORMAL,
     0);
   if FHandle <> INVALID_HANDLE_VALUE then
-    CloseHandle(FHandle)
+    FileClose(FHandle) { *Konvertiert von CloseHandle* }
   else
     Result := GetLastError;
+  {$ELSE}
+  FHandle:=SerOpen(my_str);
+  if FHandle <> INVALID_HANDLE_VALUE then
+    SerClose(FHandle)
+  else
+    Result := -1;
+  {$ENDIF}
 end;
 
 
@@ -278,16 +314,20 @@ var
   DeviceName: array[0..15] of Char;
   my_Name: AnsiString;
 begin
-// Wir versuchen, COM1 zu ˆffnen.
-// Sollte dies fehlschlagen, gibt die Funktion false zur¸ck.
+// Wir versuchen, COM1 zu √∂ffnen.
+// Sollte dies fehlschlagen, gibt die Funktion false zur√ºck.
+  {$IFnDEF FPC}
   if length(com_name) > 4 then
-    my_name:= AnsiString('\\.\'+com_name)  // COM10 und dar¸ber
+    my_name:= AnsiString('\\.\'+com_name)  // COM10 und dar√ºber
   else
     my_name:= AnsiString(com_name); // in AnsiSTring kopieren
 
   StrPCopy(DeviceName, my_name);
   ComFile := CreateFile(DeviceName, GENERIC_READ or GENERIC_WRITE,
     0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
+  {$ELSE}
+  ComFile:=SerOpen(com_name);
+  {$ENDIF}
 
   if ComFile = INVALID_HANDLE_VALUE then
     Result := False
@@ -295,16 +335,20 @@ begin
     Result := True;
 end;
 
-
 procedure COMClose;
 // nicht vergessen den COM Port wieder zu schliessen!
 begin
-  CloseHandle(ComFile);
+  {$IFnDEF FPC}
+  FileClose(ComFile); { *Konvertiert von CloseHandle* }
+  {$ELSE}
+  SerClose(ComFile);
+  {$ENDIF}
   com_isopen:= false;
 end;
 
 
 function COMReceiveCount: DWORD;
+{$IFnDEF FPC}
 // Anzahl der Bytes im COM-Rx-Buffer
 var Comstat: _Comstat;
     Errors: DWORD;
@@ -315,32 +359,43 @@ begin
     COMReceiveCount:= 0;
   if GettickCount mod 10 = 0 then
     ShowAliveState(LastAliveState);
+{$ELSE}
+begin
+  Result := 0;//TODO
+{$ENDIF}
 end;
 
 procedure COMRxClear;
-// evt. im Buffer stehende Daten lˆschen
+// evt. im Buffer stehende Daten l√∂schen
 begin
+{$IFnDEF FPC}
 //  PurgeComm(ComFile,PURGE_TXCLEAR);
   PurgeComm(ComFile,PURGE_RXCLEAR);
+{$ELSE}
+  SerFlush(ComFile);
+{$ENDIF}
 end;
 
 function COMSetup(baud_str: String): Boolean;
 const
   RxBufferSize = 256;
   TxBufferSize = 256;
+  {$IFnDEF FPC}
 var
   DCB: TDCB;
   Config: AnsiString;
   CommTimeouts: TCommTimeouts;
+  {$ENDIF}
 begin
 // wir gehen davon aus das das Einstellen des COM Ports funktioniert.
-// sollte dies fehlschlagen wird der R¸ckgabewert auf "FALSE" gesetzt.
+// sollte dies fehlschlagen wird der R√ºckgabewert auf "FALSE" gesetzt.
   Result := True;
+  {$IFnDEF FPC}
   if not SetupComm(ComFile, RxBufferSize, TxBufferSize) then
     Result := False;
   if not GetCommState(ComFile, DCB) then
     Result := False;
-  // hier die Baudrate, Parit‰t usw. konfigurieren
+  // hier die Baudrate, Parit√§t usw. konfigurieren
   Config := 'baud' + baud_str + 'parity=n data=8 stop=1';
   if not BuildCommDCB(@Config[1], DCB) then
     Result := False;
@@ -355,13 +410,17 @@ begin
   end;
   if not SetCommTimeouts(ComFile, CommTimeouts) then
     Result := False;
+  {$ELSE}
+  SerSetParams(ComFile,StrToInt(baud_str),8,NoneParity,1,[]);
+  {$ENDIF}
 end;
 
 procedure COMSetTimeout(read_timeout: DWord);
+{$IFnDEF FPC}
 var
   CommTimeouts: TCommTimeouts;
 begin
-  with CommTimeouts do begin
+with CommTimeouts do begin
     ReadIntervalTimeout         := 0;
     ReadTotalTimeoutMultiplier  := 0;
     ReadTotalTimeoutConstant    := read_timeout;
@@ -369,16 +428,25 @@ begin
     WriteTotalTimeoutConstant   := 1000;
   end;
   SetCommTimeouts(ComFile, CommTimeouts);
+{$else}
+begin
+{$endIF}
 end;
 
 function COMReadChar: Char;
 var
   c: AnsiChar;
   BytesRead: DWORD;
+  arr : array of byte;
 begin
   Result := #0;
+  {$IFnDEF FPC}
   if ReadFile(ComFile, c, 1, BytesRead, nil) then
     Result := char(c);
+  {$else}
+  if SerReadTimeout(ComFile,arr,1,20)=1 then
+    Result := char(arr[0]);
+  {$endif}
 end;
 
 // #############################################################################
@@ -389,7 +457,7 @@ var
   my_str: AnsiString;
   i: Integer;
   my_char: Char;
-  target_time, current_time: TLargeInteger;
+  target_time, current_time: Int64;
   has_timeout: Boolean;
 begin
   StopWatch.Start;
@@ -430,7 +498,11 @@ var
   my_str: AnsiString;
 begin
   my_str := AnsiString(sendStr);
+  {$IFnDEF FPC}
   WriteFile(ComFile, my_str[1], Length(my_str), BytesWritten, nil);
+  {$ELSE}
+  SerWrite(ComFile,my_str,length(my_str));
+  {$ENDIF}
   if my_getok then begin
     Result:= COMReceiveStr(0);
   end;
@@ -440,17 +512,21 @@ end;
 // #############################################################################
 
 function FTDIreceiveCount: Integer;
-// gibt Anzahl der Zeichen im Empfangspuffer zur¸ck
+// gibt Anzahl der Zeichen im Empfangspuffer zur√ºck
 var i: Integer;
 begin
   i:= 0;
+  {$IFnDEF FPC}
   ftdi.getReceiveQueueStatus(i);
+  {$ENDIF}
   Result:= i;
 end;
 
 procedure FTDIrxClear;
 begin
+{$IFnDEF FPC}
   ftdi.purgeQueue(fReceiveQueue);
+{$ENDIF}
 end;
 
 function FTDIreceiveStr(timeout: Integer): string;
@@ -459,10 +535,11 @@ var
   my_str: AnsiString;
   i: Integer;
   my_char: AnsiChar;
-  target_time, current_time: TLargeInteger;
+  target_time, current_time: Int64;
   has_timeout: Boolean;
 
 begin
+{$IFnDEF FPC}
   StopWatch.Start;
   my_str:= '';
   has_timeout:= timeout > 0;
@@ -487,6 +564,7 @@ begin
     end;
   end;
   Result:= my_str;
+{$ENDIF}
 end;
 
 function FTDIsendStr(sendStr: String; my_getok: boolean): String;
@@ -497,20 +575,22 @@ var
   i: longint;
   my_str: AnsiString;
 begin
+{$IFnDEF FPC}
   my_str:= AnsiString(sendStr);
   Result:= '';
   ftdi.write(@my_str[1], length(my_str), i);
   if my_getok then begin
     Result:= grbl_receiveStr(0);
   end;
+{$ENDIF}
 end;
 
 // #############################################################################
-// Abh‰ngig davon, ob FTDI oder COM benutzt wird, entsprechende Routine aufrufen
+// Abh√§ngig davon, ob FTDI oder COM benutzt wird, entsprechende Routine aufrufen
 // #############################################################################
 
 function grbl_receiveCount: Integer;
-// gibt Anzahl der Zeichen im Empfangspuffer zur¸ck
+// gibt Anzahl der Zeichen im Empfangspuffer zur√ºck
 begin
   result:= 0;
   if ftdi_isopen then
@@ -609,7 +689,7 @@ begin
           Form1.Memo1.lines.add('WARNING: Alarm state, machine not homed!');
           Form1.Memo1.lines.add('Press HOME CYCLE on machine panel');
           Form1.Memo1.lines.add('or Machine Control page.');
-          result:= true; // Homing ermˆglichen
+          result:= true; // Homing erm√∂glichen
         end;
       hold:
         begin
@@ -652,7 +732,7 @@ begin
 end;
 
 procedure grbl_addStr(my_str: String);
-// Zeile an Sendeliste anh‰ngen, wird in Timer2 behandelt
+// Zeile an Sendeliste anh√§ngen, wird in Timer2 behandelt
 begin
   grbl_sendlist.add(my_str);
 end;
@@ -684,20 +764,20 @@ begin
 end;
 
 procedure grbl_offsXY(x, y: Double);
-// GCode-String G92 x,y mit abschlieﬂendem CR an GRBL senden, auf OK warten
+// GCode-String G92 x,y mit abschlie√üendem CR an GRBL senden, auf OK warten
 begin
   grbl_addStr('G92 X'+ FloatToSTrDot(x)+' Y'+ FloatToSTrDot(y));
 end;
 
 procedure grbl_offsZ(z: Double);
-// GCode-String G92 z mit abschlieﬂendem CR an GRBL senden, auf OK warten
+// GCode-String G92 z mit abschlie√üendem CR an GRBL senden, auf OK warten
 // Z mit Tool-Offset versehen
 begin
   grbl_addStr('G92 Z'+ FloatToSTrDot(z));
 end;
 
 procedure grbl_moveXY(x, y: Double; is_abs: Boolean);
-// GCode-String G0 x,y mit abschlieﬂendem CR an GRBL senden, auf OK warten
+// GCode-String G0 x,y mit abschlie√üendem CR an GRBL senden, auf OK warten
 var my_str: String;
 begin
   if is_abs then
@@ -713,7 +793,7 @@ begin
 end;
 
 procedure grbl_moveZ(z: Double; is_abs: Boolean);
-// GCode-String G0 z mit abschlieﬂendem CR an GRBL senden, auf OK warten
+// GCode-String G0 z mit abschlie√üendem CR an GRBL senden, auf OK warten
 var my_str: String;
 begin
   if is_abs then
@@ -728,7 +808,7 @@ begin
 end;
 
 procedure grbl_moveslowZ(z: Double; is_abs: Boolean);
-// GCode-String G1 z mit abschlieﬂendem CR an GRBL senden, auf OK warten
+// GCode-String G1 z mit abschlie√üendem CR an GRBL senden, auf OK warten
 var my_str: String;
 begin
   if is_abs then
@@ -744,8 +824,8 @@ begin
 end;
 
 procedure grbl_millXYF(x, y: Double; f: Integer);
-// GCode-String G0 x,y mit abschlieﬂendem CR an GRBL senden, auf OK warten
-// F (speed) wird nur gesendet, wenn es sich ge‰ndert hat!
+// GCode-String G0 x,y mit abschlie√üendem CR an GRBL senden, auf OK warten
+// F (speed) wird nur gesendet, wenn es sich ge√§ndert hat!
 var my_str: String;
 begin
   grbl_checkXY(x,y);
@@ -759,8 +839,8 @@ begin
 end;
 
 procedure grbl_millXY(x, y: Double);
-// GCode-String G0 x,y mit abschlieﬂendem CR an GRBL senden, auf OK warten
-// XY-Werte werden nur gesendet, wenn sie sich ge‰ndert haben!
+// GCode-String G0 x,y mit abschlie√üendem CR an GRBL senden, auf OK warten
+// XY-Werte werden nur gesendet, wenn sie sich ge√§ndert haben!
 var my_str: String;
 begin
   grbl_checkXY(x,y);
@@ -775,8 +855,8 @@ begin
 end;
 
 procedure grbl_millZF(z: Double; f: Integer);
-// GCode-String G0 x,y mit abschlieﬂendem CR an GRBL senden, auf OK warten
-// F (speed) wird hier immer neu gesetzt wg. mˆglichem GRBL-Z-Scaling
+// GCode-String G0 x,y mit abschlie√üendem CR an GRBL senden, auf OK warten
+// F (speed) wird hier immer neu gesetzt wg. m√∂glichem GRBL-Z-Scaling
 var my_str: String;
 begin
   grbl_checkZ(z);
@@ -787,7 +867,7 @@ begin
 end;
 
 procedure grbl_millZ(z: Double);
-// GCode-String G0 x,y mit abschlieﬂendem CR an GRBL senden, auf OK warten
+// GCode-String G0 x,y mit abschlie√üendem CR an GRBL senden, auf OK warten
 var my_str: String;
 begin
   grbl_checkZ(z);
@@ -797,8 +877,8 @@ begin
 end;
 
 procedure grbl_millXYZF(x, y, z: Double; f: Integer);
-// GCode-String G0 x,y mit abschlieﬂendem CR an GRBL senden, auf OK warten
-// F (speed) wird nur gesendet, wenn es sich ge‰ndert hat!
+// GCode-String G0 x,y mit abschlie√üendem CR an GRBL senden, auf OK warten
+// F (speed) wird nur gesendet, wenn es sich ge√§ndert hat!
 var my_str: String;
 begin
   grbl_checkZ(z);
@@ -814,8 +894,8 @@ begin
 end;
 
 procedure grbl_millXYZ(x, y, z: Double);
-// GCode-String G0 x,y mit abschlieﬂendem CR an GRBL senden, auf OK warten
-// XYZ-Werte werden nur gesendet, wenn sie sich ge‰ndert haben!
+// GCode-String G0 x,y mit abschlie√üendem CR an GRBL senden, auf OK warten
+// XYZ-Werte werden nur gesendet, wenn sie sich ge√§ndert haben!
 var my_str: String;
 begin
   grbl_checkZ(z);
@@ -856,7 +936,7 @@ var i, my_len, my_z_feed: Integer;
     y:= (millpath[i].y + offset.y) / c_hpgl_scale;
     grbl_moveXY(x,y,false);
     z:= 0;
-    my_z_feed:= job.pens[millpen].speed; // Feed des gew‰hlten Pens
+    my_z_feed:= job.pens[millpen].speed; // Feed des gew√§hlten Pens
 {
     if my_z_feed > job.z_feed then
       my_z_feed:= job.z_feed;
@@ -864,7 +944,7 @@ var i, my_len, my_z_feed: Integer;
     if i mod 25 = 0 then
       Application.ProcessMessages;
     repeat
-      grbl_moveZ(0.5, false); // ann‰hern auf 0,5 mm ¸ber Oberfl‰che
+      grbl_moveZ(0.5, false); // ann√§hern auf 0,5 mm √ºber Oberfl√§che
       z:= z - job.pens[millpen].z_inc;
       if z < my_z_end then
         z:= my_z_end;
@@ -876,7 +956,7 @@ end;
 
 
 procedure grbl_millpath(millpath: TPath; millpen: Integer; offset: TIntPoint; is_closedpoly: Boolean);
-// kompletten Pfad fr‰sen, ggf. wiederholen bis z_end erreicht
+// kompletten Pfad fr√§sen, ggf. wiederholen bis z_end erreicht
 var i, my_len, my_z_feed: Integer;
   x, y: Double;
   z, my_z_limit, my_z_end: Double;
@@ -901,7 +981,7 @@ begin
     x:= (millpath[0].x + offset.x) / c_hpgl_scale;
     y:= (millpath[0].y + offset.y) / c_hpgl_scale;
     grbl_moveXY(x,y, false);
-    grbl_moveZ(0.5, false); // ann‰hern auf 0,5 mm ¸ber Oberfl‰che
+    grbl_moveZ(0.5, false); // ann√§hern auf 0,5 mm √ºber Oberfl√§che
 
     my_z_feed:= job.pens[millpen].speed;
     if my_z_feed > job.z_feed then
@@ -933,6 +1013,7 @@ var
   i: Integer;
 begin
   ftdi_isopen:= false;
+  {$IFnDEF FPC}
   ftdi:= tftdichip.create;  { Create class instance }
   { Get the device list }
   if not ftdi.createDeviceInfoList(ftdi_device_count, ftdi_device_list) then begin
@@ -954,12 +1035,16 @@ begin
     end;
   end else
     result:= 'No FTDI devices found';
+  {$ENDIF}
 end;
 
 procedure SetFTDIbaudRate(my_str: String);
+{$IFnDEF FPC}
 var
   my_baud: fBaudRate;
+{$ENDIF}
 begin
+{$IFnDEF FPC}
   if ftdi_isopen then
     exit;
   ftdi_isopen:= true;
@@ -977,10 +1062,12 @@ begin
   ftdi.setBaudRate(my_baud);
   ftdi.setDataCharacteristics(fBits8, fStopBits1, fParityNone);
   ftdi.setFlowControl(fFlowNone, 0, 0);
+{$ENDIF}
 end;
 
 function InitFTDI(my_device:Integer; baud_str: String):String;
 begin
+{$IFnDEF FPC}
 // Check if device is present
   if ftdi_isopen then
     exit;
@@ -1001,12 +1088,14 @@ begin
     result:= 'USB connected';
   end else
     result:= 'Reset error';
+{$ENDIF}
 end;
 
 function InitFTDIbySerial(my_serial, baud_str: String):String;
 begin
   if ftdi_isopen then
     exit;
+  {$IFnDEF FPC}
   if ftdi_device_count > 0 then begin
     if not ftdi.isPresentBySerial(my_serial) then begin
       result:= 'Device not present';
@@ -1027,6 +1116,7 @@ begin
     end else
       result:= 'Reset error';
   end;
+  {$ENDIF}
 end;
 
 end.

@@ -534,7 +534,7 @@ object AboutBox: TAboutBox
         'for GRBL-JOG step controller or GRBL from # 0.9'
         ''
         'Written by Carsten Meyer, cm@ct.de '
-        '(c) Heise Zeitschriften, c'#39't Hacks/Make 11/2014'
+        '(c) Heise Zeitschriften, c''t Hacks/Make 11/2014'
         ''
         'Sources available at https://github.com/heise/GRBL-JOG'
         ''

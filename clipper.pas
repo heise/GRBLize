@@ -1,5 +1,9 @@
 unit clipper;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 (*******************************************************************************
 *                                                                              *
 * Author    :  Angus Johnson                                                   *
@@ -47,9 +51,11 @@ unit clipper;
 //{$DEFINE use_deprecated}
 
 // enable LEGACYIFEND for Delphi XE4+
+{$IFnDEF FPC}
 {$IF CompilerVersion >= 25.0}
   {$LEGACYIFEND ON}
 {$IFEND}
+{$ENDIF}
 
 // use generic lists for NextGen compiler
 {$IFDEF NEXTGEN}
@@ -1181,9 +1187,9 @@ end;
 //---------------------------------------------------------------------------
 
 (*****************************************************************************
-*  Dx:                  0(90º)                       Slope:   0  = Dx: -inf  *
+*  Dx:                  0(90Âº)                       Slope:   0  = Dx: -inf  *
 *                       |                            Slope: 0.5  = Dx:   -2  *
-*      +inf (180º) <--- o ---> -inf (0º)             Slope: 2.0  = Dx: -0.5  *
+*      +inf (180Âº) <--- o ---> -inf (0Âº)             Slope: 2.0  = Dx: -0.5  *
 *                                                    Slope: inf  = Dx:    0  *
 *****************************************************************************)
 
@@ -5019,10 +5025,10 @@ var
   A, B, C: double;
 begin
   //The equation of a line in general form (Ax + By + C = 0)
-  //given 2 points (x¹,y¹) & (x²,y²) is ...
-  //(y¹ - y²)x + (x² - x¹)y + (y² - y¹)x¹ - (x² - x¹)y¹ = 0
-  //A = (y¹ - y²); B = (x² - x¹); C = (y² - y¹)x¹ - (x² - x¹)y¹
-  //perpendicular distance of point (x³,y³) = (Ax³ + By³ + C)/Sqrt(A² + B²)
+  //given 2 points (xÂ¹,yÂ¹) & (xÂ²,yÂ²) is ...
+  //(yÂ¹ - yÂ²)x + (xÂ² - xÂ¹)y + (yÂ² - yÂ¹)xÂ¹ - (xÂ² - xÂ¹)yÂ¹ = 0
+  //A = (yÂ¹ - yÂ²); B = (xÂ² - xÂ¹); C = (yÂ² - yÂ¹)xÂ¹ - (xÂ² - xÂ¹)yÂ¹
+  //perpendicular distance of point (xÂ³,yÂ³) = (AxÂ³ + ByÂ³ + C)/Sqrt(AÂ² + BÂ²)
   //see http://en.wikipedia.org/wiki/Perpendicular_distance
   A := ln1.Y - ln2.Y;
   B := ln2.X - ln1.X;

@@ -394,7 +394,9 @@ begin
   job.pens[0].used:= false;
   job.pens[0].enable:= true;
   Form1.SgPens.Repaint;
+  {$IFnDEF FPC}
   GLSneedsATCupdateTimeout:= 1;
+  {$ENDIF}
 end;
 
 Procedure OpenJobFile;
@@ -602,8 +604,10 @@ begin
     exit;
   ClearFiles;
   NeedsRedraw:= true;
+  {$IFnDEF FPC}
   GLSneedsRedrawTimeout:= 1;
   GLSneedsATCupdateTimeout:= 2;
+  {$ENDIF}
 end;
 
 
@@ -637,7 +641,11 @@ begin
       FillRect(Rect);
       aStr:= Cells[ACol, ARow];
       aRect.Top := aRect.Top + 1; // adjust top to center vertical
+      {$IFnDEF FPC}
       DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
+      {$ELSE}
+      //TODO:Draw Text
+      {$ENDIF}
     end;
 end;
 
@@ -739,7 +747,11 @@ begin
       FillRect(Rect);
       aStr:= Cells[ACol, ARow];
       aRect.Top := aRect.Top + 1; // adjust top to center vertical
+      {$IFnDEF FPC}
       DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
+      {$ELSE}
+      //TODO:Draw Text
+      {$ENDIF}
     end;
 end;
 
@@ -839,7 +851,11 @@ begin
           FillRect(Rect);
           aRect := Rect;
           aRect.Top := aRect.Top + 1; // adjust top to center
+          {$IFnDEF FPC}
           DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
+          {$ELSE}
+          //TODO:Draw Text
+          {$ENDIF}
         end;
       7:  // Clear-"Button"
         begin
@@ -856,7 +872,11 @@ begin
           FillRect(Rect);
           aRect := Rect;
           aRect.Top := aRect.Top + 1; // adjust top to center
+          {$IFnDEF FPC}
           DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
+          {$ELSE}
+          //TODO:Draw Text
+          {$ENDIF}
         end;
     end;
   end;

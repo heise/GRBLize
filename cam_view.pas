@@ -1,11 +1,17 @@
 unit cam_view;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses
-  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls,  Buttons, StdCtrls, ComCtrls, Registry, MMsystem,
-  VFrames;
+  {$IFnDEF FPC}
+  Windows, Messages, MMsystem, VFrames,
+  {$ENDIF}
+  SysUtils, Variants, Classes, Graphics, Controls, Forms, Types,
+  Dialogs, ExtCtrls,  Buttons, StdCtrls, ComCtrls, Registry;
 
 type
   TForm3 = class(TForm)
@@ -43,7 +49,9 @@ type
     { Private-Deklarationen }
   public
     { Public-Deklarationen }
+    {$IFnDEF FPC}
     fVideoImage: TVideoImage;
+    {$ENDIF}
     fVideoBitmap: TBitmap;
     procedure OnNewVideoFrame(Sender : TObject; Width, Height: integer; DataPtr: pointer);
   end;
@@ -55,7 +63,11 @@ var
 
 implementation
 
-uses grbl_player_main, import_files, drawing_window, grbl_com, glscene_view;
+uses grbl_player_main, import_files, drawing_window, grbl_com
+  {$IFnDEF FPC}
+  ,glscene_view
+  {$ENDIF}
+  ;
 
 {$R *.dfm}
 
@@ -68,15 +80,19 @@ begin
         if fActivated then begin
           CamIsOn:= false;
           fActivated := false;
+          {$IFnDEF FPC}
           fVideoImage.VideoStop;
+          {$ENDIF}
         end;
       end;
     1:
       if fCamPresent then begin
         Label1.Caption:='    Initializing Webcam...';
         Application.ProcessMessages;
+        {$IFnDEF FPC}
         if not fActivated then
           fVideoImage.VideoStart(DeviceList[0]);
+        {$ENDIF}
         fActivated:= true;
         CamIsOn:= true;
       end else
@@ -93,7 +109,9 @@ begin
   // Retreive latest video image
   if not fActivated then
     exit;
+  {$IFnDEF FPC}
   fVideoImage.GetBitmap(fVideoBitmap);
+  {$ENDIF}
   with fVideoBitmap do begin
     // Paint a crosshair onto video image
     bm_center_x:= VideoBox.width div 2;
@@ -144,25 +162,22 @@ begin
 
   fActivated:= false;
   // Create instance of our video image class.
+  {$IFnDEF FPC}
   fVideoImage:= TVideoImage.Create;
   // Tell fVideoImage where to paint the images it receives from the camera
   // (Only in case we do not want to modify the images by ourselves)
   fVideoImage.SetDisplayCanvas(VideoBox.Canvas);
+  {$ENDIF}
   fVideoBitmap:= TBitmap.create;
   fVideoBitmap.Height:= VideoBox.Height;
   fVideoBitmap.Width:= VideoBox.Width;
 
-
-  // Create instance of our video image class.
-  fVideoImage:= TVideoImage.Create;
-  // Tell fVideoImage where to paint the images it receives from the camera
-  // (Only in case we do not want to modify the images by ourselves)
-  fVideoImage.SetDisplayCanvas(VideoBox.Canvas);
-
   overlay_color:= OverlayColor.Color;
 
   DeviceList := TStringList.Create;
+  {$IFnDEF FPC}
   fVideoImage.GetListOfDevices(DeviceList);
+  {$ENDIF}
   if DeviceList.Count < 1 then begin
     // If no camera has been found, terminate program
     fCamPresent:= false;
@@ -172,8 +187,10 @@ begin
     CamIsOn:= false;
   end else begin
     fCamPresent:= true;
+    {$IFnDEF FPC}
     fVideoImage:= TVideoImage.Create;
     fVideoImage.OnNewVideoFrame := OnNewVideoFrame;
+    {$ENDIF}
     Label1.Caption:='  Webcam/Video Device off';
     if CamIsOn then
 //      RadioGroupCam.ItemIndex:= 1;
@@ -196,8 +213,10 @@ begin
   end;
 
   if fCamPresent then begin
+    {$IFnDEF FPC}
     if fActivated then
       fVideoImage.VideoStop;
+    {$ENDIF}
   end;
   fActivated := false;
   Form1.ShowSpindleCam1.Checked:= false;

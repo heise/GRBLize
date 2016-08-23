@@ -123,9 +123,11 @@ begin
     final_bounds_mm.max.y:= final_bounds.max.y / c_hpgl_scale;
     final_bounds_mm.mid.x:= final_bounds.mid.x / c_hpgl_scale;
     final_bounds_mm.mid.y:= final_bounds.mid.y / c_hpgl_scale;
+    {$IFnDEF FPC}
     GLSneedsATCupdateTimeout:= 0;
     GLSneedsRedrawTimeout:= 1;
     GLScenterBlock(final_bounds);
+    {$ENDIF}
   end;
 end;
 
@@ -181,7 +183,11 @@ begin
               aStr:= ShapeArray[i];
             end;
             aRect.Top := aRect.Top + 1; // adjust top to center vertical
+            {$IFnDEF FPC}
             DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
+            {$ELSE}
+            //TODO:Draw Text
+            {$ENDIF}
           end;
         else begin
           if not final_array[aRow-1].enable then begin
@@ -219,7 +225,9 @@ begin
         my_bool:= true;
       end;
       final_array[HiliteBlock].enable:= my_bool;
+      {$IFnDEF FPC}
       GLSneedsRedrawTimeout:= 1;
+      {$ENDIF}
       AutoAssignATCtoolsToJob;
     end else if my_col = 4 then begin
       my_shape:= final_array[HiliteBlock].shape;
@@ -246,6 +254,8 @@ procedure TForm1.SgBlocksClick(Sender: TObject);
 begin
   SgBlocks.Repaint;
   NeedsRedraw:= true;
+  {$IFnDEF FPC}
   GLSneedsATCupdateTimeout:= 0;
+  {$ENDIF}
 end;
 

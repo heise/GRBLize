@@ -7,7 +7,6 @@ var i: Integer;
   my_str: string;
   my_Settings: TFormatSettings;
 begin
-  my_Settings.Create;
   my_str:= '';
   result:= 0;
   if start_idx >= length(grbl_str) then
@@ -332,7 +331,9 @@ end;
 procedure ExitJobMsg;
 begin
   // falls wg. speed abgeschaltet
+  {$IFnDEF FPC}
   GLSfinalize3Dview;
+  {$ENDIF}
   grbl_sendlist.Clear;
   LastToolUsed:= ToolInSpindle;
   spindle_on_off(false);
@@ -395,11 +396,14 @@ begin
     DefaultsGridListToJob;
     PenGridListToJob;
     BtnRunjob.tag:= 1;
+    {$IFnDEF FPC}
     Form4.GLLinesPath.Visible:= Form4.CheckToolpathVisible.Checked;
     Form4.GLDummyCubeTool.visible:= true;
-
+    {$ENDIF}
     atc_idx:= sgATC.Row;
+    {$IFnDEF FPC}
     GLSsetToolToATCidx(atc_idx);
+    {$ENDIF}
     ForceToolPositions(grbl_wpos.x, grbl_wpos.y, grbl_wpos.z);
     Form1.Memo1.lines.add('');
     Memo1.lines.clear;
@@ -420,7 +424,9 @@ begin
 // alle Pfade mit gleicher ATC-Nummer abarbeiten. ATC enthält immer die Liste
 // der im Job benutzten Werkkzeuge.
     my_pen:= atcArray[atc_idx].pen;
+    {$IFnDEF FPC}
     GLSmakeToolArray(job.pens[my_pen].diameter);
+    {$ENDIF}
     for i:= 0 to my_len-1 do begin
       my_entry:= final_array[i];
       if not my_entry.enable then
@@ -478,9 +484,11 @@ begin
     end;
 
     BtnRunjob.tag:= 1;
+    {$IFnDEF FPC}
     Form4.GLLinesPath.Visible:= Form4.CheckToolpathVisible.Checked;
     Form4.GLDummyCubeTool.visible:= true;
     GLSsetToolToATCidx(FirstToolUsed);
+    {$ENDIF}
 
     Memo1.lines.clear;
     my_btn := MessageDlg('Is machine zeroed with first tool?'
@@ -490,8 +498,10 @@ begin
     Memo1.lines.Clear;
     Memo1.lines.add('Job run started.');
     Memo1.lines.add('=========================================');
+    {$IFnDEF FPC}
     GLSneedsRedrawTimeout:= 1;
     GLSneedsATCupdateTimeout:= 1;
+    {$ENDIF}
     if my_btn = mrCancel then
       exit;
     if (not atcArray[FirstToolUsed].TREFok) and CheckToolChange.checked then begin
@@ -506,10 +516,14 @@ begin
         continue;
 // alle Pfade mit gleicher ATC-Nummer abarbeiten. ATC enthält immer die Liste
 // der im Job benutzten Werkzeuge.
+      {$IFnDEF FPC}
       GLSsetToolToATCidx(atc_idx);
+      {$ENDIF}
       ForceToolPositions(grbl_wpos.x, grbl_wpos.y, grbl_wpos.z);
       my_pen:= atcArray[atc_idx].pen;
+      {$IFnDEF FPC}
       GLSmakeToolArray(job.pens[my_pen].diameter);
+      {$ENDIF}
       for i:= 0 to my_len-1 do begin
         my_entry:= final_array[i];
         if not my_entry.enable then
@@ -595,16 +609,19 @@ var
     Memo1.lines.Clear;
     Memo1.lines.add('G-Code file run started.');
     mdelay(grbl_delay_long);
+    {$IFnDEF FPC}
     if Form4.ComboBoxSimType.ItemIndex = 1 then
       Form4.ComboBoxSimType.ItemIndex:= 2;
     Form4.GLLinesPath.Visible:= Form4.CheckToolpathVisible.Checked;
     Form4.GLDummyCubeTool.visible:= true;
+    {$ENDIF}
     ForceToolPositions(grbl_wpos.x, grbl_wpos.y, grbl_wpos.z);
+    {$IFnDEF FPC}
     GLSneedsRedrawTimeout:= 1;
     GLSneedsATCupdateTimeout:= 1;
     GLSsetToolDia(ComboBoxGdia.ItemIndex+1, ComboBoxGTip.ItemIndex); // Werkzeugform und Farbe
     GLSsetToolColor(clgray);
-
+    {$ENDIF}
     OpenFileDialog.FilterIndex:= 2;
     if not OpenFileDialog.Execute then
       exit;
@@ -617,7 +634,6 @@ var
     z_offs:= StrToFloatDef(EditZoffs.Text, 0);
     if z_offs <> 0 then
       Memo1.lines.add('Using Z offset' + EditZoffs.Text);
-    my_Settings.Create;
     my_Settings.DecimalSeparator:= '.';
     while not Eof(my_ReadFile) do begin
       if isCancelled then begin

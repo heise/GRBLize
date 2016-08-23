@@ -1,8 +1,17 @@
 unit import_files;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 uses
-  SysUtils, StrUtils, Windows, Classes, Forms, Controls, Menus,
+{$IFnDEF FPC}
+  Windows,
+{$ELSE}
+  LCLIntf, LCLType, LMessages, process,
+{$ENDIF}
+  SysUtils, StrUtils, Classes, Forms, Controls, Menus,
   Math, StdCtrls, Graphics, FileCtrl, Dialogs, Clipper;
 
 const
@@ -155,7 +164,7 @@ const
   ShapeColorArray: Array [0..4] of Tcolor =
    (clBlack, clBlue, clRed, clFuchsia, clgreen);
   ToolTipArray: Array [0..7] of String[15] =
-   ('Flat Tip', 'Cone 30°', 'Cone 45°', 'Cone 60°', 'Cone 90°','Ball Tip','Drill', 'Dummy');
+   ('Flat Tip', 'Cone 30Â°', 'Cone 45Â°', 'Cone 60Â°', 'Cone 90Â°','Ball Tip','Drill', 'Dummy');
   zeroPoint: TIntPoint = (
     X: 0;
     Y: 0;
@@ -225,15 +234,15 @@ var
 // beginnt my_line an Position my_pos nach Buchstaben oder Zahlen anbzusuchen.
 // Wurde eine Zahl gefunden, ist Result = p_number, ansonsten p_letter.
 // Wurde nichts (mehr) gefunden, ist Result = p_endofline.
-// POSITION zeigt zum Schluss auf das Zeichen NACH dem letzten gültigen Wert.
+// POSITION zeigt zum Schluss auf das Zeichen NACH dem letzten gÃ¼ltigen Wert.
 // T_parseReturnType = (p_none, p_endofline, p_letters, p_number);
   function ParseLine(var position: Integer; var linetoparse: string;
                      var value: Double; var letters: String): T_parseReturnType;
 
 // Dekodiert einen einzelnes Befehlsbuchstaben/Wert-Paar, beginnend an Position
-// Liefert Buchstaben in "letter" und folgenden Wert in "value" zurück
+// Liefert Buchstaben in "letter" und folgenden Wert in "value" zurÃ¼ck
 // Ergebnis ist TRUE, wenn Befehlsbuchstaben/Wert-Paar gefunden wurde
-// POSITION zeigt zum Schluss auf das Zeichen NACH dem letzten gültigen Wert.
+// POSITION zeigt zum Schluss auf das Zeichen NACH dem letzten gÃ¼ltigen Wert.
   function ParseCommand(var position: Integer; var linetoparse: string;
     var value: Double; var letter: char): boolean;
 
@@ -246,11 +255,16 @@ uses grbl_player_main;
 
 procedure ExecuteFile(const AFilename: String;
                  AParameter, ACurrentDir: String; AWait, AHide: Boolean);
+{$IFnDEF FPC}
 var
   si: TStartupInfo;
   pi: TProcessInformation;
-
+{$ELSE}
+var
+  aproc: TProcess;
+{$ENDIF}
 begin
+  {$IFnDEF FPC}
   if Length(ACurrentDir) = 0 then
     ACurrentDir := ExtractFilePath(AFilename)
   else if AnsiLastChar(ACurrentDir) = '\' then
@@ -279,9 +293,22 @@ begin
       end;
     TerminateProcess(pi.hProcess, Cardinal(-1));
   finally
-    CloseHandle(pi.hProcess);
-    CloseHandle(pi.hThread);
+    FileClose(pi.hProcess); { *Konvertiert von CloseHandle* }
+    FileClose(pi.hThread); { *Konvertiert von CloseHandle* }
   end;
+  {$ELSE}
+  aproc := TProcess.Create(nil);
+  AParameter := Format('"%s" %s', [AFilename, TrimRight(AParameter)]);
+  aproc.CommandLine:=AParameter;
+  if AWait then
+    aProc.Options:=[poWaitOnExit,poNoConsole];
+  try
+    aProc.Execute;
+  finally
+    aproc.Free;
+  end;
+  aProc.Free;
+  {$ENDIF}
 end;
 
 
@@ -289,7 +316,6 @@ function FloatToStrDot(my_val: Double):String;
 var
   my_Settings: TFormatSettings;
 begin
-  my_Settings.Create;
   my_Settings.DecimalSeparator := '.';
   FloatToStrDot:= FormatFloat('0.00',my_val,my_Settings);
 end;
@@ -298,7 +324,6 @@ function StrDotToFloat(my_str: String): Double;
 var
   my_Settings: TFormatSettings;
 begin
-  my_Settings.Create;
   my_Settings.DecimalSeparator := '.';
   StrDotToFloat:= StrToFloatDef(my_str,0,my_Settings);
 end;
@@ -309,7 +334,7 @@ function ParseLine(var position: Integer; var linetoparse: string;
 // beginnt my_line an Position my_pos nach Buchstaben oder Zahlen anbzusuchen.
 // Wurde eine Zahl gefunden, ist Result = p_number, ansonsten p_letter.
 // Wurde nichts (mehr) gefunden, ist Result = p_endofline.
-// POSITION zeigt zum Schluss auf das Zeichen NACH dem letzten gültigen Wert.
+// POSITION zeigt zum Schluss auf das Zeichen NACH dem letzten gÃ¼ltigen Wert.
 // T_parseReturnType = (p_none, p_endofline, p_letters, p_number);
 var
   my_str: String;
@@ -324,7 +349,7 @@ begin
   result:= p_none;
   if (position > my_end) then
     exit;
-  // Leer- und Steuerzeichen überspringen
+  // Leer- und Steuerzeichen Ã¼berspringen
   repeat
     my_char := linetoparse[position]; // erstes Zeichen
     inc(position);
@@ -365,7 +390,7 @@ end;
 function ParseCommand(var position: Integer; var linetoparse: string;
   var value: Double; var letter: char): boolean;
 // Dekodiert einen einzelnes Befehlsbuchstaben/Wert-Paar, beginnend an Position
-// Liefert Buchstaben in "letter" und folgenden Wert in "value" zurück
+// Liefert Buchstaben in "letter" und folgenden Wert in "value" zurÃ¼ck
 // Ergebnis ist TRUE, wenn Befehlsbuchstaben/Wert-Paar gefunden wurde
 var
   my_str: String;
@@ -395,7 +420,7 @@ begin
 end;
 
 function new_block(fileID: Integer): Integer;
-// hängt leeren Block an
+// hÃ¤ngt leeren Block an
 var my_len: Integer;
 begin
   my_len:= length(blockArrays[fileID]);
@@ -407,8 +432,8 @@ begin
 end;
 
 procedure append_point(fileID, blockID: Integer; new_pt: TintPoint);
-// für File-Import:
-// hängt übergebenen Punkt an Block-Pfad an und setzt File-Bounds
+// fÃ¼r File-Import:
+// hÃ¤ngt Ã¼bergebenen Punkt an Block-Pfad an und setzt File-Bounds
 var my_len: Integer;
 begin
   my_len:= length(blockArrays[fileID, blockID].outline_raw);
@@ -451,7 +476,7 @@ end;
 // #############################################################################
 
 procedure file_rotate_mirror(fileID: Integer; auto_close_polygons: boolean);
-// Jeden Block prüfen, ob geschlossener Pfad; danach outline_raw-Pfade
+// Jeden Block prÃ¼fen, ob geschlossener Pfad; danach outline_raw-Pfade
 // rotieren und spiegeln
 // Verwendet beim Import gesetzte File-Bounds
 // muss gleich nach Import geschehen
@@ -465,14 +490,14 @@ begin
   if not my_file_entry.valid then
     exit;
   my_blocklen:= length(blockArrays[fileID]);
-  if my_blocklen = 0 then // keine Blöcke enthalten
+  if my_blocklen = 0 then // keine BlÃ¶cke enthalten
     exit;
   for b:= 0 to my_blocklen - 1 do begin
     my_pathlen:= length(blockArrays[fileID, b].outline_raw);
     if my_pathlen = 0 then  // keine Pfade enthalten
       continue;
 
-    // letzten Eintrag entfernen, falls gleich erstem Punkt, dafür "closed" setzen
+    // letzten Eintrag entfernen, falls gleich erstem Punkt, dafÃ¼r "closed" setzen
     my_first_pt:= blockArrays[fileID,b].outline_raw[0];
     my_last_pt:= blockArrays[fileID,b].outline_raw[my_pathlen-1];
     if (my_first_pt.X = my_last_pt.X) and (my_first_pt.Y = my_last_pt.Y) and auto_close_polygons then begin
@@ -581,7 +606,7 @@ begin
 end;
 
 procedure block_scale_file(fileID: Integer);
-// skaliert Pens/Tools über gesamtes File
+// skaliert Pens/Tools Ã¼ber gesamtes File
 var
   my_blockID, my_blockcount: Integer;
 begin
@@ -594,7 +619,7 @@ begin
 end;
 
 procedure block_scale_all;
-// skaliert Pens/Tools über alle Files
+// skaliert Pens/Tools Ã¼ber alle Files
 var
   i: Integer;
 begin
@@ -603,7 +628,7 @@ begin
 end;
 
 procedure block_scale_pen(penID: Integer);
-// skaliert Pens/Tools über alle Files
+// skaliert Pens/Tools Ã¼ber alle Files
 var
   my_fileID, my_blockID, my_blockcount: Integer;
 begin
@@ -659,8 +684,8 @@ begin
     dy:= search_path[p].y;
     // ist dieser Punkt ist gleich dem Ausgangspunkt?
     if (dx = last_x) and (dy = last_y) then
-      continue; // wenn ja, überspringen
-    // finde nächstliegenden Punkt
+      continue; // wenn ja, Ã¼berspringen
+    // finde nÃ¤chstliegenden Punkt
     dx:= abs(dx - last_x); // Abstand zum Ausgangspunkt
     dy:= abs(dy - last_y);
     // dv:= round(sqrt(sqr(dx) + sqr(dy)));
@@ -691,14 +716,14 @@ begin
 end;
 
 function add_block_to_final(my_block: Tblock_record): Integer;
-// erzeugt neuen final_array-Eintrag, gibt Index zu neuem final zurück
+// erzeugt neuen final_array-Eintrag, gibt Index zu neuem final zurÃ¼ck
 var
   i: Integer;
 begin
   i:= length(final_array);
   if my_block.enable then begin
     setlength(final_array, i+1);
-    // diese Werte können nachträglich geändert werden:
+    // diese Werte kÃ¶nnen nachtrÃ¤glich geÃ¤ndert werden:
     final_array[i].shape:= job.pens[my_block.pen].shape;
     // diese Werte liegen seit Import fest:
     final_array[i].enable:= my_block.enable;
@@ -707,7 +732,7 @@ begin
     final_array[i].was_closed:= my_block.closed;
     final_array[i].bounds:= my_block.bounds;
 
-    // ersten Outline-Pfad übertragen
+    // ersten Outline-Pfad Ã¼bertragen
     setlength(final_array[i].outlines, 1);
     setlength(final_array[i].outlines[0], 1);
     final_array[i].outlines[0]:= my_block.outline;
@@ -718,8 +743,8 @@ end;
 
 procedure make_final_array(fileID: Integer);
 // Blocks zusammensuchen, Childs adoptieren
-// Berücksichtigt nur eine Verwandschaftsebene!
-// Trägt Werte aus Pen-Array ein
+// BerÃ¼cksichtigt nur eine Verwandschaftsebene!
+// TrÃ¤gt Werte aus Pen-Array ein
 var i, c, p, m: Integer;
   my_len: Integer;
 begin
@@ -765,7 +790,7 @@ begin
       continue;
     end;
     if not blockArrays[fileID,p].isChild then begin  // ist ersteinmal kein Child
-      m:= add_block_to_final(blockArrays[fileID,p]); // also hinzufügen
+      m:= add_block_to_final(blockArrays[fileID,p]); // also hinzufÃ¼gen
       if blockArrays[fileID,p].isParent then         // hat Block Childs?
         for i:= 0 to length(blockArrays[fileID,p].childList)-1 do begin  // Child-Loop (c)
           c:= blockArrays[fileID,p].childList[i];
@@ -783,7 +808,7 @@ end;
 
 
 procedure compile_milling(var my_final_entry: Tfinal);
-// Wrapper für ClipperOffset für einzelnen Pen, mehrere Blocks
+// Wrapper fÃ¼r ClipperOffset fÃ¼r einzelnen Pen, mehrere Blocks
 // erstellt milling-Paths-Array mit ggf. mehreren Pfadgruppen
 // Milling-Pfade [0] sind immer outline
 
@@ -796,7 +821,7 @@ var i, j, rp, mp: Integer;
 begin
 // Offenbar seit Delphi XE8 funktioniert der Offset
 // von innenliegenden Objekten mit Clipper nicht mehr.
-// temporärer Workaround: Einzelne Objekte anlegen, keine Childs.
+// temporÃ¤rer Workaround: Einzelne Objekte anlegen, keine Childs.
 
 
   if (my_final_entry.shape = drillhole) or (my_final_entry.shape = contour) then begin
@@ -862,7 +887,7 @@ end;
 
 
 procedure param_change;
-// alle Änderungen, Offset etc.
+// alle Ã„nderungen, Offset etc.
 var i: Integer;
 begin
   block_scale_all;
@@ -870,14 +895,14 @@ begin
   for i:= 0 to c_numOfFiles do
     if FileParamArray[i].valid then
       make_final_array(i);
-  // Werkzeugkorrektur-Offsets für fertiges BlockArray
+  // Werkzeugkorrektur-Offsets fÃ¼r fertiges BlockArray
   for i:= 0 to high(final_array) do
     compile_milling(final_array[i]);
   ListBlocks;
 end;
 
 procedure item_change(arr_idx: Integer);
-// Parameter-Änderungen in Final-Array anwenden
+// Parameter-Ã„nderungen in Final-Array anwenden
 begin
   if (arr_idx < length(final_array)) and (arr_idx >= 0) then
     compile_milling(final_array[arr_idx]);

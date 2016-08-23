@@ -1,18 +1,28 @@
 unit grbl_player_main;
-// CNC-Steuerung für GRBL-JOG-Platine mit GRBL 0.8c/jog.2 Firmware
+
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
+// CNC-Steuerung fÃ¼r GRBL-JOG-Platine mit GRBL 0.8c/jog.2 Firmware
 // oder GRBL 0.9j mit DEFINE GRBL115
 
 
 interface
 
 uses
+  {$IFnDEF FPC}
+  Windows,ShellApi, MMsystem, VFrames, XPMan, System.ImageList, System.Actions,
+  glscene_view, GLColor,
+  FTDItypes, Vcl.ColorGrd, Vcl.Samples.Gauges, System.UItypes,
+  {$ENDIF}
   Math, StdCtrls, ComCtrls, ToolWin, Buttons, ExtCtrls, ImgList,
   Controls, StdActns, Classes, ActnList, Menus, GraphUtil,
-  SysUtils, StrUtils, Windows, Graphics, Forms, Messages,
-  Dialogs, Spin, FileCtrl, Grids, Registry, ShellApi, MMsystem,
-  VFrames, ExtDlgs, XPMan, CheckLst, drawing_window,
-  glscene_view, GLColor, ValEdit, System.ImageList, System.Actions,
-  FTDItypes, deviceselect, grbl_com, Vcl.ColorGrd, Vcl.Samples.Gauges, System.UItypes;
+  SysUtils, StrUtils, Graphics, Forms, Messages,Types,
+  Dialogs, Spin, FileCtrl, Grids, Registry,
+  ExtDlgs, CheckLst, drawing_window,
+  ValEdit,
+  deviceselect, grbl_com;
 
 const
   c_ProgNameStr: String = 'GRBLize ';
@@ -51,7 +61,9 @@ type
     OpenFileDialog: TOpenDialog;
     TimerDraw: TTimer;
     BtnClose: TButton;
+    {$IFnDEF FPC}
     XPManifest1: TXPManifest;
+    {$ENDIF}
     N7: TMenuItem;
     OpenJobDialog: TOpenDialog;
     SaveJobDialog: TSaveDialog;
@@ -401,7 +413,7 @@ var
   Form1: TForm1;
   LEDbusy: TLed;
   DeviceList: TStringList;
-  TimeOutValue,LEDtimer: Integer;  // Timer-Tick-Zähler
+  TimeOutValue,LEDtimer: Integer;  // Timer-Tick-ZÃ¤hler
   TimeOut: Boolean;
 
   ComPortAvailableList: Array[0..31] of Integer;
@@ -412,7 +424,7 @@ var
 
   MouseJogAction: Boolean;
   open_request, ftdi_was_open, com_was_open: boolean;
-  WorkZeroX, WorkZeroY, WorkZeroZ: Double;  // Absolutwerte Werkstück-Null
+  WorkZeroX, WorkZeroY, WorkZeroZ: Double;  // Absolutwerte WerkstÃ¼ck-Null
   JogX, JogY, JogZ: Double;  // Absolutwerte Jogpad
   HomingPerformed: Boolean;
 
@@ -434,7 +446,7 @@ var
 
   LastResponseStr:String;
 
-  // für Simulation
+  // fÃ¼r Simulation
   gcsim_x_old, gcsim_y_old, gcsim_z_old: Double;
   gcsim_seek: Boolean;
   gcsim_dia: Double;
@@ -447,17 +459,31 @@ var
 
 
  const
- // für Simulation
+ // fÃ¼r Simulation
   c_zero_x = 50;
   c_zero_y = 50;
   c_zero_z = -25;
   c_numATCslots = 9;
+
+  {$IFDEF FPC}
+  const
+    SND_ASYNC = 0;
+  procedure PlaySound(aSound : string;aDur : Integer;aFlags : Integer);
+  {$ENDIF}
 
 implementation
 
 uses import_files, Clipper, About, bsearchtree, cam_view, gerber_import;
 
 {$R *.dfm}
+
+{$IFDEF FPC}
+procedure PlaySound(aSound : string;aDur : Integer;aFlags : Integer);
+begin
+
+end;
+{$ENDIF}
+
 
 // #############################################################################
 // #############################################################################
@@ -493,7 +519,7 @@ begin
 end;
 
 procedure TLed.SetLED(led_on: boolean);
-// liefert vorherigen Zustand zurück
+// liefert vorherigen Zustand zurÃ¼ck
 begin
   if led_on and (not IsOn) then begin
     Form1.PanelBusy.Color:= clred;
@@ -677,7 +703,7 @@ begin
 end;
 
 procedure ResetCoordinates;
-// willkürliche Ausgangswerte, auch für Simulation
+// willkÃ¼rliche Ausgangswerte, auch fÃ¼r Simulation
 begin
   grbl_mpos.x:= c_zero_x;
   grbl_mpos.y:= c_zero_y;
@@ -707,14 +733,16 @@ procedure ForceToolPositions(x, y, z: Double);
 begin
   if Form1.ShowDrawing1.Checked then
     SetDrawingToolPosMM(x, y, z);
+  {$IFnDEF FPC}
   if Form1.Show3DPreview1.Checked and isSimActive then begin
     GLSsetToolPosMM(x, y, z)
   end;
+  {$ENDIF}
 end;
 
 
 procedure ResetSimulation;
-// willkürliche Ausgangswerte, auch für Simulation
+// willkÃ¼rliche Ausgangswerte, auch fÃ¼r Simulation
 begin
   Form1.Memo1.lines.add('Reset Simulation');
   ResetCoordinates;
@@ -728,9 +756,11 @@ begin
   JogY:= grbl_wpos.y;
   JogZ:= grbl_wpos.z;
   ForceToolPositions(grbl_wpos.X, grbl_wpos.Y, grbl_wpos.Z);
+  {$IFnDEF FPC}
   GLSspindle_on_off(false);
   GLSneedsRedrawTimeout:= 0;
   GLSneedsATCupdateTimeout:= 0;
+  {$ENDIF}
   HomingPerformed:= true;
   MachineState:= idle;
 end;
@@ -779,7 +809,7 @@ begin
   grbl_receveivelist:= TStringList.create;
   grbl_sendlist:= TStringList.create;
   grbl_is_connected:= false;
-  grbl_delay_short:= 15;   // Könnte man von Baudrate abhängig machen
+  grbl_delay_short:= 15;   // KÃ¶nnte man von Baudrate abhÃ¤ngig machen
   grbl_delay_long:= 40;
   LEDbusy:= Tled.Create;
   InitJob;
@@ -835,12 +865,14 @@ begin
     grbl_ini.Free;
   end;
 
+  {$IFnDEF FPC}
   if not IsFormOpen('Form4') then
     Form4 := TForm4.Create(Self);
   if Show3DPreview1.Checked then
     Form4.show
   else
     Form4.hide;
+  {$ENDIF}
 
   if not IsFormOpen('Form3') then
     Form3 := TForm3.Create(Self);
@@ -891,16 +923,19 @@ begin
   ResetCoordinates;
   ResetToolflags;
   ResetSimulation;
+  {$IFnDEF FPC}
   if ftdi_was_open then
     OpenFTDIport
-  else if com_was_open then
+  else{$ENDIF} if com_was_open then
     OpenCOMport;
   PortOpenedCheck;
   EnableStatus;
   StartupDone:= true;
+  {$IFnDEF FPC}
   if Show3DPreview1.Checked then begin
     Form4.FormReset;
- end;
+  end;
+  {$ENDIF}
 end;
 
 // #############################################################################
@@ -943,11 +978,13 @@ begin
 
   if com_isopen then
     COMclose;
+  {$IFnDEF FPC}
   if ftdi_isopen then begin
     ftdi_isopen:= false;
     ftdi.closeDevice;
     freeandnil(ftdi);
   end;
+  {$ENDIF}
   grbl_is_connected:= false;
   SaveIniFile;
 
@@ -956,8 +993,10 @@ begin
     AboutBox.Close;
   if IsFormOpen('DeviceSelectbox') then
     DeviceSelectbox.Close;
+  {$IFnDEF FPC}
   if IsFormOpen('Form4') then
     Form4.Close;
+  {$ENDIF}
   if IsFormOpen('Form3') then
     Form3.Close;
   if IsFormOpen('Form2') then
@@ -1027,12 +1066,16 @@ end;
 
 procedure TForm1.ComboBoxGdiaChange(Sender: TObject);
 begin
+  {$IFnDEF FPC}
   GLSsetToolDia(ComboBoxGdia.ItemIndex +1, gcsim_tooltip);
+  {$ENDIF}
 end;
 
 procedure TForm1.ComboBoxGtipChange(Sender: TObject);
 begin
+  {$IFnDEF FPC}
   GLSsetToolDia(gcsim_dia, ComboBoxGTip.ItemIndex);
+  {$ENDIF}
 end;
 
 procedure TForm1.BtnCancelMouseEnter(Sender: TObject);
@@ -1061,8 +1104,10 @@ begin
   ResetToolflags;
   if isSimActive then begin
     ResetCoordinates;
+    {$IFnDEF FPC}
     Form4.FormReset;
     GLSsetATCandProbe;
+    {$ENDIF}
     ForceToolPositions(grbl_wpos.X, grbl_wpos.Y, grbl_wpos.Z);
     HomingPerformed:= true;
     DeviceView.Text:= 'SIMULATION';
@@ -1084,8 +1129,10 @@ begin
   end;
   if Form1.CheckBoxSim.Checked then
     ResetCoordinates;
+  {$IFnDEF FPC}
   if Form1.Show3DPreview1.Checked then
     GLSsetATCandProbe;
+  {$ENDIF}
 end;
 
 procedure TForm1.CheckToolChangeClick(Sender: TObject);
@@ -1100,7 +1147,7 @@ end;
 // #############################################################################
 
 // Drei Timer verwendet:
-// TimerBlinkTimer lässt die Buttons und Panels blinken und aktualisiert "langsame" Datenanzeigen
+// TimerBlinkTimer lÃ¤sst die Buttons und Panels blinken und aktualisiert "langsame" Datenanzeigen
 // TimerDrawElapsed aktualisiert alle -zig ms die Zeichnung
 // TimerStatusElapsed holt alle 25 ms aktuelle Positionsdaten wenn "idle"
 
@@ -1144,13 +1191,13 @@ end;
 
 function DecodeStatus(my_response: String; var pos_changed: Boolean): Boolean;
 // liefert Busy-Status TRUE wenn GRBL-Status nicht IDLE ist
-// setzt pos_changed wenn sich Position änderte
+// setzt pos_changed wenn sich Position Ã¤nderte
 
 // Format ab GRBL 0.9j:
 // <Idle,MPos:40.001,35.989,-19.999,WPos:40.001,35.989,-19.999>  3-stellig, 61 Zeichen
 // <Idle,MPos:40.00,35.98,-19.99,WPos:40.00,35.98,-19.99>  2-stellig 55 Zeichen
-// 1 Zeichen dauert bei 115200 Bd 1/11520 s = ca. 0,086 ms, d.h. 7 ms für gesamten Satz
-// 1 Zeichen dauert bei 19200  Bd 1/1920 s  = ca. 0,5 ms,   d.h. 35 ms für gesamten Satz
+// 1 Zeichen dauert bei 115200 Bd 1/11520 s = ca. 0,086 ms, d.h. 7 ms fÃ¼r gesamten Satz
+// 1 Zeichen dauert bei 19200  Bd 1/1920 s  = ca. 0,5 ms,   d.h. 35 ms fÃ¼r gesamten Satz
 
 var
   my_str: String;
@@ -1160,7 +1207,7 @@ var
 begin
   result:= false;
   pos_changed:= false;
-  if (pos('>', my_response) = 0) then begin  // nicht vollständig
+  if (pos('>', my_response) = 0) then begin  // nicht vollstÃ¤ndig
     inc(ResponseFaultCounter);
     exit;
   end;
@@ -1168,7 +1215,7 @@ begin
     my_response:= StringReplace(my_response,'<','',[rfReplaceAll]);
     my_response:= StringReplace(my_response,'>','',[rfReplaceAll]);
     my_response:= StringReplace(my_response,':',',',[rfReplaceAll]);
-  end else begin                             // nicht vollständig
+  end else begin                             // nicht vollstÃ¤ndig
     inc(ResponseFaultCounter);
     exit;
   end;
@@ -1235,7 +1282,7 @@ begin
       PanelAlarm.Color:= $00000040;
       PanelAlarm.Font.Color:= clgray;
     end;
-    // keine gültige Statusmeldung?
+    // keine gÃ¼ltige Statusmeldung?
     if not is_valid then begin
       inc(ResponseFaultCounter);
       exit;
@@ -1281,7 +1328,7 @@ begin
 end;
 
 procedure HandleZeroRequest;
-// wenn Zero-Button auf Maschinen-Panel gedrückt
+// wenn Zero-Button auf Maschinen-Panel gedrÃ¼ckt
 var my_str, my_response: String;
     pos_changed: Boolean;
 begin
@@ -1327,7 +1374,7 @@ end;
 // #############################################################################
 
 procedure TForm1.TimerStatusElapsed(Sender: TObject);
-// alle 25 ms aufgerufen. Statemachine, über Semaphoren gesteuert.
+// alle 25 ms aufgerufen. Statemachine, Ã¼ber Semaphoren gesteuert.
 var pos_changed: Boolean;
   old_machine_state: t_mstates;
 begin
@@ -1338,7 +1385,7 @@ begin
   if isSimActive then
     StatusTimerState:= s_sim;
   case StatusTimerState of
-    s_reset: // Zurücksetzen
+    s_reset: // ZurÃ¼cksetzen
       StatusTimerState:= s_request;
     s_request: // Koordinaten anfragen
       begin
@@ -1377,7 +1424,7 @@ begin
   until StatusTimerState = s_reset;
 }
   Form1.TimerStatus.Enabled:= false;
-  grbl_wait_for_timeout(30);  // etwas länger als Timer zum Beenden braucht
+  grbl_wait_for_timeout(30);  // etwas lÃ¤nger als Timer zum Beenden braucht
 end;
 
 procedure EnableStatus;
@@ -1396,7 +1443,7 @@ procedure WaitForIdle;
 // Warte auf Idle
 begin
   if isGrblActive then
-    while (MachineState = run) do begin // noch beschäftigt?
+    while (MachineState = run) do begin // noch beschÃ¤ftigt?
       sleep(50);
       Application.processmessages;
       if isCancelled or isEmergency or isWaitExit then
@@ -1438,7 +1485,7 @@ end;
 
 function SendReceiveAndDwell(my_cmd: String): String;
 // bei abgeschaltetem Status senden und empfangen, warten bis Bewegung beendet
-// Sende einzelnen Befehl, hierfür 100 ms Timeout
+// Sende einzelnen Befehl, hierfÃ¼r 100 ms Timeout
 begin
   if isGRBLactive then begin
     Form1.Memo1.lines.add(my_cmd);
@@ -1530,7 +1577,7 @@ begin
     SpindleRunning:= false;
     SendActive:= false;
     Memo1.lines.add('Feed release');
-    grbl_sendStr('~', false);   // Feed Hold löschen
+    grbl_sendStr('~', false);   // Feed Hold lÃ¶schen
     grbl_rx_clear; // letzte Antwort verwerfen
     Memo1.lines.add('Unlock Alarm State');
     grbl_sendStr('$X' + #13, false);   // Unlock
@@ -1553,7 +1600,7 @@ procedure CancelSim;
 // Abbruch eines simulierten Jobs
 begin
   with Form1 do begin
-    PanelAlive.tag:= 0;  // Receive Cancel löschen
+    PanelAlive.tag:= 0;  // Receive Cancel lÃ¶schen
     Memo1.lines.add('');
     Memo1.lines.add('Cancel Job Simulation');
     Memo1.lines.add('=========================================');
@@ -1628,7 +1675,7 @@ begin
     end;
     EnableStatus;
   end else begin
-    gcsim_active:= true;          // für Cadencer-Prozess
+    gcsim_active:= true;          // fÃ¼r Cadencer-Prozess
     for i:= 0 to grbl_sendlist.Count-1 do begin
       my_str:= grbl_sendlist[i];
       Form1.ProgressBar1.position:= i;
@@ -1685,8 +1732,10 @@ begin
   ListBlocks;
   if isSimActive then
     ResetCoordinates;
+  {$IFnDEF FPC}
   GLSneedsRedrawTimeout:= 0;
   GLSneedsATCupdateTimeout:= 0;
+  {$ENDIF}
 end;
 
 procedure TForm1.Show3DPreview1Click(Sender: TObject);
@@ -1694,6 +1743,7 @@ begin
   if isSimActive then
     ResetCoordinates;
   Show3DPreview1.Checked:= not Show3DPreview1.Checked;
+  {$IFnDEF FPC}
   if Show3DPreview1.Checked then begin
     GLSneedsRedrawTimeout:= 0;
     GLSneedsATCupdateTimeout:= 0;
@@ -1703,6 +1753,7 @@ begin
     ForceToolPositions(grbl_wpos.X, grbl_wpos.Y, grbl_wpos.Z);
   end else
     Form4.Hide;
+  {$ENDIF}
 end;
 
 procedure TForm1.HelpAbout1Execute(Sender: TObject);
@@ -1739,7 +1790,7 @@ begin
   my_atc_x:= job.atc_zero_x + (my_atc * job.atc_delta_x);
   my_atc_y:= job.atc_zero_y + (my_atc * job.atc_delta_y);
   grbl_moveXY(my_atc_x, my_atc_y, true);
-  //grbl_moveZ(job.atc_pickup_z + 10, true);  // move Z down near pickup-Höhe
+  //grbl_moveZ(job.atc_pickup_z + 10, true);  // move Z down near pickup-HÃ¶he
   SendListToGrbl;
   NeedsRedraw:= true;
 end;
@@ -1767,7 +1818,7 @@ begin
   Memo1.lines.add('');
   Memo1.lines.add('WARNING: Emergency Stop');
   Memo1.lines.add('=========================================');
-  // E-Stop ausführen
+  // E-Stop ausfÃ¼hren
   if isSimActive then begin
     grbl_sendStr(#24, false);   // Soft Reset CTRL-X, Stepper sofort stoppen
     sleep(200);
@@ -1862,7 +1913,9 @@ begin
   HomingPerformed:= true;
   Memo1.lines.add('Done.');
   Memo1.lines.add('');
+  {$IFnDEF FPC}
   GLSclearPathNodes;
+  {$ENDIF}
 end;
 
 procedure TForm1.PanelReadyClick(Sender: TObject);
@@ -1890,11 +1943,11 @@ begin
 end;
 
 procedure TForm1.pu_ProbeToolLengthRefClick(Sender: TObject);
-// Reset für erstes Werkzeug. Aktuell (evt. neu eingesetztes) Werkzeug
+// Reset fÃ¼r erstes Werkzeug. Aktuell (evt. neu eingesetztes) Werkzeug
 // wird auf jeden Fall neu kalibriert.
 begin
   if (abs(MposOnFixedProbe) < job.table_z) then
-// letztes Werkzeug gilt als Referenzlänge wenn gültig
+// letztes Werkzeug gilt als ReferenzlÃ¤nge wenn gÃ¼ltig
     MposOnFixedProbeReference:= MposOnFixedProbe
   else begin
     MposOnFixedProbeReference:= 0;
@@ -1922,7 +1975,9 @@ begin
       FirstToolUsed:= i;
       ToolInSpindle:= i;
       atcArray[i].inslot:= false;
+      {$IFnDEF FPC}
       GLSsetToolToATCidx(i);
+      {$ENDIF}
       break;
     end;
   if atcArray[FirstToolUsed].enable then
@@ -1930,8 +1985,10 @@ begin
   else
     Form1.EditFirstToolDia.Text:=  '(no tools, job empty)';
   UpdateATCsg;
+  {$IFnDEF FPC}
   Form4.Refresh;
   GLSsetATCandProbe;
+  {$ENDIF}
   sgATC.Row:= ToolInSpindle;
 end;
 
@@ -1948,7 +2005,9 @@ begin
   pt.Y:= Y;
   pt := sgATC.ClientToScreen(pt);
   if (not CheckUseATC2.checked) and atcArray[my_row].enable then begin
+    {$IFnDEF FPC}
     GLSsetToolToATCidx(my_row);
+    {$ENDIF}
     ToolInSpindle:= my_row;
   end;
   sgATC.Row := my_row;
@@ -2024,7 +2083,7 @@ begin
 end;
 
 procedure TForm1.BtnZeroZClick(Sender: TObject);
-// manuelle Z-Höhe mit Messklotz
+// manuelle Z-HÃ¶he mit Messklotz
 begin
   WaitForIdle;
   Memo1.lines.add('');
@@ -2039,7 +2098,7 @@ begin
   InvalidateTLCs;
   CancelG43offset;
   SendSingleCommandStr('G92 Z'+FloatToStrDot(job.z_gauge));
-// vorerst nicht nötig, da erstes Tool ohnehin immer TLC'd wird:
+// vorerst nicht nÃ¶tig, da erstes Tool ohnehin immer TLC'd wird:
 {
   if CheckPartProbeZ.Checked then
     DoTLCandConfirm(true, 1);
@@ -2060,7 +2119,7 @@ end;
 // #############################################################################
 
 procedure TForm1.BtnZcontactClick(Sender: TObject);
-// Werkstück-Probekontakt anfahren. Tool muss über Kontakt sein
+// WerkstÃ¼ck-Probekontakt anfahren. Tool muss Ã¼ber Kontakt sein
 var my_dlg_result: integer;
 begin
   WaitForIdle;
@@ -2092,10 +2151,10 @@ begin
       JogZ:= WorkZeroZ;
       DisableStatus;
       SendReceiveAndDwell('G0 G53 Z0' + #13);  // Ganz oben
-      // WorkZero ist negativ. Wird sind um -Workzero über dem Werkstück
+      // WorkZero ist negativ. Wird sind um -Workzero Ã¼ber dem WerkstÃ¼ck
       grbl_SendStr('G92 Z'+FloatToStrDot(-WorkZeroZ) + #13, true);
       EnableStatus;
-// vorerst nicht nötig, da erstes Tool ohnehin immer TLC'd wird:
+// vorerst nicht nÃ¶tig, da erstes Tool ohnehin immer TLC'd wird:
 {
       if CheckPartProbeZ.Checked then
         DoTLCandConfirm(true, 1);  // ist erstes Werkzeug!
@@ -2124,7 +2183,7 @@ begin
 // manuelle Wechselposition
   SendListToGrbl;
 
-// vorerst nicht nötig, da erstes Tool ohnehin immer TLC'd wird:
+// vorerst nicht nÃ¶tig, da erstes Tool ohnehin immer TLC'd wird:
 {
   if Form1.CheckTLCprobe.checked then begin
     if MessageDlg('Manual Tool Change'
@@ -2148,7 +2207,9 @@ begin
   ToolInSpindle:= FirstToolUsed; // first Tool
   sgATC.row:= FirstToolUsed;
   if Form1.Show3DPreview1.checked then
+    {$IFnDEF FPC}
     GLSupdateATC;
+    {$ENDIF}
   InvalidateTLCs;
   CancelG43offset;
   WorkZeroZdone:= false;
@@ -2228,7 +2289,7 @@ begin
     Memo1.lines.add('Move tool to part XY zero');
     spindle_on_off(false);
     drawing_tool_down:= false;
-    // nur anheben, wenn X/Y nicht in Nullpunkt-Nähe
+    // nur anheben, wenn X/Y nicht in Nullpunkt-NÃ¤he
     if (CompareValue(0, grbl_wpos.x, 1) <> 0) or (CompareValue(0, grbl_wpos.x, 1) <> 0) then
       grbl_moveZ(0, true);
     grbl_moveXY(0,0, false);
