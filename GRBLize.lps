@@ -9,7 +9,7 @@
         <Filename Value="GRBLize.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos Y="25"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -18,7 +18,7 @@
         <IsPartOfProject Value="True"/>
         <HasResources Value="True"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="30"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
       <Unit2>
@@ -27,7 +27,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="204"/>
         <CursorPos Y="221"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
@@ -39,7 +39,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="27" Y="19"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="30"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit3>
       <Unit4>
@@ -47,7 +47,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="8"/>
         <CursorPos X="22" Y="20"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit4>
@@ -57,7 +57,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="25"/>
         <CursorPos X="9" Y="56"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="30"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit5>
       <Unit6>
@@ -66,10 +66,11 @@
         <ComponentName Value="Form2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="865"/>
-        <CursorPos X="10" Y="888"/>
-        <UsageCount Value="28"/>
+        <TopLine Value="816"/>
+        <CursorPos Y="837"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -83,7 +84,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="339"/>
         <CursorPos X="25" Y="380"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="30"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit7>
       <Unit8>
@@ -92,11 +93,10 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="1001"/>
-        <CursorPos X="9" Y="1022"/>
-        <UsageCount Value="28"/>
+        <CursorPos X="60" Y="1016"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -644,123 +644,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="846" TopLine="812"/>
+        <Caret Line="934" TopLine="931"/>
       </Position1>
       <Position2>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="847" TopLine="813"/>
+        <Caret Line="888" Column="10" TopLine="865"/>
       </Position2>
       <Position3>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="848" TopLine="814"/>
+        <Caret Line="941" Column="7" TopLine="934"/>
       </Position3>
       <Position4>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="850" TopLine="816"/>
+        <Caret Line="874" Column="9" TopLine="843"/>
       </Position4>
       <Position5>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="851" TopLine="817"/>
+        <Caret Line="392" TopLine="635"/>
       </Position5>
       <Position6>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="852" TopLine="818"/>
+        <Caret Line="1020" Column="32" TopLine="1006"/>
       </Position6>
       <Position7>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="854" TopLine="821"/>
+        <Caret Line="1034" Column="16" TopLine="1012"/>
       </Position7>
       <Position8>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="855" TopLine="822"/>
+        <Caret Line="1071" Column="14" TopLine="1037"/>
       </Position8>
       <Position9>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="856" TopLine="823"/>
+        <Caret Line="1085" Column="14" TopLine="1051"/>
       </Position9>
       <Position10>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="857" TopLine="824"/>
+        <Caret Line="1090" Column="14" TopLine="1056"/>
       </Position10>
       <Position11>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="858" TopLine="825"/>
+        <Caret Line="1095" Column="14" TopLine="1061"/>
       </Position11>
       <Position12>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="859" TopLine="826"/>
+        <Caret Line="1100" Column="14" TopLine="1066"/>
       </Position12>
       <Position13>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="861" TopLine="828"/>
+        <Caret Line="1114" Column="16" TopLine="1080"/>
       </Position13>
       <Position14>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="862" TopLine="829"/>
+        <Caret Line="1136" Column="16" TopLine="1102"/>
       </Position14>
       <Position15>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="863" TopLine="830"/>
+        <Caret Line="1138" Column="19" TopLine="1104"/>
       </Position15>
       <Position16>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="864" TopLine="831"/>
+        <Caret Line="1180" Column="14" TopLine="1146"/>
       </Position16>
       <Position17>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="865" TopLine="832"/>
+        <Caret Line="1200" Column="14" TopLine="1166"/>
       </Position17>
       <Position18>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="866" TopLine="833"/>
+        <Caret Line="1220" Column="14" TopLine="1186"/>
       </Position18>
       <Position19>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="867" TopLine="834"/>
+        <Caret Line="1240" Column="14" TopLine="1206"/>
       </Position19>
       <Position20>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="868" TopLine="835"/>
+        <Caret Line="1261" Column="14" TopLine="1227"/>
       </Position20>
       <Position21>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="869" TopLine="836"/>
+        <Caret Line="1283" Column="14" TopLine="1249"/>
       </Position21>
       <Position22>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="870" TopLine="837"/>
+        <Caret Line="1423" Column="14" TopLine="1389"/>
       </Position22>
       <Position23>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="872" TopLine="839"/>
+        <Caret Line="1462" Column="14" TopLine="1429"/>
       </Position23>
       <Position24>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="873" TopLine="840"/>
+        <Caret Line="1467" Column="14" TopLine="1433"/>
       </Position24>
       <Position25>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="388" TopLine="367"/>
+        <Caret Line="1465" TopLine="1430"/>
       </Position25>
       <Position26>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="389" TopLine="367"/>
+        <Caret Line="1468" Column="18" TopLine="1430"/>
       </Position26>
       <Position27>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="390" TopLine="367"/>
+        <Caret Line="112" Column="36" TopLine="84"/>
       </Position27>
       <Position28>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="391" Column="16" TopLine="368"/>
+        <Caret Line="838" TopLine="803"/>
       </Position28>
       <Position29>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="934" TopLine="931"/>
+        <Caret Line="1018" TopLine="995"/>
       </Position29>
       <Position30>
         <Filename Value="drawing_window.pas"/>
-        <Caret Line="888" Column="10" TopLine="865"/>
+        <Caret Line="838" TopLine="816"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

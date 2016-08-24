@@ -81,7 +81,6 @@ type
     procedure pu_toolisAtPartZeroClick(Sender: TObject);
     procedure pu_moveToolToPartZeroClick(Sender: TObject);
     procedure BtnZoomResetClick(Sender: TObject);
-    procedure FormPaint(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -835,7 +834,6 @@ begin
     if length(final_Array) > 0 then
       for j:= 0 to length(final_Array) - 1 do begin
         draw_final_entry(final_Array[j], HiliteBlock = j, po1);
-//       Application.ProcessMessages;     // sehr langsam!
       end;
     draw_move(po1, po2, clgray, true, false);
 
@@ -1015,7 +1013,6 @@ begin
     set_drawing_scales;
     draw_grid(Form2.DrawingBitmap);
     NeedsRedraw:= true;
-    Application.ProcessMessages;
   end;
 end;
 
@@ -1463,11 +1460,6 @@ begin
 end;
 
 procedure TForm2.FormResize(Sender: TObject);
-begin
-  NeedsRedraw:= true;
-end;
-
-procedure TForm2.FormPaint(Sender: TObject);
 begin
   NeedsRedraw:= true;
 end;

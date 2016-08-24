@@ -1,8 +1,8 @@
 object Form2: TForm2
   Cursor = crCross
-  Left = 816
+  Left = 815
   Height = 555
-  Top = 320
+  Top = 295
   Width = 765
   HorzScrollBar.Visible = False
   VertScrollBar.Visible = False
@@ -23,7 +23,6 @@ object Form2: TForm2
   OnClose = FormClose
   OnCreate = FormCreate
   OnMouseWheel = FormMouseWheel
-  OnPaint = FormPaint
   OnResize = FormResize
   LCLVersion = '1.7'
   object DrawingBox: TPaintBox
