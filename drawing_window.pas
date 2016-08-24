@@ -20,6 +20,9 @@ uses
   Types, import_files;
 
 type
+
+  { TForm2 }
+
   TForm2 = class(TForm)
     DrawingBox: TPaintBox;
     PopupMenuObject: TPopupMenu;
@@ -65,6 +68,7 @@ type
     MenuItem18: TMenuItem;
     pu_MoveCamToPoint: TMenuItem;
     N3: TMenuItem;
+    procedure DrawingBoxPaint(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure pu_camIsAtPointClick(Sender: TObject);
     procedure pu_camIsAtCenterClick(Sender: TObject);
@@ -382,12 +386,9 @@ begin
 end;
 
 procedure update_drawing;
-var
-  my_rect: TRect;
 begin
   with Form2.DrawingBox do begin
-    my_rect:= Rect(0, 0, Width, Height);
-    Canvas.Draw(0, 0, Form2.DrawingBitmap);
+    Invalidate;
   end;
 end;
 
@@ -882,6 +883,9 @@ procedure TForm2.FormCreate(Sender: TObject);
 var
   grbl_ini:TRegistry;
 begin
+  {$ifdef FPC}
+  DoubleBuffered:=true;
+  {$endif}
   grbl_ini:= TRegistry.Create;
   try
     grbl_ini.RootKey := HKEY_CURRENT_USER;
@@ -925,6 +929,11 @@ begin
   end;
 
   Form1.WindowMenu1.Items[0].Checked:= false;
+end;
+
+procedure TForm2.DrawingBoxPaint(Sender: TObject);
+begin
+  Canvas.Draw(0, 0, Form2.DrawingBitmap);
 end;
 
 procedure TForm2.FormActivate(Sender: TObject);

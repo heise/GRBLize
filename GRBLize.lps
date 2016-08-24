@@ -45,7 +45,7 @@
       <Unit4>
         <Filename Value="import_files.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="8"/>
         <CursorPos X="22" Y="20"/>
         <UsageCount Value="28"/>
         <Loaded Value="True"/>
@@ -66,10 +66,12 @@
         <ComponentName Value="Form2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="267"/>
-        <CursorPos X="32" Y="286"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="865"/>
+        <CursorPos X="10" Y="888"/>
         <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit6>
       <Unit7>
@@ -90,9 +92,10 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="228"/>
-        <CursorPos X="139" Y="231"/>
+        <TopLine Value="1001"/>
+        <CursorPos X="9" Y="1022"/>
         <UsageCount Value="28"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -580,7 +583,7 @@
       </Unit73>
       <Unit74>
         <Filename Value="page_job.inc"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="9"/>
         <TopLine Value="720"/>
         <CursorPos X="26" Y="735"/>
         <UsageCount Value="11"/>
@@ -589,7 +592,7 @@
       </Unit74>
       <Unit75>
         <Filename Value="page_blocks.inc"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="7"/>
         <TopLine Value="135"/>
         <CursorPos Y="145"/>
         <UsageCount Value="11"/>
@@ -598,7 +601,7 @@
       </Unit75>
       <Unit76>
         <Filename Value="page_grblsetup.inc"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="143"/>
         <CursorPos X="3" Y="146"/>
         <UsageCount Value="11"/>
@@ -607,7 +610,7 @@
       </Unit76>
       <Unit77>
         <Filename Value="page_pens.inc"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="5"/>
         <CursorPos X="29" Y="4"/>
         <UsageCount Value="11"/>
         <Loaded Value="True"/>
@@ -615,7 +618,7 @@
       </Unit77>
       <Unit78>
         <Filename Value="page_atc.inc"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="133"/>
         <CursorPos Y="140"/>
         <UsageCount Value="11"/>
@@ -624,143 +627,140 @@
       </Unit78>
       <Unit79>
         <Filename Value="..\promet-erp\promet\source\components\synapse\synaser.pas"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="465"/>
         <CursorPos X="14" Y="481"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit79>
       <Unit80>
         <Filename Value="c:\lazarus144\lcl\grids.pas"/>
         <UnitName Value="Grids"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="9717"/>
         <CursorPos Y="9734"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit80>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="grbl_player_main.pas"/>
-        <Caret Line="299" Column="33" TopLine="278"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="846" TopLine="812"/>
       </Position1>
       <Position2>
-        <Filename Value="grbl_player_main.pas"/>
-        <Caret Line="317" Column="15" TopLine="294"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="847" TopLine="813"/>
       </Position2>
       <Position3>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="828" Column="2" TopLine="800"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="848" TopLine="814"/>
       </Position3>
       <Position4>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="19" Column="48"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="850" TopLine="816"/>
       </Position4>
       <Position5>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="303" Column="7" TopLine="287"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="851" TopLine="817"/>
       </Position5>
       <Position6>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="308" Column="13" TopLine="291"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="852" TopLine="818"/>
       </Position6>
       <Position7>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="315" TopLine="291"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="854" TopLine="821"/>
       </Position7>
       <Position8>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="336" Column="8" TopLine="319"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="855" TopLine="822"/>
       </Position8>
       <Position9>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="157" Column="24" TopLine="137"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="856" TopLine="823"/>
       </Position9>
       <Position10>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="348" Column="19" TopLine="323"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="857" TopLine="824"/>
       </Position10>
       <Position11>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="350" Column="19" TopLine="325"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="858" TopLine="825"/>
       </Position11>
       <Position12>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="344" Column="32" TopLine="328"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="859" TopLine="826"/>
       </Position12>
       <Position13>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="386" Column="20" TopLine="365"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="861" TopLine="828"/>
       </Position13>
       <Position14>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="398" Column="3" TopLine="380"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="862" TopLine="829"/>
       </Position14>
       <Position15>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="438" TopLine="420"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="863" TopLine="830"/>
       </Position15>
       <Position16>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="437" Column="12" TopLine="420"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="864" TopLine="831"/>
       </Position16>
       <Position17>
-        <Filename Value="..\promet-erp\promet\source\components\synapse\synaser.pas"/>
-        <Caret Line="76" Column="33" TopLine="64"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="865" TopLine="832"/>
       </Position17>
       <Position18>
-        <Filename Value="..\promet-erp\promet\source\components\synapse\synaser.pas"/>
-        <Caret Line="141" Column="14" TopLine="113"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="866" TopLine="833"/>
       </Position18>
       <Position19>
-        <Filename Value="..\promet-erp\promet\source\components\synapse\synaser.pas"/>
-        <Caret Line="145" Column="13" TopLine="117"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="867" TopLine="834"/>
       </Position19>
       <Position20>
-        <Filename Value="..\promet-erp\promet\source\components\synapse\synaser.pas"/>
-        <Caret Line="187" Column="11" TopLine="159"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="868" TopLine="835"/>
       </Position20>
       <Position21>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="437" Column="46" TopLine="420"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="869" TopLine="836"/>
       </Position21>
       <Position22>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="470" Column="17" TopLine="453"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="870" TopLine="837"/>
       </Position22>
       <Position23>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="471" Column="44" TopLine="450"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="872" TopLine="839"/>
       </Position23>
       <Position24>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="528" TopLine="510"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="873" TopLine="840"/>
       </Position24>
       <Position25>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="218" Column="41" TopLine="203"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="388" TopLine="367"/>
       </Position25>
       <Position26>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="220" Column="73" TopLine="203"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="389" TopLine="367"/>
       </Position26>
       <Position27>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="118" Column="16" TopLine="101"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="390" TopLine="367"/>
       </Position27>
       <Position28>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="184" Column="18" TopLine="169"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="391" Column="16" TopLine="368"/>
       </Position28>
       <Position29>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="221" TopLine="204"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="934" TopLine="931"/>
       </Position29>
       <Position30>
-        <Filename Value="grbl_player_main.pas"/>
-        <Caret Line="231" Column="139" TopLine="228"/>
+        <Filename Value="drawing_window.pas"/>
+        <Caret Line="888" Column="10" TopLine="865"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
