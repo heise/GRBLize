@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 457
+  Left = 455
   Height = 695
-  Top = 185
+  Top = 135
   Width = 932
   BorderStyle = bsSingle
   ClientHeight = 672
@@ -11,7 +11,6 @@ object Form1: TForm1
   Constraints.MaxWidth = 932
   Constraints.MinHeight = 695
   Constraints.MinWidth = 932
-  DefaultMonitor = dmMainForm
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
@@ -472,11 +471,6 @@ object Form1: TForm1
     Width = 593
     TabStop = False
     ActivePage = TabSheetRun
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'MS Sans Serif'
-    Font.Style = [fsBold]
-    ParentFont = False
     TabIndex = 4
     TabOrder = 2
     OnChange = PageControl1Change
@@ -547,17 +541,14 @@ object Form1: TForm1
         ColCount = 9
         DefaultRowHeight = 18
         FixedCols = 0
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'MS Sans Serif'
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine]
-        ParentFont = False
         RowCount = 8
         ScrollBars = ssNone
         TabOrder = 0
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
+        TitleFont.Color = clBlack
+        TitleFont.Height = -11
         TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = [fsBold]
         OnClick = SgFilesClick
         OnDrawCell = SgFilesDrawCell
         OnKeyPress = SgFilesKeyPress
@@ -649,16 +640,12 @@ object Form1: TForm1
         ColCount = 13
         DefaultColWidth = 30
         DefaultRowHeight = 18
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'MS Sans Serif'
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
-        ParentFont = False
         RowCount = 32
         ScrollBars = ssVertical
         TabOrder = 0
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
+        TitleFont.Height = -11
         TitleFont.Name = 'MS Sans Serif'
         OnDrawCell = SgPensDrawCell
         OnKeyPress = SgPensKeyPress
@@ -707,16 +694,12 @@ object Form1: TForm1
         Width = 565
         ColCount = 8
         DefaultRowHeight = 18
-        Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'MS Sans Serif'
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goThumbTracking]
-        ParentFont = False
         RowCount = 2
         ScrollBars = ssVertical
         TabOrder = 0
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
+        TitleFont.Height = -11
         TitleFont.Name = 'MS Sans Serif'
         OnClick = SgBlocksClick
         OnDrawCell = SgBlocksDrawCell
@@ -1109,9 +1092,9 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label18: TLabel
-        Left = 151
+        Left = 158
         Height = 19
-        Top = 26
+        Top = 56
         Width = 55
         Caption = 'Y Axis'
         Font.Color = clRed
@@ -1232,7 +1215,7 @@ object Form1: TForm1
         Height = 13
         Hint = 'Z Lift value from job defaults'
         Top = 346
-        Width = 71
+        Width = 67
         Caption = '+00,00 mm'
         ParentColor = False
       end
@@ -1250,7 +1233,7 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label16: TLabel
-        Left = 216
+        Left = 200
         Height = 19
         Top = 26
         Width = 55
@@ -1492,7 +1475,7 @@ object Form1: TForm1
         Left = 119
         Height = 25
         Top = 23
-        Width = 26
+        Width = 35
         Caption = '+10'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1503,7 +1486,7 @@ object Form1: TForm1
         Left = 119
         Height = 25
         Top = 51
-        Width = 26
+        Width = 35
         Caption = '+1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1514,7 +1497,7 @@ object Form1: TForm1
         Left = 119
         Height = 25
         Top = 79
-        Width = 26
+        Width = 35
         Caption = '+0.1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1525,7 +1508,7 @@ object Form1: TForm1
         Left = 119
         Height = 25
         Top = 129
-        Width = 26
+        Width = 35
         Caption = '-0.1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1536,7 +1519,7 @@ object Form1: TForm1
         Left = 119
         Height = 25
         Top = 156
-        Width = 26
+        Width = 35
         Caption = '-1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1547,7 +1530,7 @@ object Form1: TForm1
         Left = 119
         Height = 25
         Top = 183
-        Width = 26
+        Width = 35
         Caption = '-10'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1557,7 +1540,7 @@ object Form1: TForm1
         Left = 145
         Height = 25
         Top = 104
-        Width = 26
+        Width = 35
         Caption = '+0.1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1565,10 +1548,10 @@ object Form1: TForm1
       end
       object BitBtn2: TBitBtn
         Tag = 1
-        Left = 173
+        Left = 180
         Height = 25
         Top = 104
-        Width = 26
+        Width = 35
         Caption = '+1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1576,10 +1559,10 @@ object Form1: TForm1
       end
       object BitBtn3: TBitBtn
         Tag = 2
-        Left = 202
+        Left = 216
         Height = 25
         Top = 104
-        Width = 26
+        Width = 35
         Caption = '+10'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1590,7 +1573,7 @@ object Form1: TForm1
         Left = 93
         Height = 25
         Top = 104
-        Width = 26
+        Width = 35
         Caption = '-0.1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1598,10 +1581,10 @@ object Form1: TForm1
       end
       object BitBtn5: TBitBtn
         Tag = 4
-        Left = 65
+        Left = 57
         Height = 25
         Top = 104
-        Width = 26
+        Width = 35
         Caption = '-1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1609,10 +1592,10 @@ object Form1: TForm1
       end
       object BitBtn6: TBitBtn
         Tag = 5
-        Left = 37
+        Left = 22
         Height = 25
         Top = 104
-        Width = 26
+        Width = 35
         Caption = '-10'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1620,10 +1603,10 @@ object Form1: TForm1
       end
       object BitBtn15: TBitBtn
         Tag = 22
-        Left = 269
+        Left = 264
         Height = 25
         Top = 23
-        Width = 26
+        Width = 35
         Caption = '+10'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1631,10 +1614,10 @@ object Form1: TForm1
       end
       object BitBtn14: TBitBtn
         Tag = 21
-        Left = 269
+        Left = 264
         Height = 25
         Top = 51
-        Width = 26
+        Width = 35
         Caption = '+1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1642,10 +1625,10 @@ object Form1: TForm1
       end
       object BitBtn13: TBitBtn
         Tag = 20
-        Left = 269
+        Left = 264
         Height = 25
         Top = 79
-        Width = 26
+        Width = 35
         Caption = '+0.1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1653,10 +1636,10 @@ object Form1: TForm1
       end
       object BitBtn16: TBitBtn
         Tag = 23
-        Left = 269
+        Left = 264
         Height = 25
         Top = 129
-        Width = 26
+        Width = 35
         Caption = '-0.1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1664,10 +1647,10 @@ object Form1: TForm1
       end
       object BitBtn17: TBitBtn
         Tag = 24
-        Left = 269
+        Left = 264
         Height = 25
         Top = 156
-        Width = 26
+        Width = 35
         Caption = '-1'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -1675,10 +1658,10 @@ object Form1: TForm1
       end
       object BitBtn18: TBitBtn
         Tag = 25
-        Left = 269
+        Left = 264
         Height = 25
         Top = 183
-        Width = 26
+        Width = 35
         Caption = '-10'
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
@@ -2054,10 +2037,10 @@ object Form1: TForm1
     TabOrder = 12
   end
   object CheckBoxSim: TCheckBox
-    Left = 485
+    Left = 472
     Height = 22
     Hint = 'Job will be simulated only, no output to machine'
-    Top = 37
+    Top = 36
     Width = 122
     Caption = 'Simulation only'
     Checked = True

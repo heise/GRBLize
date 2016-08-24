@@ -803,6 +803,12 @@ begin
   StartupDone:= false;
   {$IFnDEF FPC}
   XPManifest1:=TXPManifest.Create(Self);
+  {$ELSE}
+  BorderStyle:=bsSizeable;//not moveable in Linux without being Sizeable Constrains makes it unsizeable
+  //Lazarus grids seems to need an row more (for Header)
+  SgFiles.RowCount:=SgFiles.RowCount+2;
+  SgPens.RowCount:=SgPens.RowCount+2;
+  Font.Name:='default';
   {$ENDIF}
   Show;
   PlaySound('SYSTEMWELCOME', 0, SND_ASYNC);

@@ -16,8 +16,8 @@ uses
 
 const
   c_hpgl_scale = 40;
-  c_numOfFiles = 8 {$ifndef FPC}-1{$endif};
-  c_numOfPens = 32 {$ifndef FPC}-1{$endif};
+  c_numOfFiles = 8 -1;
+  c_numOfPens = 32 -1;
 
   type
 

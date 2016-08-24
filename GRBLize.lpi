@@ -60,7 +60,9 @@
       <Unit3>
         <Filename Value="deviceselect.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="deviceselectbox"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit3>
       <Unit4>
         <Filename Value="import_files.pas"/>

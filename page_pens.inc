@@ -11,6 +11,9 @@ var
   my_tooltip: Integer;
 
 begin
+  {$IFDEF FPC}
+  TCustomGrid(Sender).Canvas.Rectangle(Rect);
+  {$ENDIF}
   Rect.Left:= Rect.Left-4;    // Workaround für XE8-Darstellung
   if aRow = 0 then with SgPens,Canvas do begin
     Font.Style := [fsBold];

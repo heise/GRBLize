@@ -139,6 +139,9 @@ var
   aRect: TRect;
   aStr: String;
 begin
+  {$IFDEF FPC}
+  TCustomGrid(Sender).Canvas.Rectangle(Rect);
+  {$ENDIF}
   Rect.Left:= Rect.Left-4; // Workaround für XE8-Darstellung
   with SgBlocks,Canvas do begin
     aStr:= Cells[ACol, ARow];

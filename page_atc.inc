@@ -134,6 +134,9 @@ procedure TForm1.sgATCDrawCell(Sender: TObject; ACol, ARow: Integer;
   Rect: TRect; State: TGridDrawState);
 var my_color: TColor;
 begin
+  {$IFDEF FPC}
+  TCustomGrid(Sender).Canvas.Rectangle(Rect);
+  {$ENDIF}
   Rect.Left:= Rect.Left-4;    // Workaround für XE8-Darstellung
   if aRow = 0 then with sgATC,Canvas do begin
     Font.Style := [fsBold];
