@@ -16,7 +16,7 @@ uses
 {$IFnDEF FPC}
   MMsystem, Windows, FTDIdll, FTDIchip, FTDItypes,
 {$ELSE}
-  LCLIntf, LCLType, LMessages, LCLProc, Serial,
+  LCLIntf, LCLType, LMessages, LCLProc, synaser,
 {$ENDIF}
   SysUtils, StrUtils, DateUtils, Classes, Forms, Controls, Menus,
   Dialogs, StdCtrls, import_files, Clipper, deviceselect;
@@ -151,7 +151,11 @@ var
   grbl_sendlist, grbl_receveivelist: TSTringList;
   grbl_checksema: boolean;
   grbl_delay_short, grbl_delay_long: Word;
+  {$IFnDEF FPC}
   ComFile: THandle;
+  {$else}
+  ComFile: TBlockSerial;
+  {$endif}
   AliveIndicatorDirection: Boolean;
   AliveCount: Integer;
   LastAliveState: t_alivestates;
@@ -177,6 +181,7 @@ begin
   {$IFnDEF FPC}
   fIsHighResolution := QueryPerformanceFrequency(fFrequency);
   {$ELSE}
+  fFrequency := 1;
   fIsHighResolution := True;
   {$ENDIF}
   if not fIsHighResolution then
@@ -282,7 +287,11 @@ end;
 function CheckCom(my_ComNumber: Integer): Integer;
 // check if a COM port is available
 var
+  {$IFnDEF FPC}
   FHandle: THandle;
+  {$else}
+  FHandle : TBlockSerial;
+  {$endif}
   my_str: String;
 begin
   Result := 0;
@@ -300,11 +309,14 @@ begin
   else
     Result := GetLastError;
   {$ELSE}
-  FHandle:=SerOpen(my_str);
-  if FHandle <> INVALID_HANDLE_VALUE then
-    SerClose(FHandle)
-  else
+  FHandle:=TBlockSerial.Create;
+  try
+    FHandle.Connect(my_str);
+    Result := 0;
+  finally
     Result := -1;
+  end;
+  FHandle.Free;
   {$ENDIF}
 end;
 
@@ -325,14 +337,23 @@ begin
   StrPCopy(DeviceName, my_name);
   ComFile := CreateFile(DeviceName, GENERIC_READ or GENERIC_WRITE,
     0, nil, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
-  {$ELSE}
-  ComFile:=SerOpen(com_name);
-  {$ENDIF}
-
   if ComFile = INVALID_HANDLE_VALUE then
     Result := False
   else
     Result := True;
+  {$ELSE}
+  ComFile:=TBlockSerial.Create;
+  try
+    ComFile.Connect(com_name);
+  except
+    FreeAndNil(ComFile);
+  end;
+  if ComFile = nil then
+    Result := False
+  else
+    Result := True;
+  {$ENDIF}
+
 end;
 
 procedure COMClose;
@@ -341,7 +362,7 @@ begin
   {$IFnDEF FPC}
   FileClose(ComFile); { *Konvertiert von CloseHandle* }
   {$ELSE}
-  SerClose(ComFile);
+  FreeAndNil(ComFile);
   {$ENDIF}
   com_isopen:= false;
 end;
@@ -361,7 +382,9 @@ begin
     ShowAliveState(LastAliveState);
 {$ELSE}
 begin
-  Result := 0;//TODO
+  if Assigned(ComFile) then
+    Result := ComFile.WaitingData
+  else Result := 0;
 {$ENDIF}
 end;
 
@@ -372,7 +395,8 @@ begin
 //  PurgeComm(ComFile,PURGE_TXCLEAR);
   PurgeComm(ComFile,PURGE_RXCLEAR);
 {$ELSE}
-  SerFlush(ComFile);
+  if Assigned(ComFile) then
+    ComFile.Flush;
 {$ENDIF}
 end;
 
@@ -411,7 +435,7 @@ begin
   if not SetCommTimeouts(ComFile, CommTimeouts) then
     Result := False;
   {$ELSE}
-  SerSetParams(ComFile,StrToInt(baud_str),8,NoneParity,1,[]);
+  ComFile.Config(StrToInt(baud_str),8,'N',SB1,False,False);
   {$ENDIF}
 end;
 
@@ -444,8 +468,8 @@ begin
   if ReadFile(ComFile, c, 1, BytesRead, nil) then
     Result := char(c);
   {$else}
-  if SerReadTimeout(ComFile,arr,1,20)=1 then
-    Result := char(arr[0]);
+  Result := char(ComFile.RecvByte(20));
+  if ComFile.LastError<>0 then result := #0;
   {$endif}
 end;
 
@@ -501,7 +525,7 @@ begin
   {$IFnDEF FPC}
   WriteFile(ComFile, my_str[1], Length(my_str), BytesWritten, nil);
   {$ELSE}
-  SerWrite(ComFile,my_str,length(my_str));
+  ComFile.SendString(my_str);
   {$ENDIF}
   if my_getok then begin
     Result:= COMReceiveStr(0);
