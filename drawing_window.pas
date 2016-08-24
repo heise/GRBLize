@@ -12,6 +12,8 @@ interface
 uses
   {$IFnDEF FPC}
   Windows,VFrames, ShellApi, XPMan, System.UItypes,
+  {$ELSE}
+  LMessages,LCLType,
   {$ENDIF}
   Math, StdCtrls, ComCtrls, ToolWin, Buttons, ExtCtrls, ImgList,
   Controls, StdActns, Classes, ActnList, Menus, GraphUtil,
@@ -386,9 +388,7 @@ end;
 
 procedure update_drawing;
 begin
-  with Form2.DrawingBox do begin
-    Invalidate;
-  end;
+  Form2.Invalidate;
 end;
 
 
@@ -1428,7 +1428,11 @@ var
   pos, diff, max: Integer;
 begin
   Handled:= true;
+  {$ifndef FPC}
   p := DrawingBox.ScreenToClient(MousePos);
+  {$else}
+  p := MousePos;
+  {$endif}
   p.x:= (p.X - drawing_offset_x);
   p.y:= (p.y - drawing_offset_y);
   pos:= TrackBarZoom.Position;
@@ -1453,15 +1457,14 @@ begin
       bm_scroll.y:= bm_scroll.y + round(diff * p.y / Scale);
     end;
   end;
-  {$IFnDEF FPC}
   TrackBarZoom.Perform(CN_HSCROLL, SB_ENDSCROLL, 0);
-  {$ENDIF}
   NeedsRedraw:= true;
 end;
 
 procedure TForm2.FormResize(Sender: TObject);
 begin
   NeedsRedraw:= true;
+  Invalidate;
 end;
 
 end.
