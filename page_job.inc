@@ -644,7 +644,7 @@ begin
       {$IFnDEF FPC}
       DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
       {$ELSE}
-      //TODO:Draw Text
+      TextRect(aRect,aRect.Left+5,aRect.Top+5,aStr);
       {$ENDIF}
     end;
 end;
@@ -724,12 +724,12 @@ var
   aStr: String;
 
 begin
-  {$IFDEF FPC}
-  TCustomGrid(Sender).Canvas.Rectangle(Rect);
-  {$ENDIF}
   Rect.Left:= Rect.Left-4; // Workaround für XE8-Darstellung
   aStr:= SgAppDefaults.Cells[ACol, ARow];
   if aRow = 0 then with SgAppDefaults,Canvas do begin
+    {$IFDEF FPC}
+    TCustomGrid(Sender).Canvas.Rectangle(Rect);
+    {$ENDIF}
     Font.Style := [fsBold];
     TextRect(Rect, Rect.Left + 2, Rect.Top + 2, aStr);
   end else if (aCol = 1) and ((aStr= 'ON') or (aStr= 'OFF')) then // ON, OFF
@@ -753,7 +753,7 @@ begin
       {$IFnDEF FPC}
       DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
       {$ELSE}
-      //TODO:Draw Text
+      Canvas.TextRect(aRect,aRect.Left+5,aRect.Top,aStr);
       {$ENDIF}
     end;
 end;
@@ -860,7 +860,7 @@ begin
           {$IFnDEF FPC}
           DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
           {$ELSE}
-          //TODO:Draw Text
+          TextRect(aRect,aRect.Left+5,aRect.Top,aStr);
           {$ENDIF}
         end;
       7:  // Clear-"Button"
@@ -881,7 +881,7 @@ begin
           {$IFnDEF FPC}
           DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
           {$ELSE}
-          //TODO:Draw Text
+          Canvas.TextRect(aRect,0,0,aStr);
           {$ENDIF}
         end;
     end;

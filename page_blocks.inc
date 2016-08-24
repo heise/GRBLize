@@ -189,7 +189,7 @@ begin
             {$IFnDEF FPC}
             DrawText(Canvas.Handle, PChar(aStr), Length(aStr), aRect, DT_CENTER);
             {$ELSE}
-            //TODO:Draw Text
+            Canvas.TextRect(aRect,aRect.Left+5,aRect.Top,aStr);
             {$ENDIF}
           end;
         else begin

@@ -476,8 +476,8 @@ object Form1: TForm1
     OnChange = PageControl1Change
     object TabSheet1: TTabSheet
       Caption = 'Job/Files'
-      ClientHeight = 402
-      ClientWidth = 587
+      ClientHeight = 407
+      ClientWidth = 585
       Font.Color = clBlack
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
@@ -487,7 +487,7 @@ object Form1: TForm1
         Left = 8
         Height = 13
         Top = 8
-        Width = 371
+        Width = 323
         Caption = 'HPGL/Vector/Drill Fles (G-Code/SVG will be mapped to Pen/Tool 9)'
         Font.Color = cl3DDkShadow
         Font.Height = -11
@@ -499,7 +499,7 @@ object Form1: TForm1
         Left = 8
         Height = 13
         Top = 186
-        Width = 66
+        Width = 58
         Caption = 'Job Settings'
         Font.Color = cl3DDkShadow
         Font.Height = -11
@@ -511,7 +511,7 @@ object Form1: TForm1
         Left = 134
         Height = 13
         Top = 186
-        Width = 163
+        Width = 138
         Caption = 'Press Enter to Accept Values'
         Font.Color = cl3DDkShadow
         Font.Height = -11
@@ -523,7 +523,7 @@ object Form1: TForm1
         Left = 304
         Height = 13
         Top = 240
-        Width = 76
+        Width = 64
         Caption = 'Job Comment'
         Font.Color = cl3DDkShadow
         Font.Height = -11
@@ -718,8 +718,8 @@ object Form1: TForm1
     end
     object TabSheetDefaults: TTabSheet
       Caption = 'Defaults'
-      ClientHeight = 402
-      ClientWidth = 587
+      ClientHeight = 407
+      ClientWidth = 585
       ImageIndex = 2
       object Bevel11: TBevel
         Left = 319
@@ -732,7 +732,7 @@ object Form1: TForm1
         Left = 8
         Height = 13
         Top = 8
-        Width = 243
+        Width = 202
         Caption = 'GRBL Settings (use decimal dot for values)'
         Font.Color = cl3DDkShadow
         Font.Height = -11
@@ -781,7 +781,7 @@ object Form1: TForm1
         Left = 319
         Height = 13
         Top = 8
-        Width = 163
+        Width = 139
         Caption = 'GRBLize Application Defaults'
         Font.Color = cl3DDkShadow
         Font.Height = -11
@@ -793,7 +793,7 @@ object Form1: TForm1
         Left = 334
         Height = 13
         Top = 334
-        Width = 126
+        Width = 103
         Caption = 'Set to current position'
         Font.Color = cl3DDkShadow
         Font.Height = -11
