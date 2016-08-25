@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 454
+  Left = 453
   Height = 695
-  Top = 110
+  Top = 85
   Width = 932
   BorderStyle = bsSingle
   ClientHeight = 672
@@ -442,6 +442,22 @@ object Form1: TForm1
       Left = 51
       Top = 2
       Action = FileSave1
+    end
+    object BtnConnect: TBitBtn
+      Left = 74
+      Height = 24
+      Top = 2
+      Width = 78
+      Caption = 'Connect'
+      Default = True
+      Enabled = False
+      Font.Color = clRed
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      OnClick = BtnConnectClick
+      ParentFont = False
+      TabOrder = 0
     end
   end
   object DeviceView: TEdit
@@ -1715,7 +1731,7 @@ object Form1: TForm1
     end
   end
   object BtnRescan: TButton
-    Left = 229
+    Left = 232
     Height = 24
     Hint = 'Open FTDI USB Device'
     Top = 2
@@ -2053,22 +2069,6 @@ object Form1: TForm1
     State = cbChecked
     TabOrder = 14
   end
-  object BtnConnect: TBitBtn
-    Left = 82
-    Height = 24
-    Top = 2
-    Width = 68
-    Caption = 'Connect'
-    Default = True
-    Enabled = False
-    Font.Color = clRed
-    Font.Height = -13
-    Font.Name = 'MS Sans Serif'
-    Font.Style = [fsBold]
-    OnClick = BtnConnectClick
-    ParentFont = False
-    TabOrder = 15
-  end
   object PanelYdone: TPanel
     Left = 239
     Height = 20
@@ -2083,7 +2083,7 @@ object Form1: TForm1
     Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
-    TabOrder = 16
+    TabOrder = 15
   end
   object PanelXdone: TPanel
     Left = 110
@@ -2099,7 +2099,7 @@ object Form1: TForm1
     Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
-    TabOrder = 17
+    TabOrder = 16
   end
   object Memo1: TMemo
     Left = 611
@@ -2114,7 +2114,7 @@ object Form1: TForm1
     )
     ParentFont = False
     ScrollBars = ssVertical
-    TabOrder = 18
+    TabOrder = 17
   end
   object PanelAlive: TPanel
     Left = 592
@@ -2131,7 +2131,7 @@ object Form1: TForm1
     Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
-    TabOrder = 19
+    TabOrder = 18
     OnClick = PanelAliveClick
   end
   object sgATC: TStringGrid
@@ -2150,7 +2150,7 @@ object Form1: TForm1
     ParentFont = False
     RowCount = 21
     ScrollBars = ssNone
-    TabOrder = 20
+    TabOrder = 19
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
     TitleFont.Name = 'MS Sans Serif'

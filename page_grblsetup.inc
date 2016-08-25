@@ -94,6 +94,7 @@ begin
         inc(i)
       else deviceselectbox.ComboBoxComPort.Items.Delete(i);
     end;
+  deviceselectbox.ComboBoxCOMport.Items.Insert(0,'none');
   {$endif}
   if deviceselectbox.ComboBoxComPort.Items.Count>0 then
     deviceselectbox.ComboBoxCOMport.ItemIndex:= 0; // Auswahl erzwingen
@@ -191,6 +192,8 @@ begin
         LEDbusy.Checked:= true;
         my_str:= grbl_receiveStr(250);
         if my_str='ok' then
+          break;
+        if my_str='#Timeout' then
           break;
         if pos('[',my_str) > 0 then
           continue;

@@ -1,7 +1,7 @@
 object deviceselectbox: Tdeviceselectbox
-  Left = 241
+  Left = 240
   Height = 249
-  Top = 58
+  Top = 33
   Width = 505
   BorderStyle = bsDialog
   Caption = 'Select USB Device'
@@ -127,7 +127,6 @@ object deviceselectbox: Tdeviceselectbox
         'none (FTDI direct)'
       )
       ParentFont = False
-      Sorted = True
       Style = csDropDownList
       TabOrder = 3
       Text = 'none (FTDI direct)'

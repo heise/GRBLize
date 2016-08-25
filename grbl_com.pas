@@ -312,7 +312,8 @@ begin
   FHandle:=TBlockSerial.Create;
   try
     FHandle.Connect(my_str);
-    Result := 0;
+    Result := FHandle.LastError;
+    FHandle.CloseSocket;
   except
     Result := -1;
   end;
@@ -345,6 +346,8 @@ begin
   ComFile:=TBlockSerial.Create;
   try
     ComFile.Connect(com_name);
+    if ComFile.LastError <> 0 then
+      FreeAndNil(ComFile);
   except
     FreeAndNil(ComFile);
   end;
@@ -362,6 +365,7 @@ begin
   {$IFnDEF FPC}
   FileClose(ComFile); { *Konvertiert von CloseHandle* }
   {$ELSE}
+  ComFile.CloseSocket;
   FreeAndNil(ComFile);
   {$ENDIF}
   com_isopen:= false;
@@ -468,7 +472,7 @@ begin
   if ReadFile(ComFile, c, 1, BytesRead, nil) then
     Result := char(c);
   {$else}
-  Result := char(ComFile.RecvByte(20));
+  Result := char(ComFile.RecvByte(2));
   if ComFile.LastError<>0 then result := #0;
   {$endif}
 end;
@@ -484,6 +488,7 @@ var
   target_time, current_time: Int64;
   has_timeout: Boolean;
 begin
+  {$IFnDEF FPC}
   StopWatch.Start;
   COMSetTimeout(1);
   Result := '';
@@ -511,6 +516,12 @@ begin
     end;
   end;
   Result:= my_str;
+  {$ELSE}
+  Result := ComFile.RecvTerminated(timeout,#10);
+  if pos(#13,Result)>0 then
+    Result := copy(Result,0,pos(#13,result)-1);
+  if Result = '' then Result := '#Timeout';
+  {$ENDIF}
 end;
 
 function COMsendStr(sendStr: String; my_getok: boolean): String;

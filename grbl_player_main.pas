@@ -33,7 +33,11 @@ const
   c_loadATCstr: String = 'M9';
 
 type
+
+  { TForm1 }
+
   TForm1 = class(TForm)
+    BtnConnect: TBitBtn;
     MainMenu1: TMainMenu;
     File1: TMenuItem;
     FileNewItem: TMenuItem;
@@ -155,7 +159,6 @@ type
     ToolButton2: TToolButton;
     CheckBoxSim: TCheckBox;
     BtnCancel: TSpeedButton;
-    BtnConnect: TBitBtn;
     PanelYdone: TPanel;
     PanelXdone: TPanel;
     BtnZeroAll: TSpeedButton;
