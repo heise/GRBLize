@@ -1,63 +1,67 @@
 object Form1: TForm1
   Left = 454
-  Height = 695
   Top = 110
-  Width = 932
   BorderStyle = bsSingle
-  ClientHeight = 672
-  ClientWidth = 932
+  ClientHeight = 647
+  ClientWidth = 926
   Color = clBtnFace
   Constraints.MaxHeight = 696
   Constraints.MaxWidth = 932
   Constraints.MinHeight = 695
   Constraints.MinWidth = 932
+  Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
+  Font.Style = []
   Menu = MainMenu1
+  OldCreateOrder = True
+  ShowHint = True
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
-  ShowHint = True
-  LCLVersion = '1.7'
+  PixelsPerInch = 96
+  TextHeight = 13
   object Bevel3: TBevel
     Left = 7
-    Height = 167
     Top = 474
     Width = 593
+    Height = 167
     Style = bsRaised
   end
   object Bevel5: TBevel
     Left = 606
-    Height = 609
     Top = 32
     Width = 315
+    Height = 609
     Style = bsRaised
   end
   object Bevel9: TBevel
     Left = 20
-    Height = 37
     Top = 592
     Width = 176
+    Height = 37
   end
   object Bevel6: TBevel
     Left = 206
-    Height = 37
     Top = 592
     Width = 176
+    Height = 37
   end
   object Bevel8: TBevel
     Left = 20
-    Height = 55
     Top = 484
     Width = 427
+    Height = 55
   end
   object PosX: TLabel
     Left = 24
-    Height = 38
     Top = 504
-    Width = 122
+    Width = 106
+    Height = 37
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -32
     Font.Name = 'MS Sans Serif'
@@ -67,24 +71,27 @@ object Form1: TForm1
   end
   object BtnZeroX: TSpeedButton
     Left = 24
-    Height = 25
-    Hint = 'Tool is at part X zero; set part X to 0'
     Top = 545
     Width = 80
+    Height = 25
+    Hint = 'Tool is at part X zero; set part X to 0'
     Caption = 'Zero X'
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -15
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    OnClick = BtnZeroXClick
     ParentFont = False
+    OnClick = BtnZeroXClick
   end
   object PosY: TLabel
     Left = 152
-    Height = 38
     Top = 504
-    Width = 122
+    Width = 106
+    Height = 37
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -32
     Font.Name = 'MS Sans Serif'
@@ -94,24 +101,27 @@ object Form1: TForm1
   end
   object BtnZeroY: TSpeedButton
     Left = 156
-    Height = 25
-    Hint = 'Tool is at part Y zero; set part Y to 0'
     Top = 545
     Width = 77
+    Height = 25
+    Hint = 'Tool is at part Y zero; set part Y to 0'
     Caption = 'Zero Y'
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = 1097744
     Font.Height = -15
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    OnClick = BtnZeroYClick
     ParentFont = False
+    OnClick = BtnZeroYClick
   end
   object PosZ: TLabel
     Left = 280
-    Height = 38
     Top = 504
-    Width = 122
+    Width = 106
+    Height = 37
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -32
     Font.Name = 'MS Sans Serif'
@@ -121,24 +131,29 @@ object Form1: TForm1
   end
   object BtnZeroZ: TSpeedButton
     Left = 280
-    Height = 25
-    Hint = 'Tool is at part Y zero; set part Z to Z gauge value from job defaults'
     Top = 545
     Width = 81
+    Height = 25
+    Hint = 
+      'Tool is at part Y zero; set part Z to Z gauge value from job def' +
+      'aults'
     Caption = 'Zero Z'
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -15
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    OnClick = BtnZeroZClick
     ParentFont = False
+    OnClick = BtnZeroZClick
   end
   object MposX: TLabel
     Left = 24
-    Height = 15
     Top = 486
-    Width = 50
+    Width = 45
+    Height = 16
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
@@ -148,10 +163,12 @@ object Form1: TForm1
   end
   object MposY: TLabel
     Left = 152
-    Height = 15
     Top = 486
-    Width = 50
+    Width = 45
+    Height = 16
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
@@ -161,10 +178,12 @@ object Form1: TForm1
   end
   object MposZ: TLabel
     Left = 280
-    Height = 15
     Top = 486
-    Width = 50
+    Width = 45
+    Height = 16
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
@@ -174,22 +193,27 @@ object Form1: TForm1
   end
   object Label23: TLabel
     Left = 212
-    Height = 15
     Top = 593
-    Width = 173
+    Width = 126
+    Height = 13
     Caption = 'Part zero in machine coord'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 13
     Font.Name = 'MS Sans Serif'
+    Font.Style = []
     ParentColor = False
     ParentFont = False
   end
   object Label27: TLabel
     Left = 399
-    Height = 25
     Top = 512
-    Width = 48
+    Width = 34
+    Height = 20
     Caption = 'Part'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 21
     Font.Name = 'MS Sans Serif'
@@ -199,23 +223,28 @@ object Form1: TForm1
   end
   object Label28: TLabel
     Left = 393
-    Height = 15
     Top = 484
-    Width = 54
+    Width = 41
+    Height = 13
     Caption = 'Machine'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 13
     Font.Name = 'MS Sans Serif'
+    Font.Style = []
     ParentColor = False
     ParentFont = False
   end
   object LabelWorkX: TLabel
     Left = 212
-    Height = 15
-    Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 50
+    Width = 45
+    Height = 16
+    Hint = 'Offset to part zero in machine coordinates'
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
@@ -225,11 +254,13 @@ object Form1: TForm1
   end
   object LabelWorkY: TLabel
     Left = 270
-    Height = 15
-    Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 50
+    Width = 45
+    Height = 16
+    Hint = 'Offset to part zero in machine coordinates'
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
@@ -239,11 +270,13 @@ object Form1: TForm1
   end
   object LabelWorkZ: TLabel
     Left = 330
-    Height = 15
-    Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 50
+    Width = 45
+    Height = 16
+    Hint = 'Offset to part zero in machine coordinates'
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
@@ -253,11 +286,13 @@ object Form1: TForm1
   end
   object LabelTableX: TLabel
     Left = 25
-    Height = 15
-    Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 50
+    Width = 45
+    Height = 16
+    Hint = 'Offset to part zero in machine coordinates'
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
@@ -267,11 +302,13 @@ object Form1: TForm1
   end
   object LabelTableY: TLabel
     Left = 83
-    Height = 15
-    Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 50
+    Width = 45
+    Height = 16
+    Hint = 'Offset to part zero in machine coordinates'
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
@@ -281,11 +318,13 @@ object Form1: TForm1
   end
   object LabelTableZ: TLabel
     Left = 143
-    Height = 15
-    Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 50
+    Width = 45
+    Height = 16
+    Hint = 'Offset to part zero in machine coordinates'
     Caption = '000,00'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
@@ -295,23 +334,28 @@ object Form1: TForm1
   end
   object Label31: TLabel
     Left = 25
-    Height = 15
     Top = 593
-    Width = 187
+    Width = 132
+    Height = 13
     Caption = 'Table size (limits XYZ travel)'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = 13
     Font.Name = 'MS Sans Serif'
+    Font.Style = []
     ParentColor = False
     ParentFont = False
   end
   object LabelHintZ: TLabel
     Left = 516
+    Top = 505
+    Width = 62
     Height = 13
     Hint = 'Z Gauge height value from job defaults'
-    Top = 505
-    Width = 71
     Caption = '+00.00 mm'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
@@ -321,41 +365,44 @@ object Form1: TForm1
   end
   object BtnCancel: TSpeedButton
     Left = 392
-    Height = 39
-    Hint = 'Cancel any running process and clear 3D view'
     Top = 590
     Width = 98
+    Height = 39
+    Hint = 'Cancel any running process and clear 3D view'
     Caption = 'CANCEL'
-    Font.CharSet = ANSI_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -19
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
+    ParentFont = False
     OnClick = BtnCancelClick
     OnMouseEnter = BtnCancelMouseEnter
     OnMouseLeave = BtnCancelMouseLeave
-    ParentFont = False
   end
   object BtnZeroAll: TSpeedButton
     Left = 496
-    Height = 25
-    Hint = 'Set workpiece Z to Z gauge value'
     Top = 545
     Width = 98
+    Height = 25
+    Hint = 'Set workpiece Z to Z gauge value'
     Caption = 'Zero All'
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGreen
     Font.Height = -15
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    OnClick = BtnZeroAllClick
     ParentFont = False
+    OnClick = BtnZeroAllClick
   end
   object Label13: TLabel
     Left = 612
-    Height = 13
     Top = 41
-    Width = 165
+    Width = 155
+    Height = 13
     Caption = 'G-Code Output / Messages'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = cl3DDkShadow
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
@@ -365,10 +412,12 @@ object Form1: TForm1
   end
   object LabelATCmsg: TLabel
     Left = 612
-    Height = 13
     Top = 423
-    Width = 99
+    Width = 93
+    Height = 13
     Caption = 'ATC or Tool List'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = cl3DDkShadow
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
@@ -378,49 +427,58 @@ object Form1: TForm1
   end
   object Label24: TLabel
     Left = 794
-    Height = 13
     Top = 423
-    Width = 140
+    Width = 113
+    Height = 13
     Caption = '(current tool highlighted)'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
+    Font.Style = []
     ParentColor = False
     ParentFont = False
   end
   object LabelFaults: TLabel
     Left = 815
-    Height = 13
     Top = 41
-    Width = 62
+    Width = 54
+    Height = 13
     Caption = 'LabelFaults'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
+    Font.Style = []
     ParentColor = False
     ParentFont = False
   end
   object Label22: TLabel
     Left = 508
-    Height = 13
     Top = 486
-    Width = 93
+    Width = 79
+    Height = 13
     Caption = 'Z Gauge Height:'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
+    Font.Style = []
     ParentColor = False
     ParentFont = False
   end
   object ToolBar1: TToolBar
     Left = 0
-    Height = 30
     Top = 0
-    Width = 932
+    Width = 926
+    Height = 30
     BorderWidth = 1
     ButtonHeight = 24
-    Constraints.MaxWidth = 1192
     Color = clBtnFace
+    Constraints.MaxWidth = 1192
     Images = ImageList1
     Indent = 5
     ParentColor = False
@@ -430,125 +488,137 @@ object Form1: TForm1
     Wrapable = False
     object ToolButton9: TToolButton
       Left = 5
-      Top = 2
+      Top = 0
       Action = FileNew1
     end
     object ToolButton1: TToolButton
       Left = 28
-      Top = 2
+      Top = 0
       Action = FileOpen1
     end
     object ToolButton2: TToolButton
       Left = 51
-      Top = 2
+      Top = 0
       Action = FileSave1
     end
   end
   object DeviceView: TEdit
     Left = 296
-    Height = 21
-    Hint = 'Selected FTDI Device'
     Top = 4
     Width = 193
-    AutoSize = False
+    Height = 21
+    Hint = 'Selected FTDI Device'
+    TabStop = False
     AutoSelect = False
+    AutoSize = False
     Color = clGradientInactiveCaption
-    Font.CharSet = ANSI_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -12
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
     ReadOnly = True
-    TabStop = False
     TabOrder = 0
     Text = 'SIMULATION'
   end
   object PageControl1: TPageControl
     Left = 7
-    Height = 433
     Top = 36
     Width = 593
-    TabStop = False
+    Height = 433
     ActivePage = TabSheetRun
-    TabIndex = 4
     TabOrder = 2
+    TabStop = False
     OnChange = PageControl1Change
     object TabSheet1: TTabSheet
       Caption = 'Job/Files'
-      ClientHeight = 402
-      ClientWidth = 587
+      Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       ParentFont = False
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label1: TLabel
         Left = 8
-        Height = 13
         Top = 8
-        Width = 371
+        Width = 388
+        Height = 13
         Caption = 'HPGL/Vector/Drill Fles (G-Code/SVG will be mapped to Pen/Tool 9)'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
       object Label12: TLabel
         Left = 8
-        Height = 13
         Top = 186
-        Width = 66
+        Width = 71
+        Height = 13
         Caption = 'Job Settings'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
       object Label2: TLabel
         Left = 134
-        Height = 13
         Top = 186
-        Width = 163
+        Width = 167
+        Height = 13
         Caption = 'Press Enter to Accept Values'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
       object Label3: TLabel
         Left = 304
-        Height = 13
         Top = 240
         Width = 76
+        Height = 13
         Caption = 'Job Comment'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
       end
       object SgFiles: TStringGrid
         Tag = 1
         Left = 8
-        Height = 155
-        Hint = 'File settings - click on path to load. G-Code and SVG files will be mapped to Pen/Tool 9.'
         Top = 25
         Width = 569
+        Height = 155
+        Hint = 
+          'File settings - click on path to load. G-Code and SVG files will' +
+          ' be mapped to Pen/Tool 9.'
         ColCount = 9
         DefaultRowHeight = 18
         FixedCols = 0
-        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine]
         RowCount = 8
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine]
         ScrollBars = ssNone
         TabOrder = 0
-        TitleFont.Color = clBlack
-        TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
-        TitleFont.Style = [fsBold]
         OnClick = SgFilesClick
         OnDrawCell = SgFilesDrawCell
         OnKeyPress = SgFilesKeyPress
@@ -562,28 +632,35 @@ object Form1: TForm1
           45
           45
           44
-          56
-        )
+          56)
+        RowHeights = (
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18)
       end
       object SgJobDefaults: TStringGrid
         Left = 8
-        Height = 193
-        Hint = 'General job settings common for all files and tools'
         Top = 202
         Width = 265
+        Height = 193
+        Hint = 'General job settings common for all files and tools'
         ColCount = 2
         DefaultRowHeight = 18
+        RowCount = 2
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
         ParentFont = False
-        RowCount = 2
         ScrollBars = ssNone
         TabOrder = 1
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'MS Sans Serif'
         OnClick = SgJobDefaultsClick
         OnDrawCell = SgJobDefaultsDrawCell
         OnExit = SgJobDefaultsExit
@@ -591,62 +668,69 @@ object Form1: TForm1
         OnMouseDown = SgJobDefaultsMouseDown
         ColWidths = (
           209
-          51
-        )
+          51)
+        RowHeights = (
+          18
+          18)
       end
       object MemoComment: TMemo
         Left = 304
-        Height = 134
-        Hint = 'Custom comment, saved with this job'
         Top = 261
         Width = 273
+        Height = 134
+        Hint = 'Custom comment, saved with this job'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
         Lines.Strings = (
           'Your Job Description'
           ''
           'If Job Settings are empty, '
           'please open file "default.job" '
-          'supplied with GRBLize.'
-        )
+          'supplied with GRBLize.')
         ParentFont = False
         TabOrder = 2
       end
     end
     object TabSheetPens: TTabSheet
       Caption = 'Tools'
-      ClientHeight = 402
-      ClientWidth = 587
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label7: TLabel
         Left = 8
-        Height = 13
         Top = 8
-        Width = 269
+        Width = 231
+        Height = 13
         Caption = 'HPGL Pen Mill (P) and Excellon Drill (D) Tool Edit'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object SgPens: TStringGrid
         Tag = 2
         Left = 8
-        Height = 369
-        Hint = 'HPGL Pen and Excellon Drill settings. Drill number = pen number+10.'
         Top = 24
         Width = 565
+        Height = 369
+        Hint = 
+          'HPGL Pen and Excellon Drill settings. Drill number = pen number+' +
+          '10.'
         ColCount = 13
         DefaultColWidth = 30
         DefaultRowHeight = 18
-        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
         RowCount = 32
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
         ScrollBars = ssVertical
         TabOrder = 0
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
         OnDrawCell = SgPensDrawCell
         OnKeyPress = SgPensKeyPress
         OnMouseDown = SgPensMouseDown
@@ -664,43 +748,77 @@ object Form1: TForm1
           60
           49
           32
-          56
-        )
+          56)
+        RowHeights = (
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18
+          18)
       end
     end
     object TabSheetGroups: TTabSheet
       Caption = 'Path View'
-      ClientHeight = 402
-      ClientWidth = 587
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Label5: TLabel
         Left = 9
-        Height = 13
         Top = 8
-        Width = 56
+        Width = 48
+        Height = 13
         Caption = 'Path View'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object SgBlocks: TStringGrid
         Tag = 3
         Left = 8
-        Height = 369
-        Hint = 'Lists all groups in job'
         Top = 24
         Width = 565
+        Height = 369
+        Hint = 'Lists all groups in job'
         ColCount = 8
         DefaultRowHeight = 18
-        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goThumbTracking]
         RowCount = 2
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goThumbTracking]
         ScrollBars = ssVertical
         TabOrder = 0
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
         OnClick = SgBlocksClick
         OnDrawCell = SgBlocksDrawCell
         OnMouseDown = SgBlocksMouseDown
@@ -712,173 +830,190 @@ object Form1: TForm1
           66
           175
           84
-          52
-        )
+          52)
+        RowHeights = (
+          18
+          18)
       end
     end
     object TabSheetDefaults: TTabSheet
       Caption = 'Defaults'
-      ClientHeight = 402
-      ClientWidth = 587
       ImageIndex = 2
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object Bevel11: TBevel
         Left = 319
-        Height = 69
         Top = 327
         Width = 255
+        Height = 69
         Shape = bsFrame
       end
       object Label11: TLabel
         Left = 8
-        Height = 13
         Top = 8
         Width = 202
+        Height = 13
         Caption = 'GRBL Settings (use decimal dot for values)'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object Bevel1: TBevel
         Left = 8
-        Height = 69
         Top = 327
         Width = 294
+        Height = 69
         Shape = bsFrame
       end
       object BtnLoadGrblSetup: TSpeedButton
         Left = 23
-        Height = 25
-        Hint = 'Load GRBL Setup from File'
         Top = 333
         Width = 98
+        Height = 25
+        Hint = 'Load GRBL Setup from File'
         Caption = 'Load from File'
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clBlue
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnLoadGrblSetupClick
         ParentFont = False
+        OnClick = BtnLoadGrblSetupClick
       end
       object BtnSaveGrblSetup: TSpeedButton
         Left = 127
-        Height = 25
-        Hint = 'Save GRBL Setup to File'
         Top = 333
         Width = 98
+        Height = 25
+        Hint = 'Save GRBL Setup to File'
         Caption = 'Save to File'
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = 4227327
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnSaveGrblSetupClick
         ParentFont = False
+        OnClick = BtnSaveGrblSetupClick
       end
       object Label25: TLabel
         Left = 319
-        Height = 13
         Top = 8
         Width = 139
+        Height = 13
         Caption = 'GRBLize Application Defaults'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object Label10: TLabel
         Left = 334
-        Height = 13
         Top = 334
         Width = 103
+        Height = 13
         Caption = 'Set to current position'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = cl3DDkShadow
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object SgGrblSettings: TStringGrid
         Left = 8
-        Height = 304
-        Hint = 'GRBL params read from GRBL-JOG'
         Top = 24
         Width = 293
+        Height = 304
+        Hint = 'GRBL params read from GRBL-JOG'
         ColCount = 2
         DefaultColWidth = 160
         DefaultRowHeight = 18
         FixedCols = 0
+        RowCount = 2
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goEditing, goThumbTracking]
         ParentFont = False
-        RowCount = 2
         ScrollBars = ssVertical
         TabOrder = 0
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'MS Sans Serif'
         OnDrawCell = SgGrblSettingsDrawCell
         ColWidths = (
           205
-          64
-        )
+          64)
+        RowHeights = (
+          18
+          18)
       end
       object BtnSendGrblSettings: TBitBtn
         Left = 127
-        Height = 25
-        Hint = 'Send edited values to GRBL device'
         Top = 364
         Width = 98
+        Height = 25
+        Hint = 'Send edited values to GRBL device'
         Caption = 'Send to GRBL'
         Enabled = False
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        OnClick = BtnSendGrblSettingsClick
         ParentFont = False
         TabOrder = 1
+        OnClick = BtnSendGrblSettingsClick
       end
       object BtnRefreshGrblSettings: TBitBtn
         Left = 23
-        Height = 25
-        Hint = 'Read values from GRBL device'
         Top = 364
         Width = 98
+        Height = 25
+        Hint = 'Read values from GRBL device'
         Caption = 'Get from GRBL'
         Enabled = False
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clTeal
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        OnClick = BtnRefreshGrblSettingsClick
         ParentFont = False
         TabOrder = 2
+        OnClick = BtnRefreshGrblSettingsClick
       end
       object SgAppDefaults: TStringGrid
         Left = 319
-        Height = 301
-        Hint = 'General job settings common for all files and tools, will be saved to GRBLize.ini on application quit'
         Top = 27
         Width = 254
+        Height = 301
+        Hint = 
+          'General job settings common for all files and tools, will be sav' +
+          'ed to GRBLize.ini on application quit'
         ColCount = 2
         DefaultRowHeight = 18
         FixedCols = 0
+        RowCount = 2
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
         ParentFont = False
-        RowCount = 2
         TabOrder = 3
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'MS Sans Serif'
         OnClick = SgAppDefaultsClick
         OnDrawCell = SgAppDefaultsDrawCell
         OnExit = SgAppDefaultsExit
@@ -886,204 +1021,233 @@ object Form1: TForm1
         OnMouseDown = SgAppDefaultsMouseDown
         ColWidths = (
           184
-          47
-        )
+          47)
+        RowHeights = (
+          18
+          18)
       end
       object BtnSetPark: TButton
         Left = 454
-        Height = 25
-        Hint = 'Set default park position to current machine position'
         Top = 334
         Width = 103
+        Height = 25
+        Hint = 'Set default park position to current machine position'
         Caption = 'Set new Park'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -9
         Font.Name = 'MS Sans Serif'
-        OnClick = BtnSetParkClick
+        Font.Style = []
         ParentFont = False
         TabOrder = 4
+        OnClick = BtnSetParkClick
       end
       object BtnSetFix1: TButton
         Left = 334
-        Height = 25
-        Hint = 'Set default fixture position to current machine position'
         Top = 364
         Width = 103
+        Height = 25
+        Hint = 'Set default fixture position to current machine position'
         Caption = 'Set new Fixture 1'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -9
         Font.Name = 'MS Sans Serif'
-        OnClick = BtnSetFix1Click
+        Font.Style = []
         ParentFont = False
         TabOrder = 5
+        OnClick = BtnSetFix1Click
       end
       object BtnSetFix2: TButton
         Left = 454
-        Height = 25
-        Hint = 'Set default fixture position to current machine position'
         Top = 364
         Width = 103
+        Height = 25
+        Hint = 'Set default fixture position to current machine position'
         Caption = 'Set new Fixture 2'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -9
         Font.Name = 'MS Sans Serif'
-        OnClick = BtnSetFix2Click
+        Font.Style = []
         ParentFont = False
         TabOrder = 6
+        OnClick = BtnSetFix2Click
       end
     end
     object TabSheetRun: TTabSheet
       Caption = 'Machine Control'
-      ClientHeight = 402
-      ClientWidth = 587
       ImageIndex = 3
       object Bevel2: TBevel
         Left = 3
-        Height = 170
         Top = 231
         Width = 301
+        Height = 170
         Shape = bsFrame
       end
       object Bevel4: TBevel
         Left = 310
-        Height = 226
         Top = 17
         Width = 272
+        Height = 226
         Shape = bsFrame
       end
       object Bevel10: TBevel
         Left = 3
-        Height = 197
         Top = 17
         Width = 301
+        Height = 197
         Shape = bsFrame
       end
       object Bevel7: TBevel
         Left = 310
-        Height = 153
         Top = 248
         Width = 272
+        Height = 153
         Shape = bsFrame
       end
       object BtnRunJob: TSpeedButton
         Left = 325
-        Height = 25
-        Hint = '´Run or simulate complete job with all tools listed'
         Top = 264
         Width = 106
+        Height = 25
+        Hint = #194#180'Run or simulate complete job with all tools listed'
         Caption = 'Run Job'
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = 2925325
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnRunJobClick
         ParentFont = False
+        OnClick = BtnRunJobClick
       end
       object Label6: TLabel
         Left = 4
-        Height = 13
         Top = 1
-        Width = 41
+        Width = 37
+        Height = 13
         Caption = 'Jogging'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object Label26: TLabel
         Left = 511
-        Height = 13
         Top = 216
-        Width = 71
+        Width = 61
+        Height = 13
         Caption = 'Job Progress'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object Label4: TLabel
         Left = 325
-        Height = 13
         Top = 344
-        Width = 150
+        Width = 125
+        Height = 13
         Caption = 'GCode Simulation Settings'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGray
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object Label8: TLabel
         Left = 486
-        Height = 13
         Top = 367
-        Width = 94
+        Width = 82
+        Height = 13
         Caption = 'G-Code Tool Dia.'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object BtnRunGcode: TSpeedButton
         Left = 325
-        Height = 25
         Top = 301
         Width = 106
+        Height = 25
         Caption = 'Run GCode File'
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clBlue
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = RunGcode
         ParentFont = False
+        OnClick = RunGcode
       end
       object Label19: TLabel
         Left = 499
-        Height = 13
         Top = 301
-        Width = 82
+        Width = 67
+        Height = 13
         Caption = 'Apply Z Offset'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object Label44: TLabel
         Left = 499
-        Height = 13
         Top = 315
-        Width = 79
+        Width = 67
+        Height = 13
         Caption = 'to G-Code File'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object Label48: TLabel
         Left = 327
-        Height = 13
         Top = 27
-        Width = 115
+        Width = 100
+        Height = 13
         Caption = 'First Tool used in Job'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object Label17: TLabel
         Left = 44
-        Height = 19
         Top = 82
-        Width = 55
+        Width = 43
+        Height = 16
         Caption = 'X Axis'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = 16
         Font.Name = 'MS Sans Serif'
@@ -1093,10 +1257,12 @@ object Form1: TForm1
       end
       object Label18: TLabel
         Left = 158
-        Height = 19
         Top = 56
-        Width = 55
+        Width = 44
+        Height = 16
         Caption = 'Y Axis'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = 16
         Font.Name = 'MS Sans Serif'
@@ -1106,125 +1272,134 @@ object Form1: TForm1
       end
       object BtnHomeCycle: TSpeedButton
         Left = 208
-        Height = 25
-        Hint = 'Perform a homing cycle'
         Top = 344
         Width = 87
+        Height = 25
+        Hint = 'Perform a homing cycle'
         Caption = 'Home Cycle'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGreen
         Font.Height = -12
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        OnClick = BtnHomeCycleClick
         ParentFont = False
+        OnClick = BtnHomeCycleClick
       end
       object BtnMovePark: TSpeedButton
         Left = 11
-        Height = 25
-        Hint = 'Move tool bit to park position'
         Top = 239
         Width = 66
+        Height = 25
+        Hint = 'Move tool bit to park position'
         Caption = 'Park'
         Enabled = False
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = 2925325
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnMoveParkClick
         ParentFont = False
+        OnClick = BtnMoveParkClick
       end
       object BtnMoveFix1: TSpeedButton
         Left = 11
-        Height = 25
-        Hint = 'Move tool bit to fixture 1 position'
         Top = 270
         Width = 66
+        Height = 25
+        Hint = 'Move tool bit to fixture 1 position'
         Caption = 'Fixture 1'
         Enabled = False
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clPurple
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnMoveFix1Click
         ParentFont = False
+        OnClick = BtnMoveFix1Click
       end
       object BtnMoveFix2: TSpeedButton
         Left = 11
-        Height = 25
-        Hint = 'Move tool bit to fixture 2 position'
         Top = 301
         Width = 66
+        Height = 25
+        Hint = 'Move tool bit to fixture 2 position'
         Caption = 'Fixture 2'
         Enabled = False
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clMaroon
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnMoveFix2Click
         ParentFont = False
+        OnClick = BtnMoveFix2Click
       end
       object Label20: TLabel
         Left = 5
-        Height = 13
         Top = 216
-        Width = 45
+        Width = 39
+        Height = 13
         Caption = 'Move to'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object BtnMoveXYzero: TSpeedButton
         Left = 102
-        Height = 25
-        Hint = 'Move tool to workpiece XY zero and Z =Z Lift value from job defaults'
         Top = 239
         Width = 87
+        Height = 25
+        Hint = 
+          'Move tool to workpiece XY zero and Z =Z Lift value from job defa' +
+          'ults'
         Caption = 'Part Zero XY'
         Enabled = False
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = 4227327
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnMoveXYzeroClick
         ParentFont = False
+        OnClick = BtnMoveXYzeroClick
       end
       object BtnMoveToolChange: TSpeedButton
         Left = 11
-        Height = 25
-        Hint = 'Move tool bit to manual tool change position'
         Top = 332
         Width = 80
+        Height = 25
+        Hint = 'Move tool bit to manual tool change position'
         Caption = 'Tool Change'
         Enabled = False
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clOlive
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnMoveToolChangeClick
         ParentFont = False
+        OnClick = BtnMoveToolChangeClick
       end
       object LabelHintZ2: TLabel
         Left = 113
+        Top = 346
+        Width = 52
         Height = 13
         Hint = 'Z Lift value from job defaults'
-        Top = 346
-        Width = 67
         Caption = '+00,00 mm'
+        Color = clBtnFace
         ParentColor = False
       end
       object Label15: TLabel
         Left = 158
-        Height = 28
         Top = 153
-        Width = 92
+        Width = 70
+        Height = 24
         Caption = 'Jogpad'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = 24
         Font.Name = 'MS Sans Serif'
@@ -1234,10 +1409,12 @@ object Form1: TForm1
       end
       object Label16: TLabel
         Left = 200
-        Height = 19
         Top = 26
-        Width = 55
+        Width = 43
+        Height = 16
         Caption = 'Z Axis'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = 16
         Font.Name = 'MS Sans Serif'
@@ -1247,194 +1424,210 @@ object Form1: TForm1
       end
       object BtnHomeOverride: TSpeedButton
         Left = 208
-        Height = 18
-        Hint = 'Will set "homed" condition - be careful!'
         Top = 375
         Width = 87
+        Height = 18
+        Hint = 'Will set "homed" condition - be careful!'
         Caption = 'Override Home'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clRed
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        OnClick = BtnHomeOverrideClick
+        Font.Style = []
         ParentFont = False
+        OnClick = BtnHomeOverrideClick
       end
       object BtnRunTool: TSpeedButton
         Left = 457
-        Height = 25
-        Hint = 'Run only the single tool selected in "Tools used" list'
         Top = 264
         Width = 106
+        Height = 25
+        Hint = 'Run only the single tool selected in "Tools used" list'
         Caption = 'Run Single Tool'
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = 2925325
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnRunToolClick
         ParentFont = False
+        OnClick = BtnRunToolClick
       end
       object BtnMoveMillCenter: TSpeedButton
         Left = 102
-        Height = 25
-        Hint = 'Move tool to job mills/drills XY center with Z =Up to probe part Z'
         Top = 270
         Width = 87
+        Height = 25
+        Hint = 
+          'Move tool to job mills/drills XY center with Z =Up to probe part' +
+          ' Z'
         Caption = 'Job Center'
         Enabled = False
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clTeal
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnMoveMillCenterClick
         ParentFont = False
+        OnClick = BtnMoveMillCenterClick
       end
       object BtnZcontact: TSpeedButton
         Left = 208
-        Height = 25
-        Hint = 'Move tool bit to movable Z probe contact and stop'
         Top = 270
         Width = 87
+        Height = 25
+        Hint = 'Move tool bit to movable Z probe contact and stop'
         Caption = 'Probe Z'
         Enabled = False
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clFuchsia
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnZcontactClick
         ParentFont = False
+        OnClick = BtnZcontactClick
       end
       object Label9: TLabel
         Left = 208
-        Height = 13
         Top = 298
-        Width = 106
+        Width = 86
+        Height = 13
         Caption = 'with floating probe'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object Label14: TLabel
         Left = 310
-        Height = 13
         Top = 1
-        Width = 132
+        Width = 107
+        Height = 13
         Caption = 'Options (from Defaults)'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object Label21: TLabel
         Left = 106
-        Height = 13
         Top = 331
-        Width = 99
+        Width = 81
+        Height = 13
         Caption = 'Z Lift above part:'
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGrayText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentColor = False
         ParentFont = False
       end
       object BtnMoveZzero: TSpeedButton
         Left = 102
-        Height = 25
-        Hint = 'Move tool to workpiece XY zero and Z =Z Lift value from job defaults'
         Top = 301
         Width = 87
+        Height = 25
+        Hint = 
+          'Move tool to workpiece XY zero and Z =Z Lift value from job defa' +
+          'ults'
         Caption = 'Part Zero Z'
         Enabled = False
-        Font.CharSet = ANSI_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = 4227327
         Font.Height = -12
         Font.Name = 'Arial'
         Font.Style = [fsBold]
-        OnClick = BtnMoveZzeroClick
         ParentFont = False
+        OnClick = BtnMoveZzeroClick
       end
       object CheckEndPark: TCheckBox
         Left = 13
-        Height = 22
-        Hint = 'On end move to Park Position'
         Top = 371
         Width = 90
+        Height = 22
+        Hint = 'On end move to Park Position'
         Caption = 'Park on end'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentFont = False
         TabOrder = 0
       end
       object ProgressBar1: TProgressBar
         Left = 325
-        Height = 17
         Top = 213
         Width = 180
+        Height = 17
         TabOrder = 1
       end
       object ComboBoxGtip: TComboBox
         Left = 406
-        Height = 27
-        Hint = 'Simulated tool tip'
         Top = 363
         Width = 75
+        Height = 21
+        Hint = 'Simulated tool tip'
+        Style = csDropDownList
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        ItemHeight = 0
         ItemIndex = 0
-        Items.Strings = (
-          'Flat Tip'
-          'Cone 30°'
-          'Cone 45°'
-          'Cone 60°'
-          'Cone 90°'
-          'Ball Tip'
-        )
-        OnChange = ComboBoxGtipChange
         ParentFont = False
-        Style = csDropDownList
         TabOrder = 2
         Text = 'Flat Tip'
+        OnChange = ComboBoxGtipChange
+        Items.Strings = (
+          'Flat Tip'
+          'Cone 30'#194#176
+          'Cone 45'#194#176
+          'Cone 60'#194#176
+          'Cone 90'#194#176
+          'Ball Tip')
       end
       object ComboBoxGdia: TComboBox
         Left = 325
-        Height = 27
-        Hint = 'Simulated tool diameter'
         Top = 363
         Width = 75
+        Height = 21
+        Hint = 'Simulated tool diameter'
+        Style = csDropDownList
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        ItemHeight = 0
         ItemIndex = 1
+        ParentFont = False
+        TabOrder = 3
+        Text = '2-2,5 mm'
+        OnChange = ComboBoxGdiaChange
         Items.Strings = (
           '1-1,5 mm'
           '2-2,5 mm'
           '3-3,5 mm'
           '4 mm'
           '5 mm'
-          '6 mm'
-        )
-        OnChange = ComboBoxGdiaChange
-        ParentFont = False
-        Style = csDropDownList
-        TabOrder = 3
-        Text = '2-2,5 mm'
+          '6 mm')
       end
       object EditZoffs: TEdit
         Left = 437
-        Height = 23
-        Hint = 'Offset added to G-Gode Z output (does not affect jobs)'
         Top = 303
         Width = 56
+        Height = 21
+        Hint = 'Offset added to G-Gode Z output (does not affect jobs)'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlue
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
@@ -1445,234 +1638,241 @@ object Form1: TForm1
       end
       object CheckTLCprobe: TCheckBox
         Left = 325
-        Height = 22
-        Hint = 'Use a separate fixed Z probe for tool length compensation. If not enabled, will use movable part probe as fixed probe.'
         Top = 145
         Width = 249
+        Height = 22
+        Hint = 
+          'Use a separate fixed Z probe for tool length compensation. If no' +
+          't enabled, will use movable part probe as fixed probe.'
         Caption = 'Use TLC Probe Switch (required for ATC)'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
-        OnClick = CheckTLCprobeClick
+        Font.Style = []
         ParentFont = False
         TabOrder = 5
+        OnClick = CheckTLCprobeClick
       end
       object CheckPartProbeZ: TCheckBox
         Left = 325
-        Height = 22
-        Hint = 'Use a movable Z probe to be placed on part'
         Top = 122
         Width = 204
+        Height = 22
+        Hint = 'Use a movable Z probe to be placed on part'
         Caption = 'Use Floating Part Z Probe Switch'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
+        Font.Style = []
         ParentFont = False
         TabOrder = 6
       end
       object BitBtn9: TBitBtn
         Tag = 12
         Left = 119
-        Height = 25
         Top = 23
         Width = 35
+        Height = 25
         Caption = '+10'
+        TabOrder = 7
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 7
       end
       object BitBtn8: TBitBtn
         Tag = 11
         Left = 119
-        Height = 25
         Top = 51
         Width = 35
+        Height = 25
         Caption = '+1'
+        TabOrder = 8
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 8
       end
       object BitBtn7: TBitBtn
         Tag = 10
         Left = 119
-        Height = 25
         Top = 79
         Width = 35
+        Height = 25
         Caption = '+0.1'
+        TabOrder = 9
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 9
       end
       object BitBtn10: TBitBtn
         Tag = 13
         Left = 119
-        Height = 25
         Top = 129
         Width = 35
+        Height = 25
         Caption = '-0.1'
+        TabOrder = 10
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 10
       end
       object BitBtn11: TBitBtn
         Tag = 14
         Left = 119
-        Height = 25
         Top = 156
         Width = 35
+        Height = 25
         Caption = '-1'
+        TabOrder = 11
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 11
       end
       object BitBtn12: TBitBtn
         Tag = 15
         Left = 119
-        Height = 25
         Top = 183
         Width = 35
+        Height = 25
         Caption = '-10'
+        TabOrder = 12
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 12
       end
       object BitBtn1: TBitBtn
         Left = 145
-        Height = 25
         Top = 104
         Width = 35
+        Height = 25
         Caption = '+0.1'
+        TabOrder = 13
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 13
       end
       object BitBtn2: TBitBtn
         Tag = 1
         Left = 180
-        Height = 25
         Top = 104
         Width = 35
+        Height = 25
         Caption = '+1'
+        TabOrder = 14
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 14
       end
       object BitBtn3: TBitBtn
         Tag = 2
         Left = 216
-        Height = 25
         Top = 104
         Width = 35
+        Height = 25
         Caption = '+10'
+        TabOrder = 15
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 15
       end
       object BitBtn4: TBitBtn
         Tag = 3
         Left = 93
-        Height = 25
         Top = 104
         Width = 35
+        Height = 25
         Caption = '-0.1'
+        TabOrder = 16
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 16
       end
       object BitBtn5: TBitBtn
         Tag = 4
         Left = 57
-        Height = 25
         Top = 104
         Width = 35
+        Height = 25
         Caption = '-1'
+        TabOrder = 17
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 17
       end
       object BitBtn6: TBitBtn
         Tag = 5
         Left = 22
-        Height = 25
         Top = 104
         Width = 35
+        Height = 25
         Caption = '-10'
+        TabOrder = 18
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 18
       end
       object BitBtn15: TBitBtn
         Tag = 22
         Left = 264
-        Height = 25
         Top = 23
         Width = 35
+        Height = 25
         Caption = '+10'
+        TabOrder = 19
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 19
       end
       object BitBtn14: TBitBtn
         Tag = 21
         Left = 264
-        Height = 25
         Top = 51
         Width = 35
+        Height = 25
         Caption = '+1'
+        TabOrder = 20
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 20
       end
       object BitBtn13: TBitBtn
         Tag = 20
         Left = 264
-        Height = 25
         Top = 79
         Width = 35
+        Height = 25
         Caption = '+0.1'
+        TabOrder = 21
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 21
       end
       object BitBtn16: TBitBtn
         Tag = 23
         Left = 264
-        Height = 25
         Top = 129
         Width = 35
+        Height = 25
         Caption = '-0.1'
+        TabOrder = 22
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 22
       end
       object BitBtn17: TBitBtn
         Tag = 24
         Left = 264
-        Height = 25
         Top = 156
         Width = 35
+        Height = 25
         Caption = '-1'
+        TabOrder = 23
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 23
       end
       object BitBtn18: TBitBtn
         Tag = 25
         Left = 264
-        Height = 25
         Top = 183
         Width = 35
+        Height = 25
         Caption = '-10'
+        TabOrder = 24
         OnMouseDown = BitBtnJogMouseDown
         OnMouseUp = BitBtnJogMouseUp
-        TabOrder = 24
       end
       object EditFirstToolDia: TEdit
         Left = 325
-        Height = 23
-        Hint = 'This tool must be inserted before running job'
         Top = 46
         Width = 182
+        Height = 21
+        Hint = 'This tool must be inserted before running job'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clGreen
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
@@ -1680,83 +1880,96 @@ object Form1: TForm1
         ParentFont = False
         ParentShowHint = False
         ReadOnly = True
+        ShowHint = True
         TabOrder = 25
         Text = '(dummy probe tool)'
       end
       object CheckToolChange: TCheckBox
         Left = 325
-        Height = 22
-        Hint = 'Will use same tool for complete job if disabled'
         Top = 89
         Width = 168
+        Height = 22
+        Hint = 'Will use same tool for complete job if disabled'
         Caption = 'Enable Tool Change in Job'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        OnClick = CheckToolChangeClick
         ParentFont = False
         TabOrder = 26
+        OnClick = CheckToolChangeClick
       end
       object CheckUseATC2: TCheckBox
         Left = 325
-        Height = 22
         Top = 175
         Width = 218
+        Height = 22
         Caption = 'Use Automatic Tool Changer (ATC)'
+        Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        OnClick = CheckUseATC2Click
         ParentFont = False
         TabOrder = 27
+        OnClick = CheckUseATC2Click
       end
     end
   end
   object BtnRescan: TButton
     Left = 229
-    Height = 24
-    Hint = 'Open FTDI USB Device'
     Top = 2
     Width = 60
+    Height = 24
+    Hint = 'Open FTDI USB Device'
     Caption = 'Rescan'
-    Font.CharSet = ANSI_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
-    OnClick = BtnRescanClick
     ParentFont = False
     TabOrder = 3
+    OnClick = BtnRescanClick
   end
   object BtnClose: TButton
     Left = 156
-    Height = 24
-    Hint = 'Close FTDI USB Device'
     Top = 2
     Width = 54
+    Height = 24
+    Hint = 'Close FTDI USB Device'
     Caption = 'Close'
-    Font.CharSet = ANSI_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'Arial'
     Font.Style = [fsBold]
-    OnClick = BtnCloseClick
     ParentFont = False
     TabOrder = 1
+    OnClick = BtnCloseClick
   end
   object ComboBox1: TComboBox
     Left = 25
-    Height = 25
     Top = 752
     Width = 89
-    BidiMode = bdRightToLeftNoAlign
+    Height = 21
+    Style = csDropDownList
+    BiDiMode = bdRightToLeftNoAlign
     DropDownCount = 20
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ItemHeight = 0
+    Font.Style = []
+    ParentBiDiMode = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
+    Visible = False
+    OnExit = ComboBox1Exit
+    OnSelect = ComboBox1Exit
     Items.Strings = (
       'OFF'
       'Pen 0'
@@ -1769,25 +1982,16 @@ object Form1: TForm1
       'Pen 7'
       'Pen 8'
       'Pen 9'
-      'Drill 0'
-    )
-    OnExit = ComboBox1Exit
-    OnSelect = ComboBox1Exit
-    ParentBidiMode = False
-    ParentFont = False
-    ParentShowHint = False
-    ShowHint = True
-    Style = csDropDownList
-    TabOrder = 4
-    Visible = False
+      'Drill 0')
   end
   object BtnEmergStop: TBitBtn
     Left = 496
-    Height = 39
-    Hint = 'Emergency Stop - Steps may be lost!'
     Top = 590
     Width = 98
+    Height = 39
+    Hint = 'Emergency Stop - Steps may be lost!'
     Caption = 'STOP'
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -14
     Font.Name = 'MS Sans Serif'
@@ -1890,281 +2094,313 @@ object Form1: TForm1
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFECEEF9E6E6F4E4E5F4E9EAF7FDFDFEFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-    }
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+    ParentFont = False
+    TabOrder = 5
     OnClick = BtnEmergencyStopClick
     OnMouseEnter = BtnCancelMouseEnter
     OnMouseLeave = BtnCancelMouseLeave
-    ParentFont = False
-    TabOrder = 5
   end
   object PanelBusy: TPanel
     Left = 871
-    Height = 21
-    Hint = 'Busy/Running'
     Top = 5
     Width = 50
+    Height = 21
+    Hint = 'Busy/Running'
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Busy'
     Color = clMaroon
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ParentColor = False
+    Font.Style = []
     ParentFont = False
     TabOrder = 6
   end
   object ComboBoxTip: TComboBox
     Left = 118
-    Height = 25
-    Hint = 'Select Tool Tip'
     Top = 752
     Width = 89
-    BidiMode = bdRightToLeftNoAlign
+    Height = 21
+    Hint = 'Select Tool Tip'
+    Style = csDropDownList
+    BiDiMode = bdRightToLeftNoAlign
     DropDownCount = 7
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ItemHeight = 0
-    Items.Strings = (
-      'Flat Tip'
-      'Cone 30°'
-      'Cone 45°'
-      'Cone 60°'
-      'Cone 90°'
-      'Ball Tip'
-      'Drill'
-    )
+    Font.Style = []
+    ParentBiDiMode = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 7
+    Visible = False
     OnChange = ComboBoxTipExit
     OnExit = ComboBoxTipExit
     OnKeyPress = ComboBoxTipKeyPress
     OnMouseLeave = ComboBoxTipMouseLeave
     OnSelect = ComboBoxTipExit
-    ParentBidiMode = False
-    ParentFont = False
-    ParentShowHint = False
-    ShowHint = True
-    Style = csDropDownList
-    TabOrder = 7
-    Visible = False
+    Items.Strings = (
+      'Flat Tip'
+      'Cone 30'#194#176
+      'Cone 45'#194#176
+      'Cone 60'#194#176
+      'Cone 90'#194#176
+      'Ball Tip'
+      'Drill')
   end
   object PanelRun: TPanel
     Left = 705
-    Height = 21
-    Hint = 'Machine is moving. Click panel to cancel HOLD state'
     Top = 5
     Width = 49
+    Height = 21
+    Hint = 'Machine is moving. Click panel to cancel HOLD state'
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Run'
     Color = 4194368
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ParentColor = False
+    Font.Style = []
     ParentFont = False
     TabOrder = 8
     OnClick = PanelReadyClick
   end
   object PanelReady: TPanel
     Left = 649
-    Height = 21
-    Hint = 'Machine Idle. Click panel to cancel HOLD state'
     Top = 5
     Width = 50
+    Height = 21
+    Hint = 'Machine Idle. Click panel to cancel HOLD state'
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Ready'
     Color = 16384
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ParentColor = False
+    Font.Style = []
     ParentFont = False
     TabOrder = 9
     OnClick = PanelReadyClick
   end
   object PanelAlarm: TPanel
     Left = 815
-    Height = 21
-    Hint = 'Steps missed or probing failed, run Home Cycle. Click to Unlock'
     Top = 5
     Width = 50
+    Height = 21
+    Hint = 'Steps missed or probing failed, run Home Cycle. Click to Unlock'
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Alarm'
     Color = 64
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ParentColor = False
+    Font.Style = []
     ParentFont = False
     TabOrder = 10
     OnClick = PanelAlarmClick
   end
   object PanelHold: TPanel
     Left = 760
-    Height = 21
-    Hint = 'Feed hold/pause. Click panel to set HOLD state'
     Top = 5
     Width = 49
+    Height = 21
+    Hint = 'Feed hold/pause. Click panel to set HOLD state'
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Hold'
     Color = 4194304
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clGrayText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ParentColor = False
+    Font.Style = []
     ParentFont = False
     TabOrder = 11
     OnClick = PanelHoldClick
   end
   object PanelZdone: TPanel
     Left = 367
-    Height = 20
-    Hint = 'Zero Z first before Run Job is blinking'
     Top = 548
     Width = 20
+    Height = 20
+    Hint = 'Zero Z first before Run Job is blinking'
     BevelOuter = bvLowered
     BevelWidth = 2
     Color = 64
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ParentColor = False
+    Font.Style = []
     ParentFont = False
     TabOrder = 12
   end
   object CheckBoxSim: TCheckBox
     Left = 472
-    Height = 22
-    Hint = 'Job will be simulated only, no output to machine'
     Top = 32
     Width = 122
+    Height = 22
+    Hint = 'Job will be simulated only, no output to machine'
     Caption = 'Simulation only'
     Checked = True
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    OnClick = CheckBoxSimClick
     ParentFont = False
     State = cbChecked
     TabOrder = 14
+    OnClick = CheckBoxSimClick
   end
   object BtnConnect: TBitBtn
     Left = 82
-    Height = 24
     Top = 2
     Width = 68
+    Height = 24
     Caption = 'Connect'
     Default = True
     Enabled = False
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
-    OnClick = BtnConnectClick
     ParentFont = False
     TabOrder = 15
+    OnClick = BtnConnectClick
   end
   object PanelYdone: TPanel
     Left = 239
-    Height = 20
-    Hint = 'Zero Z first before Run Job is blinking'
     Top = 548
     Width = 20
+    Height = 20
+    Hint = 'Zero Z first before Run Job is blinking'
     BevelOuter = bvLowered
     BevelWidth = 2
     Color = 64
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ParentColor = False
+    Font.Style = []
     ParentFont = False
     TabOrder = 16
   end
   object PanelXdone: TPanel
     Left = 110
-    Height = 20
-    Hint = 'Zero Z first before Run Job is blinking'
     Top = 548
     Width = 20
+    Height = 20
+    Hint = 'Zero Z first before Run Job is blinking'
     BevelOuter = bvLowered
     BevelWidth = 2
     Color = 64
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlack
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ParentColor = False
+    Font.Style = []
     ParentFont = False
     TabOrder = 17
   end
   object Memo1: TMemo
     Left = 611
-    Height = 359
     Top = 58
     Width = 297
+    Height = 359
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
+    Font.Style = []
     Lines.Strings = (
-      'GRBL G-Code messages'
-    )
+      'GRBL G-Code messages')
     ParentFont = False
     ScrollBars = ssVertical
     TabOrder = 18
   end
   object PanelAlive: TPanel
     Left = 592
-    Height = 21
-    Hint = 'Machine Idle. Click if response stuck to exit receive loop.'
     Top = 5
     Width = 50
+    Height = 21
+    Hint = 'Machine Idle. Click if response stuck to exit receive loop.'
     BevelOuter = bvLowered
     BevelWidth = 2
     Caption = 'Resp OK'
     Color = 16416
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ParentColor = False
+    Font.Style = []
     ParentFont = False
     TabOrder = 19
     OnClick = PanelAliveClick
   end
   object sgATC: TStringGrid
     Left = 611
-    Height = 193
-    Hint = 'List of all Tools used in job. Right-click for disable/enable.'
     Top = 440
     Width = 297
+    Height = 193
+    Hint = 'List of all Tools used in job. Right-click for disable/enable.'
     ColCount = 3
     DefaultRowHeight = 18
     FixedCols = 0
+    RowCount = 21
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'MS Sans Serif'
+    Font.Style = []
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine]
     ParentFont = False
-    RowCount = 21
     ScrollBars = ssNone
     TabOrder = 20
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'MS Sans Serif'
     OnDrawCell = sgATCDrawCell
     OnMouseDown = sgATCMouseDown
     ColWidths = (
       30
       199
-      62
-    )
+      62)
+    RowHeights = (
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18
+      18)
   end
   object MainMenu1: TMainMenu
-    left = 458
-    top = 743
+    Left = 458
+    Top = 743
     object File1: TMenuItem
       Caption = '&File'
       Hint = 'File Commands'
@@ -2241,31 +2477,31 @@ object Form1: TForm1
     end
   end
   object ActionList1: TActionList
-    left = 530
-    top = 743
+    Left = 530
+    Top = 743
     object FileNew1: TAction
       Category = 'File'
       Caption = '&Neu'
       Hint = 'Neu|Neue Datei erstellen'
       ImageIndex = 6
-      OnExecute = FileNew1Execute
       ShortCut = 16462
+      OnExecute = FileNew1Execute
     end
     object FileOpen1: TAction
       Category = 'File'
-      Caption = 'Ö&ffnen'
-      Hint = 'Öffnen|Datei öffnen'
+      Caption = #195#8211'&ffnen'
+      Hint = #195#8211'ffnen|Datei '#195#182'ffnen'
       ImageIndex = 7
-      OnExecute = JobOpenExecute
       ShortCut = 16463
+      OnExecute = JobOpenExecute
     end
     object FileSave1: TAction
       Category = 'File'
       Caption = '&Speichern'
       Hint = 'Speichern|Aktuelle Datei speichern'
       ImageIndex = 8
-      OnExecute = JobSaveExecute
       ShortCut = 16467
+      OnExecute = JobSaveExecute
     end
     object FileSaveAs1: TAction
       Category = 'File'
@@ -2296,8 +2532,8 @@ object Form1: TForm1
     end
     object EditPaste1: TEditPaste
       Category = 'Edit'
-      Caption = '&Einfügen'
-      Hint = 'Einfügen|Inhalt der Zwischenablage einfügen'
+      Caption = '&Einf'#195#188'gen'
+      Hint = 'Einf'#195#188'gen|Inhalt der Zwischenablage einf'#195#188'gen'
       ImageIndex = 2
       ShortCut = 16470
     end
@@ -2309,521 +2545,40 @@ object Form1: TForm1
     end
   end
   object ImageList1: TImageList
-    left = 578
-    top = 743
-    Bitmap = {
-      4C690F0000001000000010000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000FF000000000000000000000000000000FF000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000FF000000000000000000000000000000FF000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000FF000000000000000000000000000000FF000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000FF000000FF00000000000000FF000000FF000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000FF00000000000000FF00000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000FF000000FF000000FF00000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000FF0000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000840000FF000000FF840000FF00000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000840000FF00000000840000FF840000FF840000FF0000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000840000FF840000FF840000FF00000000840000FF00000000000000008400
-      00FF000000000000000000000000000000000000000000000000000000008400
-      00FF0000000000000000840000FF00000000840000FF00000000000000008400
-      00FF000000000000000000000000000000000000000000000000000000008400
-      00FF0000000000000000840000FF00000000840000FF00000000000000008400
-      00FF000000000000000000000000000000000000000000000000000000008400
-      00FF0000000000000000840000FF0000000000000000840000FF840000FF0000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000840000FF840000FF00000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000FF000000FF000000FF0000
-      00FF000000FF000000FF00000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFF000000FF000000FF000000000000000000000000000000000000
-      000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFF000000FFFFFFFFFF000000FF0000000000000000000000000000
-      000000000000000000000000000000000000000000FFFFFFFFFF000000FF0000
-      00FFFFFFFFFF000000FF840000FF840000FF840000FF840000FF840000FF8400
-      00FF00000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8400
-      00FF840000FF000000000000000000000000000000FFFFFFFFFF000000FF0000
-      00FF000000FF000000FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8400
-      00FFFFFFFFFF840000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFF840000FFFFFFFFFF000000FF000000FFFFFFFFFF8400
-      00FF840000FF840000FF840000FF00000000000000FFFFFFFFFF000000FF0000
-      00FF000000FF000000FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFF840000FF00000000000000FFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFF840000FFFFFFFFFF000000FF000000FF000000FF0000
-      00FF000000FFFFFFFFFF840000FF00000000000000FF000000FF000000FF0000
-      00FF000000FF000000FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFF840000FF000000000000000000000000000000000000
-      00000000000000000000840000FFFFFFFFFF000000FF000000FF000000FF0000
-      00FF000000FFFFFFFFFF840000FF000000000000000000000000000000000000
-      00000000000000000000840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFF840000FF000000000000000000000000000000000000
-      00000000000000000000840000FF840000FF840000FF840000FF840000FF8400
-      00FF840000FF840000FF840000FF000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000FF000000FF000000FF000000FF0000000000000000000000000000
-      000000000000000000000000000000000000000000FF000000FF000000FF0000
-      00FF000000FF00FFFFFF00FFFFFF000000FF000000FF000000FF000000FF0000
-      00FF000000000000000000000000000000FF008484FF848484FF008484FF0000
-      00FF00FFFFFF000000FF000000FF00FFFFFF000000FF848484FF008484FF8484
-      84FF000000FF0000000000000000000000FF848484FF848484FF000000FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF848484FF0084
-      84FF000000FF0000000000000000000000FF008484FF848484FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF848484FF8484
-      84FF000000FF0000000000000000000000FF848484FF008484FF848484FF0084
-      84FF848484FF008484FF848484FF008484FF848484FF008484FF848484FF0084
-      84FF000000FF0000000000000000000000FF008484FF848484FF008484FF8484
-      84FF008484FF840000FF840000FF840000FF840000FF840000FF840000FF8400
-      00FF000000FF0000000000000000000000FF848484FF008484FF848484FF0084
-      84FF848484FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8400
-      00FF840000FF0000000000000000000000FF008484FF848484FF008484FF8484
-      84FF008484FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8400
-      00FFFFFFFFFF840000FF00000000000000FF848484FF008484FF848484FF0084
-      84FF848484FF840000FFFFFFFFFF000000FF000000FF000000FFFFFFFFFF8400
-      00FF840000FF840000FF840000FF000000FF008484FF848484FF008484FF8484
-      84FF008484FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFF840000FF000000FF848484FF008484FF848484FF0084
-      84FF848484FF840000FFFFFFFFFF000000FF000000FF000000FF000000FF0000
-      00FF000000FFFFFFFFFF840000FF00000000000000FF000000FF000000FF0000
-      00FF000000FF840000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFF840000FF000000000000000000000000000000000000
-      000000000000840000FF840000FF840000FF840000FF840000FF840000FF8400
-      00FF840000FF840000FF840000FF000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000DEA57BFF7B5A00FF7B5A00FF7B5A00FF7B5A00FFDEA5
-      7BFF0000000000000000000000000000000000000000946B08FF000000000000
-      0000DEA57BFF7B5A00FF7B5A00FFDEA57BFF0000000000000000DEA57BFF7B5A
-      00FFDEA57BFF00000000000000000000000000000000946B08FF946B08FFDEA5
-      7BFF7B5A00FFDEA57BFF0000000000000000000000000000000000000000DEA5
-      7BFF7B5A00FF00000000000000000000000000000000946B08FF7B5A00FF946B
-      08FFDEA57BFF0000000000000000000000000000000000000000000000000000
-      00007B5A00FF00000000000000000000000000000000946B08FF7B5A00FF7B5A
-      00FF946B08FF0000000000000000000000000000000000000000000000000000
-      00007B5A00FF00000000000000000000000000000000634A00FF634A00FF634A
-      00FF634A00FF634A00FF00000000000000000000000000000000000000000000
-      00007B5A00FF0000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000DEA57BFF7B5A
-      00FF7B5A00FF7B5A00FF7B5A00FFDEA57BFF0000000000000000000000000000
-      00000000000000000000000000000000000000000000DEA57BFF7B5A00FFDEA5
-      7BFF0000000000000000DEA57BFF7B5A00FF7B5A00FFDEA57BFF000000000000
-      0000946B08FF000000000000000000000000000000007B5A00FFDEA57BFF0000
-      000000000000000000000000000000000000DEA57BFF7B5A00FFDEA57BFF946B
-      08FF946B08FF000000000000000000000000000000007B5A00FF000000000000
-      00000000000000000000000000000000000000000000DEA57BFF946B08FF7B5A
-      00FF946B08FF000000000000000000000000000000007B5A00FF000000000000
-      00000000000000000000000000000000000000000000946B08FF7B5A00FF7B5A
-      00FF946B08FF000000000000000000000000000000007B5A00FF000000000000
-      000000000000000000000000000000000000634A00FF634A00FF634A00FF634A
-      00FF634A00FF0000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000000000FF000000FF0000
-      00FF000000000000000000000000000000000000000000000000000000000000
-      000000000000000000FF000000000000000000000000000000FF000000FF0000
-      00FF000000FF0000000000000000000000000000000000000000000000000000
-      00FF000000FF0000000000000000000000000000000000000000000000FF0000
-      00FF000000FF000000FF00000000000000000000000000000000000000FF0000
-      00FF000000000000000000000000000000000000000000000000000000000000
-      0000000000FF000000FF000000FF0000000000000000000000FF000000FF0000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000FF000000FF000000FF000000FF000000FF000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000FF000000FF000000FF00000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000FF000000FF000000FF000000FF000000FF000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000FF000000FF000000FF0000000000000000000000FF000000FF0000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00FF000000FF000000FF00000000000000000000000000000000000000FF0000
-      00FF000000000000000000000000000000000000000000000000000000FF0000
-      00FF000000FF0000000000000000000000000000000000000000000000000000
-      00FF0000000000000000000000000000000000000000000000FF000000FF0000
-      00FF000000FF0000000000000000000000000000000000000000000000000000
-      0000000000FF00000000000000000000000000000000000000FF000000FF0000
-      00FF000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000FF0000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000FF00000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF00000000000000000000
-      00000000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF000000000000
-      00000000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFF000000FF0000
-      00000000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF000000FF0000
-      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
-      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
-      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
-      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
-      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
-      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
-      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
-      00FF0000000000000000000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
-      00FF0000000000000000000000000000000000000000000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      00FF000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000FF000000FF000000FF0000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000FF0000000000000000000000000000
-      00FF00000000000000FF00000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000FF000000FF0000000000000000000000FF000000FF000000FF0000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00FF000000FF000000FF00000000000000FF00FFFFFFFFFFFFFF00FFFFFF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000000000
-      0000000000000000000000000000000000FFFFFFFFFF00FFFFFFFFFFFFFF00FF
-      FFFFFFFFFFFF00FFFFFFFFFFFFFF00FFFFFFFFFFFFFF000000FF000000000000
-      0000000000000000000000000000000000FF00FFFFFFFFFFFFFF00FFFFFFFFFF
-      FFFF00FFFFFFFFFFFFFF00FFFFFFFFFFFFFF00FFFFFF000000FF000000000000
-      0000000000000000000000000000000000FFFFFFFFFF00FFFFFFFFFFFFFF00FF
-      FFFF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF00FFFFFFFFFFFFFF00FFFFFF0000
-      00FF008484FF008484FF008484FF008484FF008484FF008484FF008484FF0084
-      84FF008484FF000000FF00000000000000FFFFFFFFFF00FFFFFF000000FF0084
-      84FF008484FF008484FF008484FF008484FF008484FF008484FF008484FF0084
-      84FF000000FF0000000000000000000000FF00FFFFFF000000FF008484FF0084
-      84FF008484FF008484FF008484FF008484FF008484FF008484FF008484FF0000
-      00FF000000000000000000000000000000FF000000FF008484FF008484FF0084
-      84FF008484FF008484FF008484FF008484FF008484FF008484FF000000FF0000
-      0000000000000000000000000000000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000000FF000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF0000000000000000000000FF008484FF000000FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
-      00FFC6C6C6FF000000FF0000000000000000000000FF008484FF000000FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
-      00FF000000FF000000FF0000000000000000000000FF008484FF000000FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
-      00FF008484FF000000FF0000000000000000000000FF008484FF000000FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
-      00FF008484FF000000FF0000000000000000000000FF008484FF000000FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
-      00FF008484FF000000FF0000000000000000000000FF008484FF000000FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF0000
-      00FF008484FF000000FF0000000000000000000000FF008484FF008484FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0084
-      84FF008484FF000000FF0000000000000000000000FF008484FF008484FF0084
-      84FF008484FF008484FF008484FF008484FF008484FF008484FF008484FF0084
-      84FF008484FF000000FF0000000000000000000000FF008484FF008484FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      00FF008484FF000000FF0000000000000000000000FF008484FF008484FF0000
-      00FF000000FF000000FF000000FF000000FF000000FFC6C6C6FFC6C6C6FF0000
-      00FF008484FF000000FF0000000000000000000000FF008484FF008484FF0000
-      00FF000000FF000000FF000000FF000000FF000000FFC6C6C6FFC6C6C6FF0000
-      00FF008484FF000000FF0000000000000000000000FF008484FF008484FF0000
-      00FF000000FF000000FF000000FF000000FF000000FFC6C6C6FFC6C6C6FF0000
-      00FF008484FF000000FF000000000000000000000000000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF00000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF0000000000000000000000000000
-      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF00000000000000000000
-      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFC6C6C6FF000000FF000000000000
-      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF000000FF000000FF0000
-      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000
-      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF000000FF000000FF0000
-      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFF000000FF848484FFC6C6C6FFC6C6C6FF848484FF0000
-      00FF000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFF000000FF848484FFFFFF00FFFFFF00FFC6C6C6FF848484FF8484
-      84FF000000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFF000000FFC6C6C6FFFFFF00FFC6C6C6FFC6C6C6FF848484FFC6C6
-      C6FF000000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF848484FFC6C6
-      C6FF000000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFF000000FF848484FFC6C6C6FFC6C6C6FFFFFF00FF848484FF8484
-      84FF000000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFF000000FF848484FFC6C6C6FFC6C6C6FF848484FF0000
-      00FF000000FF0000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF00000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000
-      0000000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      000000000000000000FF000000FF000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000FF000000FF000000FF000000FF000000FF0000
-      00FF00000000840000FF840000FF000000000000000000000000000000000000
-      000000000000000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
-      C6FF000000FF840000FF840000FF000000000000000000000000000000000000
-      0000000000FFC6C6C6FF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
-      C6FFC6C6C6FF840000FF840000FF000000FF000000FF000000FF000000FF0000
-      00FFC6C6C6FF000000FFC6C6C6FF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
-      C6FFC6C6C6FF840000FF840000FF000000FFFFFFFFFFFFFFFFFF000000FFC6C6
-      C6FF000000FFC6C6C6FF000000FFC6C6C6FF000000FFC6C6C6FFC6C6C6FFC6C6
-      C6FF000000FF840000FF840000FF000000FFFFFFFFFF000000FFC6C6C6FF0000
-      00FFFFFFFFFF000000FFC6C6C6FF000000FFC6C6C6FF000000FF000000FF0000
-      00FF00000000840000FF840000FF000000FFFFFFFFFF000000FF000000FFFFFF
-      FFFFFFFFFFFFFFFFFFFF000000FFC6C6C6FF000000FFFFFFFFFF000000FF0000
-      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFF000000FF0000
-      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000
-      0000000000000000000000000000000000FFFFFFFFFF000000FF000000FFFFFF
-      FFFF000000FF000000FF000000FF000000FF000000FFFFFFFFFF000000FF0000
-      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000
-      0000000000000000000000000000000000FFFFFFFFFF000000FF000000FFFFFF
-      FFFF000000FF000000FF000000FF000000FF000000FFFFFFFFFF000000FF0000
-      0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FF0000
-      0000000000000000000000000000000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000FF0000000000000000000000000000
-      000000000000000000000000000000000000840000FF840000FF840000FF8400
-      00FF840000FF0000000000000000000000FF000000FF00000000000000000000
-      0000000000000000000000000000840000FF840000FF840000FF840000FF8400
-      00FF840000FF840000FF00000000000000FF000000FF000000FF000000000000
-      00000000000000000000840000FF840000FF840000FF00000000000000000000
-      0000840000FF840000FF840000FF000000FF000000FF000000FF000000FF0000
-      00000000000000000000840000FF840000FF840000FF00000000000000000000
-      0000840000FF840000FF840000FF000000FF000000FF000000FF000000FF0000
-      00FF0000000000000000840000FF840000FF840000FF00000000000000000000
-      0000840000FF840000FF840000FF000000FF000000FF000000FF000000FF0000
-      00FF000000FF0000000000000000000000000000000000000000000000008400
-      00FF840000FF840000FF00000000000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF00000000000000000000000000000000840000FF8400
-      00FF840000FF0000000000000000000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF000000FF0000000000000000840000FF840000FF8400
-      00FF000000000000000000000000000000FF000000FF000000FF000000FF0000
-      00FF0000000000000000000000000000000000000000840000FF840000FF8400
-      00FF000000000000000000000000000000FF000000FF00000000000000FF0000
-      00FF000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000FF0000000000000000000000000000
-      00FF000000FF00000000000000000000000000000000840000FF840000FF8400
-      00FF000000000000000000000000000000000000000000000000000000000000
-      00FF000000FF00000000000000000000000000000000840000FF840000FF8400
-      00FF000000000000000000000000000000000000000000000000000000000000
-      0000000000FF000000FF00000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000FF000000FF00000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00FF000000FF000000FF000000FF000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000000000FF000000FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF000000FF00000000000000000000
-      000000000000000000000000000000000000000000FF848484FFFFFFFFFFFFFF
-      FFFFFFFFFFFFC6C6C6FFC6C6C6FFC6C6C6FF848484FF000000FF000000000000
-      000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFF
-      00FFFFFF00FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF000000000000
-      0000000000000000000000000000000000FFC6C6C6FFFFFFFFFFFFFF00FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF0000
-      0000000000000000000000000000000000FFC6C6C6FFFFFFFFFFFFFF00FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF0000
-      0000000000000000000000000000000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF0000
-      0000000000000000000000000000000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FF0000
-      000000000000000000000000000000000000000000FFC6C6C6FFC6C6C6FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFFFFFFFFF000000FF000000000000
-      000000000000000000000000000000000000000000FF848484FFC6C6C6FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFFFFFFFFF848484FF000000FF000000000000
-      00000000000000000000000000000000000000000000000000FF000000FFC6C6
-      C6FFC6C6C6FFC6C6C6FFFFFFFFFF848484FF840000FF840000FF840000FF0000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00FF000000FF000000FF000000FF840000FFC6C6C6FF840000FF840000FF8400
-      00FF000000000000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000840000FFC6C6C6FF840000FF8400
-      00FF840000FF0000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000840000FFC6C6C6FF8400
-      00FF840000FF840000FF00000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000840000FFC6C6
-      C6FF840000FF840000FF00000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000008400
-      00FF840000FF0000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      84FF000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      84FF000084FF0000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000000000000000000084FF000084FF0000
-      84FF000084FF000084FF00000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000084FF00000000000000000000
-      84FF000084FF0000000000000000000000000000000000000000000000000000
-      000000000000000000000000000000000000000084FF00000000000000000000
-      84FF0000000000000000000000000000000000000000000000FF000000FF0000
-      00FF000000FF000000000000000000000000000084FF00000000000000000000
-      000000000000000000000000000000000000000000FF848484FFC6C6C6FFC6C6
-      C6FF848484FF000000FF00000000000000000000000000000000000000000000
-      00000000000000000000000084FF000000FF848484FFFFFFFFFFFFFFFFFFC6C6
-      C6FFC6C6C6FF848484FF000000FF000000000000000000000000000000000000
-      84FF0000000000000000000084FF000000FFC6C6C6FFFFFFFFFFFFFF00FFC6C6
-      C6FFC6C6C6FFC6C6C6FF000000FF000000000000000000000000000084FF0000
-      84FF0000000000000000000084FF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
-      C6FFC6C6C6FFFFFFFFFF000000FF0000000000000000000084FF000084FF0000
-      84FF000084FF000084FF00000000000000FF848484FFC6C6C6FFC6C6C6FFC6C6
-      C6FFFFFFFFFF848484FF000000FF000000000000000000000000000084FF0000
-      84FF00000000000000000000000000000000000000FF848484FFC6C6C6FFFFFF
-      FFFF848484FF000000FF840000FF000000000000000000000000000000000000
-      84FF0000000000000000000000000000000000000000000000FF000000FF0000
-      00FF000000FF840000FF840000FF840000FF0000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000840000FF840000FF840000FF00000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000840000FF840000FF00000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      00FF000000FF0000000000000000000000000000000000000000000000000000
-      00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-      FFFF000000FF0000000000000000000000000000000000000000000000000000
-      00FFFFFFFFFF000000FF000000FF000000FF000000FF000000FFFFFFFFFF0000
-      00FF000000000000000000000000000000000000000000000000000000FFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000
-      00FF000000000000000000000000000000000000000000000000000000FFFFFF
-      FFFF000000FF000000FF000000FF000000FF000000FFFFFFFFFF000000FF0000
-      00FF000000FF000000FF000000000000000000000000000000FFFFFFFFFFFFFF
-      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFC6C6
-      C6FF000000FFC6C6C6FF000000FF00000000000000FF000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FFC6C6C6FF0000
-      00FFC6C6C6FF000000FF000000FF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FFC6C6
-      C6FF000000FFC6C6C6FF000000FF000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      00FFC6C6C6FFC6C6C6FF000000FF000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
-      C6FFC6C6C6FFC6C6C6FF848484FF848484FF848484FFC6C6C6FFC6C6C6FF0000
-      00FFC6C6C6FF000000FF00000000000000FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6
-      C6FFC6C6C6FFC6C6C6FF00FFFFFF00FFFFFF00FFFFFFC6C6C6FFC6C6C6FF0000
-      00FF000000FF000000FF00000000000000FF000000FF000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      00FFC6C6C6FF000000FF0000000000000000000000FFC6C6C6FFC6C6C6FFC6C6
-      C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FFC6C6C6FF000000FFC6C6
-      C6FF000000FF00000000000000000000000000000000000000FF000000FF0000
-      00FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF0000
-      00FF000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000000000000000000000000000000000000000
-      0000000000000000000000000000
-    }
+    Left = 578
+    Top = 743
   end
   object OpenFileDialog: TOpenDialog
-    Filter = 'Vector/Drill Files|*.plt;*.hpgl; *.hpg;*.pen;*.drl;*.svg|G-Code Files|*.tap; *.dat; *.nc?; *.gc?; *.ngc|GRBL Setup|*.grb|Gerber Files|*.gbr|All Files|*.*'
+    Filter = 
+      'Vector/Drill Files|*.plt;*.hpgl; *.hpg;*.pen;*.drl;*.svg|G-Code ' +
+      'Files|*.tap; *.dat; *.nc?; *.gc?; *.ngc|GRBL Setup|*.grb|Gerber ' +
+      'Files|*.gbr|All Files|*.*'
     FilterIndex = 0
     Options = [ofFileMustExist, ofEnableSizing]
-    left = 346
-    top = 743
+    Left = 346
+    Top = 743
   end
   object TimerDraw: TTimer
     Interval = 100
     OnTimer = TimerDrawElapsed
-    left = 698
-    top = 743
+    Left = 698
+    Top = 743
   end
   object OpenJobDialog: TOpenDialog
     Filter = 'Job Files|*.job|All Files|*.*'
     FilterIndex = 0
     Options = [ofHideReadOnly, ofFileMustExist, ofEnableSizing]
-    left = 298
-    top = 743
+    Left = 298
+    Top = 743
   end
   object SaveJobDialog: TSaveDialog
-    Title = 'Job File Save'
     DefaultExt = '.job'
     Filter = 'JOB File|*.job|GRBL Setup|*.grb|All Files|*.*'
-    left = 402
-    top = 743
+    Title = 'Job File Save'
+    Left = 402
+    Top = 743
   end
   object ColorDialog1: TColorDialog
-    Color = clBlack
     CustomColors.Strings = (
       'ColorA=000000'
       'ColorB=000080'
@@ -2844,26 +2599,25 @@ object Form1: TForm1
       'ColorQ=C0DCC0'
       'ColorR=F0CAA6'
       'ColorS=F0FBFF'
-      'ColorT=A4A0A0'
-    )
-    left = 250
-    top = 743
+      'ColorT=A4A0A0')
+    Left = 250
+    Top = 743
   end
   object TimerStatus: TTimer
     Interval = 25
     OnTimer = TimerStatusElapsed
-    left = 642
-    top = 743
+    Left = 642
+    Top = 743
   end
   object TimerBlink: TTimer
     Interval = 350
     OnTimer = TimerBlinkTimer
-    left = 746
-    top = 743
+    Left = 746
+    Top = 743
   end
   object PopupMenuATC: TPopupMenu
-    left = 856
-    top = 464
+    Left = 856
+    Top = 464
     object pu_ToolEnable: TMenuItem
       Caption = 'Tool enabled'
       OnClick = pu_ToolEnableClick

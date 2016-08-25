@@ -106,12 +106,6 @@
             <Form>AboutBox</Form>
         </DCCReference>
         <DCCReference Include="grbl_com.pas"/>
-        <DCCReference Include="ftdiclass\blinklist.pas"/>
-        <DCCReference Include="ftdiclass\bsearchtree.pas"/>
-        <DCCReference Include="ftdiclass\FTDIchip.pas"/>
-        <DCCReference Include="ftdiclass\FTDIdll.pas"/>
-        <DCCReference Include="ftdiclass\FTDIthread.pas"/>
-        <DCCReference Include="ftdiclass\FTDItypes.pas"/>
         <DCCReference Include="deviceselect.pas">
             <Form>deviceselectbox</Form>
         </DCCReference>
@@ -120,6 +114,10 @@
         <DCCReference Include="drawing_window.pas">
             <Form>Form2</Form>
         </DCCReference>
+        <DCCReference Include="ftdiclass\FTDIchip.pas"/>
+        <DCCReference Include="ftdiclass\FTDIdll.pas"/>
+        <DCCReference Include="ftdiclass\FTDIthread.pas"/>
+        <DCCReference Include="ftdiclass\FTDItypes.pas"/>
         <DCCReference Include="cam_view.pas">
             <Form>Form3</Form>
         </DCCReference>
@@ -131,14 +129,12 @@
         <DCCReference Include="DirectX\DirectSound.pas"/>
         <DCCReference Include="DirectX\DXTypes.pas"/>
         <DCCReference Include="DirectX\Direct3D9.pas"/>
+        <DCCReference Include="VFrames.pas"/>
         <DCCReference Include="grbl_player_main.pas">
             <Form>Form1</Form>
         </DCCReference>
-        <DCCReference Include="VFrames.pas"/>
-        <DCCReference Include="gerber_import.pas">
-            <Form>FormGerber</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
+        <DCCReference Include="ftdiclass\bsearchtree.pas"/>
+        <DCCReference Include="ftdiclass\blinklist.pas"/>
         <None Include="drill_import.inc">
             <ContainerId>File</ContainerId>
         </None>
