@@ -486,6 +486,7 @@ var
   my_char: Char;
   target_time, current_time: Int64;
   has_timeout: Boolean;
+  pos_changed: Boolean;
 begin
   {$IFnDEF FPC}
   StopWatch.Start;
@@ -508,6 +509,9 @@ begin
       sleep(0);
     end;
     current_time:= StopWatch.GetCurrentMilliseconds;
+    if (copy(my_str,0,1)='<') then
+      if not ((not DecodeStatus(my_str,pos_changed)) and (pos('idle',lowercase(my_str))=0)) then
+        my_str := '';
   until (my_char= #10) or ((current_time > target_time) and has_timeout) or isWaitExit;
   if has_timeout then begin
     if (current_time > target_time) then begin
@@ -518,8 +522,11 @@ begin
   {$ELSE}
   if timeout=0 then
     begin
-      while Result = '' do
+      while (Result = '') or (copy(Result,0,1)='<') do
         begin
+          if (copy(Result,0,1)='<') then
+            if (not DecodeStatus(Result,pos_changed)) and (pos('idle',lowercase(result))=0) then
+              break;
           Application.ProcessMessages;
           Result := ComFile.RecvTerminated(100,#10);
         end;

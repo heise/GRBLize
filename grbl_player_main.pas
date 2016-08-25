@@ -1238,7 +1238,7 @@ begin
     grbl_receveivelist.CommaText:= my_response;
     if grbl_receveivelist.Count < 2 then
       exit;   // Meldung fehlerhaft
-    my_Str:= grbl_receveivelist[0];
+    my_Str:= lowercase(grbl_receveivelist[0]);
     if AliveCount >= 7 then
       AliveIndicatorDirection:= false;
     if AliveCount <= 0 then
@@ -1249,11 +1249,11 @@ begin
       dec(AliveCount);
     ShowAliveState(LastAliveState);
 
-    if (my_Str = 'Idle') or (my_Str = 'Zero') then begin
+    if (my_Str = 'idle') or (my_Str = 'zero') then begin
       PanelReady.Color:= clLime;
       PanelReady.Font.Color:= clwhite;
       is_valid:= true;
-      if (my_Str = 'Zero') then
+      if (my_Str = 'zero') then
         MachineState:= zero
       else
         MachineState:= idle;
@@ -1262,7 +1262,7 @@ begin
       PanelReady.Font.Color:= clgray;
     end;
 
-    if (my_Str = 'Queue') or (my_Str =  'Hold') then begin
+    if (my_Str = 'queue') or (my_Str =  'hold') then begin
       is_valid:= true;
       PanelHold.Color:= clAqua;
       PanelHold.Font.Color:= clwhite;
@@ -1274,7 +1274,7 @@ begin
     end;
 
     is_jogging:= AnsiContainsStr(my_Str,'Jog');
-    if (my_Str = 'Run') or is_jogging then begin
+    if (my_Str = 'run') or is_jogging then begin
       is_valid:= true;
       PanelRun.Color:= clFuchsia;
       PanelRun.Font.Color:= clwhite;
@@ -1285,7 +1285,7 @@ begin
       PanelRun.Font.Color:= clgray;
     end;
 
-    if my_Str = 'Alarm' then begin
+    if my_Str = 'alarm' then begin
       is_valid:= true;
       PanelAlarm.Color:= clRed;
       PanelAlarm.Font.Color:= clwhite;
@@ -1301,15 +1301,15 @@ begin
       exit;
     end;
     if is_jogging then begin  // Kurzmeldung von GRBL-JOG 0.9j
-      if my_Str = 'JogX' then begin
+      if my_Str = 'jogx' then begin
         grbl_wpos.x:= StrDotToFloat(grbl_receveivelist[1]);
         PosX.Caption:= FormatFloat('000.00', grbl_wpos.x);
       end;
-      if my_Str = 'JogY' then begin
+      if my_Str = 'jogy' then begin
         grbl_wpos.y:= StrDotToFloat(grbl_receveivelist[1]);
         PosY.Caption:= FormatFloat('000.00', grbl_wpos.y);
       end;
-      if my_Str = 'JogZ' then begin
+      if my_Str = 'jogz' then begin
         grbl_wpos.z:= StrDotToFloat(grbl_receveivelist[1]);
         PosZ.Caption:= FormatFloat('000.00', grbl_wpos.z);
       end;
@@ -1391,7 +1391,7 @@ procedure TForm1.TimerStatusElapsed(Sender: TObject);
 var pos_changed: Boolean;
   old_machine_state: t_mstates;
 begin
-  if isJobRunning or isEmergency then begin
+  if isEmergency then begin
     StatusTimerState:= s_reset;
     exit;
   end;
@@ -1650,7 +1650,7 @@ begin
       grbl_sendlist.Clear;
       exit;
     end;
-    DisableStatus;
+    //DisableStatus;
     SendActive:= true;
     grbl_rx_clear; // letzte Antwort verwerfen
     for i:= 0 to grbl_sendlist.Count-1 do begin
@@ -1686,7 +1686,7 @@ begin
         end;
       end;
     end;
-    EnableStatus;
+    //EnableStatus;
   end else begin
     gcsim_active:= true;          // für Cadencer-Prozess
     for i:= 0 to grbl_sendlist.Count-1 do begin
