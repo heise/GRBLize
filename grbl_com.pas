@@ -516,10 +516,21 @@ begin
   end;
   Result:= my_str;
   {$ELSE}
-  Result := ComFile.RecvTerminated(timeout,#10);
+  if timeout=0 then
+    begin
+      while Result = '' do
+        begin
+          Application.ProcessMessages;
+          Result := ComFile.RecvTerminated(100,#10);
+        end;
+    end
+  else
+    Result := ComFile.RecvTerminated(timeout,#10);
   if pos(#13,Result)>0 then
     Result := copy(Result,0,pos(#13,result)-1);
-  if Result = '' then Result := '#Timeout';
+  if ComFile.LastError<>0 then
+    if Result = '' then
+      Result := '#Timeout';
   {$ENDIF}
 end;
 
@@ -699,6 +710,11 @@ begin
     Form1.Memo1.lines.add('');
     Form1.Memo1.lines.add('Grbl Startup Message (Version):');
     Form1.Memo1.lines.add('=========================================');
+    repeat
+      my_str:= grbl_receiveStr(2500);
+      if length(my_Str) > 1 then
+        Form1.Memo1.lines.add(my_str);
+    until pos('grbl',lowercase(my_str))>0;
     repeat
       my_str:= grbl_receiveStr(20);
       if length(my_Str) > 1 then

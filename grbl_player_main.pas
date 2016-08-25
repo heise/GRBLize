@@ -1457,7 +1457,7 @@ procedure WaitForIdle;
 begin
   if isGrblActive then
     while (MachineState = run) do begin // noch beschäftigt?
-      sleep(50);
+      sleep(5);
       Application.processmessages;
       if isCancelled or isEmergency or isWaitExit then
         break;

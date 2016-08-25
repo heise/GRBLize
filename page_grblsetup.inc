@@ -11,7 +11,7 @@ begin
     Form1.DeviceView.Text:= 'Serial port ' + com_name;
     Form1.DeviceView.Font.Color:= clWindowText;
     Form1.DeviceView.Font.Style:= [];
-    sleep(2000);  // Arduino Startup Time
+    //we wait longer for GRBL Message so its more save sleep(2000);  // Arduino Startup Time
   end;
 end;
 
