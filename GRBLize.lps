@@ -26,8 +26,7 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="193"/>
-        <CursorPos X="2" Y="10"/>
+        <CursorPos X="18" Y="174"/>
         <UsageCount Value="31"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -584,8 +583,8 @@
       <Unit74>
         <Filename Value="page_job.inc"/>
         <EditorIndex Value="7"/>
-        <TopLine Value="846"/>
-        <CursorPos X="48" Y="863"/>
+        <TopLine Value="88"/>
+        <CursorPos X="50" Y="102"/>
         <UsageCount Value="12"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -602,7 +601,6 @@
       <Unit76>
         <Filename Value="page_grblsetup.inc"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="73"/>
         <CursorPos X="20" Y="92"/>
         <UsageCount Value="12"/>
         <Loaded Value="True"/>
@@ -658,124 +656,124 @@
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="page_pens.inc"/>
-        <Caret Line="105" TopLine="87"/>
+        <Filename Value="grbl_player_main.pas"/>
+        <Caret Line="9" Column="95"/>
       </Position1>
       <Position2>
-        <Filename Value="page_job.inc"/>
-        <Caret Line="884" Column="11" TopLine="867"/>
+        <Filename Value="grbl_player_main.pas"/>
+        <Caret Line="122" Column="10" TopLine="94"/>
       </Position2>
       <Position3>
         <Filename Value="grbl_player_main.pas"/>
-        <Caret Line="9" Column="95"/>
+        <Caret Line="297" Column="20" TopLine="268"/>
       </Position3>
       <Position4>
         <Filename Value="grbl_player_main.pas"/>
-        <Caret Line="122" Column="10" TopLine="94"/>
+        <Caret Line="300" Column="20" TopLine="271"/>
       </Position4>
       <Position5>
         <Filename Value="grbl_player_main.pas"/>
-        <Caret Line="297" Column="20" TopLine="268"/>
+        <Caret Line="299" Column="20" TopLine="273"/>
       </Position5>
       <Position6>
-        <Filename Value="grbl_player_main.pas"/>
-        <Caret Line="300" Column="20" TopLine="271"/>
-      </Position6>
-      <Position7>
-        <Filename Value="grbl_player_main.pas"/>
-        <Caret Line="299" Column="20" TopLine="273"/>
-      </Position7>
-      <Position8>
         <Filename Value="page_atc.inc"/>
         <Caret Line="140" TopLine="133"/>
-      </Position8>
-      <Position9>
+      </Position6>
+      <Position7>
         <Filename Value="page_grblsetup.inc"/>
         <Caret Line="146" Column="3" TopLine="143"/>
-      </Position9>
-      <Position10>
+      </Position7>
+      <Position8>
         <Filename Value="page_job.inc"/>
         <Caret Line="740" Column="54" TopLine="729"/>
-      </Position10>
-      <Position11>
+      </Position8>
+      <Position9>
         <Filename Value="page_job.inc"/>
         <Caret Line="647" Column="46" TopLine="630"/>
-      </Position11>
-      <Position12>
+      </Position9>
+      <Position10>
         <Filename Value="page_pens.inc"/>
         <Caret Line="104" Column="53" TopLine="82"/>
-      </Position12>
-      <Position13>
+      </Position10>
+      <Position11>
         <Filename Value="page_pens.inc"/>
         <Caret Line="83" Column="46" TopLine="76"/>
-      </Position13>
-      <Position14>
+      </Position11>
+      <Position12>
         <Filename Value="grbl_player_main.pas"/>
         <Caret Line="1067" Column="7" TopLine="1037"/>
-      </Position14>
-      <Position15>
+      </Position12>
+      <Position13>
         <Filename Value="grbl_player_main.pas"/>
         <Caret Line="19" Column="11"/>
-      </Position15>
-      <Position16>
+      </Position13>
+      <Position14>
         <Filename Value="page_grblsetup.inc"/>
         <Caret Line="96" Column="58" TopLine="62"/>
+      </Position14>
+      <Position15>
+        <Filename Value="page_grblsetup.inc"/>
+        <Caret Line="93" Column="15" TopLine="73"/>
+      </Position15>
+      <Position16>
+        <Filename Value="grbl_com.pas"/>
+        <Caret Line="298" Column="18" TopLine="287"/>
       </Position16>
       <Position17>
         <Filename Value="page_grblsetup.inc"/>
-        <Caret Line="93" Column="15" TopLine="73"/>
+        <Caret Line="93" TopLine="73"/>
       </Position17>
       <Position18>
         <Filename Value="grbl_com.pas"/>
-        <Caret Line="298" Column="18" TopLine="287"/>
+        <Caret Line="296" TopLine="287"/>
       </Position18>
       <Position19>
-        <Filename Value="page_grblsetup.inc"/>
-        <Caret Line="93" TopLine="73"/>
+        <Filename Value="grbl_com.pas"/>
+        <Caret Line="297" TopLine="287"/>
       </Position19>
       <Position20>
         <Filename Value="grbl_com.pas"/>
-        <Caret Line="296" TopLine="287"/>
+        <Caret Line="298" TopLine="287"/>
       </Position20>
       <Position21>
         <Filename Value="grbl_com.pas"/>
-        <Caret Line="297" TopLine="287"/>
+        <Caret Line="312" TopLine="287"/>
       </Position21>
       <Position22>
         <Filename Value="grbl_com.pas"/>
-        <Caret Line="298" TopLine="287"/>
+        <Caret Line="313" TopLine="287"/>
       </Position22>
       <Position23>
         <Filename Value="grbl_com.pas"/>
-        <Caret Line="312" TopLine="287"/>
+        <Caret Line="314" TopLine="287"/>
       </Position23>
       <Position24>
         <Filename Value="grbl_com.pas"/>
-        <Caret Line="313" TopLine="287"/>
+        <Caret Line="315" TopLine="287"/>
       </Position24>
       <Position25>
         <Filename Value="grbl_com.pas"/>
-        <Caret Line="314" TopLine="287"/>
+        <Caret Line="316" Column="9" TopLine="287"/>
       </Position25>
       <Position26>
         <Filename Value="grbl_com.pas"/>
-        <Caret Line="315" TopLine="287"/>
+        <Caret Line="307" Column="42" TopLine="289"/>
       </Position26>
       <Position27>
         <Filename Value="grbl_com.pas"/>
-        <Caret Line="316" Column="9" TopLine="287"/>
+        <Caret Line="7" Column="38"/>
       </Position27>
       <Position28>
         <Filename Value="grbl_com.pas"/>
-        <Caret Line="307" Column="42" TopLine="289"/>
+        <Caret Line="10" Column="17"/>
       </Position28>
       <Position29>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="7" Column="38"/>
+        <Filename Value="page_job.inc"/>
+        <Caret Line="863" Column="48" TopLine="846"/>
       </Position29>
       <Position30>
-        <Filename Value="grbl_com.pas"/>
-        <Caret Line="10" Column="17"/>
+        <Filename Value="page_job.inc"/>
+        <Caret Line="98" Column="24" TopLine="81"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
