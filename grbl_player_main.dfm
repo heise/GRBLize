@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 455
+  Left = 454
   Height = 695
-  Top = 135
+  Top = 110
   Width = 932
   BorderStyle = bsSingle
-  ClientHeight = 670
+  ClientHeight = 672
   ClientWidth = 932
   Color = clBtnFace
   Constraints.MaxHeight = 696
@@ -19,7 +19,7 @@ object Form1: TForm1
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   ShowHint = True
-  LCLVersion = '1.4.4.0'
+  LCLVersion = '1.7'
   object Bevel3: TBevel
     Left = 7
     Height = 167
@@ -54,9 +54,9 @@ object Form1: TForm1
   end
   object PosX: TLabel
     Left = 24
-    Height = 37
+    Height = 38
     Top = 504
-    Width = 106
+    Width = 122
     Caption = '000,00'
     Font.Color = clBlue
     Font.Height = -32
@@ -81,9 +81,9 @@ object Form1: TForm1
   end
   object PosY: TLabel
     Left = 152
-    Height = 37
+    Height = 38
     Top = 504
-    Width = 106
+    Width = 122
     Caption = '000,00'
     Font.Color = clGreen
     Font.Height = -32
@@ -108,9 +108,9 @@ object Form1: TForm1
   end
   object PosZ: TLabel
     Left = 280
-    Height = 37
+    Height = 38
     Top = 504
-    Width = 106
+    Width = 122
     Caption = '000,00'
     Font.Color = clRed
     Font.Height = -32
@@ -135,9 +135,9 @@ object Form1: TForm1
   end
   object MposX: TLabel
     Left = 24
-    Height = 16
+    Height = 15
     Top = 486
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Font.Color = clBlue
     Font.Height = -13
@@ -148,9 +148,9 @@ object Form1: TForm1
   end
   object MposY: TLabel
     Left = 152
-    Height = 16
+    Height = 15
     Top = 486
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Font.Color = clGreen
     Font.Height = -13
@@ -161,9 +161,9 @@ object Form1: TForm1
   end
   object MposZ: TLabel
     Left = 280
-    Height = 16
+    Height = 15
     Top = 486
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Font.Color = clRed
     Font.Height = -13
@@ -174,9 +174,9 @@ object Form1: TForm1
   end
   object Label23: TLabel
     Left = 212
-    Height = 13
+    Height = 15
     Top = 593
-    Width = 126
+    Width = 173
     Caption = 'Part zero in machine coord'
     Font.Color = clBlack
     Font.Height = 13
@@ -186,9 +186,9 @@ object Form1: TForm1
   end
   object Label27: TLabel
     Left = 399
-    Height = 20
+    Height = 25
     Top = 512
-    Width = 34
+    Width = 48
     Caption = 'Part'
     Font.Color = clBlack
     Font.Height = 21
@@ -199,9 +199,9 @@ object Form1: TForm1
   end
   object Label28: TLabel
     Left = 393
-    Height = 13
+    Height = 15
     Top = 484
-    Width = 41
+    Width = 54
     Caption = 'Machine'
     Font.Color = clBlack
     Font.Height = 13
@@ -211,10 +211,10 @@ object Form1: TForm1
   end
   object LabelWorkX: TLabel
     Left = 212
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Font.Color = clBlue
     Font.Height = -13
@@ -225,10 +225,10 @@ object Form1: TForm1
   end
   object LabelWorkY: TLabel
     Left = 270
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Font.Color = clGreen
     Font.Height = -13
@@ -239,10 +239,10 @@ object Form1: TForm1
   end
   object LabelWorkZ: TLabel
     Left = 330
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Font.Color = clRed
     Font.Height = -13
@@ -253,10 +253,10 @@ object Form1: TForm1
   end
   object LabelTableX: TLabel
     Left = 25
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Font.Color = clBlue
     Font.Height = -13
@@ -267,10 +267,10 @@ object Form1: TForm1
   end
   object LabelTableY: TLabel
     Left = 83
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Font.Color = clGreen
     Font.Height = -13
@@ -281,10 +281,10 @@ object Form1: TForm1
   end
   object LabelTableZ: TLabel
     Left = 143
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Font.Color = clRed
     Font.Height = -13
@@ -295,9 +295,9 @@ object Form1: TForm1
   end
   object Label31: TLabel
     Left = 25
-    Height = 13
+    Height = 15
     Top = 593
-    Width = 132
+    Width = 187
     Caption = 'Table size (limits XYZ travel)'
     Font.Color = clBlack
     Font.Height = 13
@@ -310,7 +310,7 @@ object Form1: TForm1
     Height = 13
     Hint = 'Z Gauge height value from job defaults'
     Top = 505
-    Width = 62
+    Width = 71
     Caption = '+00.00 mm'
     Font.Color = clWindowText
     Font.Height = -11
@@ -354,7 +354,7 @@ object Form1: TForm1
     Left = 612
     Height = 13
     Top = 41
-    Width = 155
+    Width = 165
     Caption = 'G-Code Output / Messages'
     Font.Color = cl3DDkShadow
     Font.Height = -11
@@ -367,7 +367,7 @@ object Form1: TForm1
     Left = 612
     Height = 13
     Top = 423
-    Width = 93
+    Width = 99
     Caption = 'ATC or Tool List'
     Font.Color = cl3DDkShadow
     Font.Height = -11
@@ -380,7 +380,7 @@ object Form1: TForm1
     Left = 794
     Height = 13
     Top = 423
-    Width = 113
+    Width = 140
     Caption = '(current tool highlighted)'
     Font.Color = clGrayText
     Font.Height = -11
@@ -392,7 +392,7 @@ object Form1: TForm1
     Left = 815
     Height = 13
     Top = 41
-    Width = 54
+    Width = 62
     Caption = 'LabelFaults'
     Font.Color = clGrayText
     Font.Height = -11
@@ -404,7 +404,7 @@ object Form1: TForm1
     Left = 508
     Height = 13
     Top = 486
-    Width = 79
+    Width = 93
     Caption = 'Z Gauge Height:'
     Font.Color = clGrayText
     Font.Height = -11
@@ -476,8 +476,8 @@ object Form1: TForm1
     OnChange = PageControl1Change
     object TabSheet1: TTabSheet
       Caption = 'Job/Files'
-      ClientHeight = 407
-      ClientWidth = 585
+      ClientHeight = 402
+      ClientWidth = 587
       Font.Color = clBlack
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
@@ -487,7 +487,7 @@ object Form1: TForm1
         Left = 8
         Height = 13
         Top = 8
-        Width = 323
+        Width = 371
         Caption = 'HPGL/Vector/Drill Fles (G-Code/SVG will be mapped to Pen/Tool 9)'
         Font.Color = cl3DDkShadow
         Font.Height = -11
@@ -499,7 +499,7 @@ object Form1: TForm1
         Left = 8
         Height = 13
         Top = 186
-        Width = 58
+        Width = 66
         Caption = 'Job Settings'
         Font.Color = cl3DDkShadow
         Font.Height = -11
@@ -511,7 +511,7 @@ object Form1: TForm1
         Left = 134
         Height = 13
         Top = 186
-        Width = 138
+        Width = 163
         Caption = 'Press Enter to Accept Values'
         Font.Color = cl3DDkShadow
         Font.Height = -11
@@ -523,7 +523,7 @@ object Form1: TForm1
         Left = 304
         Height = 13
         Top = 240
-        Width = 64
+        Width = 76
         Caption = 'Job Comment'
         Font.Color = cl3DDkShadow
         Font.Height = -11
@@ -718,8 +718,8 @@ object Form1: TForm1
     end
     object TabSheetDefaults: TTabSheet
       Caption = 'Defaults'
-      ClientHeight = 407
-      ClientWidth = 585
+      ClientHeight = 402
+      ClientWidth = 587
       ImageIndex = 2
       object Bevel11: TBevel
         Left = 319
@@ -934,8 +934,8 @@ object Form1: TForm1
     end
     object TabSheetRun: TTabSheet
       Caption = 'Machine Control'
-      ClientHeight = 407
-      ClientWidth = 585
+      ClientHeight = 402
+      ClientWidth = 587
       ImageIndex = 3
       object Bevel2: TBevel
         Left = 3
@@ -984,7 +984,7 @@ object Form1: TForm1
         Left = 4
         Height = 13
         Top = 1
-        Width = 37
+        Width = 41
         Caption = 'Jogging'
         Font.Color = clGrayText
         Font.Height = -11
@@ -996,7 +996,7 @@ object Form1: TForm1
         Left = 511
         Height = 13
         Top = 216
-        Width = 61
+        Width = 71
         Caption = 'Job Progress'
         Font.Color = clGrayText
         Font.Height = -11
@@ -1008,7 +1008,7 @@ object Form1: TForm1
         Left = 325
         Height = 13
         Top = 344
-        Width = 125
+        Width = 150
         Caption = 'GCode Simulation Settings'
         Font.Color = clGray
         Font.Height = -11
@@ -1020,7 +1020,7 @@ object Form1: TForm1
         Left = 486
         Height = 13
         Top = 367
-        Width = 82
+        Width = 94
         Caption = 'G-Code Tool Dia.'
         Font.Color = clBlue
         Font.Height = -11
@@ -1046,7 +1046,7 @@ object Form1: TForm1
         Left = 499
         Height = 13
         Top = 301
-        Width = 67
+        Width = 82
         Caption = 'Apply Z Offset'
         Font.Color = clBlue
         Font.Height = -11
@@ -1058,7 +1058,7 @@ object Form1: TForm1
         Left = 499
         Height = 13
         Top = 315
-        Width = 67
+        Width = 79
         Caption = 'to G-Code File'
         Font.Color = clBlue
         Font.Height = -11
@@ -1070,7 +1070,7 @@ object Form1: TForm1
         Left = 327
         Height = 13
         Top = 27
-        Width = 100
+        Width = 115
         Caption = 'First Tool used in Job'
         Font.Color = clGrayText
         Font.Height = -11
@@ -1080,9 +1080,9 @@ object Form1: TForm1
       end
       object Label17: TLabel
         Left = 44
-        Height = 16
+        Height = 19
         Top = 82
-        Width = 43
+        Width = 55
         Caption = 'X Axis'
         Font.Color = clRed
         Font.Height = 16
@@ -1093,9 +1093,9 @@ object Form1: TForm1
       end
       object Label18: TLabel
         Left = 158
-        Height = 16
+        Height = 19
         Top = 56
-        Width = 44
+        Width = 55
         Caption = 'Y Axis'
         Font.Color = clRed
         Font.Height = 16
@@ -1170,7 +1170,7 @@ object Form1: TForm1
         Left = 5
         Height = 13
         Top = 216
-        Width = 39
+        Width = 45
         Caption = 'Move to'
         Font.Color = clGrayText
         Font.Height = -11
@@ -1215,15 +1215,15 @@ object Form1: TForm1
         Height = 13
         Hint = 'Z Lift value from job defaults'
         Top = 346
-        Width = 52
+        Width = 67
         Caption = '+00,00 mm'
         ParentColor = False
       end
       object Label15: TLabel
         Left = 158
-        Height = 24
+        Height = 28
         Top = 153
-        Width = 70
+        Width = 92
         Caption = 'Jogpad'
         Font.Color = clRed
         Font.Height = 24
@@ -1234,9 +1234,9 @@ object Form1: TForm1
       end
       object Label16: TLabel
         Left = 200
-        Height = 16
+        Height = 19
         Top = 26
-        Width = 43
+        Width = 55
         Caption = 'Z Axis'
         Font.Color = clRed
         Font.Height = 16
@@ -1309,7 +1309,7 @@ object Form1: TForm1
         Left = 208
         Height = 13
         Top = 298
-        Width = 86
+        Width = 106
         Caption = 'with floating probe'
         Font.Color = clGrayText
         Font.Height = -11
@@ -1321,7 +1321,7 @@ object Form1: TForm1
         Left = 310
         Height = 13
         Top = 1
-        Width = 107
+        Width = 132
         Caption = 'Options (from Defaults)'
         Font.Color = clGrayText
         Font.Height = -11
@@ -1333,7 +1333,7 @@ object Form1: TForm1
         Left = 106
         Height = 13
         Top = 331
-        Width = 81
+        Width = 99
         Caption = 'Z Lift above part:'
         Font.Color = clGrayText
         Font.Height = -11
@@ -1359,10 +1359,10 @@ object Form1: TForm1
       end
       object CheckEndPark: TCheckBox
         Left = 13
-        Height = 23
+        Height = 22
         Hint = 'On end move to Park Position'
         Top = 371
-        Width = 82
+        Width = 90
         Caption = 'Park on end'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1379,7 +1379,7 @@ object Form1: TForm1
       end
       object ComboBoxGtip: TComboBox
         Left = 406
-        Height = 21
+        Height = 27
         Hint = 'Simulated tool tip'
         Top = 363
         Width = 75
@@ -1387,7 +1387,7 @@ object Form1: TForm1
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        ItemHeight = 13
+        ItemHeight = 0
         ItemIndex = 0
         Items.Strings = (
           'Flat Tip'
@@ -1405,7 +1405,7 @@ object Form1: TForm1
       end
       object ComboBoxGdia: TComboBox
         Left = 325
-        Height = 21
+        Height = 27
         Hint = 'Simulated tool diameter'
         Top = 363
         Width = 75
@@ -1413,7 +1413,7 @@ object Form1: TForm1
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        ItemHeight = 13
+        ItemHeight = 0
         ItemIndex = 1
         Items.Strings = (
           '1-1,5 mm'
@@ -1431,7 +1431,7 @@ object Form1: TForm1
       end
       object EditZoffs: TEdit
         Left = 437
-        Height = 21
+        Height = 23
         Hint = 'Offset added to G-Gode Z output (does not affect jobs)'
         Top = 303
         Width = 56
@@ -1445,10 +1445,10 @@ object Form1: TForm1
       end
       object CheckTLCprobe: TCheckBox
         Left = 325
-        Height = 23
+        Height = 22
         Hint = 'Use a separate fixed Z probe for tool length compensation. If not enabled, will use movable part probe as fixed probe.'
         Top = 145
-        Width = 218
+        Width = 249
         Caption = 'Use TLC Probe Switch (required for ATC)'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1459,10 +1459,10 @@ object Form1: TForm1
       end
       object CheckPartProbeZ: TCheckBox
         Left = 325
-        Height = 23
+        Height = 22
         Hint = 'Use a movable Z probe to be placed on part'
         Top = 122
-        Width = 181
+        Width = 204
         Caption = 'Use Floating Part Z Probe Switch'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1669,7 +1669,7 @@ object Form1: TForm1
       end
       object EditFirstToolDia: TEdit
         Left = 325
-        Height = 21
+        Height = 23
         Hint = 'This tool must be inserted before running job'
         Top = 46
         Width = 182
@@ -1685,10 +1685,10 @@ object Form1: TForm1
       end
       object CheckToolChange: TCheckBox
         Left = 325
-        Height = 23
+        Height = 22
         Hint = 'Will use same tool for complete job if disabled'
         Top = 89
-        Width = 177
+        Width = 168
         Caption = 'Enable Tool Change in Job'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1700,9 +1700,9 @@ object Form1: TForm1
       end
       object CheckUseATC2: TCheckBox
         Left = 325
-        Height = 23
+        Height = 22
         Top = 175
-        Width = 222
+        Width = 218
         Caption = 'Use Automatic Tool Changer (ATC)'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1748,7 +1748,7 @@ object Form1: TForm1
   end
   object ComboBox1: TComboBox
     Left = 25
-    Height = 21
+    Height = 25
     Top = 752
     Width = 89
     BidiMode = bdRightToLeftNoAlign
@@ -1756,7 +1756,7 @@ object Form1: TForm1
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ItemHeight = 13
+    ItemHeight = 0
     Items.Strings = (
       'OFF'
       'Pen 0'
@@ -1917,7 +1917,7 @@ object Form1: TForm1
   end
   object ComboBoxTip: TComboBox
     Left = 118
-    Height = 21
+    Height = 25
     Hint = 'Select Tool Tip'
     Top = 752
     Width = 89
@@ -1925,7 +1925,7 @@ object Form1: TForm1
     DropDownCount = 7
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ItemHeight = 13
+    ItemHeight = 0
     Items.Strings = (
       'Flat Tip'
       'Cone 30°'
@@ -2038,10 +2038,10 @@ object Form1: TForm1
   end
   object CheckBoxSim: TCheckBox
     Left = 472
-    Height = 23
+    Height = 22
     Hint = 'Job will be simulated only, no output to machine'
     Top = 32
-    Width = 109
+    Width = 122
     Caption = 'Simulation only'
     Checked = True
     Font.Color = clWindowText

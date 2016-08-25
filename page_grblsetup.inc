@@ -77,13 +77,26 @@ begin
     deviceselectbox.ListView1.Items[0].Selected := true;
   end;
   deviceselectbox.ComboBoxCOMport.Items.clear;
+  {$IFnDEF FPC}
   deviceselectbox.ComboBoxCOMport.Items.add('none (FTDI direct)');
   for i := 0 to 31 do begin
-    if CheckCom(i) = 0 then begin
+    if CheckCom('COM' + i) = 0 then begin
       deviceselectbox.ComboBoxCOMport.Items.add('COM' + IntToSTr(i));
     end;
   end;
-  deviceselectbox.ComboBoxCOMport.ItemIndex:= 0; // Auswahl erzwingen
+  {$ELSE}
+  deviceselectbox.ComboBoxComPort.Items.Delimiter:=',';
+  deviceselectbox.ComboBoxComPort.Items.DelimitedText:=synaser.GetSerialPortNames;
+  i := 0;
+  while i < deviceselectbox.ComboBoxComPort.Items.Count do
+    begin
+      if CheckCom(deviceselectbox.ComboBoxComPort.Items[i])=0 then
+        inc(i)
+      else deviceselectbox.ComboBoxComPort.Items.Delete(i);
+    end;
+  {$endif}
+  if deviceselectbox.ComboBoxComPort.Items.Count>0 then
+    deviceselectbox.ComboBoxCOMport.ItemIndex:= 0; // Auswahl erzwingen
   deviceselectbox.ShowModal;
   if (deviceselectbox.ModalResult=MrOK) then begin
     if (deviceselectbox.ComboBoxCOMport.ItemIndex > 0) then begin

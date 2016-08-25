@@ -15,6 +15,8 @@ uses
   Windows,ShellApi, MMsystem, VFrames, XPMan, System.ImageList, System.Actions,
   glscene_view, GLColor,
   FTDItypes, Vcl.ColorGrd, Vcl.Samples.Gauges, System.UItypes,
+  {$else}
+  synaser,
   {$ENDIF}
   Math, StdCtrls, ComCtrls, ToolWin, Buttons, ExtCtrls, ImgList,
   Controls, StdActns, Classes, ActnList, Menus, GraphUtil,

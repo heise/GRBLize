@@ -33,7 +33,7 @@ type
   function InitFTDIbySerial(my_serial: String; baud_str: String):String;
 
    // für Kommunikation nicht über FTDI, sondern über COM-port
-  function CheckCom(my_ComNumber: Integer): Integer;   // COM# verfügbar?
+  function CheckCom(my_Com: string): Integer;   // COM# verfügbar?
   function COMOpen(com_name: String): Boolean;
   procedure COMRxClear;
   procedure COMClose;
@@ -284,7 +284,7 @@ begin
     Result := Format('COM%d', [ComNr]);
 end;
 
-function CheckCom(my_ComNumber: Integer): Integer;
+function CheckCom(my_Com: string): Integer;
 // check if a COM port is available
 var
   {$IFnDEF FPC}
@@ -295,7 +295,7 @@ var
   my_str: String;
 begin
   Result := 0;
-  my_str:= ExtComName(my_ComNumber);
+  my_str:= my_Com;
   {$IFnDEF FPC}
   FHandle := CreateFile(PChar(my_str),
     GENERIC_WRITE,
@@ -313,7 +313,7 @@ begin
   try
     FHandle.Connect(my_str);
     Result := 0;
-  finally
+  except
     Result := -1;
   end;
   FHandle.Free;
@@ -1115,7 +1115,7 @@ begin
 {$ENDIF}
 end;
 
-function InitFTDIbySerial(my_serial, baud_str: String):String;
+function InitFTDIbySerial(my_serial: String; baud_str: String): String;
 begin
   if ftdi_isopen then
     exit;
