@@ -1,4 +1,4 @@
-unit drawing_window;
+﻿unit drawing_window;
 
 {$IFDEF FPC}
   {$MODE Delphi}

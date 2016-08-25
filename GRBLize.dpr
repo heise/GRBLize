@@ -9,10 +9,10 @@ program GRBLize;
 
 
 uses
-{$IFnDEF FPC}
-{$ELSE}
+  {$IFnDEF FPC}
+  {$ELSE}
   Interfaces,
-{$ENDIF}
+  {$ENDIF }
   Forms,
   ABOUT in 'ABOUT.PAS' {AboutBox},
   grbl_com in 'grbl_com.pas',
@@ -20,7 +20,7 @@ uses
   import_files in 'import_files.pas',
   clipper in 'clipper.pas',
   drawing_window in 'drawing_window.pas' {Form2},
-{$IFnDEF FPC}
+  {$IFnDEF FPC}
   FTDIchip in 'ftdiclass\FTDIchip.pas',
   FTDIdll in 'ftdiclass\FTDIdll.pas',
   FTDIthread in 'ftdiclass\FTDIthread.pas',
@@ -33,8 +33,10 @@ uses
   DXTypes in 'DirectX\DXTypes.pas',
   Direct3D9 in 'DirectX\Direct3D9.pas',
   VFrames in 'VFrames.pas',
-{$ENDIF}
-  grbl_player_main in 'grbl_player_main.pas' {Form1};
+  grbl_player_main in 'grbl_player_main.pas' {Form1},
+  bsearchtree in 'ftdiclass\bsearchtree.pas',
+  blinklist in 'ftdiclass\blinklist.pas';
+  {$ENDIF }
 
 {$R *.res}
 

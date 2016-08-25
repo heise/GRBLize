@@ -181,8 +181,7 @@ begin
   {$IFnDEF FPC}
   fIsHighResolution := QueryPerformanceFrequency(fFrequency);
   {$ELSE}
-  fFrequency := 1;
-  fIsHighResolution := True;
+  fIsHighResolution := False;
   {$ENDIF}
   if not fIsHighResolution then
     fFrequency := MSecsPerSec;

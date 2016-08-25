@@ -1,4 +1,4 @@
-// #############################################################################
+ï»¿// #############################################################################
 // ############################### FILES AND JOBS ##############################
 // #############################################################################
 
@@ -9,7 +9,7 @@ begin
   for j := 0 to 31 do begin
     case job.pens[j].tooltip of
       1:
-        job.pens[j].tipdia:= job.pens[j].z_end * 0.53; // tan(30°) * 2
+        job.pens[j].tipdia:= job.pens[j].z_end * 0.53; // tan(30Â°) * 2
       2:
         job.pens[j].tipdia:= job.pens[j].z_end * 0.82;
       3:
@@ -95,14 +95,14 @@ begin
   for i := 0 to c_numOfFiles do with Form1.SgFiles do begin
     Cells[0,i+1]:= '';
     Cells[1,i+1]:= 'OFF';
-    Cells[2,i+1]:= '0°';
+    Cells[2,i+1]:= '0';
     Cells[3,i+1]:= 'OFF';
     Cells[4,i+1]:= '0';
     Cells[5,i+1]:= '0';
     Cells[6,i+1]:= '100';
     Cells[6,i+1]:= 'YES';
     Cells[8,i+1]:= '';
-    job.fileDelimStrings[i]:= '"",-1,0°,OFF,0,0,100';
+    job.fileDelimStrings[i]:= '"",-1,0Â°,OFF,0,0,100';
     with FileParamArray[i] do begin
       bounds.min.x := high(Integer);
       bounds.min.y := high(Integer);
@@ -330,11 +330,11 @@ begin
   end;
   with Form1.SgFiles do begin
     for i:= 1 to c_numOfFiles +1 do begin
-      if Cells[2, i] = '90°' then
+      if Cells[2, i] = '90Â°' then
         FileParamArray[i-1].rotate:= deg90
-      else if Cells[2, i] = '270°' then
+      else if Cells[2, i] = '270Â°' then
         FileParamArray[i-1].rotate:= deg270
-      else if Cells[2, i] = '180°' then
+      else if Cells[2, i] = '180Â°' then
         FileParamArray[i-1].rotate:= deg180
       else
         FileParamArray[i-1].rotate:= deg0;
@@ -618,7 +618,7 @@ var
   aStr: String;
 
 begin
-  Rect.Left:= Rect.Left-4; // Workaround für XE8-Darstellung
+  Rect.Left:= Rect.Left-4; // Workaround fÃ¼r XE8-Darstellung
   aStr:= SgJobDefaults.Cells[ACol, ARow];
   if aRow = 0 then with SgJobDefaults,Canvas do begin
     Font.Style := [fsBold];
@@ -724,7 +724,7 @@ var
   aStr: String;
 
 begin
-  Rect.Left:= Rect.Left-4; // Workaround für XE8-Darstellung
+  Rect.Left:= Rect.Left-4; // Workaround fÃ¼r XE8-Darstellung
   aStr:= SgAppDefaults.Cells[ACol, ARow];
   if aRow = 0 then with SgAppDefaults,Canvas do begin
     {$IFDEF FPC}
@@ -803,7 +803,7 @@ begin
   {$IFDEF FPC}
   TCustomGrid(Sender).Canvas.Rectangle(Rect);
   {$ENDIF}
-  Rect.Left:= Rect.Left-4; // Workaround für XE8-Darstellung
+  Rect.Left:= Rect.Left-4; // Workaround fÃ¼r XE8-Darstellung
   if aRow = 0 then with SgFiles,Canvas do begin
     Font.Style := [fsBold];
     TextRect(Rect, Rect.Left + 2, Rect.Top + 2, Cells[ACol, ARow]);
@@ -852,7 +852,7 @@ begin
           end;
           if aStr <> 'OFF' then
             Font.Style := [fsBold];
-          if aStr = '0°' then
+          if aStr = '0Â°' then
             Font.Style := [];
           FillRect(Rect);
           aRect := Rect;
@@ -940,14 +940,14 @@ begin
         end;
       2:
         begin
-          if Cells[2, my_Row] = '0°' then
-            Cells[2, my_Row]:= '90°'
-          else if Cells[2, my_Row] = '90°' then
-            Cells[2, my_Row]:= '180°'
-          else if Cells[2, my_Row] = '180°' then
-            Cells[2, my_Row]:= '270°'
+          if Cells[2, my_Row] = '0Â°' then
+            Cells[2, my_Row]:= '90Â°'
+          else if Cells[2, my_Row] = '90Â°' then
+            Cells[2, my_Row]:= '180Â°'
+          else if Cells[2, my_Row] = '180Â°' then
+            Cells[2, my_Row]:= '270Â°'
           else
-            Cells[2, my_Row]:= '0°';
+            Cells[2, my_Row]:= '0Â°';
         end;
       3:
         begin
@@ -964,7 +964,7 @@ begin
         begin
           Cells[0, my_Row]:= '';
           Cells[1, my_Row]:= '-1';
-          Cells[2, my_Row]:= '0°';
+          Cells[2, my_Row]:= '0Â°';
           Cells[3, my_Row]:= 'OFF';
           Cells[8, my_Row]:= '';
           for i:= 0 to c_numOfPens do
@@ -991,7 +991,7 @@ end;
 
 
 procedure TForm1.SgFilesClick(Sender: TObject);
-// wird nach Loslassen der Maustaste ausgeführt!
+// wird nach Loslassen der Maustaste ausgefÃ¼hrt!
 var my_ext: String;
 begin
   with SgFiles do begin
