@@ -509,8 +509,8 @@ begin
       sleep(0);
     end;
     current_time:= StopWatch.GetCurrentMilliseconds;
-    if (copy(my_str,0,1)='<') then
-      if not ((not DecodeStatus(my_str,pos_changed)) and (pos('idle',lowercase(my_str))=0)) then
+    if (copy(my_str,0,1)='<') and (pos('idle',lowercase(Result))=0)) then
+      if not ((not DecodeStatus(my_str,pos_changed)) then
         my_str := '';
   until (my_char= #10) or ((current_time > target_time) and has_timeout) or isWaitExit;
   if has_timeout then begin
@@ -522,12 +522,13 @@ begin
   {$ELSE}
   if timeout=0 then
     begin
-      while (Result = '') or (copy(Result,0,1)='<') do
+      while (Result = '') or ((copy(Result,0,1)='<') and (pos('idle',lowercase(Result))=0)) do
         begin
           if (copy(Result,0,1)='<') then
-            if (not DecodeStatus(Result,pos_changed)) and (pos('idle',lowercase(result))=0) then
+            if (not DecodeStatus(Result,pos_changed)) then
               break;
           Application.ProcessMessages;
+          if not Assigned(ComFile) then break;
           Result := ComFile.RecvTerminated(100,#10);
         end;
     end

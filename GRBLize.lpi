@@ -55,7 +55,9 @@
       <Unit1>
         <Filename Value="ABOUT.PAS"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutBox"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit1>
       <Unit2>
         <Filename Value="grbl_com.pas"/>

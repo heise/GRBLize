@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 453
-  Height = 695
-  Top = 85
+  Left = 541
+  Height = 696
+  Top = 159
   Width = 932
   BorderStyle = bsSingle
-  ClientHeight = 670
+  ClientHeight = 673
   ClientWidth = 932
   Color = clBtnFace
   Constraints.MaxHeight = 696
@@ -19,7 +19,7 @@ object Form1: TForm1
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   ShowHint = True
-  LCLVersion = '1.4.4.0'
+  LCLVersion = '1.7'
   object Bevel3: TBevel
     Left = 7
     Height = 167
@@ -54,9 +54,9 @@ object Form1: TForm1
   end
   object PosX: TLabel
     Left = 24
-    Height = 37
+    Height = 38
     Top = 504
-    Width = 106
+    Width = 122
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clBlue
@@ -83,9 +83,9 @@ object Form1: TForm1
   end
   object PosY: TLabel
     Left = 152
-    Height = 37
+    Height = 38
     Top = 504
-    Width = 106
+    Width = 122
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clGreen
@@ -112,9 +112,9 @@ object Form1: TForm1
   end
   object PosZ: TLabel
     Left = 280
-    Height = 37
+    Height = 38
     Top = 504
-    Width = 106
+    Width = 122
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clRed
@@ -141,9 +141,9 @@ object Form1: TForm1
   end
   object MposX: TLabel
     Left = 24
-    Height = 16
+    Height = 15
     Top = 486
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clBlue
@@ -156,9 +156,9 @@ object Form1: TForm1
   end
   object MposY: TLabel
     Left = 152
-    Height = 16
+    Height = 15
     Top = 486
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clGreen
@@ -171,9 +171,9 @@ object Form1: TForm1
   end
   object MposZ: TLabel
     Left = 280
-    Height = 16
+    Height = 15
     Top = 486
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clRed
@@ -186,9 +186,9 @@ object Form1: TForm1
   end
   object Label23: TLabel
     Left = 212
-    Height = 13
+    Height = 15
     Top = 593
-    Width = 126
+    Width = 173
     Caption = 'Part zero in machine coord'
     Color = clBtnFace
     Font.Color = clBlack
@@ -200,9 +200,9 @@ object Form1: TForm1
   end
   object Label27: TLabel
     Left = 399
-    Height = 20
+    Height = 25
     Top = 512
-    Width = 34
+    Width = 48
     Caption = 'Part'
     Color = clBtnFace
     Font.Color = clBlack
@@ -215,9 +215,9 @@ object Form1: TForm1
   end
   object Label28: TLabel
     Left = 393
-    Height = 13
+    Height = 15
     Top = 484
-    Width = 41
+    Width = 54
     Caption = 'Machine'
     Color = clBtnFace
     Font.Color = clBlack
@@ -229,10 +229,10 @@ object Form1: TForm1
   end
   object LabelWorkX: TLabel
     Left = 212
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clBlue
@@ -245,10 +245,10 @@ object Form1: TForm1
   end
   object LabelWorkY: TLabel
     Left = 270
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clGreen
@@ -261,10 +261,10 @@ object Form1: TForm1
   end
   object LabelWorkZ: TLabel
     Left = 330
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clRed
@@ -277,10 +277,10 @@ object Form1: TForm1
   end
   object LabelTableX: TLabel
     Left = 25
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clBlue
@@ -293,10 +293,10 @@ object Form1: TForm1
   end
   object LabelTableY: TLabel
     Left = 83
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clGreen
@@ -309,10 +309,10 @@ object Form1: TForm1
   end
   object LabelTableZ: TLabel
     Left = 143
-    Height = 16
+    Height = 15
     Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 45
+    Width = 50
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clRed
@@ -325,9 +325,9 @@ object Form1: TForm1
   end
   object Label31: TLabel
     Left = 25
-    Height = 13
+    Height = 15
     Top = 593
-    Width = 132
+    Width = 187
     Caption = 'Table size (limits XYZ travel)'
     Color = clBtnFace
     Font.Color = clBlack
@@ -342,7 +342,7 @@ object Form1: TForm1
     Height = 13
     Hint = 'Z Gauge height value from job defaults'
     Top = 505
-    Width = 62
+    Width = 71
     Caption = '+00.00 mm'
     Color = clBtnFace
     Font.Color = clWindowText
@@ -388,7 +388,7 @@ object Form1: TForm1
     Left = 612
     Height = 13
     Top = 41
-    Width = 155
+    Width = 165
     Caption = 'G-Code Output / Messages'
     Color = clBtnFace
     Font.Color = cl3DDkShadow
@@ -403,7 +403,7 @@ object Form1: TForm1
     Left = 612
     Height = 13
     Top = 423
-    Width = 93
+    Width = 99
     Caption = 'ATC or Tool List'
     Color = clBtnFace
     Font.Color = cl3DDkShadow
@@ -418,7 +418,7 @@ object Form1: TForm1
     Left = 794
     Height = 13
     Top = 423
-    Width = 113
+    Width = 140
     Caption = '(current tool highlighted)'
     Color = clBtnFace
     Font.Color = clGrayText
@@ -432,7 +432,7 @@ object Form1: TForm1
     Left = 815
     Height = 13
     Top = 41
-    Width = 54
+    Width = 62
     Caption = 'LabelFaults'
     Color = clBtnFace
     Font.Color = clGrayText
@@ -446,7 +446,7 @@ object Form1: TForm1
     Left = 508
     Height = 13
     Top = 486
-    Width = 79
+    Width = 93
     Caption = 'Z Gauge Height:'
     Color = clBtnFace
     Font.Color = clGrayText
@@ -536,8 +536,8 @@ object Form1: TForm1
     OnChange = PageControl1Change
     object TabSheet1: TTabSheet
       Caption = 'Job/Files'
-      ClientHeight = 0
-      ClientWidth = 0
+      ClientHeight = 402
+      ClientWidth = 587
       Font.Color = clBlack
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
@@ -547,7 +547,7 @@ object Form1: TForm1
         Left = 8
         Height = 13
         Top = 8
-        Width = 388
+        Width = 411
         Caption = 'HPGL/Vector/Drill Fles (G-Code/SVG will be mapped to Pen/Tool 9)'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
@@ -562,7 +562,7 @@ object Form1: TForm1
         Left = 8
         Height = 13
         Top = 186
-        Width = 71
+        Width = 76
         Caption = 'Job Settings'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
@@ -577,7 +577,7 @@ object Form1: TForm1
         Left = 134
         Height = 13
         Top = 186
-        Width = 167
+        Width = 180
         Caption = 'Press Enter to Accept Values'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
@@ -592,7 +592,7 @@ object Form1: TForm1
         Left = 304
         Height = 13
         Top = 240
-        Width = 76
+        Width = 82
         Caption = 'Job Comment'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
@@ -691,13 +691,13 @@ object Form1: TForm1
     end
     object TabSheetPens: TTabSheet
       Caption = 'Tools'
-      ClientHeight = 0
-      ClientWidth = 0
+      ClientHeight = 402
+      ClientWidth = 587
       object Label7: TLabel
         Left = 8
         Height = 13
         Top = 8
-        Width = 231
+        Width = 269
         Caption = 'HPGL Pen Mill (P) and Excellon Drill (D) Tool Edit'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
@@ -747,14 +747,14 @@ object Form1: TForm1
     end
     object TabSheetGroups: TTabSheet
       Caption = 'Path View'
-      ClientHeight = 0
-      ClientWidth = 0
+      ClientHeight = 402
+      ClientWidth = 587
       ImageIndex = 1
       object Label5: TLabel
         Left = 9
         Height = 13
         Top = 8
-        Width = 48
+        Width = 56
         Caption = 'Path View'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
@@ -797,8 +797,8 @@ object Form1: TForm1
     end
     object TabSheetDefaults: TTabSheet
       Caption = 'Defaults'
-      ClientHeight = 0
-      ClientWidth = 0
+      ClientHeight = 402
+      ClientWidth = 587
       ImageIndex = 2
       object Bevel11: TBevel
         Left = 319
@@ -811,7 +811,7 @@ object Form1: TForm1
         Left = 8
         Height = 13
         Top = 8
-        Width = 202
+        Width = 243
         Caption = 'GRBL Settings (use decimal dot for values)'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
@@ -862,7 +862,7 @@ object Form1: TForm1
         Left = 319
         Height = 13
         Top = 8
-        Width = 139
+        Width = 163
         Caption = 'GRBLize Application Defaults'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
@@ -876,7 +876,7 @@ object Form1: TForm1
         Left = 334
         Height = 13
         Top = 334
-        Width = 103
+        Width = 126
         Caption = 'Set to current position'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
@@ -1019,8 +1019,8 @@ object Form1: TForm1
     end
     object TabSheetRun: TTabSheet
       Caption = 'Machine Control'
-      ClientHeight = 407
-      ClientWidth = 585
+      ClientHeight = 402
+      ClientWidth = 587
       ImageIndex = 3
       object Bevel2: TBevel
         Left = 3
@@ -1069,7 +1069,7 @@ object Form1: TForm1
         Left = 4
         Height = 13
         Top = 1
-        Width = 37
+        Width = 41
         Caption = 'Jogging'
         Color = clBtnFace
         Font.Color = clGrayText
@@ -1083,7 +1083,7 @@ object Form1: TForm1
         Left = 511
         Height = 13
         Top = 216
-        Width = 61
+        Width = 71
         Caption = 'Job Progress'
         Color = clBtnFace
         Font.Color = clGrayText
@@ -1097,7 +1097,7 @@ object Form1: TForm1
         Left = 325
         Height = 13
         Top = 344
-        Width = 125
+        Width = 150
         Caption = 'GCode Simulation Settings'
         Color = clBtnFace
         Font.Color = clGray
@@ -1111,7 +1111,7 @@ object Form1: TForm1
         Left = 486
         Height = 13
         Top = 367
-        Width = 82
+        Width = 94
         Caption = 'G-Code Tool Dia.'
         Color = clBtnFace
         Font.Color = clBlue
@@ -1139,7 +1139,7 @@ object Form1: TForm1
         Left = 499
         Height = 13
         Top = 301
-        Width = 67
+        Width = 82
         Caption = 'Apply Z Offset'
         Color = clBtnFace
         Font.Color = clBlue
@@ -1153,7 +1153,7 @@ object Form1: TForm1
         Left = 499
         Height = 13
         Top = 315
-        Width = 67
+        Width = 79
         Caption = 'to G-Code File'
         Color = clBtnFace
         Font.Color = clBlue
@@ -1167,7 +1167,7 @@ object Form1: TForm1
         Left = 327
         Height = 13
         Top = 27
-        Width = 100
+        Width = 115
         Caption = 'First Tool used in Job'
         Color = clBtnFace
         Font.Color = clGrayText
@@ -1179,9 +1179,9 @@ object Form1: TForm1
       end
       object Label17: TLabel
         Left = 44
-        Height = 16
+        Height = 19
         Top = 82
-        Width = 43
+        Width = 55
         Caption = 'X Axis'
         Color = clBtnFace
         Font.Color = clRed
@@ -1194,9 +1194,9 @@ object Form1: TForm1
       end
       object Label18: TLabel
         Left = 158
-        Height = 16
+        Height = 19
         Top = 56
-        Width = 44
+        Width = 55
         Caption = 'Y Axis'
         Color = clBtnFace
         Font.Color = clRed
@@ -1273,7 +1273,7 @@ object Form1: TForm1
         Left = 5
         Height = 13
         Top = 216
-        Width = 39
+        Width = 45
         Caption = 'Move to'
         Color = clBtnFace
         Font.Color = clGrayText
@@ -1320,7 +1320,7 @@ object Form1: TForm1
         Height = 13
         Hint = 'Z Lift value from job defaults'
         Top = 346
-        Width = 52
+        Width = 67
         Caption = '+00,00 mm'
         Color = clBtnFace
         ParentColor = False
@@ -1328,9 +1328,9 @@ object Form1: TForm1
       end
       object Label15: TLabel
         Left = 158
-        Height = 24
+        Height = 28
         Top = 153
-        Width = 70
+        Width = 92
         Caption = 'Jogpad'
         Color = clBtnFace
         Font.Color = clRed
@@ -1343,9 +1343,9 @@ object Form1: TForm1
       end
       object Label16: TLabel
         Left = 200
-        Height = 16
+        Height = 19
         Top = 26
-        Width = 43
+        Width = 55
         Caption = 'Z Axis'
         Color = clBtnFace
         Font.Color = clRed
@@ -1417,10 +1417,11 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label9: TLabel
-        Left = 208
+        Left = 193
         Height = 13
-        Top = 298
-        Width = 86
+        Top = 296
+        Width = 106
+        Anchors = [akTop, akRight]
         Caption = 'with floating probe'
         Color = clBtnFace
         Font.Color = clGrayText
@@ -1434,7 +1435,7 @@ object Form1: TForm1
         Left = 310
         Height = 13
         Top = 1
-        Width = 107
+        Width = 132
         Caption = 'Options (from Defaults)'
         Color = clBtnFace
         Font.Color = clGrayText
@@ -1448,7 +1449,7 @@ object Form1: TForm1
         Left = 106
         Height = 13
         Top = 331
-        Width = 81
+        Width = 99
         Caption = 'Z Lift above part:'
         Color = clBtnFace
         Font.Color = clGrayText
@@ -1476,10 +1477,10 @@ object Form1: TForm1
       end
       object CheckEndPark: TCheckBox
         Left = 13
-        Height = 23
+        Height = 22
         Hint = 'On end move to Park Position'
         Top = 371
-        Width = 82
+        Width = 92
         Caption = 'Park on end'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1496,7 +1497,7 @@ object Form1: TForm1
       end
       object ComboBoxGtip: TComboBox
         Left = 406
-        Height = 21
+        Height = 25
         Hint = 'Simulated tool tip'
         Top = 363
         Width = 75
@@ -1504,7 +1505,7 @@ object Form1: TForm1
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        ItemHeight = 13
+        ItemHeight = 0
         ItemIndex = 0
         Items.Strings = (
           'Flat Tip'
@@ -1522,7 +1523,7 @@ object Form1: TForm1
       end
       object ComboBoxGdia: TComboBox
         Left = 325
-        Height = 21
+        Height = 25
         Hint = 'Simulated tool diameter'
         Top = 363
         Width = 75
@@ -1530,7 +1531,7 @@ object Form1: TForm1
         Font.Height = -11
         Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
-        ItemHeight = 13
+        ItemHeight = 0
         ItemIndex = 1
         Items.Strings = (
           '1-1,5 mm'
@@ -1548,7 +1549,7 @@ object Form1: TForm1
       end
       object EditZoffs: TEdit
         Left = 437
-        Height = 21
+        Height = 23
         Hint = 'Offset added to G-Gode Z output (does not affect jobs)'
         Top = 303
         Width = 56
@@ -1562,10 +1563,10 @@ object Form1: TForm1
       end
       object CheckTLCprobe: TCheckBox
         Left = 325
-        Height = 23
+        Height = 22
         Hint = 'Use a separate fixed Z probe for tool length compensation. If not enabled, will use movable part probe as fixed probe.'
         Top = 145
-        Width = 218
+        Width = 252
         Caption = 'Use TLC Probe Switch (required for ATC)'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1576,10 +1577,10 @@ object Form1: TForm1
       end
       object CheckPartProbeZ: TCheckBox
         Left = 325
-        Height = 23
+        Height = 22
         Hint = 'Use a movable Z probe to be placed on part'
         Top = 122
-        Width = 181
+        Width = 209
         Caption = 'Use Floating Part Z Probe Switch'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1786,7 +1787,7 @@ object Form1: TForm1
       end
       object EditFirstToolDia: TEdit
         Left = 325
-        Height = 21
+        Height = 23
         Hint = 'This tool must be inserted before running job'
         Top = 46
         Width = 182
@@ -1803,10 +1804,10 @@ object Form1: TForm1
       end
       object CheckToolChange: TCheckBox
         Left = 325
-        Height = 23
+        Height = 22
         Hint = 'Will use same tool for complete job if disabled'
         Top = 89
-        Width = 177
+        Width = 187
         Caption = 'Enable Tool Change in Job'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1818,9 +1819,9 @@ object Form1: TForm1
       end
       object CheckUseATC2: TCheckBox
         Left = 325
-        Height = 23
+        Height = 22
         Top = 175
-        Width = 222
+        Width = 239
         Caption = 'Use Automatic Tool Changer (ATC)'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1866,7 +1867,7 @@ object Form1: TForm1
   end
   object ComboBox1: TComboBox
     Left = 25
-    Height = 21
+    Height = 25
     Top = 752
     Width = 89
     BidiMode = bdRightToLeftNoAlign
@@ -1874,7 +1875,7 @@ object Form1: TForm1
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ItemHeight = 13
+    ItemHeight = 0
     Items.Strings = (
       'OFF'
       'Pen 0'
@@ -2035,7 +2036,7 @@ object Form1: TForm1
   end
   object ComboBoxTip: TComboBox
     Left = 118
-    Height = 21
+    Height = 25
     Hint = 'Select Tool Tip'
     Top = 752
     Width = 89
@@ -2044,7 +2045,7 @@ object Form1: TForm1
     Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'MS Sans Serif'
-    ItemHeight = 13
+    ItemHeight = 0
     Items.Strings = (
       'Flat Tip'
       'Cone 30Â°'
@@ -2157,10 +2158,10 @@ object Form1: TForm1
   end
   object CheckBoxSim: TCheckBox
     Left = 472
-    Height = 23
+    Height = 22
     Hint = 'Job will be simulated only, no output to machine'
     Top = 32
-    Width = 109
+    Width = 122
     Caption = 'Simulation only'
     Checked = True
     Font.Color = clWindowText
@@ -2266,8 +2267,9 @@ object Form1: TForm1
     )
   end
   object MainMenu1: TMainMenu
-    left = 458
-    top = 743
+    Images = ImageList1
+    left = 752
+    top = 48
     object File1: TMenuItem
       Caption = '&File'
       Hint = 'File Commands'
@@ -2344,13 +2346,14 @@ object Form1: TForm1
     end
   end
   object ActionList1: TActionList
-    left = 530
-    top = 743
+    Images = ImageList1
+    left = 760
+    top = 224
     object FileNew1: TAction
       Category = 'File'
       Caption = '&Neu'
       Hint = 'Neu|Neue Datei erstellen'
-      ImageIndex = 6
+      ImageIndex = 4
       OnExecute = FileNew1Execute
       ShortCut = 16462
     end
@@ -2358,7 +2361,7 @@ object Form1: TForm1
       Category = 'File'
       Caption = 'Ö&ffnen'
       Hint = 'Öffnen|Datei öffnen'
-      ImageIndex = 7
+      ImageIndex = 5
       OnExecute = JobOpenExecute
       ShortCut = 16463
     end
@@ -2366,7 +2369,7 @@ object Form1: TForm1
       Category = 'File'
       Caption = '&Speichern'
       Hint = 'Speichern|Aktuelle Datei speichern'
-      ImageIndex = 8
+      ImageIndex = 6
       OnExecute = JobSaveExecute
       ShortCut = 16467
     end
@@ -2412,35 +2415,262 @@ object Form1: TForm1
     end
   end
   object ImageList1: TImageList
-    left = 578
-    top = 743
+    left = 672
+    top = 224
+    Bitmap = {
+      4C69070000001000000010000000FFFFFF000000001C00000033000000360000
+      0036000000360000003600000036000000360000003600000036000000200000
+      0002FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000033F8F8F8F0FBFBFBFDFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFF8F8F8FF949494910000
+      002000000002FFFFFF00FFFFFF00FFFFFF0000000036FBFBFBFDF4F4F4FFF5F5
+      F5FFF5F5F5FFF5F5F5FFF1F1F1FFEFEFEFFFE9E9E9FFFCFCFCFFE7E7E7FF9595
+      95910000002000000002FFFFFF000000000100000036FCFCFCFFF7F7F7FFF9F9
+      F9FFF7F7F7FFF7F7F7FFF3F3F3FFF0F0F0FFEAEAEAFFFCFCFCFFF6F6F6FFF4F4
+      F4FF9999999100000020FFFFFF000000000100000036FCFCFCFFF9F9F9FFF9F9
+      F9FFF9F9F9FFF7F7F7FFF6F6F6FFF2F2F2FFEBEBEBFFFCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFF00000036000000010000000100000036FCFCFCFFFBFBFBFFFCFC
+      FCFFFCFCFCFFFBFBFBFFF8F8F8FFF5F5F5FFF1F1F1FFECECECFFEAEAEAFFE6E6
+      E6FFFCFCFCFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFBFBFBFFF8F8F8FFF5F5F5FFF2F2F2FFEFEFEFFFEDED
+      EDFFFCFCFCFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFFBFBFBFFF8F8F8FFF6F6F6FFF3F3F3FFF2F2
+      F2FFFCFCFCFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFAFAFAFFF9F9F9FFF6F6F6FFF6F6
+      F6FFFCFCFCFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFBFBFBFF60BC6CFF5CB667FF57B0
+      61FF52A85CFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFBFBFBFFFBFBFBFFFBFBFBFFFAFAFAFF5BB465FF9DD6A6FF99D3
+      A2FF4B9E53FF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFBFBFBFFFBFBFBFFFAFAFAFFFAFAFAFF54AB5EFF96D29FFF91CF
+      99FF539F5BFF23502762000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFBFBFBFF83C48AFF57AB61FF6AB473FF90CE97FF8ACB
+      91FF6AB070FF357F3CF9307935B80000000100000036FCFCFCFEFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFF8FAF8FF64AB6BFF63AC6BFF88C990FF82C6
+      8AFF529A58FF2C7231E1296F2E06FFFFFF0000000034F9F9F9F5FCFCFCFDFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFF5F9F65FF559E5CFF5098
+      56FF518C56FD00000033FFFFFF00FFFFFF000000001D00000034000000360000
+      00360000003600000036000000360000003600000036000000362E7332D4286A
+      2DD0000000330000001DFFFFFF00C77947AACC8655CECC8857DECB8856DBCC88
+      56DBCB8757DBCA8350D0C479426EB2673C08FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00CA8554D0FFFFFFDBFDF3E9DEFDF3EADEFCF2
+      E8DEFAEFE3DEFAF2E7DEEABB88DECF85559CB4693D0AFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00CB8656DAFEF5EDDEFCDEC5DEFBE0C7DEF9DC
+      C2DEF5D3B4DEFEF9F3DEFAE2C4DEECC193DEC37D4880FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00CB8655DBFEF6F0DEFCE2CDDEFCE3CDDEFADF
+      C8DEF7D9BCDEF5E9DDDEFAF3EBDEFBF8F3DECD9565DCFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00CB8655DBFEF7F1DEFCE5D2DEFCE4D1DEFBE2
+      CCDEF9DDC4DEEAC39DFFE6BF96FFE4BB92FFE4BB92FFD1A06CF5D09E6DF6CC96
+      5FDAC479427EB2673C09FFFFFF00CB8654DBFFF7F2DEFEE7D5DEFEE7D5DEFDE5
+      D1DEFAE0CADEE5BE96FFFFFFFEFFFDF3E9FFFDF3EAFFFCF2E8FFFAEFE3FFFAF2
+      E7FFEABB88FFCF8555B3B4693D0CCB8553DBFFF7F0DEFFE7D5DEFDE7D6DEFDE6
+      D4DEFCE4D0DEE4BB93FFFEF5EDFFFCDEC5FFFBE0C7FFF9DCC2FFF5D3B4FFFEF9
+      F3FFFAE2C4FFECC193FFC37D4893CA8452DBFFF7F1DEFFE9D9DEFFEADBDEFFE9
+      D9DEFFE7D7DEE4BB92FFFEF6F0FFFCE2CDFFFCE3CDFFFADFC8FFF7D9BCFFF5E9
+      DDFFFAF3EBFFFBF8F3FFCA8353FECC8352DBFBF5EEDEFFE9D9DEFFEADBDEFFE9
+      D9DEFFE7D7DEE4BB92FFFEF7F1FFFCE5D2FFFCE4D1FFFBE2CCFFF9DDC4FFF6D7
+      BBFFF3D1AFFFFAEFE4FFCC8758FECF8253DEEFF1E7DEFFE9D9DEFFEADBDEFFE9
+      D9DEFFE7D7DEE4BB91FFFFF7F2FFFEE7D5FFFEE7D5FFFDE5D1FFFAE0CAFFF9DE
+      C4FFF7D9BCFFFDF2E7FFCC8757FEC87C4ED3FCF3ECDEFAF1E8DEFAF0E7DEFBF1
+      E9DEFBF2EADEE4BA91FFFFF7F0FFFFE7D5FFFDE7D6FFFDE6D4FFFCE4D0FFFBE3
+      CBFFFADCC2FFFEF3E8FFCC8656FEC7794AB9C8794BCEC87545DDC77545D4C875
+      45D4C77545D4CA8452FFFFF7F1FFFFE9D9FFFFEADBFFFFE9D9FFFFE7D7FFFFE5
+      D2FFFFE2CBFFFFF7F1FFCB8555FEFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00CC8352FBFBF5EEFFFFE9D9FFFFEADBFFFFE9D9FFFFE7D7FFFFE5
+      D2FFFFE2CBFFFBF6EFFFCC8355FEFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00CF8253FFEFF1E7FFFFE9D9FFFFEADBFFFFE9D9FFFFE7D7FFFFE5
+      D2FFFFE2CBFFEFF2E8FFCE8156FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00C77949EDFCF3ECFFFAF1E8FFFAF0E7FFFBF1E9FFFBF2EAFFFBF2
+      EAFFFBF2EBFFFDF4EEFFCA8054F9FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00C57342C1C67545E6C87545FEC77545F3C87545F3C77545F3C775
+      45F3C87546F4C57444E8CA7F53F1FFFFFF00FFFFFF002063982A206398FF2063
+      98FF206398FF206398FF206398FF206398F0FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF0020639832206398B2206398FF3775A4FFB6EF
+      FEFF80DBF3FF80DBF3FFB6EFFEFF2E6EA1FF206398FF206398A520639853FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00206398E094C9E0FDAEE2F2FF4E9DDFFFB5EE
+      FDFF75D4F0FF75D4F0FFB5EEFDFF4B9BDEFF8ECBE9FF8DCAE8F2206398F3FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00206398FFB0E1F2FF79BDE2FF4498DDFF4497
+      DCFF4396DCFF4296DCFF4295DCFF4195DBFF539ED4FF89C6E6FF206398FFFFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00206398FFAADDF1FF74B9E0FF70B6DFFF6CB3
+      DDFF6BB2DCFFD9AF84FFD7AE81FFD7AC7FFFD7AC7FFFCCA070FFCD9F71FFB38F
+      67FFCB8856D6B2673C09FFFFFF00206398FFA5DAEFFF6FB5DEFF68B0DCFF60A9
+      D9FF5FA9D9FFD7AD81FFFFFFFEFFFDF3E9FFFDF3EAFFFCF2E8FFFAEFE3FFFAF2
+      E7FFEABB88FFCE8959E7B4693D0C206398FF9ED6EDFF6BB2DCFF66AFDCFF60AA
+      DAFF5FA9D9FFD9AF84FFFEF5EDFFFCDEC5FFFBE0C7FFF9DCC2FFF5D3B4FFFEF9
+      F3FFFAE2C4FFECC193FFCB8857DC206398FF98D2EBFF65AEDAFF60AAD9FF5DA6
+      D8FF5CA5D7FFD9AF84FFFEF6F0FFFCE2CDFFFCE3CDFFFADFC8FFF7D9BCFFF5E9
+      DDFFFAF3EBFFFBF8F3FFCA8353FE206398FF91CDE9FF5FA9D9FF5DA5D8FF5AA0
+      D6FF599FD6FFD8AD81FFFEF7F1FFFCE5D2FFFCE4D1FFFBE2CCFFF9DDC4FFF6D7
+      BBFFF3D1AFFFFAEFE4FFCC8758FE206398FF8BC9E7FF5CA5D7FF59A0D5FF579C
+      D3FF569AD3FFD7AC7FFFFFF7F2FFFEE7D5FFFEE7D5FFFDE5D1FFFAE0CAFFF9DE
+      C4FFF7D9BCFFFDF2E7FFCC8757FE206398FF88C4E6FF599FD6FF569BD3FF5397
+      D1FF5395D1FFD7AC7FFFFFF7F0FFFFE7D5FFFDE7D6FFFDE6D4FFFCE4D0FFFBE3
+      CBFFFADCC2FFFEF3E8FFCC8656FE206398FF84BFE2FF569AD3FF5397D1FF5092
+      CFFF5091CFFFD6A97DFFFFF7F1FFFFE9D9FFFFEADBFFFFE9D9FFFFE7D7FFFFE5
+      D2FFFFE2CBFFFFF7F1FFCB8555FE206398FF80B9E1FF5395D1FF5092D0FF4E8E
+      CEFF4D8CCDFFD6A97DFFFBF5EEFFFFE9D9FFFFEADBFFFFE9D9FFFFE7D7FFFFE5
+      D2FFFFE2CBFFFBF6EFFFCC8355FE206398C274ADD8FF7BB2DDFF78AEDCFF75AA
+      DAFF74A9DAFFDAA97DFFEFF1E7FFFFE9D9FFFFEADBFFFFE9D9FFFFE7D7FFFFE5
+      D2FFFFE2CBFFEFF2E8FFCE8156FF2063984A206398CF206398FF206398FF2063
+      98FF206398FFC98F67FFFCF3ECFFFAF1E8FFFAF0E7FFFBF1E9FFFBF2EAFFFBF2
+      EAFFFBF2EBFFFDF4EEFFCA8054F9FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00C57342C1C67545E6C87545FEC77545F3C87545F3C77545F3C775
+      45F3C87546F4C57444E8CA7F53F1FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4094FAADBEA5093
+      CAFD4E90C8FF2F9DD2DF35A4DE19FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0050A8D9FF6AA5D8FFC9E1
+      F7FFCBE3F8FF4295CAFF3182C2AEFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFA7D4F4FFC5E1F8FFCCE3
+      F9FFCCE3F9FFBDDBF7FF4F90C9FDFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFA8E2F8FF6CAEDDFFA5CF
+      F4FFA5CFF4FFBDDBF7FF5393CBF7FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF002FBAE4FFC3EDF8FFB3F4FCFF68D9F5FF6FCFF3FF599D
+      D0FF73ABDDFF4F91C9FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF002FBAE4FFC3EDF8FFB3F4FCFF60DCF5FF44D6F4FF8EEEFAFF5DB4
+      E6FF3B8FD9FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF002FBAE4FFC3EDF8FFB3F4FCFF60DCF5FF44D6F4FF8EEEFAFF5DB4E6FF3B8F
+      D9FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002790
+      BFFFC3EDF8FFB3F4FCFF60DCF5FF44D6F4FF8EEEFAFF5DB4E6FF3B8FD9FFFFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002689B9FFBEE6
+      F2FFB3F4FCFF60DCF5FF44D6F4FF8EEEFAFF5DB4E6FF3B8FD9FFFFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00206398202689B9FFB0CBE1FF67A9
+      C8FF60DCF5FF44D6F4FF8EEEFAFF5DB4E6FF3B8FD9FFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF001E6D93FFC8E1F2FFD1E7FAFF347D
+      B5FF3199C3FF6DC4DCFF4A9CCFFF3483C7FFFFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF001E6D93FFCBE3F9FF61AAECFF4098
+      E8FF1567C2FF1660AAFF2C76B4FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00124259FF5D9CD4FFA6CFF5FFA9CF
+      ECFF488BC1FF2C76B4FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00134058FF15425EFF25699CFF2C76
+      B4FF3B8BBAADFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000001C00000033000000360000
+      0036000000360000003600000036000000360000003600000036000000200000
+      0002FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000033F8F8F8F0FBFBFBFDFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFF8F8F8FF949494910000
+      002000000002FFFFFF00FFFFFF00FFFFFF0000000036FBFBFBFDF4F4F4FFF5F5
+      F5FFF5F5F5FFF5F5F5FFF1F1F1FFEFEFEFFFE9E9E9FFFCFCFCFFE7E7E7FF9595
+      95910000002000000002FFFFFF000000000100000036FCFCFCFFF7F7F7FFF9F9
+      F9FFF7F7F7FFF7F7F7FFF3F3F3FFF0F0F0FFEAEAEAFFFCFCFCFFF6F6F6FFF4F4
+      F4FF9999999100000020FFFFFF000000000100000036FCFCFCFFF9F9F9FFF9F9
+      F9FFF9F9F9FFF7F7F7FFF6F6F6FFF2F2F2FFEBEBEBFFFCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFF00000036000000010000000100000036FCFCFCFFFBFBFBFFFCFC
+      FCFFFCFCFCFFFBFBFBFFF8F8F8FFF5F5F5FFF1F1F1FFECECECFFEAEAEAFFE6E6
+      E6FFFCFCFCFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFBFBFBFFF8F8F8FFF5F5F5FFF2F2F2FFEFEFEFFFEDED
+      EDFFFCFCFCFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFFBFBFBFFF8F8F8FFF6F6F6FFF3F3F3FFF2F2
+      F2FFFCFCFCFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFAFAFAFFF9F9F9FFF6F6F6FFF6F6
+      F6FFFCFCFCFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFBFBFBFFF9F9F9FFF9F9F9FFF8F8
+      F8FFFCFCFCFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFBFBFBFFFBFBFBFFFBFBFBFFFAFAFAFFFAFAFAFFF8F8F8FFF8F8
+      F8FFFCFCFCFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFBFBFBFFFBFBFBFFFAFAFAFFFAFAFAFFFAFAFAFFFAFAFAFFFAFA
+      FAFFFCFCFCFF00000036000000010000000100000036FCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFBFBFBFFFBFBFBFFFBFBFBFFFBFBFBFFFBFBFBFFFBFB
+      FBFFFCFCFCFF00000036000000010000000100000036FCFCFCFEFCFCFCFFFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFC
+      FCFFFCFCFCFD00000036FFFFFF00FFFFFF0000000034F9F9F9F5FCFCFCFDFCFC
+      FCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFC
+      FCFDF9F9F9F300000033FFFFFF00FFFFFF000000001D00000034000000360000
+      0036000000360000003600000036000000360000003600000036000000360000
+      0036000000330000001DFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0034B4D9D05EC2E1FA60C3E2FA60C3
+      E2FA60C3E2FA5FC3E2FA3CB6DBDD2CB2D8162CB2D80F2CB2D80F2CB2D80F2CB2
+      D80F2CB3D80F2CB3D804FFFFFF00FFFFFF0036B3DAF8FDFEFEFFFEFFFFFFFEFE
+      FFFFFDFEFFFFFEFFFFFFEAF7FBFF6BC7E4F96BC7E3F86BC7E3F86BC7E3F879CD
+      E6F774CAE5E132B1D956FFFFFF00FFFFFF0035AFDAF0F7FCFEFF8EE4F8FF91DE
+      F5FF9FE0F5FFACE1F6FFEFFBFEFFF4FDFEFFF3FCFEFFF1FCFEFFEFFBFEFFEEFB
+      FEFFFAFDFFF936AFDAD4FFFFFF00FFFFFF0036AADAF2F1FAFDFF94DEF5FF93DC
+      F4FF81D5F2FF6ACAEDFF6CCBEAFF85D3EFFF80D2EFFF7AD0EFFF76CFEEFF72CF
+      EEFFE9F7FBFF34AEDAF3FFFFFF00FFFFFF0035ABDAFAE8F6FBFF94D4EFFF88CE
+      EEFF73C1E9FFC9E9F6FFF2FCFEFFF3FCFEFFF2FCFEFFF0FCFEFFEFFBFEFFEEFB
+      FEFFFEFFFFFF36ABDAF7FFFFFF00FFFFFF0037A6DAFAFEFFFFFFF8FDFFFFF6FD
+      FFFFF5FCFFFFF3FCFEFFD8F6FCFF94E6F8FF85E3F7FF76DFF6FF68DBF5FF5CD8
+      F4FFD7F4FCFF35A4DAF7FFFFFF00FFFFFF0036A1DAF9F6FCFEFFC8F2FCFFB9EF
+      FBFFACECFAFF9CE8F9FF8BE3F7FF7CE0F6FF6CDCF6FF5DD9F5FF4FD6F4FF44D3
+      F3FFD0F3FCFF359FDAF7FFFFFF00FFFFFF00369ADAF8F2FAFDFFB3EDFAFFA4E9
+      F9FF95E6F8FF85E2F7FF76DEF6FF65DBF5FF57D7F4FF49D4F3FF3BD1F2FF30CE
+      F1FFCCF2FBFF3598DAF7FFFFFF00FFFFFF003594DAF7EFFAFEFFA1E9F9FF91E5
+      F8FF81E1F7FF72DEF6FF63DAF5FF54D7F4FF47D3F3FF39D0F2FF2ECDF1FF26CB
+      F0FFCAF2FBFF3594DAF7FFFFFF00FFFFFF00338ED9E6DCF0FAF0A7DDF4FD9EDB
+      F4FF96DAF3FF8ED8F3FF86D7F3FF7FD4F2FF79D3F2FF72D2F1FF6CD0F1FF69CF
+      F1FFC2EAF8FE338ED9F0FFFFFF00FFFFFF002C86D8702D88D8A62D87D8EA2D88
+      D8F72D88D8F72D88D8F72D88D8F72D88D8F72D88D8F72D88D8F72D88D8F72D87
+      D8F72D88D8F12C86D893FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00BC6B3671BC6B3690BC6B36CCBC6B36EEBC6B
+      36FABB6B36FEBB6B36FFBB6A36FFBB6A36FFBC6C39FFBD6E3BFFBB6D3AFFBB6B
+      38EFBB703ECBB6693554FFFFFF00BC6B369BF6E0D1FFF7E0D1FFFEFBF8FFFEFB
+      F7FFFDF9F6FFFCF5F0FFFAF0EAFFFBF2EDFFFDF9F6FFFDFAF7FFFBF1EBFFF8E9
+      DFFEECD0BDFBC9895EECB5693563BC6B36D8F6DFD1FFE9AA80FFFEFAF6FFFDFA
+      F6FFC88C64FFFBF3EEFFFBF1EAFFFCF6F2FFFEFBF8FFFCF6F1FFF9ECE2FFF8E7
+      DBFFEED0BAFFECD0BDFFBB703EF8BC6B36F0F6DFD0FFE8A87EFFFCF6F1FFFCF6
+      F1FFC88C64FFFAF1E9FFFBF4EEFFFDFAF7FFFDF9F6FFFAF0E8FFF8E8DDFFF7E6
+      DBFFE1A37AFFEFD5C3FFB76935FEBC6B36FAF5DDCCFFE7A87EFFFAF0E8FFFAF0
+      E8FFC98D66FFFAF0E9FFFDF8F3FFFEFAF8FFFCF4EFFFF9E9DFFFF7E7DBFFF7E5
+      D9FFE0A278FFE7C2A9FFB66835FFBB6B36FEF4DCC9FFE7A77DFFF9ECE1FFF9EC
+      E1FFF9EDE3FFFCF4EEFFFDFAF7FFFDF7F3FFFAEDE5FFF7E7DBFFF7E5D9FFF6E5
+      D8FFDEA077FFE4BEA4FFB46734FFBB6B36FFF4D9C7FFE6A67DFFC88C64FFC98D
+      65FFC98E67FFCB926CFFCB926DFFCA9069FFC88C65FFC88C64FFC88C64FFC88C
+      64FFDA9C74FFE1BA9FFFB36634FFBB6A36FFF2D8C5FFE3A47BFFE3A37AFFE3A4
+      7AFFE2A47BFFE2A37BFFE1A37BFFE1A279FFDFA077FFDE9F76FFDD9E74FFDB9C
+      72FFDC9D74FFDDB59AFFB16534FFBB6A36FFF2D5C2FFE3A37AFFE3A37AFFE2A3
+      7BFFE2A37BFFE2A47BFFE1A279FFE0A178FFDEA077FFDE9E75FFDC9D74FFDA9B
+      73FFD99B73FFDAB095FFAF6433FFBB6A36FFF0D2BEFFE2A37AFFE2A37AFFE1A3
+      7AFFE2A37BFFE1A37BFFE0A178FFDE9F77FFDD9F76FFDC9D74FFD99B72FFD899
+      71FFD69970FFD5AB8EFFAD6333FFBA6A36FFEFD0BBFFE2A27AFFFEFBF8FFFEFB
+      F8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+      F8FFD3966DFFD2A78AFFAB6232FFBB6B38FFEFCEB8FFE1A279FFFEFAF7FF62C0
+      88FF62C088FF62C088FF62C088FF62C088FF62C088FF62C088FF62C088FFFDF9
+      F6FFCF936AFFCEA384FFAA6132FFBB6C38FFEECCB6FFE1A27AFFFEFAF7FFBFDC
+      C2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFBFDCC2FFFDF9
+      F6FFCD9068FFCC9E81FFA86132FFBA6B37FEEDCAB3FFE0A27AFFFEFAF7FF62C0
+      88FF62C088FF62C088FF62C088FF62C088FF62C088FF62C088FF62C088FFFDF9
+      F6FFCA8D65FFC99B7CFFA76031FEBA6A35DEEBC6ADFFEAC5ADFFFEFBF8FFFEFB
+      F8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFBF8FFFEFB
+      F8FFC89A7CFFC79879FFA76031EDBA6A368FB96935B5B86935EEB76835FFB568
+      35FFB46734FFB26634FFB06533FFAE6433FFAC6332FFAA6232FFA96132FFA860
+      31FFA76031FEA66031F1A86131C4
+    }
   end
   object OpenFileDialog: TOpenDialog
     Filter = 'Vector/Drill Files|*.plt;*.hpgl; *.hpg;*.pen;*.drl;*.svg|G-Code Files|*.tap; *.dat; *.nc?; *.gc?; *.ngc|GRBL Setup|*.grb|Gerber Files|*.gbr|All Files|*.*'
     FilterIndex = 0
     Options = [ofFileMustExist, ofEnableSizing]
-    left = 346
-    top = 743
+    left = 672
+    top = 112
   end
   object TimerDraw: TTimer
     Interval = 100
     OnTimer = TimerDrawElapsed
-    left = 698
-    top = 743
+    left = 832
+    top = 48
   end
   object OpenJobDialog: TOpenDialog
     Filter = 'Job Files|*.job|All Files|*.*'
     FilterIndex = 0
     Options = [ofHideReadOnly, ofFileMustExist, ofEnableSizing]
-    left = 298
-    top = 743
+    left = 672
+    top = 168
   end
   object SaveJobDialog: TSaveDialog
     Title = 'Job File Save'
     DefaultExt = '.job'
     Filter = 'JOB File|*.job|GRBL Setup|*.grb|All Files|*.*'
-    left = 402
-    top = 743
+    left = 752
+    top = 168
   end
   object ColorDialog1: TColorDialog
     Color = clBlack
@@ -2466,24 +2696,24 @@ object Form1: TForm1
       'ColorS=F0FBFF'
       'ColorT=A4A0A0'
     )
-    left = 250
-    top = 743
+    left = 752
+    top = 104
   end
   object TimerStatus: TTimer
     Interval = 25
     OnTimer = TimerStatusElapsed
-    left = 642
-    top = 743
+    left = 832
+    top = 104
   end
   object TimerBlink: TTimer
     Interval = 350
     OnTimer = TimerBlinkTimer
-    left = 746
-    top = 743
+    left = 832
+    top = 168
   end
   object PopupMenuATC: TPopupMenu
-    left = 856
-    top = 464
+    left = 800
+    top = 504
     object pu_ToolEnable: TMenuItem
       Caption = 'Tool enabled'
       OnClick = pu_ToolEnableClick

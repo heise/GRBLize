@@ -1680,8 +1680,9 @@ begin
               PlaySound('SYSTEMHAND', 0, SND_ASYNC);
               break;
             end;
-            MessageDlg('Error ' + LastResponseStr + ' occured. Machine stopped.',
-              mtConfirmation, [mbCancel],0);
+            if pos('IDLE',LastResponseStr)=0 then
+              MessageDlg('Error ' + LastResponseStr + ' occured. Machine stopped.',
+                mtConfirmation, [mbCancel],0);
           end;
         end;
       end;
