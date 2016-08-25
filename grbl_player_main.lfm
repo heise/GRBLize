@@ -1094,7 +1094,7 @@ object Form1: TForm1
     end
     object TabSheetRun: TTabSheet
       Caption = 'Machine Control'
-      ClientHeight = 407
+      ClientHeight = 400
       ClientWidth = 585
       ImageIndex = 3
       object Bevel2: TBevel

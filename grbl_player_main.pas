@@ -479,8 +479,11 @@ implementation
 
 uses import_files, Clipper, About, bsearchtree, cam_view, gerber_import;
 
+{$IFDEF FPC}
 {$R *.lfm}
-
+{$ELSE}
+{$ENDIF}
+{$R *.dfm}
 {$IFDEF FPC}
 procedure PlaySound(aSound : string;aDur : Integer;aFlags : Integer);
 begin
