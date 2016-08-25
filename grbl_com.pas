@@ -530,6 +530,8 @@ begin
           Application.ProcessMessages;
           if not Assigned(ComFile) then break;
           Result := ComFile.RecvTerminated(100,#10);
+          if Result = '' then
+            grbl_sendStr('?', false);   // neuen Status anfordern wenn wir eh nur warten
         end;
     end
   else

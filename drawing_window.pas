@@ -684,7 +684,7 @@ begin
   end;
 end;
 
-procedure draw_tool;
+procedure draw_tool(Canvas : TCanvas);
 
 var
   po1: Tpoint;
@@ -692,43 +692,41 @@ var
 begin
   po1 := FloatPointToOffsGraph(drawing_ToolPos, ZeroPoint);
 
-  with Form2.DrawingBitmap do begin
-    // Cursorlinien zeichnen
-    Canvas.Pen.Color:= clgray;
-    Canvas.Pen.Mode:= pmMerge;
-    Canvas.Brush.Color:= clnone;
-    Canvas.Pen.Width := 1;
-    Canvas.Pen.Style:= psDot;     // psDashDot , psDot
-    Canvas.moveto(po1.x, Height);
-    Canvas.lineto(po1.x, 0);
-    Canvas.moveto(0, po1.y);
-    Canvas.lineto(Width, po1.y);
-    Canvas.Pen.Style:= psSolid;
-    Canvas.Pen.Mode:= pmCopy;
+  // Cursorlinien zeichnen
+  Canvas.Pen.Color:= clgray;
+  Canvas.Pen.Mode:= pmMerge;
+  Canvas.Brush.Color:= clnone;
+  Canvas.Pen.Width := 1;
+  Canvas.Pen.Style:= psDot;     // psDashDot , psDot
+  Canvas.moveto(po1.x, Canvas.Height);
+  Canvas.lineto(po1.x, 0);
+  Canvas.moveto(0, po1.y);
+  Canvas.lineto(Canvas.Width, po1.y);
+  Canvas.Pen.Style:= psSolid;
+  Canvas.Pen.Mode:= pmCopy;
 
-    Canvas.Brush.Color:= clsilver;
-    Canvas.font.Color:= clblack;
-    Canvas.TextOut(po1.x-13,po1.y-21, 'TOOL');
+  Canvas.Brush.Color:= clsilver;
+  Canvas.font.Color:= clblack;
+  Canvas.TextOut(po1.x-13,po1.y-21, 'TOOL');
 
-    Canvas.Pen.Color:= clgray;
-    if drawing_tool_down then
-      Canvas.Brush.Color:= clwhite
-    else
-      Canvas.Brush.Color:= clnone;
-    Canvas.Pen.Width := 2;
-    Canvas.Ellipse(po1.x-6,po1.y-6,po1.x+6,po1.y+6);
+  Canvas.Pen.Color:= clgray;
+  if drawing_tool_down then
+    Canvas.Brush.Color:= clwhite
+  else
     Canvas.Brush.Color:= clnone;
+  Canvas.Pen.Width := 2;
+  Canvas.Ellipse(po1.x-6,po1.y-6,po1.x+6,po1.y+6);
+  Canvas.Brush.Color:= clnone;
 
-    Canvas.Pen.Color:= clred;
-    po1.x:= po1.x + round(job.cam_x * scale);
-    po1.y:= po1.y - round(job.cam_y * scale);
-    Canvas.Ellipse(po1.x-6,po1.y-6,po1.x+6,po1.y+6);
-    Canvas.Brush.Color:= clred;
-    Canvas.TextOut(po1.x-11,po1.y-21, 'CAM');
-    Canvas.Pen.Width := 1;
-    Canvas.Brush.Color:= clnone;
-    Canvas.Pen.Color:= clgray;
-  end;
+  Canvas.Pen.Color:= clred;
+  po1.x:= po1.x + round(job.cam_x * scale);
+  po1.y:= po1.y - round(job.cam_y * scale);
+  Canvas.Ellipse(po1.x-6,po1.y-6,po1.x+6,po1.y+6);
+  Canvas.Brush.Color:= clred;
+  Canvas.TextOut(po1.x-11,po1.y-21, 'CAM');
+  Canvas.Pen.Width := 1;
+  Canvas.Brush.Color:= clnone;
+  Canvas.Pen.Color:= clgray;
 end;
 
 // #############################################################################
@@ -839,8 +837,6 @@ begin
 
     Canvas.Pen.Color:= clgray;
 
-    draw_tool;
-
     // Null-Linien zeichnen
     pmax.X:= round(job.partsize_x * Scale);
     pmax.Y:= round(job.partsize_y * Scale);
@@ -932,6 +928,7 @@ end;
 procedure TForm2.DrawingBoxPaint(Sender: TObject);
 begin
   Canvas.Draw(0, 0, Form2.DrawingBitmap);
+  draw_tool(Canvas);
 end;
 
 procedure TForm2.FormActivate(Sender: TObject);

@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 541
+  Left = 539
   Height = 696
-  Top = 159
+  Top = 109
   Width = 932
   BorderStyle = bsSingle
   ClientHeight = 673
@@ -1480,7 +1480,7 @@ object Form1: TForm1
         Height = 22
         Hint = 'On end move to Park Position'
         Top = 371
-        Width = 92
+        Width = 90
         Caption = 'Park on end'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1497,7 +1497,7 @@ object Form1: TForm1
       end
       object ComboBoxGtip: TComboBox
         Left = 406
-        Height = 25
+        Height = 27
         Hint = 'Simulated tool tip'
         Top = 363
         Width = 75
@@ -1523,7 +1523,7 @@ object Form1: TForm1
       end
       object ComboBoxGdia: TComboBox
         Left = 325
-        Height = 25
+        Height = 27
         Hint = 'Simulated tool diameter'
         Top = 363
         Width = 75
@@ -1566,7 +1566,7 @@ object Form1: TForm1
         Height = 22
         Hint = 'Use a separate fixed Z probe for tool length compensation. If not enabled, will use movable part probe as fixed probe.'
         Top = 145
-        Width = 252
+        Width = 249
         Caption = 'Use TLC Probe Switch (required for ATC)'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1580,7 +1580,7 @@ object Form1: TForm1
         Height = 22
         Hint = 'Use a movable Z probe to be placed on part'
         Top = 122
-        Width = 209
+        Width = 204
         Caption = 'Use Floating Part Z Probe Switch'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1807,7 +1807,7 @@ object Form1: TForm1
         Height = 22
         Hint = 'Will use same tool for complete job if disabled'
         Top = 89
-        Width = 187
+        Width = 168
         Caption = 'Enable Tool Change in Job'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1821,7 +1821,7 @@ object Form1: TForm1
         Left = 325
         Height = 22
         Top = 175
-        Width = 239
+        Width = 218
         Caption = 'Use Automatic Tool Changer (ATC)'
         Font.Color = clWindowText
         Font.Height = -11
@@ -1867,7 +1867,7 @@ object Form1: TForm1
   end
   object ComboBox1: TComboBox
     Left = 25
-    Height = 25
+    Height = 31
     Top = 752
     Width = 89
     BidiMode = bdRightToLeftNoAlign
@@ -2036,7 +2036,7 @@ object Form1: TForm1
   end
   object ComboBoxTip: TComboBox
     Left = 118
-    Height = 25
+    Height = 31
     Hint = 'Select Tool Tip'
     Top = 752
     Width = 89
@@ -2161,7 +2161,7 @@ object Form1: TForm1
     Height = 22
     Hint = 'Job will be simulated only, no output to machine'
     Top = 32
-    Width = 122
+    Width = 109
     Caption = 'Simulation only'
     Checked = True
     Font.Color = clWindowText
@@ -2276,6 +2276,42 @@ object Form1: TForm1
       object FileNewItem: TMenuItem
         Action = FileNew1
         Caption = '&New'
+        Bitmap.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000FFFFFF000000
+          001D000000340000003600000036000000360000003600000036000000360000
+          0036000000360000003600000036000000330000001DFFFFFF00FFFFFF000000
+          0034F9F9F9F5FCFCFCFDFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFC
+          FCFFFCFCFCFFFCFCFCFFFCFCFCFDF9F9F9F300000033FFFFFF00000000010000
+          0036FCFCFCFEFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFC
+          FCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFD00000036FFFFFF00000000010000
+          0036FCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFBFBFBFFFBFBFBFFFBFB
+          FBFFFBFBFBFFFBFBFBFFFBFBFBFFFCFCFCFF0000003600000001000000010000
+          0036FCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFBFBFBFFFBFBFBFFFAFAFAFFFAFA
+          FAFFFAFAFAFFFAFAFAFFFAFAFAFFFCFCFCFF0000003600000001000000010000
+          0036FCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFBFBFBFFFBFBFBFFFBFBFBFFFAFA
+          FAFFFAFAFAFFF8F8F8FFF8F8F8FFFCFCFCFF0000003600000001000000010000
+          0036FCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFBFB
+          FBFFF9F9F9FFF9F9F9FFF8F8F8FFFCFCFCFF0000003600000001000000010000
+          0036FCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFAFA
+          FAFFF9F9F9FFF6F6F6FFF6F6F6FFFCFCFCFF0000003600000001000000010000
+          0036FCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFBFBFBFFF8F8
+          F8FFF6F6F6FFF3F3F3FFF2F2F2FFFCFCFCFF0000003600000001000000010000
+          0036FCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFBFBFBFFF8F8F8FFF5F5
+          F5FFF2F2F2FFEFEFEFFFEDEDEDFFFCFCFCFF0000003600000001000000010000
+          0036FCFCFCFFFBFBFBFFFCFCFCFFFCFCFCFFFBFBFBFFF8F8F8FFF5F5F5FFF1F1
+          F1FFECECECFFEAEAEAFFE6E6E6FFFCFCFCFF0000003600000001000000010000
+          0036FCFCFCFFF9F9F9FFF9F9F9FFF9F9F9FFF7F7F7FFF6F6F6FFF2F2F2FFEBEB
+          EBFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFF0000003600000001000000010000
+          0036FCFCFCFFF7F7F7FFF9F9F9FFF7F7F7FFF7F7F7FFF3F3F3FFF0F0F0FFEAEA
+          EAFFFCFCFCFFF6F6F6FFF4F4F4FF9999999100000020FFFFFF00FFFFFF000000
+          0036FBFBFBFDF4F4F4FFF5F5F5FFF5F5F5FFF5F5F5FFF1F1F1FFEFEFEFFFE9E9
+          E9FFFCFCFCFFE7E7E7FF959595910000002000000002FFFFFF00FFFFFF000000
+          0033F8F8F8F0FBFBFBFDFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFCFCFFFCFC
+          FCFFF8F8F8FF949494910000002000000002FFFFFF00FFFFFF00FFFFFF000000
+          001C000000330000003600000036000000360000003600000036000000360000
+          0036000000360000002000000002FFFFFF00FFFFFF00FFFFFF00
+        }
         Hint = 'New Job|Create new Job'
       end
       object FileOpenItem: TMenuItem

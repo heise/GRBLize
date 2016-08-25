@@ -1273,7 +1273,7 @@ begin
       PanelHold.Font.Color:= clgray;
     end;
 
-    is_jogging:= AnsiContainsStr(my_Str,'Jog');
+    is_jogging:= AnsiContainsStr(my_Str,'jog');
     if (my_Str = 'run') or is_jogging then begin
       is_valid:= true;
       PanelRun.Color:= clFuchsia;
@@ -1336,7 +1336,8 @@ begin
      or (old_grbl_wpos.Y <> grbl_wpos.Y) then begin
     pos_changed:= true;
     old_grbl_wpos:= grbl_wpos;
-    NeedsRedraw:= true;
+    ForceToolPositions(grbl_wpos.X, grbl_wpos.Y, grbl_wpos.Z);
+    Form2.Invalidate;
   end;
 end;
 
@@ -1417,7 +1418,6 @@ begin
         if (MachineState = hold) and (old_machine_state <> hold) then
           Form1.Memo1.lines.add('HOLD state, press CONTINUE or click READY panel');
 
-        ForceToolPositions(grbl_wpos.X, grbl_wpos.Y, grbl_wpos.Z);
         StatusTimerState:= s_request;
       end;
     s_sim:
@@ -1650,7 +1650,7 @@ begin
       grbl_sendlist.Clear;
       exit;
     end;
-    //DisableStatus;
+    DisableStatus;
     SendActive:= true;
     grbl_rx_clear; // letzte Antwort verwerfen
     for i:= 0 to grbl_sendlist.Count-1 do begin
@@ -1687,7 +1687,7 @@ begin
         end;
       end;
     end;
-    //EnableStatus;
+    EnableStatus;
   end else begin
     gcsim_active:= true;          // für Cadencer-Prozess
     for i:= 0 to grbl_sendlist.Count-1 do begin
@@ -2080,7 +2080,7 @@ begin
   SendSingleCommandStr('G92 X0');
   WorkZeroX:= grbl_mpos.X;
   JogX:= WorkZeroX;
-  NeedsRedraw:= true;
+  Form2.Invalidate;
 end;
 
 procedure TForm1.BtnZeroYClick(Sender: TObject);
@@ -2093,7 +2093,7 @@ begin
   SendSingleCommandStr('G92 Y0');
   WorkZeroY:= grbl_mpos.Y;
   JogY:= WorkZeroY;
-  NeedsRedraw:= true;
+  Form2.Invalidate;
 end;
 
 procedure TForm1.BtnZeroZClick(Sender: TObject);
@@ -2117,7 +2117,7 @@ begin
   if CheckPartProbeZ.Checked then
     DoTLCandConfirm(true, 1);
 }
-  NeedsRedraw:= true;
+  Form2.Invalidate;
   sgATC.Row:= FirstToolUsed;
   ToolInSpindle:= FirstToolUsed;
   UpdateATCsg;
@@ -2174,7 +2174,7 @@ begin
         DoTLCandConfirm(true, 1);  // ist erstes Werkzeug!
 }
     end;
-    NeedsRedraw:= true;
+    Form2.Invalidate;
     sgATC.Row:= FirstToolUsed;
     ToolInSpindle:= FirstToolUsed;
     UpdateATCsg;
@@ -2248,7 +2248,7 @@ begin
   grbl_moveXY(job.park_x, job.park_y, true);
   grbl_moveZ(job.park_z, true);
   SendListToGrbl;
-  NeedsRedraw:= true;
+  Form2.Invalidate;
 end;
 
 procedure TForm1.BtnMoveFix1Click(Sender: TObject);
@@ -2265,7 +2265,7 @@ begin
   grbl_moveZ(job.fix1_z, true);
   SendListToGrbl;
   mdelay(250);
-  NeedsRedraw:= true;
+  Form2.Invalidate;
   WaitForIdle;
   BtnZeroXClick(Sender);
   BtnZeroYClick(Sender);
@@ -2286,7 +2286,7 @@ begin
   grbl_moveZ(job.fix2_z, true);
   SendListToGrbl;
   mdelay(250);
-  NeedsRedraw:= true;
+  Form2.Invalidate;
   WaitForIdle;
   BtnZeroXClick(Sender);
   BtnZeroYClick(Sender);
@@ -2312,7 +2312,7 @@ begin
     Form1.Memo1.lines.add('WARNING: XY Zero not set!');
     PlaySound('SYSTEMHAND', 0, SND_ASYNC);
   end;
-  NeedsRedraw:= true;
+  Form2.Invalidate;
 end;
 
 procedure TForm1.BtnMoveZzeroClick(Sender: TObject);
@@ -2332,7 +2332,7 @@ begin
     PlaySound('SYSTEMHAND', 0, SND_ASYNC);
   end;
   SendListToGrbl;
-  NeedsRedraw:= true;
+  Form2.Invalidate;
 end;
 
 procedure StartJogAction(sender: TObject; tag: Integer);
@@ -2385,7 +2385,7 @@ begin
     first_loop_done:= true;
   until MouseJogAction = False; // stop when cancelled
 }
-  NeedsRedraw:= true;
+  Form2.Invalidate;
 end;
 
 
