@@ -879,6 +879,7 @@ var
 begin
   {$ifdef FPC}
   DoubleBuffered:=true;
+  DrawingBox.OnMouseWheel:=Form2.FormMouseWheel;
   {$endif}
   grbl_ini:= TRegistry.Create;
   try
@@ -1432,8 +1433,8 @@ begin
   {$endif}
   p.x:= (p.X - drawing_offset_x);
   p.y:= (p.y - drawing_offset_y);
-  pos:= TrackBarZoom.Position;
-  max:= TrackBarZoom.Max;
+  pos:= Form2.TrackBarZoom.Position;
+  max:= Form2.TrackBarZoom.Max;
   diff:= pos div 4;
   if diff = 0 then
     diff:= 1;  //  diff:=  abs(WheelDelta div 120);
@@ -1443,18 +1444,18 @@ begin
     if pos < max then begin
       if (diff + pos) > max then
         diff:= max - pos;
-      TrackBarZoom.Position:= pos + diff;
+      Form2.TrackBarZoom.Position:= pos + diff;
       bm_scroll.x:= bm_scroll.x - round(diff * p.x / Scale);
       bm_scroll.y:= bm_scroll.y - round(diff * p.y / Scale);
      end;
   end else begin
     if pos > diff then begin
-      TrackBarZoom.Position:= pos - diff;
+      Form2.TrackBarZoom.Position:= pos - diff;
       bm_scroll.x:= bm_scroll.x + round(diff * p.x / Scale);
       bm_scroll.y:= bm_scroll.y + round(diff * p.y / Scale);
     end;
   end;
-  TrackBarZoom.Perform(CN_HSCROLL, SB_ENDSCROLL, 0);
+  Form2.TrackBarZoom.Perform(CN_HSCROLL, SB_ENDSCROLL, 0);
   NeedsRedraw:= true;
 end;
 

@@ -13,12 +13,12 @@ object Form1: TForm1
   Constraints.MinWidth = 932
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
   Menu = MainMenu1
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   ShowHint = True
+  LCLVersion = '1.4.4.0'
   object Bevel3: TBevel
     Left = 7
     Height = 167
@@ -53,14 +53,13 @@ object Form1: TForm1
   end
   object PosX: TLabel
     Left = 24
-    Height = 37
-    Top = 504
-    Width = 106
+    Height = 35
+    Top = 501
+    Width = 77
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clBlue
-    Font.Height = -32
-    Font.Name = 'MS Sans Serif'
+    Font.Height = -25
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -75,21 +74,19 @@ object Form1: TForm1
     Caption = 'Zero X'
     Font.Color = clBlue
     Font.Height = -15
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     OnClick = BtnZeroXClick
     ParentFont = False
   end
   object PosY: TLabel
     Left = 152
-    Height = 37
-    Top = 504
-    Width = 106
+    Height = 35
+    Top = 501
+    Width = 77
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clGreen
-    Font.Height = -32
-    Font.Name = 'MS Sans Serif'
+    Font.Height = -25
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -104,21 +101,19 @@ object Form1: TForm1
     Caption = 'Zero Y'
     Font.Color = 1097744
     Font.Height = -15
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     OnClick = BtnZeroYClick
     ParentFont = False
   end
   object PosZ: TLabel
     Left = 280
-    Height = 37
-    Top = 504
-    Width = 106
+    Height = 35
+    Top = 501
+    Width = 77
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clRed
-    Font.Height = -32
-    Font.Name = 'MS Sans Serif'
+    Font.Height = -25
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -133,21 +128,19 @@ object Form1: TForm1
     Caption = 'Zero Z'
     Font.Color = clRed
     Font.Height = -15
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     OnClick = BtnZeroZClick
     ParentFont = False
   end
   object MposX: TLabel
     Left = 24
-    Height = 16
+    Height = 17
     Top = 486
-    Width = 45
+    Width = 39
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clBlue
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -155,14 +148,13 @@ object Form1: TForm1
   end
   object MposY: TLabel
     Left = 152
-    Height = 16
+    Height = 17
     Top = 486
-    Width = 45
+    Width = 39
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clGreen
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -170,14 +162,13 @@ object Form1: TForm1
   end
   object MposZ: TLabel
     Left = 280
-    Height = 16
+    Height = 17
     Top = 486
-    Width = 45
+    Width = 39
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clRed
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -187,26 +178,24 @@ object Form1: TForm1
     Left = 212
     Height = 13
     Top = 593
-    Width = 126
+    Width = 137
     Caption = 'Part zero in machine coord'
     Color = clBtnFace
     Font.Color = clBlack
     Font.Height = 13
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     Transparent = False
   end
   object Label27: TLabel
-    Left = 399
-    Height = 20
-    Top = 512
-    Width = 34
+    Left = 392
+    Height = 21
+    Top = 510
+    Width = 31
     Caption = 'Part'
     Color = clBtnFace
     Font.Color = clBlack
     Font.Height = 21
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -215,28 +204,26 @@ object Form1: TForm1
   object Label28: TLabel
     Left = 393
     Height = 13
-    Top = 484
-    Width = 41
+    Top = 485
+    Width = 44
     Caption = 'Machine'
     Color = clBtnFace
     Font.Color = clBlack
     Font.Height = 13
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     Transparent = False
   end
   object LabelWorkX: TLabel
     Left = 212
-    Height = 16
+    Height = 17
     Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 45
+    Width = 39
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clBlue
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -244,15 +231,14 @@ object Form1: TForm1
   end
   object LabelWorkY: TLabel
     Left = 270
-    Height = 16
+    Height = 17
     Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 45
+    Width = 39
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clGreen
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -260,15 +246,14 @@ object Form1: TForm1
   end
   object LabelWorkZ: TLabel
     Left = 330
-    Height = 16
+    Height = 17
     Hint = 'Offset to part zero in machine coordinates'
     Top = 608
-    Width = 45
+    Width = 39
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clRed
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -276,15 +261,14 @@ object Form1: TForm1
   end
   object LabelTableX: TLabel
     Left = 25
-    Height = 16
+    Height = 17
     Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 45
+    Width = 39
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clBlue
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -292,15 +276,14 @@ object Form1: TForm1
   end
   object LabelTableY: TLabel
     Left = 83
-    Height = 16
+    Height = 17
     Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 45
+    Width = 39
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clGreen
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -308,15 +291,14 @@ object Form1: TForm1
   end
   object LabelTableZ: TLabel
     Left = 143
-    Height = 16
+    Height = 17
     Hint = 'Offset to part zero in machine coordinates'
     Top = 610
-    Width = 45
+    Width = 39
     Caption = '000,00'
     Color = clBtnFace
     Font.Color = clRed
     Font.Height = -13
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -326,12 +308,11 @@ object Form1: TForm1
     Left = 25
     Height = 13
     Top = 593
-    Width = 132
+    Width = 135
     Caption = 'Table size (limits XYZ travel)'
     Color = clBtnFace
     Font.Color = clBlack
     Font.Height = 13
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     Transparent = False
@@ -341,12 +322,11 @@ object Form1: TForm1
     Height = 13
     Hint = 'Z Gauge height value from job defaults'
     Top = 505
-    Width = 62
+    Width = 58
     Caption = '+00.00 mm'
     Color = clBtnFace
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -362,7 +342,6 @@ object Form1: TForm1
     Font.CharSet = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -19
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     OnClick = BtnCancelClick
     OnMouseEnter = BtnCancelMouseEnter
@@ -378,7 +357,6 @@ object Form1: TForm1
     Caption = 'Zero All'
     Font.Color = clGreen
     Font.Height = -15
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     OnClick = BtnZeroAllClick
     ParentFont = False
@@ -387,12 +365,11 @@ object Form1: TForm1
     Left = 612
     Height = 13
     Top = 41
-    Width = 155
+    Width = 141
     Caption = 'G-Code Output / Messages'
     Color = clBtnFace
     Font.Color = cl3DDkShadow
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -402,12 +379,11 @@ object Form1: TForm1
     Left = 612
     Height = 13
     Top = 423
-    Width = 93
+    Width = 80
     Caption = 'ATC or Tool List'
     Color = clBtnFace
     Font.Color = cl3DDkShadow
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -417,12 +393,11 @@ object Form1: TForm1
     Left = 794
     Height = 13
     Top = 423
-    Width = 113
+    Width = 131
     Caption = '(current tool highlighted)'
     Color = clBtnFace
     Font.Color = clGrayText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     Transparent = False
@@ -431,12 +406,11 @@ object Form1: TForm1
     Left = 815
     Height = 13
     Top = 41
-    Width = 54
+    Width = 58
     Caption = 'LabelFaults'
     Color = clBtnFace
     Font.Color = clGrayText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     Transparent = False
@@ -445,12 +419,11 @@ object Form1: TForm1
     Left = 508
     Height = 13
     Top = 486
-    Width = 79
+    Width = 84
     Caption = 'Z Gauge Height:'
     Color = clBtnFace
     Font.Color = clGrayText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     Transparent = False
@@ -513,7 +486,7 @@ object Form1: TForm1
         4460C88B4DBBC88C4FEEC88C4FF6C88C4FF7C88C4FF7C88D4FF7C98C4FF7C78B
         4FF7C5894BD4C4763B91B3683C06FFFFFF00FFFFFF00FFFFFF00
       }
-      ShowHint = True
+      ShowCaption = False
       ParentShowHint = False
     end
     object ToolButton1: TSpeedButton
@@ -558,7 +531,7 @@ object Form1: TForm1
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
         FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
       }
-      ShowHint = True
+      ShowCaption = False
       ParentShowHint = False
     end
     object ToolButton2: TSpeedButton
@@ -603,7 +576,7 @@ object Form1: TForm1
         3690BC6B36CCBC6B36EEBC6B36FABB6B36FEBB6B36FFBB6A36FFBB6A36FFBC6C
         39FFBD6E3BFFBB6D3AFFBB6B38EFBB703ECBB6693554FFFFFF00
       }
-      ShowHint = True
+      ShowCaption = False
       ParentShowHint = False
     end
     object BtnConnect: TBitBtn
@@ -616,7 +589,6 @@ object Form1: TForm1
       Enabled = False
       Font.Color = clRed
       Font.Height = -13
-      Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       OnClick = BtnConnectClick
       ParentFont = False
@@ -635,7 +607,6 @@ object Form1: TForm1
     Font.CharSet = ANSI_CHARSET
     Font.Color = clRed
     Font.Height = -12
-    Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
     ReadOnly = True
@@ -650,28 +621,28 @@ object Form1: TForm1
     Width = 593
     TabStop = False
     ActivePage = TabSheetRun
+    Font.Color = clWindowText
+    ParentFont = False
     TabIndex = 4
     TabOrder = 2
     OnChange = PageControl1Change
     object TabSheet1: TTabSheet
       Caption = 'Job/Files'
-      ClientHeight = 0
-      ClientWidth = 0
+      ClientHeight = 407
+      ClientWidth = 585
       Font.Color = clBlack
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       ParentFont = False
       object Label1: TLabel
         Left = 8
         Height = 13
         Top = 8
-        Width = 388
+        Width = 347
         Caption = 'HPGL/Vector/Drill Fles (G-Code/SVG will be mapped to Pen/Tool 9)'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
@@ -681,12 +652,11 @@ object Form1: TForm1
         Left = 8
         Height = 13
         Top = 186
-        Width = 71
+        Width = 64
         Caption = 'Job Settings'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
@@ -696,12 +666,11 @@ object Form1: TForm1
         Left = 134
         Height = 13
         Top = 186
-        Width = 167
+        Width = 145
         Caption = 'Press Enter to Accept Values'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
@@ -711,12 +680,11 @@ object Form1: TForm1
         Left = 304
         Height = 13
         Top = 240
-        Width = 76
+        Width = 73
         Caption = 'Job Comment'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
@@ -732,13 +700,16 @@ object Form1: TForm1
         ColCount = 9
         DefaultRowHeight = 18
         FixedCols = 0
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Style = [fsBold]
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine]
+        ParentFont = False
         RowCount = 8
         ScrollBars = ssNone
         TabOrder = 0
         TitleFont.Color = clBlack
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
         TitleFont.Style = [fsBold]
         OnClick = SgFilesClick
         OnDrawCell = SgFilesDrawCell
@@ -765,8 +736,7 @@ object Form1: TForm1
         ColCount = 2
         DefaultRowHeight = 18
         Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'MS Sans Serif'
+        Font.Height = -13
         Font.Style = [fsBold]
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
         ParentFont = False
@@ -774,8 +744,7 @@ object Form1: TForm1
         ScrollBars = ssNone
         TabOrder = 1
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Height = -13
         TitleFont.Style = [fsBold]
         OnClick = SgJobDefaultsClick
         OnDrawCell = SgJobDefaultsDrawCell
@@ -795,7 +764,6 @@ object Form1: TForm1
         Width = 273
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         Lines.Strings = (
           'Your Job Description'
@@ -810,18 +778,17 @@ object Form1: TForm1
     end
     object TabSheetPens: TTabSheet
       Caption = 'Tools'
-      ClientHeight = 0
-      ClientWidth = 0
+      ClientHeight = 407
+      ClientWidth = 585
       object Label7: TLabel
         Left = 8
         Height = 13
         Top = 8
-        Width = 231
+        Width = 242
         Caption = 'HPGL Pen Mill (P) and Excellon Drill (D) Tool Edit'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
         Transparent = False
@@ -836,13 +803,15 @@ object Form1: TForm1
         ColCount = 13
         DefaultColWidth = 30
         DefaultRowHeight = 18
+        Font.Color = clWindowText
+        Font.Height = -13
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
+        ParentFont = False
         RowCount = 32
         ScrollBars = ssVertical
         TabOrder = 0
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
         OnDrawCell = SgPensDrawCell
         OnKeyPress = SgPensKeyPress
         OnMouseDown = SgPensMouseDown
@@ -866,19 +835,18 @@ object Form1: TForm1
     end
     object TabSheetGroups: TTabSheet
       Caption = 'Path View'
-      ClientHeight = 0
-      ClientWidth = 0
+      ClientHeight = 407
+      ClientWidth = 585
       ImageIndex = 1
       object Label5: TLabel
         Left = 9
         Height = 13
         Top = 8
-        Width = 48
+        Width = 51
         Caption = 'Path View'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
         Transparent = False
@@ -892,13 +860,15 @@ object Form1: TForm1
         Width = 565
         ColCount = 8
         DefaultRowHeight = 18
+        Font.Color = clWindowText
+        Font.Height = -13
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goThumbTracking]
+        ParentFont = False
         RowCount = 2
         ScrollBars = ssVertical
         TabOrder = 0
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
-        TitleFont.Name = 'MS Sans Serif'
         OnClick = SgBlocksClick
         OnDrawCell = SgBlocksDrawCell
         OnMouseDown = SgBlocksMouseDown
@@ -916,8 +886,8 @@ object Form1: TForm1
     end
     object TabSheetDefaults: TTabSheet
       Caption = 'Defaults'
-      ClientHeight = 0
-      ClientWidth = 0
+      ClientHeight = 407
+      ClientWidth = 585
       ImageIndex = 2
       object Bevel11: TBevel
         Left = 319
@@ -930,12 +900,11 @@ object Form1: TForm1
         Left = 8
         Height = 13
         Top = 8
-        Width = 202
+        Width = 215
         Caption = 'GRBL Settings (use decimal dot for values)'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
         Transparent = False
@@ -957,7 +926,6 @@ object Form1: TForm1
         Font.CharSet = ANSI_CHARSET
         Font.Color = clBlue
         Font.Height = -12
-        Font.Name = 'Arial'
         Font.Style = [fsBold]
         OnClick = BtnLoadGrblSetupClick
         ParentFont = False
@@ -972,7 +940,6 @@ object Form1: TForm1
         Font.CharSet = ANSI_CHARSET
         Font.Color = 4227327
         Font.Height = -12
-        Font.Name = 'Arial'
         Font.Style = [fsBold]
         OnClick = BtnSaveGrblSetupClick
         ParentFont = False
@@ -981,12 +948,11 @@ object Form1: TForm1
         Left = 319
         Height = 13
         Top = 8
-        Width = 139
+        Width = 149
         Caption = 'GRBLize Application Defaults'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
         Transparent = False
@@ -995,12 +961,11 @@ object Form1: TForm1
         Left = 334
         Height = 13
         Top = 334
-        Width = 103
+        Width = 116
         Caption = 'Set to current position'
         Color = clBtnFace
         Font.Color = cl3DDkShadow
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
         Transparent = False
@@ -1016,16 +981,14 @@ object Form1: TForm1
         DefaultRowHeight = 18
         FixedCols = 0
         Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'MS Sans Serif'
+        Font.Height = -13
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goEditing, goThumbTracking]
         ParentFont = False
         RowCount = 2
         ScrollBars = ssVertical
         TabOrder = 0
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Height = -13
         OnDrawCell = SgGrblSettingsDrawCell
         ColWidths = (
           205
@@ -1042,7 +1005,6 @@ object Form1: TForm1
         Enabled = False
         Font.Color = clRed
         Font.Height = -12
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         OnClick = BtnSendGrblSettingsClick
         ParentFont = False
@@ -1058,7 +1020,6 @@ object Form1: TForm1
         Enabled = False
         Font.Color = clTeal
         Font.Height = -12
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         OnClick = BtnRefreshGrblSettingsClick
         ParentFont = False
@@ -1074,15 +1035,13 @@ object Form1: TForm1
         DefaultRowHeight = 18
         FixedCols = 0
         Font.Color = clWindowText
-        Font.Height = -12
-        Font.Name = 'MS Sans Serif'
+        Font.Height = -13
         Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
         ParentFont = False
         RowCount = 2
         TabOrder = 3
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Height = -13
         OnClick = SgAppDefaultsClick
         OnDrawCell = SgAppDefaultsDrawCell
         OnExit = SgAppDefaultsExit
@@ -1102,7 +1061,6 @@ object Form1: TForm1
         Caption = 'Set new Park'
         Font.Color = clWindowText
         Font.Height = -9
-        Font.Name = 'MS Sans Serif'
         OnClick = BtnSetParkClick
         ParentFont = False
         TabOrder = 4
@@ -1116,7 +1074,6 @@ object Form1: TForm1
         Caption = 'Set new Fixture 1'
         Font.Color = clWindowText
         Font.Height = -9
-        Font.Name = 'MS Sans Serif'
         OnClick = BtnSetFix1Click
         ParentFont = False
         TabOrder = 5
@@ -1130,7 +1087,6 @@ object Form1: TForm1
         Caption = 'Set new Fixture 2'
         Font.Color = clWindowText
         Font.Height = -9
-        Font.Name = 'MS Sans Serif'
         OnClick = BtnSetFix2Click
         ParentFont = False
         TabOrder = 6
@@ -1179,66 +1135,53 @@ object Form1: TForm1
         Font.CharSet = ANSI_CHARSET
         Font.Color = 2925325
         Font.Height = -12
-        Font.Name = 'Arial'
         Font.Style = [fsBold]
         OnClick = BtnRunJobClick
         ParentFont = False
       end
       object Label6: TLabel
-        Left = 4
+        Left = 9
         Height = 13
-        Top = 1
-        Width = 37
+        Top = 6
+        Width = 42
         Caption = 'Jogging'
-        Color = clBtnFace
         Font.Color = clGrayText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object Label26: TLabel
         Left = 511
         Height = 13
         Top = 216
-        Width = 61
+        Width = 65
         Caption = 'Job Progress'
-        Color = clBtnFace
         Font.Color = clGrayText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object Label4: TLabel
         Left = 325
         Height = 13
         Top = 344
-        Width = 125
+        Width = 138
         Caption = 'GCode Simulation Settings'
-        Color = clBtnFace
         Font.Color = clGray
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object Label8: TLabel
         Left = 486
         Height = 13
         Top = 367
-        Width = 82
+        Width = 86
         Caption = 'G-Code Tool Dia.'
-        Color = clBtnFace
         Font.Color = clBlue
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object BtnRunGcode: TSpeedButton
         Left = 325
@@ -1258,73 +1201,58 @@ object Form1: TForm1
         Left = 499
         Height = 13
         Top = 301
-        Width = 67
+        Width = 73
         Caption = 'Apply Z Offset'
-        Color = clBtnFace
         Font.Color = clBlue
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object Label44: TLabel
         Left = 499
         Height = 13
         Top = 315
-        Width = 67
+        Width = 74
         Caption = 'to G-Code File'
-        Color = clBtnFace
         Font.Color = clBlue
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object Label48: TLabel
         Left = 327
         Height = 13
         Top = 27
-        Width = 100
+        Width = 108
         Caption = 'First Tool used in Job'
-        Color = clBtnFace
         Font.Color = clGrayText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object Label17: TLabel
         Left = 44
-        Height = 16
+        Height = 15
         Top = 82
-        Width = 43
+        Width = 34
         Caption = 'X Axis'
-        Color = clBtnFace
         Font.Color = clRed
         Font.Height = 16
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object Label18: TLabel
         Left = 158
-        Height = 16
+        Height = 15
         Top = 56
-        Width = 44
+        Width = 33
         Caption = 'Y Axis'
-        Color = clBtnFace
         Font.Color = clRed
         Font.Height = 16
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object BtnHomeCycle: TSpeedButton
         Left = 208
@@ -1335,7 +1263,6 @@ object Form1: TForm1
         Caption = 'Home Cycle'
         Font.Color = clGreen
         Font.Height = -12
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         OnClick = BtnHomeCycleClick
         ParentFont = False
@@ -1389,18 +1316,15 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label20: TLabel
-        Left = 5
+        Left = 9
         Height = 13
-        Top = 216
-        Width = 39
+        Top = 220
+        Width = 42
         Caption = 'Move to'
-        Color = clBtnFace
         Font.Color = clGrayText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object BtnMoveXYzero: TSpeedButton
         Left = 102
@@ -1436,10 +1360,10 @@ object Form1: TForm1
       end
       object LabelHintZ2: TLabel
         Left = 113
-        Height = 13
+        Height = 20
         Hint = 'Z Lift value from job defaults'
         Top = 346
-        Width = 52
+        Width = 75
         Caption = '+00,00 mm'
         Color = clBtnFace
         ParentColor = False
@@ -1447,33 +1371,27 @@ object Form1: TForm1
       end
       object Label15: TLabel
         Left = 158
-        Height = 24
+        Height = 23
         Top = 153
-        Width = 70
+        Width = 60
         Caption = 'Jogpad'
-        Color = clBtnFace
         Font.Color = clRed
         Font.Height = 24
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object Label16: TLabel
         Left = 200
-        Height = 16
+        Height = 15
         Top = 26
-        Width = 43
+        Width = 33
         Caption = 'Z Axis'
-        Color = clBtnFace
         Font.Color = clRed
         Font.Height = 16
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object BtnHomeOverride: TSpeedButton
         Left = 208
@@ -1484,7 +1402,6 @@ object Form1: TForm1
         Caption = 'Override Home'
         Font.Color = clRed
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         OnClick = BtnHomeOverrideClick
         ParentFont = False
       end
@@ -1536,47 +1453,38 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label9: TLabel
-        Left = 177
+        Left = 194
         Height = 13
         Top = 296
-        Width = 86
+        Width = 101
         Anchors = [akTop, akRight]
         Caption = 'with floating probe'
-        Color = clBtnFace
         Font.Color = clGrayText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object Label14: TLabel
-        Left = 310
+        Left = 315
         Height = 13
-        Top = 1
-        Width = 107
+        Top = 6
+        Width = 121
         Caption = 'Options (from Defaults)'
-        Color = clBtnFace
         Font.Color = clGrayText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object Label21: TLabel
         Left = 106
         Height = 13
         Top = 331
-        Width = 81
+        Width = 86
         Caption = 'Z Lift above part:'
-        Color = clBtnFace
         Font.Color = clGrayText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentColor = False
         ParentFont = False
-        Transparent = False
       end
       object BtnMoveZzero: TSpeedButton
         Left = 102
@@ -1599,11 +1507,10 @@ object Form1: TForm1
         Height = 23
         Hint = 'On end move to Park Position'
         Top = 371
-        Width = 82
+        Width = 86
         Caption = 'Park on end'
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentFont = False
         TabOrder = 0
       end
@@ -1622,7 +1529,6 @@ object Form1: TForm1
         Width = 75
         Font.Color = clBlue
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ItemHeight = 13
         ItemIndex = 0
@@ -1648,7 +1554,6 @@ object Form1: TForm1
         Width = 75
         Font.Color = clBlue
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ItemHeight = 13
         ItemIndex = 1
@@ -1674,7 +1579,6 @@ object Form1: TForm1
         Width = 56
         Font.Color = clBlue
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 4
@@ -1685,11 +1589,10 @@ object Form1: TForm1
         Height = 23
         Hint = 'Use a separate fixed Z probe for tool length compensation. If not enabled, will use movable part probe as fixed probe.'
         Top = 145
-        Width = 218
+        Width = 226
         Caption = 'Use TLC Probe Switch (required for ATC)'
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         OnClick = CheckTLCprobeClick
         ParentFont = False
         TabOrder = 5
@@ -1699,11 +1602,10 @@ object Form1: TForm1
         Height = 23
         Hint = 'Use a movable Z probe to be placed on part'
         Top = 122
-        Width = 181
+        Width = 191
         Caption = 'Use Floating Part Z Probe Switch'
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         ParentFont = False
         TabOrder = 6
       end
@@ -1912,7 +1814,6 @@ object Form1: TForm1
         Width = 182
         Font.Color = clGreen
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         ParentFont = False
         ParentShowHint = False
@@ -1926,11 +1827,10 @@ object Form1: TForm1
         Height = 23
         Hint = 'Will use same tool for complete job if disabled'
         Top = 89
-        Width = 177
+        Width = 163
         Caption = 'Enable Tool Change in Job'
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         OnClick = CheckToolChangeClick
         ParentFont = False
@@ -1940,11 +1840,10 @@ object Form1: TForm1
         Left = 325
         Height = 23
         Top = 175
-        Width = 222
+        Width = 205
         Caption = 'Use Automatic Tool Changer (ATC)'
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
         Font.Style = [fsBold]
         OnClick = CheckUseATC2Click
         ParentFont = False
@@ -1993,7 +1892,6 @@ object Form1: TForm1
     DropDownCount = 20
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ItemHeight = 13
     Items.Strings = (
       'OFF'
@@ -2028,7 +1926,6 @@ object Form1: TForm1
     Caption = 'STOP'
     Font.Color = clRed
     Font.Height = -14
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     Glyph.Data = {
       360C0000424D360C000000000000360000002800000020000000200000000100
@@ -2148,7 +2045,6 @@ object Form1: TForm1
     Color = clMaroon
     Font.Color = clGrayText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     TabOrder = 6
@@ -2163,7 +2059,6 @@ object Form1: TForm1
     DropDownCount = 7
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ItemHeight = 13
     Items.Strings = (
       'Flat Tip'
@@ -2199,7 +2094,6 @@ object Form1: TForm1
     Color = 4194368
     Font.Color = clGrayText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     TabOrder = 8
@@ -2217,7 +2111,6 @@ object Form1: TForm1
     Color = 16384
     Font.Color = clGrayText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     TabOrder = 9
@@ -2235,7 +2128,6 @@ object Form1: TForm1
     Color = 64
     Font.Color = clGrayText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     TabOrder = 10
@@ -2253,7 +2145,6 @@ object Form1: TForm1
     Color = 4194304
     Font.Color = clGrayText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     TabOrder = 11
@@ -2270,7 +2161,6 @@ object Form1: TForm1
     Color = 64
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     TabOrder = 12
@@ -2280,12 +2170,11 @@ object Form1: TForm1
     Height = 23
     Hint = 'Job will be simulated only, no output to machine'
     Top = 32
-    Width = 109
+    Width = 106
     Caption = 'Simulation only'
     Checked = True
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold]
     OnClick = CheckBoxSimClick
     ParentFont = False
@@ -2303,7 +2192,6 @@ object Form1: TForm1
     Color = 64
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     TabOrder = 15
@@ -2319,7 +2207,6 @@ object Form1: TForm1
     Color = 64
     Font.Color = clBlack
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     TabOrder = 16
@@ -2331,7 +2218,6 @@ object Form1: TForm1
     Width = 297
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     Lines.Strings = (
       'GRBL G-Code messages'
     )
@@ -2351,7 +2237,6 @@ object Form1: TForm1
     Color = 16416
     Font.Color = clWhite
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
     ParentColor = False
     ParentFont = False
     TabOrder = 18
@@ -2368,7 +2253,6 @@ object Form1: TForm1
     FixedCols = 0
     Font.Color = clWindowText
     Font.Height = -12
-    Font.Name = 'MS Sans Serif'
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine]
     ParentFont = False
     RowCount = 21
@@ -2376,7 +2260,6 @@ object Form1: TForm1
     TabOrder = 19
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
-    TitleFont.Name = 'MS Sans Serif'
     OnDrawCell = sgATCDrawCell
     OnMouseDown = sgATCMouseDown
     ColWidths = (

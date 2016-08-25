@@ -25,7 +25,7 @@ object Form2: TForm2
   OnMouseWheel = FormMouseWheel
   OnPaint = DrawingBoxPaint
   OnResize = FormResize
-  LCLVersion = '1.7'
+  LCLVersion = '1.4.4.0'
   object DrawingBox: TPaintBox
     Left = 0
     Height = 557
@@ -55,7 +55,7 @@ object Form2: TForm2
       Left = 24
       Height = 13
       Top = 160
-      Width = 98
+      Width = 78
       Caption = 'Grid/Ruler in mm'
       Color = clBtnFace
       ParentColor = False
@@ -96,18 +96,18 @@ object Form2: TForm2
     end
     object CheckBoxDimensions: TCheckBox
       Left = 8
-      Height = 22
+      Height = 23
       Top = 8
-      Width = 123
+      Width = 106
       Caption = 'Show Dimensions'
       OnClick = CheckBoxDimensionsClick
       TabOrder = 2
     end
     object CheckBoxDirections: TCheckBox
       Left = 8
-      Height = 22
+      Height = 23
       Top = 32
-      Width = 114
+      Width = 100
       Caption = 'Show Directions'
       Checked = True
       OnClick = CheckBoxDirectionsClick
@@ -132,9 +132,9 @@ object Form2: TForm2
     end
     object CheckBoxToolpath: TCheckBox
       Left = 8
-      Height = 22
+      Height = 23
       Top = 56
-      Width = 109
+      Width = 98
       Caption = 'Show Tool Path'
       Checked = True
       OnClick = CheckBoxDirectionsClick

@@ -103,6 +103,9 @@ type
     Label12: TLabel;
     Bevel1: TBevel;
     Label2: TLabel;
+    ToolButton1: TSpeedButton;
+    ToolButton2: TSpeedButton;
+    ToolButton9: TSpeedButton;
     WindowMenu1: TMenuItem;
     ShowDrawing1: TMenuItem;
     Show3DPreview1: TMenuItem;
@@ -154,9 +157,6 @@ type
     Label44: TLabel;
     LabelHintZ: TLabel;
     ToolBar1: TToolBar;
-    ToolButton9: TToolButton;
-    ToolButton1: TToolButton;
-    ToolButton2: TToolButton;
     CheckBoxSim: TCheckBox;
     BtnCancel: TSpeedButton;
     PanelYdone: TPanel;
@@ -479,7 +479,7 @@ implementation
 
 uses import_files, Clipper, About, bsearchtree, cam_view, gerber_import;
 
-{$R *.dfm}
+{$R *.lfm}
 
 {$IFDEF FPC}
 procedure PlaySound(aSound : string;aDur : Integer;aFlags : Integer);
