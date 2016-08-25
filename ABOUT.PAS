@@ -34,7 +34,7 @@ var
 
 implementation
 
-{$R *.dfm}
+{$R ABOUT.dfm}
 
 end.
 

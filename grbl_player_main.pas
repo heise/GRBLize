@@ -480,10 +480,10 @@ implementation
 uses import_files, Clipper, About, bsearchtree, cam_view, gerber_import;
 
 {$IFDEF FPC}
-{$R *.lfm}
+{$R grbl_player_main.lfm}
 {$ELSE}
-{$ENDIF}
 {$R *.dfm}
+{$ENDIF}
 {$IFDEF FPC}
 procedure PlaySound(aSound : string;aDur : Integer;aFlags : Integer);
 begin

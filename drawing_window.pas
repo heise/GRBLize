@@ -144,7 +144,7 @@ uses grbl_player_main
   {$ENDIF}
   ;
 
-{$R *.dfm}
+{$R drawing_window.dfm}
 
 // #############################################################################
 // Umrechnungen

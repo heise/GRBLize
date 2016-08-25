@@ -69,7 +69,7 @@ uses grbl_player_main, import_files, drawing_window, grbl_com
   {$ENDIF}
   ;
 
-{$R *.dfm}
+{$R cam_view.dfm}
 
 procedure TForm3.RadioGroupCamClick(Sender: TObject);
 begin
