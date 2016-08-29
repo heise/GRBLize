@@ -16,7 +16,7 @@ uses
 {$IFnDEF FPC}
   MMsystem, Windows, FTDIdll, FTDIchip, FTDItypes,
 {$ELSE}
-  LCLIntf, LCLType, LMessages, LCLProc, synaser,
+  LCLIntf, LCLType, LMessages, LCLProc, synaser, blcksock,
 {$ENDIF}
   SysUtils, StrUtils, DateUtils, Classes, Forms, Controls, Menus,
   Dialogs, StdCtrls, import_files, Clipper, deviceselect;
@@ -39,6 +39,9 @@ type
   procedure COMClose;
   function COMSetup(baud_str: String): Boolean;
   function COMReceiveStr(timeout: DWORD): string;
+
+  function IPOpen(com_name: String): Boolean;
+  procedure IPClose;
 
   function grbl_checkResponse: Boolean;
 
@@ -142,7 +145,7 @@ var
   ftdi_device_list: pftdiDeviceList;
   ftdi_sernum_arr, ftdi_desc_arr: Array[0..15] of String;
   {$ENDIF}
-  com_isopen, ftdi_isopen : Boolean;
+  com_isopen, ftdi_isopen, ip_isopen : Boolean;
   com_selected_port, ftdi_selected_device: Integer;  // FTDI-Frosch-Device-Nummer
   com_name, ftdi_serial: String;
   com_device_count, ftdi_device_count: dword;
@@ -155,6 +158,7 @@ var
   ComFile: THandle;
   {$else}
   ComFile: TBlockSerial;
+  IPFile: TBlockSocket;
   {$endif}
   AliveIndicatorDirection: Boolean;
   AliveCount: Integer;
@@ -640,6 +644,116 @@ begin
 {$ENDIF}
 end;
 
+function IPOpen(com_name: String): Boolean;
+var
+  DeviceName: array[0..15] of Char;
+  my_Name: AnsiString;
+begin
+  {$IFDEF FPC}
+  IPFile:=TTCPBlockSocket.Create;
+  try
+    IPFile.Connect(copy(com_name,0,pos(':',com_name)-1),copy(com_name,pos(':',com_name)+1,length(com_name)));
+    if IPFile.LastError <> 0 then
+      FreeAndNil(IPFile);
+  except
+    FreeAndNil(IPFile);
+  end;
+  if IPFile = nil then
+    Result := False
+  else
+    Result := True;
+  {$ENDIF}
+
+end;
+
+procedure IPClose;
+// nicht vergessen den COM Port wieder zu schliessen!
+begin
+  {$IFDEF FPC}
+  IPFile.CloseSocket;
+  FreeAndNil(IPFile);
+  {$ENDIF}
+  ip_isopen:= false;
+end;
+
+
+function IPReceiveCount: DWORD;
+{$IFDEF FPC}
+begin
+  if Assigned(IPFile) then
+    Result := IPFile.WaitingData
+  else Result := 0;
+{$ENDIF}
+end;
+
+function IPReadChar: Char;
+var
+  c: AnsiChar;
+  BytesRead: DWORD;
+  arr : array of byte;
+begin
+  Result := #0;
+  {$IFDEF FPC}
+  Result := char(IPFile.RecvByte(2));
+  if IPFile.LastError<>0 then result := #0;
+  {$endif}
+end;
+
+// #############################################################################
+
+function IPReceiveStr(timeout: DWORD): string;
+// wartet unendlich, wenn timeout = 0
+var
+  my_str: AnsiString;
+  i: Integer;
+  my_char: Char;
+  target_time, current_time: Int64;
+  has_timeout: Boolean;
+  pos_changed: Boolean;
+begin
+  {$IFDEF FPC}
+  if timeout=0 then
+    begin
+      while (Result = '') or ((copy(Result,0,1)='<') and (pos('idle',lowercase(Result))=0)) do
+        begin
+          if (copy(Result,0,1)='<') then
+            if (not DecodeStatus(Result,pos_changed)) then
+              break;
+          Application.ProcessMessages;
+          if not Assigned(IPFile) then break;
+          Result := IPFile.RecvTerminated(100,#10);
+          if Result = '' then
+            grbl_sendStr('?', false);   // neuen Status anfordern wenn wir eh nur warten
+        end;
+    end
+  else
+    Result := IPFile.RecvTerminated(timeout,#10);
+  if pos(#13,Result)>0 then
+    Result := copy(Result,0,pos(#13,result)-1);
+  if IPFile.LastError<>0 then
+    if Result = '' then
+      Result := '#Timeout';
+  {$ENDIF}
+end;
+
+function IPsendStr(sendStr: String; my_getok: boolean): String;
+// liefert "ok" wenn my_getok TRUE war und GRBL mit "ok" geantwortet hat
+// String sollte mit #13 abgeschlossen sein, kann aber auch einzelnes
+// GRBL-Steuerzeichen sein (?,!,~,CTRL-X)
+var
+  BytesWritten: DWORD;
+  my_str: AnsiString;
+begin
+  my_str := AnsiString(sendStr);
+  {$IFDEF FPC}
+  IPFile.SendString(my_str);
+  {$ENDIF}
+  if my_getok then begin
+    Result:= IPReceiveStr(0);
+  end;
+end;
+
+
 // #############################################################################
 // Abhängig davon, ob FTDI oder COM benutzt wird, entsprechende Routine aufrufen
 // #############################################################################
@@ -652,6 +766,8 @@ begin
     result:= FTDIreceiveCount;
   if com_isopen then
     result:= COMreceiveCount;
+  if ip_isopen then
+    result:= IPreceiveCount;
 end;
 
 procedure grbl_rx_clear;
@@ -669,6 +785,8 @@ begin
     result:= FTDIreceiveStr(timeout);
   if com_isopen then
     result:= COMReceiveStr(timeout);
+  if ip_isopen then
+    result:= IPReceiveStr(timeout);
 end;
 
 function grbl_sendStr(sendStr: String; my_getok: boolean): String;
@@ -681,6 +799,8 @@ begin
     result:= FTDIsendStr(sendStr, my_getok);
   if com_isopen then
     result:= COMsendStr(sendStr, my_getok);
+  if ip_isopen then
+    result:= IPsendStr(sendStr, my_getok);
 end;
 
 // #############################################################################
@@ -712,7 +832,7 @@ begin
   ShowAliveState(s_alive_wait_timeout);
   my_str:= '';
   result:= false;
-  if ftdi_isopen or com_isopen then begin
+  if ftdi_isopen or com_isopen or ip_isopen then begin
     DisableStatus;
     grbl_rx_clear;
     grbl_sendStr(#24, false);   // Soft Reset CTRL-X, Stepper sofort stoppen

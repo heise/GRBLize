@@ -427,7 +427,7 @@ var
   grbl_mpos, grbl_wpos, old_grbl_wpos: T3dFloat;
 
   MouseJogAction: Boolean;
-  open_request, ftdi_was_open, com_was_open: boolean;
+  open_request, ftdi_was_open, com_was_open, ip_was_open: boolean;
   WorkZeroX, WorkZeroY, WorkZeroZ: Double;  // Absolutwerte Werkstück-Null
   JogX, JogY, JogZ: Double;  // Absolutwerte Jogpad
   HomingPerformed: Boolean;
@@ -925,7 +925,7 @@ begin
   BringToFront;
   Memo1.lines.add(''+ SetUpFTDI);
 
-  if ftdi_was_open or com_was_open then begin
+  if ftdi_was_open or com_was_open or ip_was_open then begin
     BtnConnect.Enabled:= true;
     BtnConnect.SetFocus;
   end else
@@ -942,7 +942,12 @@ begin
   {$IFnDEF FPC}
   if ftdi_was_open then
     OpenFTDIport
-  else{$ENDIF} if com_was_open then
+  else
+  {$ELSE}
+   if ip_was_open then
+    OpenIPport;
+  PortOpenedCheck;
+  {$ENDIF} if com_was_open then
     OpenCOMport;
   PortOpenedCheck;
   EnableStatus;

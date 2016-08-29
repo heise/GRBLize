@@ -1,38 +1,35 @@
 object deviceselectbox: Tdeviceselectbox
-  Left = 442
-  Top = 205
+  Left = 441
+  Height = 245
+  Top = 180
+  Width = 505
   BorderStyle = bsDialog
   Caption = 'Select USB Device'
-  ClientHeight = 249
+  ClientHeight = 245
   ClientWidth = 505
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
   Font.Color = clBlack
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
-  Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
-  PixelsPerInch = 96
-  TextHeight = 13
+  LCLVersion = '1.7'
   object Panel1: TPanel
     Left = 0
+    Height = 249
     Top = 0
     Width = 505
-    Height = 249
     Caption = 'Panel1'
+    ClientHeight = 249
+    ClientWidth = 505
     TabOrder = 0
-    DesignSize = (
-      505
-      249)
     object Label1: TLabel
       Left = 18
+      Height = 15
       Top = 18
-      Width = 231
-      Height = 16
-      Caption = 'Select FTDI Cable or FT232R device:'
+      Width = 279
+      Caption = 'Select FTDI Cable or FT232R or COM Port or '
       Color = clBtnFace
-      Font.Charset = ANSI_CHARSET
+      Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -13
       Font.Name = 'Arial'
@@ -43,80 +40,77 @@ object deviceselectbox: Tdeviceselectbox
     end
     object Label3: TLabel
       Left = 18
+      Height = 15
       Top = 210
-      Width = 128
-      Height = 16
+      Width = 121
       Caption = 'FTDI/COM baud rate'
       Color = clBtnFace
-      Font.Charset = ANSI_CHARSET
+      Font.CharSet = ANSI_CHARSET
       Font.Color = clBlack
       Font.Height = -13
       Font.Name = 'Arial'
-      Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
       Transparent = False
     end
     object OKButton: TButton
       Left = 424
+      Height = 29
       Top = 208
       Width = 57
-      Height = 29
-      Anchors = [akLeft, akTop, akRight]
+      Anchors = [akTop, akLeft, akRight]
       Caption = 'OK'
       Default = True
-      TabOrder = 0
       OnClick = OKButtonClick
+      TabOrder = 0
     end
     object ListView1: TListView
       Left = 18
+      Height = 160
       Top = 40
       Width = 463
-      Height = 161
-      Columns = <
+      Columns = <      
         item
           Caption = 'Device'
           Width = 100
-        end
+        end      
         item
           Caption = 'Serial'
           Width = 100
-        end
+        end      
         item
           Caption = 'Description'
           Width = 150
-        end
+        end      
         item
           Caption = 'Type'
-          Width = 80
+          Width = 97
         end>
-      Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
+      ParentFont = False
       ReadOnly = True
       RowSelect = True
-      ParentFont = False
       TabOrder = 1
       ViewStyle = vsReport
       OnDblClick = ListView1DblClick
     end
     object CancelButton: TButton
       Left = 352
+      Height = 29
       Top = 208
       Width = 67
-      Height = 29
       Caption = 'Cancel'
-      TabOrder = 2
       OnClick = CancelButtonClick
+      TabOrder = 2
     end
     object EditBaudrate: TEdit
-      Left = 152
-      Top = 210
+      Left = 160
+      Height = 23
+      Top = 208
       Width = 64
-      Height = 21
-      Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
@@ -126,6 +120,19 @@ object deviceselectbox: Tdeviceselectbox
       ParentFont = False
       TabOrder = 3
       Text = '115200'
+    end
+    object Button1: TButton
+      AnchorSideLeft.Control = Label1
+      AnchorSideLeft.Side = asrBottom
+      Left = 301
+      Height = 25
+      Top = 14
+      Width = 113
+      AutoSize = True
+      BorderSpacing.Left = 4
+      Caption = 'Add TCP/IP Device'
+      OnClick = Button1Click
+      TabOrder = 4
     end
   end
 end

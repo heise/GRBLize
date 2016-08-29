@@ -38,10 +38,21 @@ begin
       sleep(500);  // Arduino Startup Time
     end;
 end;
+{$ELSE}
+procedure OpenIPport;
+begin
+  ip_isopen:= IPOpen(com_name);
+  Form1.Memo1.lines.add(com_name + ' connected - please wait...');
+  if ip_isopen then begin
+    Form1.DeviceView.Text:= 'IP Adress ' + com_name;
+    Form1.DeviceView.Font.Color:= clWindowText;
+    Form1.DeviceView.Font.Style:= [];
+  end;
+end;
 {$ENDIF}
 procedure PortOpenedCheck;
 begin
-  if ftdi_isopen or com_isopen then
+  if ftdi_isopen or com_isopen or ip_isopen then
     grbl_is_connected:= grbl_checkResponse;
   if grbl_is_connected then begin
     Form1.CheckBoxSim.enabled:= true;
@@ -61,6 +72,7 @@ begin
 // Alle verfügbaren COM-Ports prüfen, Ergebnisse in Array speichern
   com_isopen:= false;
   ftdi_isopen:= false;
+  ip_isopen:=false;
   grbl_is_connected:= false;
   HomingPerformed:= false;
   com_name:='';
@@ -112,10 +124,13 @@ begin
     deviceselectbox.ListView1.ItemIndex:= 0; // Auswahl erzwingen
   deviceselectbox.ShowModal;
   if (deviceselectbox.ModalResult=MrOK) then begin
-    if (deviceselectbox.ListView1.ItemIndex > 0) then begin
-      com_selected_port:= deviceselectbox.ListView1.ItemIndex - 1;
+    if (deviceselectbox.ListView1.ItemIndex >= 0) then begin
+      com_selected_port:= deviceselectbox.ListView1.ItemIndex;
       com_name:= deviceselectbox.ListView1.Selected.Caption;
-      OpenCOMport;
+      if deviceselectbox.ListView1.Selected.SubItems[2]='Serial' then
+        OpenCOMport
+      else if deviceselectbox.ListView1.Selected.SubItems[2]='TCP/IP' then
+        OpenIPport;
     end {$IFnDEF FPC} else if (ftdi_device_count > 0) then begin
       ftdi_selected_device:= deviceselectbox.ListView1.itemindex;
       ftdi_serial:= ftdi_sernum_arr[ftdi_selected_device];
