@@ -872,7 +872,7 @@ begin
       com_name:= grbl_ini.ReadString('ComPort')
     else
       com_name:= '';
-    deviceselectbox.ComboBoxCOMport.Text:= com_name;
+    deviceselectbox.ListView1.Selected := deviceselectbox.ListView1.FindCaption(0,com_name,False,False,False);
     if grbl_ini.ValueExists('ComOpen') then
       com_was_open:= grbl_ini.ReadBool('ComOpen')
     else

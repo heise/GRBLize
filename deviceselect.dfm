@@ -1,6 +1,6 @@
 object deviceselectbox: Tdeviceselectbox
-  Left = 240
-  Top = 33
+  Left = 442
+  Top = 205
   BorderStyle = bsDialog
   Caption = 'Select USB Device'
   ClientHeight = 249
@@ -22,6 +22,9 @@ object deviceselectbox: Tdeviceselectbox
     Height = 249
     Caption = 'Panel1'
     TabOrder = 0
+    DesignSize = (
+      505
+      249)
     object Label1: TLabel
       Left = 18
       Top = 18
@@ -36,25 +39,11 @@ object deviceselectbox: Tdeviceselectbox
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
-    end
-    object Label2: TLabel
-      Left = 18
-      Top = 183
-      Width = 107
-      Height = 16
-      Caption = 'or use serial port'
-      Color = clBtnFace
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clBlack
-      Font.Height = -13
-      Font.Name = 'Arial'
-      Font.Style = [fsBold]
-      ParentColor = False
-      ParentFont = False
+      Transparent = False
     end
     object Label3: TLabel
       Left = 18
-      Top = 215
+      Top = 210
       Width = 128
       Height = 16
       Caption = 'FTDI/COM baud rate'
@@ -66,12 +55,14 @@ object deviceselectbox: Tdeviceselectbox
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
+      Transparent = False
     end
     object OKButton: TButton
-      Left = 416
-      Top = 198
-      Width = 65
-      Height = 23
+      Left = 424
+      Top = 208
+      Width = 57
+      Height = 29
+      Anchors = [akLeft, akTop, akRight]
       Caption = 'OK'
       Default = True
       TabOrder = 0
@@ -81,19 +72,23 @@ object deviceselectbox: Tdeviceselectbox
       Left = 18
       Top = 40
       Width = 463
-      Height = 129
+      Height = 161
       Columns = <
         item
-          Caption = 'USB Device'
+          Caption = 'Device'
           Width = 100
         end
         item
-          Caption = 'FTDI Serial'
+          Caption = 'Serial'
           Width = 100
         end
         item
           Caption = 'Description'
-          Width = 250
+          Width = 150
+        end
+        item
+          Caption = 'Type'
+          Width = 80
         end>
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -108,35 +103,17 @@ object deviceselectbox: Tdeviceselectbox
       OnDblClick = ListView1DblClick
     end
     object CancelButton: TButton
-      Left = 345
-      Top = 197
-      Width = 65
-      Height = 25
+      Left = 352
+      Top = 208
+      Width = 67
+      Height = 29
       Caption = 'Cancel'
       TabOrder = 2
       OnClick = CancelButtonClick
     end
-    object ComboBoxComPort: TComboBox
-      Left = 152
-      Top = 182
-      Width = 139
-      Height = 21
-      Style = csDropDownList
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -11
-      Font.Name = 'MS Sans Serif'
-      Font.Style = [fsBold]
-      ItemIndex = 0
-      ParentFont = False
-      TabOrder = 3
-      Text = 'none (FTDI direct)'
-      Items.Strings = (
-        'none (FTDI direct)')
-    end
     object EditBaudrate: TEdit
       Left = 152
-      Top = 214
+      Top = 210
       Width = 64
       Height = 21
       Font.Charset = DEFAULT_CHARSET
@@ -147,7 +124,7 @@ object deviceselectbox: Tdeviceselectbox
       MaxLength = 6
       NumbersOnly = True
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 3
       Text = '115200'
     end
   end

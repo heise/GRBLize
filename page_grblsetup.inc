@@ -56,6 +56,7 @@ end;
 procedure TForm1.BtnRescanClick(Sender: TObject);
 // Auswahl des Frosches unter FTDI-Devices
 var i : Integer; LV : TListItem;
+  sl: TStringList;
 begin
 // Alle verfügbaren COM-Ports prüfen, Ergebnisse in Array speichern
   com_isopen:= false;
@@ -72,37 +73,48 @@ begin
       LV.Caption := 'Device '+IntToStr(i);
       LV.SubItems.Add(ftdi_sernum_arr[i]);
       LV.SubItems.Add(ftdi_desc_arr[i]);
+      lv.SubItems.Add('FTDI');
     end;
     {$ENDIF}
     deviceselectbox.ListView1.Items[0].Selected := true;
   end;
-  deviceselectbox.ComboBoxCOMport.Items.clear;
   {$IFnDEF FPC}
-  deviceselectbox.ComboBoxCOMport.Items.add('none (FTDI direct)');
   for i := 0 to 31 do begin
     if CheckCom('COM' + i) = 0 then begin
-      deviceselectbox.ComboBoxCOMport.Items.add('COM' + IntToSTr(i));
+      LV := deviceselectbox.ListView1.Items.add;
+      lv.Caption := ('COM' + IntToSTr(i));
+      LV.SubItems.Add('');
+      LV.SubItems.Add('');
+      lv.SubItems.Add('Serial');
     end;
   end;
   {$ELSE}
-  deviceselectbox.ComboBoxComPort.Items.Delimiter:=',';
-  deviceselectbox.ComboBoxComPort.Items.DelimitedText:=synaser.GetSerialPortNames;
+  sl := TStringList.Create;
+  sl.Delimiter:=',';
+  sl.DelimitedText:=synaser.GetSerialPortNames;
   i := 0;
-  while i < deviceselectbox.ComboBoxComPort.Items.Count do
+  while i < sl.Count do
     begin
-      if CheckCom(deviceselectbox.ComboBoxComPort.Items[i])=0 then
-        inc(i)
-      else deviceselectbox.ComboBoxComPort.Items.Delete(i);
+      if CheckCom(sl[i])=0 then
+        begin
+          lv := deviceselectbox.ListView1.Items.Add;
+          lv.Caption:=sl[i];
+          LV.SubItems.Add('');
+          LV.SubItems.Add('');
+          lv.SubItems.Add('Serial');
+          inc(i);
+        end
+      else sl.Delete(i);
     end;
-  deviceselectbox.ComboBoxCOMport.Items.Insert(0,'none');
+  sl.Free;
   {$endif}
-  if deviceselectbox.ComboBoxComPort.Items.Count>0 then
-    deviceselectbox.ComboBoxCOMport.ItemIndex:= 0; // Auswahl erzwingen
+  if deviceselectbox.ListView1.Items.Count>0 then
+    deviceselectbox.ListView1.ItemIndex:= 0; // Auswahl erzwingen
   deviceselectbox.ShowModal;
   if (deviceselectbox.ModalResult=MrOK) then begin
-    if (deviceselectbox.ComboBoxCOMport.ItemIndex > 0) then begin
-      com_selected_port:= deviceselectbox.ComboBoxCOMport.ItemIndex - 1;
-      com_name:= deviceselectbox.ComboBoxCOMport.Text;
+    if (deviceselectbox.ListView1.ItemIndex > 0) then begin
+      com_selected_port:= deviceselectbox.ListView1.ItemIndex - 1;
+      com_name:= deviceselectbox.ListView1.Selected.Caption;
       OpenCOMport;
     end {$IFnDEF FPC} else if (ftdi_device_count > 0) then begin
       ftdi_selected_device:= deviceselectbox.ListView1.itemindex;
