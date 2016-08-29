@@ -136,8 +136,9 @@ var my_color: TColor;
 begin
   {$IFDEF FPC}
   TCustomGrid(Sender).Canvas.Rectangle(Rect);
-  {$ENDIF}
+  {$ELSE}
   Rect.Left:= Rect.Left-4;    // Workaround für XE8-Darstellung
+  {$ENDIF}
   if aRow = 0 then with sgATC,Canvas do begin
     Font.Style := [fsBold];
     TextRect(Rect, Rect.Left + 2, Rect.Top + 2, Cells[ACol, ARow]);

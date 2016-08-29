@@ -141,8 +141,9 @@ var
 begin
   {$IFDEF FPC}
   TCustomGrid(Sender).Canvas.Rectangle(Rect);
-  {$ENDIF}
+  {$ELSE}
   Rect.Left:= Rect.Left-4; // Workaround für XE8-Darstellung
+  {$ENDIF}
   with SgBlocks,Canvas do begin
     aStr:= Cells[ACol, ARow];
     if (aRow = 0) or (aCol = 0) then begin

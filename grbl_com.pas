@@ -979,7 +979,7 @@ var i, my_len, my_z_feed: Integer;
   x, y: Double;
   z, my_z_end: Double;
 
-  begin
+begin
   my_len:= length(millpath);
   if my_len < 1 then
     exit;

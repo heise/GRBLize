@@ -157,7 +157,9 @@ end;
 procedure TForm1.SgGrblSettingsDrawCell(Sender: TObject; ACol,
   ARow: Integer; Rect: TRect; State: TGridDrawState);
 begin
+  {$IFnDEF FPC}
   Rect.Left:= Rect.Left-4; // Workaround für XE8-Darstellung
+  {$ENDIF}
   if aRow = 0 then with (Sender as TStringGrid),Canvas do begin
     Font.Style := [fsBold];
     TextRect(Rect, Rect.Left + 2, Rect.Top + 2, Cells[ACol, ARow]);

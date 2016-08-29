@@ -618,7 +618,9 @@ var
   aStr: String;
 
 begin
+  {$IFnDEF FPC}
   Rect.Left:= Rect.Left-4; // Workaround für XE8-Darstellung
+  {$ENDIF}
   aStr:= SgJobDefaults.Cells[ACol, ARow];
   if aRow = 0 then with SgJobDefaults,Canvas do begin
     Font.Style := [fsBold];
@@ -724,7 +726,9 @@ var
   aStr: String;
 
 begin
+  {$IFnDEF FPC}
   Rect.Left:= Rect.Left-4; // Workaround für XE8-Darstellung
+  {$ENDIF}
   aStr:= SgAppDefaults.Cells[ACol, ARow];
   if aRow = 0 then with SgAppDefaults,Canvas do begin
     {$IFDEF FPC}
@@ -802,8 +806,9 @@ var
 begin
   {$IFDEF FPC}
   TCustomGrid(Sender).Canvas.Rectangle(Rect);
-  {$ENDIF}
+  {$ELSE}
   Rect.Left:= Rect.Left-4; // Workaround für XE8-Darstellung
+  {$ENDIF}
   if aRow = 0 then with SgFiles,Canvas do begin
     Font.Style := [fsBold];
     TextRect(Rect, Rect.Left + 2, Rect.Top + 2, Cells[ACol, ARow]);
