@@ -840,11 +840,13 @@ begin
     Form1.Memo1.lines.add('');
     Form1.Memo1.lines.add('Grbl Startup Message (Version):');
     Form1.Memo1.lines.add('=========================================');
-    repeat
-      my_str:= grbl_receiveStr(2500);
-      if length(my_Str) > 1 then
-        Form1.Memo1.lines.add(my_str);
-    until pos('grbl',lowercase(my_str))>0;
+    for i := 0 to 5 do
+      begin
+        my_str:= grbl_receiveStr(2500);
+        if length(my_Str) > 1 then
+          Form1.Memo1.lines.add(my_str);
+        if pos('grbl',lowercase(my_str))>0 then break;
+      end;
     repeat
       my_str:= grbl_receiveStr(20);
       if length(my_Str) > 1 then

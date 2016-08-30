@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 537
+  Left = 536
   Height = 695
-  Top = 59
+  Top = 34
   Width = 932
   BorderStyle = bsSingle
   ClientHeight = 672
@@ -2518,7 +2518,7 @@ object Form1: TForm1
     top = 104
   end
   object TimerStatus: TTimer
-    Interval = 25
+    Interval = 50
     OnTimer = TimerStatusElapsed
     left = 832
     top = 104

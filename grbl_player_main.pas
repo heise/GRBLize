@@ -877,6 +877,10 @@ begin
       com_was_open:= grbl_ini.ReadBool('ComOpen')
     else
       com_was_open:= false;
+    if grbl_ini.ValueExists('IPOpen') then
+      ip_was_open:= grbl_ini.ReadBool('IPOpen')
+    else
+      ip_was_open:= false;
   finally
     grbl_ini.Free;
   end;
@@ -990,6 +994,7 @@ begin
     grbl_ini.WriteString('ComBaudrate', deviceselectbox.EditBaudrate.Text);
     grbl_ini.WriteString('ComPort', com_name);
     grbl_ini.WriteBool('ComOpen', com_isopen);
+    grbl_ini.WriteBool('IPOpen', ip_isopen);
   finally
     grbl_ini.Free;
   end;
