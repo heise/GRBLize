@@ -1,3 +1,12 @@
-build:
-  script:
-    - bash build.sh all
+build-windows:
+  script: git-bash build.sh all
+  tags:
+    - windows-i386
+build-linux-i386:
+  script: bash build.sh all
+  tags:
+    - linux-i386
+build-linux-x86-64:
+  script: bash build.sh all
+  tags:
+    - linux-x64
