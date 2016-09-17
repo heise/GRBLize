@@ -1,12 +1,15 @@
 build-windows:
-  script: git-bash build.sh all
+  script: 
+    - lazbuild GRBLize.lpi
   tags:
     - windows-i386
 build-linux-i386:
-  script: bash build.sh all
+  script:
+    - lazbuild GRBLize.lpi
   tags:
     - linux-i386
 build-linux-x86-64:
-  script: bash build.sh all
+  script: 
+    - lazbuild GRBLize.lpi
   tags:
     - linux-x64
