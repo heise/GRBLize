@@ -1,0 +1,3 @@
+[submodule "components/synapse"]
+	path = components/synapse
+	url = https://github.com/cutec-chris/Ararat-Synapse.git
