@@ -2799,7 +2799,7 @@ begin
   Form1.Memo1.lines.add('Move to park position');
   spindle_on_off(false);
   drawing_tool_down:= false;
-  grbl_moveZ(0, true);  // Z ganz oben, absolut!
+  grbl_moveZ(-1, true);  // Z "fast" ganz oben (in absoluten Koordinaten!)
   grbl_moveXY(job.park_x, job.park_y, true);
   grbl_moveZ(job.park_z, true);
   SendListToGrbl;
